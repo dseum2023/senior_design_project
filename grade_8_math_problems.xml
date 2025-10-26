@@ -692,7 +692,7 @@
     <ProblemNumber>87</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>5*5*23</Problem>
-    <Solution>5^2 × 23</Solution>
+    <Solution>5^2 * 23</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -700,7 +700,7 @@
     <ProblemNumber>88</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>3*3*3*31</Problem>
-    <Solution>3^2 × 93</Solution>
+    <Solution>3^2 * 93</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -708,7 +708,7 @@
     <ProblemNumber>89</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>3*3*53</Problem>
-    <Solution>3^2 × 53</Solution>
+    <Solution>3^2 * 53</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -716,7 +716,7 @@
     <ProblemNumber>90</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*2*2*3*5</Problem>
-    <Solution>4^2 × 15</Solution>
+    <Solution>4^2 * 15</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -732,7 +732,7 @@
     <ProblemNumber>92</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*17</Problem>
-    <Solution>2^2 × 17</Solution>
+    <Solution>2^2 * 17</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -740,7 +740,7 @@
     <ProblemNumber>93</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*2*3*17</Problem>
-    <Solution>2^2 x 102</Solution>
+    <Solution>2^2 * 102</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -748,7 +748,7 @@
     <ProblemNumber>94</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*2*31</Problem>
-    <Solution>2^2 x 62</Solution>
+    <Solution>2^2 * 62</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -772,7 +772,7 @@
     <ProblemNumber>97</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*2*2*53</Problem>
-    <Solution>4^2 x 53</Solution>
+    <Solution>4^2 * 53</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -780,7 +780,7 @@
     <ProblemNumber>98</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*3*3*47</Problem>
-    <Solution>3^2 x 94</Solution>
+    <Solution>3^2 * 94</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -796,7 +796,7 @@
     <ProblemNumber>100</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*2*7*11</Problem>
-    <Solution>2^2 x 154</Solution>
+    <Solution>2^2 * 154</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -804,7 +804,7 @@
     <ProblemNumber>101</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*2*2*2*3*3*3</Problem>
-    <Solution>12^2 x 3</Solution>
+    <Solution>12^2 * 3</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -812,7 +812,7 @@
     <ProblemNumber>102</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*3*3*5</Problem>
-    <Solution>3^2 x 10</Solution>
+    <Solution>3^2 * 10</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -820,7 +820,7 @@
     <ProblemNumber>103</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*3*3*29</Problem>
-    <Solution>3^2 x 58</Solution>
+    <Solution>3^2 * 58</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -828,7 +828,7 @@
     <ProblemNumber>104</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*3*3*3*17</Problem>
-    <Solution>3^2 x 102</Solution>
+    <Solution>3^2 * 102</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -836,7 +836,7 @@
     <ProblemNumber>105</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>2*3*3*31</Problem>
-    <Solution>3^2 x 62</Solution>
+    <Solution>3^2 * 62</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
@@ -844,7 +844,7 @@
     <ProblemNumber>106</ProblemNumber>
     <Directions>Rewrite the factors listed as an expression with a power of two.</Directions>
     <Problem>3*3*47</Problem>
-    <Solution>3^2 × 47</Solution>
+    <Solution>3^2 * 47</Solution>
     <AlternateSolution></AlternateSolution>
     <CommonCoreCategory>The Number System</CommonCoreCategory>
     </row>
