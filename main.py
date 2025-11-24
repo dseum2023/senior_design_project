@@ -9,6 +9,15 @@ import os
 import argparse
 from typing import Optional
 
+# Force unbuffered output for real-time streaming
+os.environ['PYTHONUNBUFFERED'] = '1'
+
+# Configure stdout for immediate flushing
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(line_buffering=True)
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(line_buffering=True)
+
 # Add src directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
@@ -21,58 +30,119 @@ from src.question_processor import QuestionProcessor
 def print_banner():
     """Print application banner"""
     print("="*60)
-    print("🧮 CALCULUS LLM TESTER")
+    print("🧮 MATH LLM TESTER")
     print("="*60)
-    print("Interactive tool for testing calculus questions with LLM")
+    print("Interactive tool for testing math questions with LLM")
     print("Model: gpt-oss:20b via Ollama")
     print("="*60)
 
 
-def check_prerequisites() -> bool:
+def get_available_datasets():
+    """Get list of available dataset XML files"""
+    datasets = {
+        '1': {
+            'file': 'calculus1_problems.xml',
+            'name': 'Calculus 1',
+            'description': 'Comprehensive calculus problems'
+        },
+        '2': {
+            'file': 'advanced_probability_statistics_problems.xml',
+            'name': 'Probability & Statistics',
+            'description': 'Advanced probability and statistics problems'
+        },
+        '3': {
+            'file': 'grade_8_math_problems.xml',
+            'name': 'Grade 8 Math',
+            'description': 'Grade 8 mathematics problems'
+        }
+    }
+
+    # Check which datasets actually exist
+    available = {}
+    for key, dataset in datasets.items():
+        if os.path.exists(dataset['file']):
+            available[key] = dataset
+
+    return available
+
+
+def select_dataset():
+    """Prompt user to select a dataset"""
+    print("\n" + "="*60)
+    print("📚 DATASET SELECTION")
+    print("="*60)
+
+    datasets = get_available_datasets()
+
+    if not datasets:
+        print("❌ No dataset XML files found!")
+        print("Please ensure at least one of these files exists:")
+        print("  - calculus1_problems.xml")
+        print("  - advanced_probability_statistics_problems.xml")
+        print("  - grade_8_math_problems.xml")
+        return None
+
+    print("\nAvailable datasets:")
+    for key, dataset in datasets.items():
+        print(f"{key}. {dataset['name']}")
+        print(f"   {dataset['description']}")
+        print(f"   File: {dataset['file']}")
+        print()
+
+    while True:
+        choice = input(f"Select dataset (1-{len(datasets)}): ").strip()
+        if choice in datasets:
+            selected = datasets[choice]
+            print(f"\n✅ Selected: {selected['name']}")
+            return selected['file']
+        print(f"Invalid choice. Please enter a number between 1 and {len(datasets)}.")
+
+
+def check_prerequisites(xml_file: str) -> bool:
     """Check if all prerequisites are met"""
-    print("🔍 Checking prerequisites...")
-    
+    print("\n🔍 Checking prerequisites...")
+
     # Check if XML file exists
-    xml_file = "calculus_comprehensive_1000.xml"
     if not os.path.exists(xml_file):
         print(f"❌ XML file not found: {xml_file}")
-        print("Please ensure the calculus questions XML file is in the current directory.")
+        print("Please ensure the dataset XML file is in the current directory.")
         return False
-    
+
     print(f"✅ Found XML file: {xml_file}")
     return True
 
 
-def setup_components(ollama_url: str, model_name: str) -> tuple:
+def setup_components(ollama_url: str, model_name: str, xml_file: str) -> tuple:
     """
     Set up all application components
-    
+
     Args:
         ollama_url: URL for Ollama server
         model_name: Name of the LLM model to use
-        
+        xml_file: Path to the XML dataset file
+
     Returns:
         Tuple of (parser, ollama_client, storage_manager, processor) or None if setup fails
     """
     try:
         # Initialize XML parser
-        print("📖 Initializing XML parser...")
-        parser = XMLParser("calculus_comprehensive_1000.xml")
-        
+        print(f"📖 Initializing XML parser for {xml_file}...")
+        parser = XMLParser(xml_file)
+
         # Initialize Ollama client
         print(f"🤖 Initializing Ollama client (URL: {ollama_url}, Model: {model_name})...")
         ollama_client = OllamaClient(base_url=ollama_url, model=model_name)
-        
+
         # Initialize storage manager
         print("💾 Initializing storage manager...")
         storage_manager = StorageManager()
-        
+
         # Initialize question processor
         print("⚙️  Initializing question processor...")
         processor = QuestionProcessor(ollama_client, storage_manager)
-        
+
         return parser, ollama_client, storage_manager, processor
-        
+
     except Exception as e:
         print(f"❌ Error during setup: {e}")
         return None
@@ -201,41 +271,52 @@ def show_question_statistics(questions: list) -> None:
 
 def main():
     """Main application entry point"""
-    parser = argparse.ArgumentParser(description="Calculus LLM Tester")
+    parser = argparse.ArgumentParser(description="Math LLM Tester")
     parser.add_argument("--ollama-url", default="http://localhost:11434",
                        help="Ollama server URL (default: http://localhost:11434)")
     parser.add_argument("--model", default="gpt-oss:20b",
                        help="LLM model name (default: gpt-oss:20b)")
+    parser.add_argument("--dataset", default=None,
+                       help="Dataset XML file to use (skips selection menu)")
     parser.add_argument("--auto-start", action="store_true",
                        help="Skip menu and start processing immediately")
-    
+
     args = parser.parse_args()
-    
+
     # Print banner
     print_banner()
-    
+
+    # Select dataset
+    if args.dataset:
+        xml_file = args.dataset
+        print(f"\n📊 Using dataset: {xml_file}")
+    else:
+        xml_file = select_dataset()
+        if not xml_file:
+            sys.exit(1)
+
     # Check prerequisites
-    if not check_prerequisites():
+    if not check_prerequisites(xml_file):
         sys.exit(1)
-    
+
     # Setup components
-    components = setup_components(args.ollama_url, args.model)
+    components = setup_components(args.ollama_url, args.model, xml_file)
     if not components:
         sys.exit(1)
-    
+
     xml_parser, ollama_client, storage_manager, processor = components
-    
+
     # Load questions
     questions = load_questions(xml_parser)
     if not questions:
         sys.exit(1)
-    
+
     # Auto-start if requested
     if args.auto_start:
         print("\n🚀 Auto-starting question processing...")
         processor.process_questions(questions)
         return
-    
+
     # Main menu loop
     while True:
         choice = show_menu()
@@ -265,8 +346,10 @@ def main():
         elif choice == '3':  # Export to CSV
             import time
             timestamp = time.strftime("%Y%m%d_%H%M%S")
-            csv_file = f"calculus_results_{timestamp}.csv"
-            
+            # Extract dataset name from xml_file
+            dataset_name = os.path.splitext(os.path.basename(xml_file))[0]
+            csv_file = f"{dataset_name}_results_{timestamp}.csv"
+
             if storage_manager.export_results_csv(csv_file):
                 print(f"✅ Results exported to {csv_file}")
             else:

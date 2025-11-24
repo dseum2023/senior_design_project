@@ -67,12 +67,25 @@ class OllamaClient:
         """
         start_time = time.time()
         
-        # Default system prompt for calculus questions
+        # Default system prompt for math questions with enforced answer format
         if system_prompt is None:
             system_prompt = (
-                "You are a mathematics expert specializing in calculus. "
-                "Please solve the following calculus problem step by step and provide a clear, "
-                "concise answer. Show your work when appropriate."
+                "You are a mathematics expert. When solving math problems, please:\n\n"
+                "1. THINK STEP BY STEP and show ALL your work\n"
+                "2. Explain your reasoning clearly at each step\n"
+                "3. Show all calculations, substitutions, and algebraic manipulations\n"
+                "4. If using formulas, state them explicitly\n"
+                "5. Verify your work when possible\n\n"
+                "After showing your complete solution process, provide your final answer in this exact format:\n"
+                "FINAL_ANSWER: [your answer here]\n\n"
+                "Examples of final answer formats:\n"
+                "- Numeric answers: FINAL_ANSWER: 42.67\n"
+                "- Fractions: FINAL_ANSWER: 54584/99000\n"
+                "- Expressions: FINAL_ANSWER: f'(x) = 12x^5\n"
+                "- Integrals: FINAL_ANSWER: (9/2)x^2 + C\n"
+                "- Text answers: FINAL_ANSWER: Rational\n"
+                "- Ranges: FINAL_ANSWER: 5 and 6\n\n"
+                "Remember: Show your thinking process first, then provide the final answer!"
             )
         
         # Determine if we should stream
@@ -85,43 +98,70 @@ class OllamaClient:
             "system": system_prompt,
             "stream": use_streaming,
             "options": {
-                "temperature": 0.1,  # Low temperature for consistent mathematical answers
+                "temperature": 0.3,  # Slightly higher temperature for more detailed explanations
                 "top_p": 0.9,
-                "top_k": 40
+                "top_k": 40,
+                "num_predict": 2048  # Allow longer responses for detailed work
             }
         }
         
         try:
             if use_streaming:
                 # Handle streaming response
+                import sys
                 response = self.session.post(
                     f"{self.base_url}/api/generate",
                     json=payload,
                     timeout=120,
                     stream=True
                 )
-                
+
                 if response.status_code == 200:
                     full_response = ""
-                    
-                    for line in response.iter_lines():
-                        if line:
-                            try:
-                                chunk_data = json.loads(line.decode('utf-8'))
-                                chunk_text = chunk_data.get('response', '')
-                                
-                                if chunk_text:
-                                    full_response += chunk_text
-                                    # Call the streaming callback to display progress
-                                    if stream_callback:
-                                        stream_callback(chunk_text)
-                                
-                                # Check if this is the final chunk
-                                if chunk_data.get('done', False):
-                                    break
+                    chunk_count = 0
+
+                    try:
+                        for line in response.iter_lines(decode_unicode=True):
+                            if line:
+                                try:
+                                    chunk_data = json.loads(line)
+                                    chunk_text = chunk_data.get('response', '')
+
+                                    if chunk_text:
+                                        full_response += chunk_text
+                                        chunk_count += 1
+                                        
+                                        # Call the streaming callback to display progress IMMEDIATELY
+                                        if stream_callback:
+                                            try:
+                                                stream_callback(chunk_text)
+                                            except Exception as callback_error:
+                                                # Don't let callback errors break streaming
+                                                print(f"\nWarning: Streaming callback error: {callback_error}", file=sys.stderr)
+
+                                    # Check if this is the final chunk
+                                    if chunk_data.get('done', False):
+                                        break
+
+                                except json.JSONDecodeError as e:
+                                    # Log JSON decode errors but continue
+                                    print(f"\nWarning: JSON decode error in chunk: {e}", file=sys.stderr)
+                                    continue
                                     
-                            except json.JSONDecodeError:
-                                continue
+                    except Exception as stream_error:
+                        print(f"\nError during streaming: {stream_error}", file=sys.stderr)
+                        # If we got some response, use it
+                        if full_response.strip():
+                            processing_time = time.time() - start_time
+                            return LLMResponse(
+                                response_text=full_response.strip(),
+                                processing_time=processing_time,
+                                success=True,
+                                error_message=f"Streaming interrupted: {stream_error}",
+                                model_used=self.model
+                            )
+                        else:
+                            raise stream_error
                     
                     processing_time = time.time() - start_time
                     

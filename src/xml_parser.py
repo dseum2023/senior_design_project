@@ -11,12 +11,13 @@ import os
 
 class Question:
     """Represents a single calculus question"""
-    
-    def __init__(self, question_id: str, category: str, question_text: str, answer: str):
+
+    def __init__(self, question_id: str, category: str, question_text: str, answer: str, alternate_answer: str = None):
         self.id = question_id
         self.category = category
         self.question_text = question_text
         self.answer = answer
+        self.alternate_answer = alternate_answer
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert question to dictionary format"""
@@ -77,19 +78,45 @@ class XMLParser:
             
             # Extract all problems
             self.questions = []
+
+            # Try calculus format first (<problem> elements)
             for problem in root.findall('problem'):
                 question_id = problem.get('id', '')
                 category = problem.get('category', '')
-                
+
                 question_elem = problem.find('question')
                 answer_elem = problem.find('answer')
-                
+
                 if question_elem is not None and answer_elem is not None:
                     question_text = question_elem.text.strip() if question_elem.text else ''
                     answer = answer_elem.text.strip() if answer_elem.text else ''
-                    
+
                     question = Question(question_id, category, question_text, answer)
                     self.questions.append(question)
+
+            # Try grade 8 format (<row> elements) if no problems found
+            if len(self.questions) == 0:
+                for row in root.findall('row'):
+                    question_id = row.get('id', '')
+
+                    # Get fields
+                    category_elem = row.find('CommonCoreCategory')
+                    problem_elem = row.find('Problem')
+                    solution_elem = row.find('Solution')
+                    alternate_elem = row.find('AlternateSolution')
+
+                    if problem_elem is not None and solution_elem is not None:
+                        category = category_elem.text.strip() if category_elem is not None and category_elem.text else 'unknown'
+                        question_text = problem_elem.text.strip() if problem_elem.text else ''
+                        answer = solution_elem.text.strip() if solution_elem.text else ''
+                        alternate_answer = alternate_elem.text.strip() if alternate_elem is not None and alternate_elem.text else None
+
+                        # Only include alternate if it's not empty
+                        if alternate_answer == '':
+                            alternate_answer = None
+
+                        question = Question(question_id, category, question_text, answer, alternate_answer)
+                        self.questions.append(question)
             
             print(f"Successfully parsed {len(self.questions)} questions from XML file")
             return self.questions

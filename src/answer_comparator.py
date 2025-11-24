@@ -1,0 +1,417 @@
+"""
+Answer Comparator Module
+Type-aware comparison of normalized answers
+"""
+
+import re
+from math import gcd
+from dataclasses import dataclass
+from typing import Optional
+
+from answer_normalizer import NormalizedAnswer, AnswerType
+
+
+@dataclass
+class ComparisonResult:
+    """Result of comparing two answers"""
+    is_correct: bool
+    confidence: float  # 0.0 to 1.0
+    match_type: str  # "exact", "equivalent", "tolerance", "no_match", "type_mismatch"
+    details: str  # Human-readable explanation
+    matched_answer: str = "none"  # "main", "alternate", or "none"
+
+
+def compare_fractions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two fractions by reducing to lowest terms
+
+    Examples:
+        1/4 vs 2/8 -> MATCH (both reduce to 1/4)
+        -1/-8 vs 1/8 -> MATCH (both reduce to 1/8)
+        1/4 vs 1/3 -> NO MATCH
+    """
+    n1, d1 = ans1.value
+    n2, d2 = ans2.value
+
+    # Reduce both to lowest terms using GCD
+    g1 = gcd(abs(n1), abs(d1))
+    g2 = gcd(abs(n2), abs(d2))
+
+    n1_reduced = n1 // g1
+    d1_reduced = d1 // g1
+    n2_reduced = n2 // g2
+    d2_reduced = d2 // g2
+
+    # Handle negative denominators: move sign to numerator
+    if d1_reduced < 0:
+        n1_reduced = -n1_reduced
+        d1_reduced = -d1_reduced
+    if d2_reduced < 0:
+        n2_reduced = -n2_reduced
+        d2_reduced = -d2_reduced
+
+    # Compare reduced forms
+    if n1_reduced == n2_reduced and d1_reduced == d2_reduced:
+        match_type = "exact" if (n1 == n2 and d1 == d2) else "equivalent"
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type=match_type,
+            details=f"Fractions equivalent: {n1}/{d1} = {n2}/{d2} (reduced: {n1_reduced}/{d1_reduced})"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Fractions not equal: {n1_reduced}/{d1_reduced} ≠ {n2_reduced}/{d2_reduced}"
+        )
+
+
+def compare_decimals(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two decimals with tolerance based on precision
+
+    Tolerance = 0.5 * (10 ** -precision)
+    Examples:
+        precision=1 -> tolerance=0.05
+        precision=2 -> tolerance=0.005
+        precision=3 -> tolerance=0.0005
+    """
+    val1 = ans1.value
+    val2 = ans2.value
+
+    # Determine tolerance based on precision
+    precision = max(ans1.precision or 2, ans2.precision or 2)
+    tolerance = 0.5 * (10 ** -precision)
+
+    diff = abs(val1 - val2)
+
+    if diff == 0:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Exact decimal match: {val1} = {val2}"
+        )
+    elif diff <= tolerance:
+        # Linear confidence falloff
+        confidence = 1.0 - (diff / tolerance)
+        return ComparisonResult(
+            is_correct=True,
+            confidence=confidence,
+            match_type="tolerance",
+            details=f"Decimals within tolerance: |{val1} - {val2}| = {diff:.6f} <= {tolerance}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Decimals differ: |{val1} - {val2}| = {diff:.6f} > {tolerance}"
+        )
+
+
+def compare_integers(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two integers (exact match only)
+
+    Examples:
+        6720 vs 6720 -> MATCH
+        -133 vs -133 -> MATCH
+        7 vs 8 -> NO MATCH
+    """
+    if ans1.value == ans2.value:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Integer exact match: {ans1.value} = {ans2.value}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Integers not equal: {ans1.value} ≠ {ans2.value}"
+        )
+
+
+def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two mathematical expressions
+
+    Comparison is whitespace-insensitive after normalization
+
+    Examples:
+        "f'(x) = 12x^5" vs "f'(x)=12x^5" -> MATCH
+        "f'(x) = 8x + 40x^4" vs "f'(x) = 40x^4 + 8x" -> MATCH (both normalized)
+    """
+    expr1 = str(ans1.value).strip()
+    expr2 = str(ans2.value).strip()
+
+    # Remove all whitespace for comparison
+    expr1_clean = re.sub(r'\s+', '', expr1)
+    expr2_clean = re.sub(r'\s+', '', expr2)
+
+    if expr1_clean == expr2_clean:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Expression match: {expr1}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Expression mismatch: '{expr1}' vs '{expr2}'"
+        )
+
+
+def compare_text(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two text answers (case-insensitive, already lowercased in normalization)
+
+    Examples:
+        "rational" vs "rational" -> MATCH
+        "Rational" vs "rational" -> MATCH (normalized)
+        "rational" vs "irrational" -> NO MATCH
+    """
+    if ans1.value == ans2.value:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Text match: {ans1.value}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Text mismatch: '{ans1.value}' vs '{ans2.value}'"
+        )
+
+
+def compare_ranges(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two ranges (sets of values, order-independent)
+
+    Examples:
+        {5, 6} vs {5, 6} -> MATCH
+        {5, 6} vs {6, 5} -> MATCH (set equality)
+        {8, 9} vs {8, 10} -> NO MATCH
+    """
+    if ans1.value == ans2.value:  # Set equality
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Range match: {ans1.value}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Range mismatch: {ans1.value} vs {ans2.value}"
+        )
+
+
+def compare_scientific_notation(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two scientific notation values
+
+    Examples:
+        5 * 10^3 vs 5 * 10^3 -> MATCH
+        5 * 10^3 vs 50 * 10^2 -> NO MATCH (not normalized the same)
+    """
+    coef1, exp1 = ans1.value
+    coef2, exp2 = ans2.value
+
+    if coef1 == coef2 and exp1 == exp2:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Scientific notation match: {coef1} * 10^{exp1}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Scientific notation mismatch: {coef1}*10^{exp1} vs {coef2}*10^{exp2}"
+        )
+
+
+def compare_coordinates(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two coordinate values (x = value, y = value)
+
+    Examples:
+        x = 1.67 vs x = 1.67 -> MATCH
+        x = 1.67 vs x = 1.66 -> NO MATCH (outside tolerance)
+        x = 1.67 vs y = 1.67 -> NO MATCH (different variables)
+    """
+    var1, val1 = ans1.value
+    var2, val2 = ans2.value
+
+    if var1 != var2:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Different variables: {var1} vs {var2}"
+        )
+
+    # Compare values using decimal comparison logic
+    precision = max(ans1.precision or 2, ans2.precision or 2)
+    tolerance = 0.5 * (10 ** -precision)
+    diff = abs(val1 - val2)
+
+    if diff <= tolerance:
+        match_type = "exact" if diff == 0 else "tolerance"
+        confidence = 1.0 if diff == 0 else (1.0 - (diff / tolerance))
+        return ComparisonResult(
+            is_correct=True,
+            confidence=confidence,
+            match_type=match_type,
+            details=f"Coordinate match: {var1} = {val1}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Coordinate values differ: {var1}={val1} vs {var2}={val2}"
+        )
+
+
+def _compare_single(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
+    """
+    Compare two normalized answers
+
+    CRITICAL: Type must match exactly (fraction ≠ decimal)
+    """
+    # CRITICAL: Type must match
+    if ans1.answer_type != ans2.answer_type:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="type_mismatch",
+            details=f"Type mismatch: {ans1.answer_type.value} vs {ans2.answer_type.value}",
+            matched_answer="none"
+        )
+
+    # Dispatch to type-specific comparison
+    if ans1.answer_type == AnswerType.FRACTION:
+        return compare_fractions(ans1, ans2)
+    elif ans1.answer_type == AnswerType.DECIMAL:
+        return compare_decimals(ans1, ans2)
+    elif ans1.answer_type == AnswerType.INTEGER:
+        return compare_integers(ans1, ans2)
+    elif ans1.answer_type == AnswerType.EXPRESSION:
+        return compare_expressions(ans1, ans2)
+    elif ans1.answer_type == AnswerType.TEXT:
+        return compare_text(ans1, ans2)
+    elif ans1.answer_type == AnswerType.RANGE:
+        return compare_ranges(ans1, ans2)
+    elif ans1.answer_type == AnswerType.SCIENTIFIC_NOTATION:
+        return compare_scientific_notation(ans1, ans2)
+    elif ans1.answer_type == AnswerType.COORDINATE:
+        return compare_coordinates(ans1, ans2)
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=0.0,
+            match_type="unknown",
+            details=f"Unknown answer type: {ans1.answer_type.value}"
+        )
+
+
+def compare_answers(extracted: NormalizedAnswer, expected: NormalizedAnswer,
+                   alternate: Optional[NormalizedAnswer] = None) -> ComparisonResult:
+    """
+    Compare extracted answer against expected (and optionally alternate)
+
+    Args:
+        extracted: Answer extracted from LLM response
+        expected: Expected ground truth answer
+        alternate: Optional alternate acceptable answer
+
+    Returns:
+        ComparisonResult with match information
+    """
+    # Try main answer first
+    result = _compare_single(extracted, expected)
+    if result.is_correct:
+        result.matched_answer = "main"
+        return result
+
+    # Try alternate if exists
+    if alternate is not None:
+        result_alt = _compare_single(extracted, alternate)
+        if result_alt.is_correct:
+            result_alt.matched_answer = "alternate"
+            return result_alt
+
+    # No match
+    result.matched_answer = "none"
+    return result
+
+
+# Quick test
+if __name__ == "__main__":
+    from answer_normalizer import normalize_answer
+
+    print("Testing Answer Comparator:")
+    print("=" * 60)
+
+    # Test 1: Fraction vs Decimal (TYPE MISMATCH - critical)
+    print("\nTest 1: Fraction vs Decimal (should be TYPE MISMATCH)")
+    frac = normalize_answer("1/4")
+    dec = normalize_answer("0.25")
+    result = compare_answers(frac, dec)
+    print(f"  Result: {'✓' if not result.is_correct and result.match_type == 'type_mismatch' else '✗'}")
+    print(f"  Match Type: {result.match_type}")
+    print(f"  Details: {result.details}")
+
+    # Test 2: Equivalent fractions
+    print("\nTest 2: Equivalent Fractions (1/4 vs 2/8)")
+    frac1 = normalize_answer("1/4")
+    frac2 = normalize_answer("2/8")
+    result = compare_answers(frac1, frac2)
+    print(f"  Result: {'✓' if result.is_correct else '✗'}")
+    print(f"  Match Type: {result.match_type}")
+    print(f"  Details: {result.details}")
+
+    # Test 3: Decimal tolerance
+    print("\nTest 3: Decimal Tolerance (8.1 vs 8.06)")
+    dec1 = normalize_answer("8.1")
+    dec2 = normalize_answer("8.06")
+    result = compare_answers(dec1, dec2)
+    print(f"  Result: {'✓' if result.is_correct else '✗'}")
+    print(f"  Match Type: {result.match_type}")
+    print(f"  Confidence: {result.confidence:.2f}")
+    print(f"  Details: {result.details}")
+
+    # Test 4: Integer exact match
+    print("\nTest 4: Integer Exact Match (-133 vs -133)")
+    int1 = normalize_answer("-133")
+    int2 = normalize_answer("-133")
+    result = compare_answers(int1, int2)
+    print(f"  Result: {'✓' if result.is_correct else '✗'}")
+    print(f"  Match Type: {result.match_type}")
+    print(f"  Details: {result.details}")
+
+    # Test 5: Text case-insensitive
+    print("\nTest 5: Text Case-Insensitive (Rational vs rational)")
+    text1 = normalize_answer("Rational")
+    text2 = normalize_answer("rational")
+    result = compare_answers(text1, text2)
+    print(f"  Result: {'✓' if result.is_correct else '✗'}")
+    print(f"  Match Type: {result.match_type}")
+    print(f"  Details: {result.details}")

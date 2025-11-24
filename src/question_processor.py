@@ -8,6 +8,7 @@ from typing import List, Optional, Tuple
 from src.xml_parser import Question
 from src.ollama_client import OllamaClient, LLMResponse
 from src.storage import StorageManager, QuestionResult
+from src.verifier import verify_answer
 
 
 class QuestionProcessor:
@@ -21,6 +22,8 @@ class QuestionProcessor:
         self.processed_count = 0
         self.skipped_count = 0
         self.failed_count = 0
+        # Verification stats
+        self.verification_stats = {"correct": 0, "incorrect": 0, "unable_to_verify": 0, "total": 0}
     
     def initialize_session(self, questions: List[Question]) -> bool:
         """
@@ -116,23 +119,95 @@ class QuestionProcessor:
         print(f"Processed: {self.processed_count}")
         print(f"Skipped: {self.skipped_count}")
         print(f"Remaining: {self.total_questions - self.processed_count - self.skipped_count}")
-        
+
         if self.total_questions > 0:
             progress_percent = ((self.processed_count + self.skipped_count) / self.total_questions) * 100
             print(f"Progress: {progress_percent:.1f}%")
-        
+
+        # Show verification stats
+        if self.verification_stats["total"] > 0:
+            print("\nVerification Stats:")
+            total_verified = self.verification_stats["correct"] + self.verification_stats["incorrect"]
+            if total_verified > 0:
+                accuracy = (self.verification_stats["correct"] / total_verified) * 100
+                print(f"  Accuracy: {self.verification_stats['correct']}/{total_verified} ({accuracy:.1f}%)")
+            print(f"  Correct: {self.verification_stats['correct']}")
+            print(f"  Incorrect: {self.verification_stats['incorrect']}")
+            print(f"  Unable to Verify: {self.verification_stats['unable_to_verify']}")
+
         # Get detailed summary from storage
         summary = self.storage_manager.get_results_summary()
         if summary:
-            print(f"Successful Responses: {summary.get('successful', 0)}")
-            print(f"Failed Responses: {summary.get('failed', 0)}")
+            print(f"\nLLM Response Stats:")
+            print(f"  Successful Responses: {summary.get('successful', 0)}")
+            print(f"  Failed Responses: {summary.get('failed', 0)}")
             if summary.get('average_processing_time', 0) > 0:
-                print(f"Average Processing Time: {summary['average_processing_time']:.2f}s")
+                print(f"  Average Processing Time: {summary['average_processing_time']:.2f}s")
         print("-" * 40)
     
     def _streaming_callback(self, chunk: str):
         """Callback function for streaming LLM responses"""
-        print(chunk, end='', flush=True)
+        import sys
+        import os
+        
+        # Write directly to stdout with immediate flush
+        sys.stdout.write(chunk)
+        sys.stdout.flush()
+        
+        # Force OS-level flush for Windows compatibility
+        if hasattr(os, 'fsync'):
+            try:
+                os.fsync(sys.stdout.fileno())
+            except (OSError, AttributeError):
+                pass  # Ignore if not supported
+
+    def display_verification_result(self, verification, llm_response_text: str = None) -> None:
+        """Display verification result in a formatted way"""
+        print("\n" + "=" * 80)
+        print("ANSWER VERIFICATION")
+        print("=" * 80)
+
+        if verification.verification_status == "correct":
+            print("[CORRECT] Answer verified successfully!")
+            print(f"  Extracted Answer: {verification.extracted_answer}")
+            print(f"  Expected Answer:  {verification.expected_normalized.original_text}")
+            print(f"  Match Type: {verification.match_type}")
+            print(f"  Extraction Method: {verification.extraction_method} (confidence: {verification.extraction_confidence:.1f})")
+            if verification.matched_answer == "alternate":
+                print(f"  Note: Matched alternate answer")
+
+        elif verification.verification_status == "incorrect":
+            print("[INCORRECT] Answer does not match!")
+            print(f"  Extracted Answer: {verification.extracted_answer} ({verification.extracted_normalized.answer_type.value if verification.extracted_normalized else 'unknown'})")
+            print(f"  Expected Answer:  {verification.expected_normalized.original_text} ({verification.expected_normalized.answer_type.value})")
+            print(f"  Reason: {verification.details}")
+
+        elif verification.verification_status == "unable_to_verify":
+            print("[UNABLE TO VERIFY] Could not extract answer")
+            print(f"  Expected Answer: {verification.expected_normalized.original_text}")
+            print(f"  Reason: {verification.error_message}")
+
+        else:  # error
+            print("[ERROR] Verification failed")
+            print(f"  Error: {verification.error_message}")
+
+        # Show running accuracy
+        total_verified = self.verification_stats["correct"] + self.verification_stats["incorrect"]
+        if total_verified > 0:
+            accuracy = (self.verification_stats["correct"] / total_verified) * 100
+            print(f"\nRunning Accuracy: {self.verification_stats['correct']}/{total_verified} ({accuracy:.1f}%)")
+            if self.verification_stats["unable_to_verify"] > 0:
+                print(f"  [{self.verification_stats['unable_to_verify']} unverified]")
+
+        # Optionally show the full LLM response for review (skip if None to avoid duplication)
+        if llm_response_text:
+            print("\n" + "-" * 80)
+            print("LLM WORK (for review):")
+            print("-" * 80)
+            print(llm_response_text)
+            print("-" * 80)
+
+        print("=" * 80)
     
     def process_question(self, question: Question) -> Tuple[bool, bool]:
         """
@@ -176,15 +251,49 @@ class QuestionProcessor:
                     print(f"⏱️  Time: {response.processing_time:.2f} seconds")
                 print("-" * 50)
             
+            # Verify the answer automatically
+            verification = None
+            verification_dict = None
+
+            if response.success:
+                print("\n🔍 Verifying answer...")
+                verification = verify_answer(
+                    llm_response=response.response_text,
+                    expected_answer=question.answer,
+                    alternate_answer=getattr(question, 'alternate_answer', None)
+                )
+
+                # Display verification result without showing the full LLM response again
+                self.display_verification_result(verification, llm_response_text=None)
+
+                # Update verification stats
+                self.verification_stats["total"] += 1
+                if verification.verification_status == "correct":
+                    self.verification_stats["correct"] += 1
+                elif verification.verification_status == "incorrect":
+                    self.verification_stats["incorrect"] += 1
+                elif verification.verification_status == "unable_to_verify":
+                    self.verification_stats["unable_to_verify"] += 1
+
+                # Convert verification to dict for storage
+                verification_dict = {
+                    "extracted_answer": verification.extracted_answer,
+                    "extraction_method": verification.extraction_method,
+                    "extraction_confidence": verification.extraction_confidence,
+                    "extracted_type": verification.extracted_normalized.answer_type.value if verification.extracted_normalized else None,
+                    "expected_type": verification.expected_normalized.answer_type.value,
+                    "is_correct": verification.is_correct,
+                    "comparison_confidence": verification.comparison_confidence,
+                    "match_type": verification.match_type,
+                    "matched_answer": verification.matched_answer,
+                    "verification_status": verification.verification_status
+                }
+
             # Auto-save the result immediately after getting LLM response
-            print(f"💾 Auto-saving result for question {question.id}...")
-            print(f"   LLM Response length: {len(response.response_text)} characters")
-            print(f"   Success: {response.success}")
-            
-            result = QuestionResult.from_question_and_response(question, response)
-            
-            print(f"   Created QuestionResult: ID={result.question_id}, Success={result.success}")
-            
+            print(f"\n💾 Auto-saving result for question {question.id}...")
+
+            result = QuestionResult.from_question_and_response(question, response, verification_dict)
+
             if self.storage_manager.save_result(result):
                 print("✅ Result auto-saved successfully to data/results.json")
                 self.processed_count += 1

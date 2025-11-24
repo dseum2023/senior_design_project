@@ -25,13 +25,15 @@ class QuestionResult:
     success: bool
     error_message: Optional[str] = None
     model_used: str = ""
+    alternate_answer: Optional[str] = None
+    verification: Optional[Dict[str, Any]] = None
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for JSON serialization"""
         return asdict(self)
     
     @classmethod
-    def from_question_and_response(cls, question: Question, llm_response: LLMResponse) -> 'QuestionResult':
+    def from_question_and_response(cls, question: Question, llm_response: LLMResponse, verification: Optional[Dict[str, Any]] = None) -> 'QuestionResult':
         """Create QuestionResult from Question and LLMResponse objects"""
         return cls(
             question_id=question.id,
@@ -43,7 +45,9 @@ class QuestionResult:
             timestamp=datetime.now().isoformat(),
             success=llm_response.success,
             error_message=llm_response.error_message,
-            model_used=llm_response.model_used
+            model_used=llm_response.model_used,
+            alternate_answer=getattr(question, 'alternate_answer', None),
+            verification=verification
         )
 
 

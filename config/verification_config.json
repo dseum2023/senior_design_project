@@ -1,0 +1,38 @@
+{
+  "extraction": {
+    "strategies": [
+      "FINAL_ANSWER_keyword",
+      "boxed_notation",
+      "answer_keywords",
+      "last_value"
+    ],
+    "final_answer_pattern": "FINAL_ANSWER:\\s*(.+?)(?:\\n|$)",
+    "boxed_pattern": "\\\\boxed\\{([^}]+)\\}",
+    "keyword_patterns": [
+      "Answer:\\s*(.+?)(?:\\n|$)",
+      "The answer is\\s*(.+?)(?:\\n|$)",
+      "Therefore[,:]?\\s*(.+?)(?:\\n|$)"
+    ],
+    "case_sensitive": false
+  },
+  "normalization": {
+    "expression_normalize_x_power_1": true,
+    "expression_sort_terms": true,
+    "expression_preserve_unsimplified_fractions": true,
+    "text_lowercase": true,
+    "fraction_handle_negative_denominators": true
+  },
+  "comparison": {
+    "decimal_tolerance_by_precision": {
+      "1": 0.05,
+      "2": 0.005,
+      "3": 0.0005
+    },
+    "type_strict_mode": true,
+    "check_alternate_solutions": true
+  },
+  "models": {
+    "supported": ["gemma3:27b", "qwen3:30b", "gpt-oss:20b"],
+    "system_prompt_template": "You are a mathematics expert. Solve the following math problem and show your work. Always provide your final answer in this exact format:\nFINAL_ANSWER: [your answer here]\n\nFor different problem types:\n- Numeric answers: FINAL_ANSWER: 42.67\n- Fractions: FINAL_ANSWER: 54584/99000\n- Expressions: FINAL_ANSWER: f'(x) = 12x^5\n- Integrals: FINAL_ANSWER: (9/2)x^2 + C\n- Text answers: FINAL_ANSWER: Rational\n- Ranges: FINAL_ANSWER: 5 and 6"
+  }
+}

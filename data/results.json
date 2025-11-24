@@ -2,10 +2,10 @@
   "metadata": {
     "created": "2025-10-26T19:54:16.841042",
     "total_questions": 0,
-    "processed_questions": 5,
-    "successful_responses": 5,
+    "processed_questions": 13,
+    "successful_responses": 13,
     "failed_responses": 0,
-    "last_updated": "2025-11-03T16:11:51.925172"
+    "last_updated": "2025-11-23T21:06:58.201115"
   },
   "results": [
     {
@@ -18,7 +18,19 @@
       "timestamp": "2025-10-26T19:56:47.270537",
       "success": true,
       "error_message": null,
-      "model_used": "gpt-oss:20b"
+      "model_used": "gpt-oss:20b",
+      "verification": {
+        "extracted_answer": "-133",
+        "extraction_method": "boxed",
+        "extraction_confidence": 0.8,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
     },
     {
       "question_id": "2",
@@ -30,7 +42,19 @@
       "timestamp": "2025-10-26T20:06:51.080531",
       "success": true,
       "error_message": null,
-      "model_used": "gpt-oss:20b"
+      "model_used": "gpt-oss:20b",
+      "verification": {
+        "extracted_answer": "5",
+        "extraction_method": "boxed",
+        "extraction_confidence": 0.8,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
     },
     {
       "question_id": "3",
@@ -42,7 +66,19 @@
       "timestamp": "2025-10-26T21:43:47.099333",
       "success": true,
       "error_message": null,
-      "model_used": "gpt-oss:20b"
+      "model_used": "gpt-oss:20b",
+      "verification": {
+        "extracted_answer": "-29",
+        "extraction_method": "boxed",
+        "extraction_confidence": 0.8,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
     },
     {
       "question_id": "4",
@@ -54,7 +90,19 @@
       "timestamp": "2025-11-03T15:42:06.192852",
       "success": true,
       "error_message": null,
-      "model_used": "gpt-oss:20b"
+      "model_used": "gpt-oss:20b",
+      "verification": {
+        "extracted_answer": "20",
+        "extraction_method": "boxed",
+        "extraction_confidence": 0.8,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
     },
     {
       "question_id": "5",
@@ -66,7 +114,219 @@
       "timestamp": "2025-11-03T16:11:51.867899",
       "success": true,
       "error_message": null,
-      "model_used": "gpt-oss:20b"
+      "model_used": "gpt-oss:20b",
+      "verification": {
+        "extracted_answer": "-69",
+        "extraction_method": "boxed",
+        "extraction_confidence": 0.8,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "test_1",
+      "category": "test",
+      "question_text": "What is 2 + 2?",
+      "expected_answer": "4",
+      "llm_response": "FINAL_ANSWER: 4",
+      "processing_time": 47.73370289802551,
+      "timestamp": "2025-11-23T20:40:40.025506",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "4",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "6",
+      "category": "limits",
+      "question_text": "Find the limit: lim(s→-1) [6*s**4 + 8*s**3 - s**2 + 7*s + 2]",
+      "expected_answer": "-8",
+      "llm_response": "FINAL_ANSWER: -8",
+      "processing_time": 49.82054901123047,
+      "timestamp": "2025-11-23T20:45:11.342173",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "-8",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "7",
+      "category": "limits",
+      "question_text": "Find the limit: lim(v→-3) [-7*v**2 + 7*v - 3]",
+      "expected_answer": "-87",
+      "llm_response": "FINAL_ANSWER: -87",
+      "processing_time": 30.886589288711548,
+      "timestamp": "2025-11-23T20:48:42.050936",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "-87",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "8",
+      "category": "limits",
+      "question_text": "Find the limit: lim(u→1) [3*u**2 + 6*u - 5]",
+      "expected_answer": "4",
+      "llm_response": "FINAL_ANSWER: 4",
+      "processing_time": 24.953152894973755,
+      "timestamp": "2025-11-23T20:51:25.939161",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "4",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "9",
+      "category": "limits",
+      "question_text": "Find the limit: lim(s→0) [-8*s**2 - 10*s - 2]",
+      "expected_answer": "-2",
+      "llm_response": "FINAL_ANSWER: -2",
+      "processing_time": 24.601678609848022,
+      "timestamp": "2025-11-23T20:53:46.640692",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "-2",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "10",
+      "category": "limits",
+      "question_text": "Find the limit: lim(z→-5) [-7*z**3 - 4*z**2 + 6*z + 8]",
+      "expected_answer": "753",
+      "llm_response": "FINAL_ANSWER: 753",
+      "processing_time": 71.8710196018219,
+      "timestamp": "2025-11-23T20:59:17.903190",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "753",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "11",
+      "category": "limits",
+      "question_text": "Find the limit: lim(t→4) [-8*t**2 + 5*t + 7]",
+      "expected_answer": "-101",
+      "llm_response": "To find the limit of the polynomial \\(-8t^{2}+5t+7\\) as \\(t\\) approaches \\(4\\), we use the fact that polynomials are continuous everywhere. Therefore, the limit equals the value of the polynomial at \\(t=4\\).\n\n\\[\n\\begin{aligned}\n-8t^{2}+5t+7 \\bigg|_{t=4}\n&= -8(4)^{2}+5(4)+7 \\\\\n&= -8(16)+20+7 \\\\\n&= -128+27 \\\\\n&= -101.\n\\end{aligned}\n\\]\n\nThus,\n\n\\[\n\\lim_{t\\to 4}\\left(-8t^{2}+5t+7\\right) = -101.\n\\]\n\nFINAL_ANSWER: -101",
+      "processing_time": 79.86079001426697,
+      "timestamp": "2025-11-23T21:02:46.753946",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "-101",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "12",
+      "category": "limits",
+      "question_text": "Find the limit: lim(y→-1) [-7*y**4 - 8*y**3 + 2*y**2 + y - 4]",
+      "expected_answer": "-2",
+      "llm_response": "To find  \n\n\\[\n\\lim_{y\\to-1}\\bigl(-7y^{4}-8y^{3}+2y^{2}+y-4\\bigr)\n\\]\n\nnote that the expression is a polynomial, which is continuous everywhere.  \nTherefore the limit as \\(y\\) approaches \\(-1\\) is simply the value of the polynomial at \\(y=-1\\).\n\n**Substitute \\(y=-1\\):**\n\n1. \\(y^2 = (-1)^2 = 1\\)\n2. \\(y^3 = (-1)^3 = -1\\)\n3. \\(y^4 = (-1)^4 = 1\\)\n\nNow evaluate each term:\n\n\\[\n\\begin{aligned}\n-7y^4 &= -7(1) = -7,\\\\\n-8y^3 &= -8(-1) = +8,\\\\\n2y^2 &= 2(1) = +2,\\\\\ny &= -1,\\\\\n-4 &= -4.\n\\end{aligned}\n\\]\n\nAdd them together:\n\n\\[\n-7 + 8 + 2 - 1 - 4 = (-7+8) + (2-1) - 4 = 1 + 1 - 4 = -2.\n\\]\n\nThus the limit equals \\(-2\\).\n\n\\[\n\\boxed{-2}\n\\]\n\nFINAL_ANSWER: -2",
+      "processing_time": 123.40591049194336,
+      "timestamp": "2025-11-23T21:06:58.179559",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "-2",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
     }
   ]
 }
