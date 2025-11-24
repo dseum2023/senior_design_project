@@ -1,4 +1,4 @@
-# Calculus LLM Tester
+# BrainBench LLM Tester
 
 An interactive Python application that processes calculus questions from an XML dataset and queries a local LLM (gpt-oss:20b) via Ollama. The application processes questions one at a time with manual confirmation and stores results in JSON format.
 
