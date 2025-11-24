@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "created": "2025-10-26T19:54:16.841042",
+    "total_questions": 0,
+    "processed_questions": 5,
+    "successful_responses": 5,
+    "failed_responses": 0,
+    "last_updated": "2025-11-03T16:11:51.925172"
+  },
+  "results": [
+    {
+      "question_id": "1",
+      "category": "limits",
+      "question_text": "Find the limit: lim(x→-2) [-5*x**4 + x**3 - 6*x**2 + 10*x - 1]",
+      "expected_answer": "-133",
+      "llm_response": "Since the expression is a polynomial, it is continuous everywhere.  \nTherefore\n\n\\[\n\\lim_{x\\to-2}\\bigl(-5x^{4}+x^{3}-6x^{2}+10x-1\\bigr)\n= -5(-2)^{4}+(-2)^{3}-6(-2)^{2}+10(-2)-1 .\n\\]\n\nCompute each term:\n\n\\[\n\\begin{aligned}\n(-2)^{2} &= 4,\\\\\n(-2)^{3} &= -8,\\\\\n(-2)^{4} &= 16.\n\\end{aligned}\n\\]\n\nNow substitute:\n\n\\[\n\\begin{aligned}\n-5x^{4} &= -5(16) = -80,\\\\\nx^{3} &= -8,\\\\\n-6x^{2} &= -6(4) = -24,\\\\\n10x &= 10(-2) = -20,\\\\\n-1 &= -1.\n\\end{aligned}\n\\]\n\nAdd them:\n\n\\[\n-80-8-24-20-1 = -(80+8+24+20+1) = -133.\n\\]\n\n\\[\n\\boxed{-133}\n\\]",
+      "processing_time": 145.54859852790833,
+      "timestamp": "2025-10-26T19:56:47.270537",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b"
+    },
+    {
+      "question_id": "2",
+      "category": "limits",
+      "question_text": "Find the limit: lim(x→0) [6*x**2 - x + 5]",
+      "expected_answer": "5",
+      "llm_response": "To evaluate the limit\n\n\\[\n\\lim_{x\\to 0}\\bigl(6x^{2}-x+5\\bigr),\n\\]\n\nfollow these simple steps:\n\n1. **Recognize the function type**  \n   The expression \\(6x^{2}-x+5\\) is a polynomial.  \n   Polynomials are continuous everywhere on \\(\\mathbb{R}\\).\n\n2. **Apply the continuity property**  \n   For a continuous function \\(f(x)\\),  \n   \\[\n   \\lim_{x\\to a} f(x) = f(a).\n   \\]\n   Here \\(f(x)=6x^{2}-x+5\\) and \\(a=0\\).\n\n3. **Substitute \\(x=0\\) into the polynomial**  \n   \\[\n   f(0)=6(0)^{2}-0+5 = 0-0+5 = 5.\n   \\]\n\n4. **State the limit**  \n   \\[\n   \\boxed{5}\n   \\]\n\nSo, \\(\\displaystyle \\lim_{x\\to 0}\\bigl(6x^{2}-x+5\\bigr)=5.\\)",
+      "processing_time": 99.24539756774902,
+      "timestamp": "2025-10-26T20:06:51.080531",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b"
+    },
+    {
+      "question_id": "3",
+      "category": "limits",
+      "question_text": "Find the limit: lim(y→2) [-2*y**3 - 9*y**2 + 10*y + 3]",
+      "expected_answer": "-29",
+      "llm_response": "The expression  \n\n\\[\n-2y^{3}-9y^{2}+10y+3\n\\]\n\nis a polynomial.  \nPolynomials are continuous everywhere, so the limit as \\(y\\) approaches any real number is simply the value of the polynomial at that point.\n\n---\n\n### Step 1: Substitute \\(y = 2\\)\n\n\\[\n\\begin{aligned}\n-2(2)^{3} &- 9(2)^{2} + 10(2) + 3 \\\\\n&= -2(8) - 9(4) + 20 + 3 .\n\\end{aligned}\n\\]\n\n### Step 2: Compute each term\n\n\\[\n\\begin{aligned}\n-2(8) &= -16,\\\\\n-9(4) &= -36,\\\\\n10(2) &= 20.\n\\end{aligned}\n\\]\n\n### Step 3: Sum the terms\n\n\\[\n-16 - 36 + 20 + 3 = (-52) + 23 = -29.\n\\]\n\n---\n\n\\[\n\\boxed{-29}\n\\]",
+      "processing_time": 114.34636974334717,
+      "timestamp": "2025-10-26T21:43:47.099333",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b"
+    },
+    {
+      "question_id": "4",
+      "category": "limits",
+      "question_text": "Find the limit: lim(t→2) [3*t**4 - 6*t**3 + 4*t**2 - 2*t + 8]",
+      "expected_answer": "20",
+      "llm_response": "To find  \n\n\\[\n\\lim_{t\\to 2}\\bigl(3t^{4}-6t^{3}+4t^{2}-2t+8\\bigr)\n\\]\n\nnote that the expression is a polynomial.  \nPolynomials are continuous everywhere, so the limit as \\(t\\) approaches any real number is simply the value of the polynomial at that point.\n\n---\n\n### Step 1: Substitute \\(t = 2\\)\n\n\\[\n\\begin{aligned}\n3t^{4} &\\to 3(2)^{4}=3\\cdot 16=48,\\\\[4pt]\n-6t^{3} &\\to -6(2)^{3}=-6\\cdot 8=-48,\\\\[4pt]\n4t^{2} &\\to 4(2)^{2}=4\\cdot 4=16,\\\\[4pt]\n-2t &\\to -2(2)=-4,\\\\[4pt]\n+8 &\\to 8.\n\\end{aligned}\n\\]\n\n---\n\n### Step 2: Add the results\n\n\\[\n48 \\;-\\; 48 \\;+\\; 16 \\;-\\; 4 \\;+\\; 8\n= (48-48) + (16-4) + 8\n= 0 + 12 + 8\n= 20.\n\\]\n\n---\n\n\\[\n\\boxed{20}\n\\]",
+      "processing_time": 120.7962098121643,
+      "timestamp": "2025-11-03T15:42:06.192852",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b"
+    },
+    {
+      "question_id": "5",
+      "category": "limits",
+      "question_text": "Find the limit: lim(v→-2) [5*v**3 - 3*v**2 + 8*v - 1]",
+      "expected_answer": "-69",
+      "llm_response": "Since the expression  \n\n\\[\nf(v)=5v^{3}-3v^{2}+8v-1\n\\]\n\nis a polynomial, it is continuous everywhere.  \nTherefore the limit as \\(v\\) approaches any real number is simply the value of the polynomial at that point.\n\n\\[\n\\lim_{v\\to-2} f(v)=f(-2)\n\\]\n\nCompute \\(f(-2)\\):\n\n\\[\n\\begin{aligned}\nf(-2) &= 5(-2)^{3}-3(-2)^{2}+8(-2)-1\\\\[4pt]\n      &= 5(-8)-3(4)-16-1\\\\[4pt]\n      &= -40-12-16-1\\\\[4pt]\n      &= -69.\n\\end{aligned}\n\\]\n\n\\[\n\\boxed{-69}\n\\]",
+      "processing_time": 152.50971865653992,
+      "timestamp": "2025-11-03T16:11:51.867899",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b"
+    }
+  ]
+}
