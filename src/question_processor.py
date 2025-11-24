@@ -1,0 +1,282 @@
+"""
+Interactive Question Processor
+Handles the interactive processing of questions with manual confirmation
+"""
+
+import time
+from typing import List, Optional, Tuple
+from src.xml_parser import Question
+from src.ollama_client import OllamaClient, LLMResponse
+from src.storage import StorageManager, QuestionResult
+
+
+class QuestionProcessor:
+    """Interactive processor for calculus questions"""
+    
+    def __init__(self, ollama_client: OllamaClient, storage_manager: StorageManager):
+        self.ollama_client = ollama_client
+        self.storage_manager = storage_manager
+        self.current_question_index = 0
+        self.total_questions = 0
+        self.processed_count = 0
+        self.skipped_count = 0
+        self.failed_count = 0
+    
+    def initialize_session(self, questions: List[Question]) -> bool:
+        """
+        Initialize processing session
+        
+        Args:
+            questions: List of questions to process
+            
+        Returns:
+            bool: True if initialization successful
+        """
+        self.total_questions = len(questions)
+        
+        # Check Ollama connection
+        if not self.ollama_client.test_connection():
+            print("❌ Cannot connect to Ollama server. Please ensure Ollama is running.")
+            return False
+        
+        # Check model availability
+        if not self.ollama_client.check_model_availability():
+            print(f"❌ Model '{self.ollama_client.model}' is not available.")
+            print("Please ensure the model is installed in Ollama.")
+            return False
+        
+        print("✅ Ollama connection established")
+        print(f"✅ Model '{self.ollama_client.model}' is available")
+        
+        # Find starting point based on progress
+        processed_ids = self.storage_manager.get_processed_question_ids()
+        skipped_ids = self.storage_manager.get_skipped_question_ids()
+        
+        # Find first unprocessed question
+        for i, question in enumerate(questions):
+            if question.id not in processed_ids and question.id not in skipped_ids:
+                self.current_question_index = i
+                break
+        else:
+            # All questions have been processed or skipped
+            self.current_question_index = len(questions)
+        
+        self.processed_count = len(processed_ids)
+        self.skipped_count = len(skipped_ids)
+        
+        if self.current_question_index < len(questions):
+            print(f"📍 Resuming from question #{questions[self.current_question_index].id}")
+        else:
+            print("🎉 All questions have been processed!")
+        
+        return True
+    
+    def display_question(self, question: Question, question_number: int) -> None:
+        """Display a question in a formatted way"""
+        print("\n" + "="*80)
+        print(f"Question #{question.id} ({question_number}/{self.total_questions})")
+        print(f"Category: {question.category}")
+        print("-" * 80)
+        print(f"Question: {question.question_text}")
+        print(f"Expected Answer: {question.answer}")
+        print("="*80)
+    
+    def display_llm_response(self, response: LLMResponse) -> None:
+        """Display LLM response in a formatted way"""
+        print("\n" + "🤖 LLM Response:")
+        print("-" * 50)
+        if response.success:
+            print(response.response_text)
+            print(f"\n⏱️  Processing Time: {response.processing_time:.2f} seconds")
+            print(f"🔧 Model: {response.model_used}")
+        else:
+            print(f"❌ Error: {response.error_message}")
+            print(f"⏱️  Time: {response.processing_time:.2f} seconds")
+        print("-" * 50)
+    
+    def get_user_choice(self) -> str:
+        """Get user choice for next action"""
+        print("\nOptions:")
+        print("  [C] Continue to next question (result already saved)")
+        print("  [R] Retry this question with new LLM response")
+        print("  [Q] Quit and save progress")
+        print("  [I] Show progress info")
+        
+        while True:
+            choice = input("\nYour choice: ").strip().upper()
+            if choice in ['C', 'R', 'Q', 'I']:
+                return choice
+            print("Invalid choice. Please enter C, R, Q, or I.")
+    
+    def show_progress_info(self) -> None:
+        """Display current progress information"""
+        print("\n" + "📊 Progress Information:")
+        print("-" * 40)
+        print(f"Total Questions: {self.total_questions}")
+        print(f"Processed: {self.processed_count}")
+        print(f"Skipped: {self.skipped_count}")
+        print(f"Remaining: {self.total_questions - self.processed_count - self.skipped_count}")
+        
+        if self.total_questions > 0:
+            progress_percent = ((self.processed_count + self.skipped_count) / self.total_questions) * 100
+            print(f"Progress: {progress_percent:.1f}%")
+        
+        # Get detailed summary from storage
+        summary = self.storage_manager.get_results_summary()
+        if summary:
+            print(f"Successful Responses: {summary.get('successful', 0)}")
+            print(f"Failed Responses: {summary.get('failed', 0)}")
+            if summary.get('average_processing_time', 0) > 0:
+                print(f"Average Processing Time: {summary['average_processing_time']:.2f}s")
+        print("-" * 40)
+    
+    def _streaming_callback(self, chunk: str):
+        """Callback function for streaming LLM responses"""
+        print(chunk, end='', flush=True)
+    
+    def process_question(self, question: Question) -> Tuple[bool, bool]:
+        """
+        Process a single question
+        
+        Args:
+            question: Question to process
+            
+        Returns:
+            Tuple[bool, bool]: (continue_processing, question_was_processed)
+        """
+        question_number = self.current_question_index + 1
+        self.display_question(question, question_number)
+        
+        # Query the LLM once
+        response = None
+        
+        while True:
+            # Only query LLM if we don't have a response yet or user chose retry
+            if response is None:
+                # Query the LLM with streaming
+                print("\n🔄 Querying LLM...")
+                print("\n🤖 LLM Response (streaming):")
+                print("-" * 50)
+                
+                # Query with streaming callback to show real-time thinking
+                response = self.ollama_client.query_llm(
+                    question.question_text,
+                    stream_callback=self._streaming_callback
+                )
+                
+                print()  # New line after streaming content
+                print("-" * 50)
+                
+                # Display final response summary
+                if response.success:
+                    print(f"⏱️  Processing Time: {response.processing_time:.2f} seconds")
+                    print(f"🔧 Model: {response.model_used}")
+                else:
+                    print(f"❌ Error: {response.error_message}")
+                    print(f"⏱️  Time: {response.processing_time:.2f} seconds")
+                print("-" * 50)
+            
+            # Auto-save the result immediately after getting LLM response
+            print(f"💾 Auto-saving result for question {question.id}...")
+            print(f"   LLM Response length: {len(response.response_text)} characters")
+            print(f"   Success: {response.success}")
+            
+            result = QuestionResult.from_question_and_response(question, response)
+            
+            print(f"   Created QuestionResult: ID={result.question_id}, Success={result.success}")
+            
+            if self.storage_manager.save_result(result):
+                print("✅ Result auto-saved successfully to data/results.json")
+                self.processed_count += 1
+            else:
+                print("⚠️  Warning: Failed to auto-save result")
+            
+            # Get user choice
+            choice = self.get_user_choice()
+            
+            if choice == 'C':  # Continue
+                return True, True
+            
+            elif choice == 'R':  # Retry
+                print("🔄 Retrying question...")
+                response = None  # Reset response to trigger new LLM query
+                continue
+            
+            elif choice == 'Q':  # Quit
+                print("💾 Saving progress and exiting...")
+                return False, False
+            
+            elif choice == 'I':  # Info
+                self.show_progress_info()
+                # Don't reset response, just continue to ask for choice again
+                continue
+    
+    def process_questions(self, questions: List[Question]) -> None:
+        """
+        Process questions interactively
+        
+        Args:
+            questions: List of questions to process
+        """
+        if not self.initialize_session(questions):
+            return
+        
+        print(f"\n🚀 Starting interactive question processing")
+        print(f"📚 Total questions: {self.total_questions}")
+        
+        if self.current_question_index >= len(questions):
+            print("🎉 All questions have been processed or skipped!")
+            self.show_progress_info()
+            return
+        
+        # Process questions starting from current index
+        for i in range(self.current_question_index, len(questions)):
+            self.current_question_index = i
+            question = questions[i]
+            
+            continue_processing, question_processed = self.process_question(question)
+            
+            if not continue_processing:
+                break
+        
+        # Show final summary
+        print("\n🏁 Session Complete!")
+        self.show_progress_info()
+        
+        # Offer to export results
+        if self.processed_count > 0:
+            export_choice = input("\nWould you like to export results to CSV? (y/n): ").strip().lower()
+            if export_choice == 'y':
+                timestamp = time.strftime("%Y%m%d_%H%M%S")
+                csv_file = f"calculus_results_{timestamp}.csv"
+                if self.storage_manager.export_results_csv(csv_file):
+                    print(f"✅ Results exported to {csv_file}")
+                else:
+                    print("❌ Failed to export results")
+
+
+def main():
+    """Test the question processor"""
+    from src.xml_parser import XMLParser
+    
+    # Initialize components
+    parser = XMLParser('calculus_comprehensive_1000.xml')
+    ollama_client = OllamaClient()
+    storage_manager = StorageManager()
+    processor = QuestionProcessor(ollama_client, storage_manager)
+    
+    # Parse questions
+    try:
+        questions = parser.parse()
+        print(f"Loaded {len(questions)} questions")
+        
+        # Process first few questions for testing
+        test_questions = questions[:3]  # Only process first 3 for testing
+        processor.process_questions(test_questions)
+        
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+if __name__ == "__main__":
+    main()
