@@ -22,6 +22,46 @@ class AnswerType(Enum):
     UNKNOWN = "unknown"                # Unable to classify
 
 
+SUPERSCRIPT_MAP = {
+    "\u2070": "0",
+    "\u00b9": "1",
+    "\u00b2": "2",
+    "\u00b3": "3",
+    "\u2074": "4",
+    "\u2075": "5",
+    "\u2076": "6",
+    "\u2077": "7",
+    "\u2078": "8",
+    "\u2079": "9",
+    "\u207b": "-",
+}
+
+
+def _strip_math_wrappers(text: str) -> str:
+    """
+    Remove common surrounding wrappers from extracted math strings.
+    """
+    text = text.strip()
+
+    # $...$, \( ... \), \[ ... \]
+    if text.startswith("$") and text.endswith("$") and len(text) >= 2:
+        text = text[1:-1].strip()
+    if text.startswith(r"\(") and text.endswith(r"\)") and len(text) >= 4:
+        text = text[2:-2].strip()
+    if text.startswith(r"\[") and text.endswith(r"\]") and len(text) >= 4:
+        text = text[2:-2].strip()
+
+    # Strip one layer of outer braces/parentheses if they wrap the whole value.
+    if text.startswith("{") and text.endswith("}") and len(text) >= 2:
+        text = text[1:-1].strip()
+    if text.startswith("(") and text.endswith(")") and len(text) >= 2:
+        inner = text[1:-1].strip()
+        if re.match(r"^[^()]+$", inner):
+            text = inner
+
+    return text.strip()
+
+
 @dataclass
 class NormalizedAnswer:
     """Normalized answer with type information"""
@@ -46,7 +86,7 @@ def detect_answer_type(text: str) -> AnswerType:
     Returns:
         AnswerType enum value
     """
-    text = text.strip()
+    text = _strip_math_wrappers(text)
 
     # Expression patterns (check first - most specific)
     if "f'(x)" in text or "f(x)" in text or "+ C" in text or "·" in text:
@@ -64,8 +104,12 @@ def detect_answer_type(text: str) -> AnswerType:
     if " and " in text or re.match(r'^\d+,\s*\d+$', text):
         return AnswerType.RANGE
 
+    # LaTeX fraction pattern
+    if re.match(r'^[+-]?\s*\\frac\s*\{-?\d+\}\s*\{-?\d+\}$', text):
+        return AnswerType.FRACTION
+
     # Fraction pattern (numerator/denominator, can have negatives)
-    if re.match(r'^-?\d+/-?\d+$', text):
+    if re.match(r'^\(?\s*-?\d+\s*/\s*-?\d+\s*\)?$', text):
         return AnswerType.FRACTION
 
     # Decimal pattern (includes negative decimals)
@@ -105,8 +149,26 @@ def normalize_fraction(text: str) -> NormalizedAnswer:
 
     Note: Does NOT reduce to simplest form - that's done in comparison
     """
-    text = text.strip()
-    match = re.match(r'^(-?\d+)/(-?\d+)$', text)
+    original_text = text.strip()
+    text = _strip_math_wrappers(original_text)
+
+    # Parse pure LaTeX fractions: \frac{a}{b}
+    latex_match = re.match(r'^([+-]?)\s*\\frac\s*\{(-?\d+)\}\s*\{(-?\d+)\}$', text)
+    if latex_match:
+        sign = -1 if latex_match.group(1) == '-' else 1
+        numerator = sign * int(latex_match.group(2))
+        denominator = int(latex_match.group(3))
+        return NormalizedAnswer(
+            value=(numerator, denominator),
+            answer_type=AnswerType.FRACTION,
+            original_text=original_text
+        )
+
+    # Strip surrounding parentheses for forms like (1/2)
+    if text.startswith("(") and text.endswith(")"):
+        text = text[1:-1].strip()
+
+    match = re.match(r'^(-?\d+)\s*/\s*(-?\d+)$', text)
 
     if match:
         numerator = int(match.group(1))
@@ -115,16 +177,31 @@ def normalize_fraction(text: str) -> NormalizedAnswer:
         return NormalizedAnswer(
             value=(numerator, denominator),
             answer_type=AnswerType.FRACTION,
-            original_text=text
+            original_text=original_text
         )
 
     # Fallback - couldn't parse
     return NormalizedAnswer(
         value=text,
         answer_type=AnswerType.UNKNOWN,
-        original_text=text,
+        original_text=original_text,
         metadata={"error": "Could not parse fraction"}
     )
+
+
+def _normalize_unicode_superscripts(text: str) -> str:
+    """
+    Convert unicode superscripts to ^-style exponents.
+    Example: x³ -> x^3, x⁻² -> x^-2
+    """
+    superscript_chars = ''.join(SUPERSCRIPT_MAP.keys())
+
+    def repl(match):
+        chars = match.group(1)
+        converted = ''.join(SUPERSCRIPT_MAP[ch] for ch in chars)
+        return f"^{converted}"
+
+    return re.sub(rf'(?<=[A-Za-z0-9\)])([{re.escape(superscript_chars)}]+)', repl, text)
 
 
 def normalize_decimal(text: str) -> NormalizedAnswer:
@@ -210,6 +287,7 @@ def normalize_expression(text: str) -> NormalizedAnswer:
         "(9/2)x^2 + C" -> "(9/2)x^2 + C"
     """
     text = text.strip()
+    text = _normalize_unicode_superscripts(text)
 
     # Normalize common LaTeX expression forms
     # \frac{a}{b} -> (a/b), \cdot -> ·

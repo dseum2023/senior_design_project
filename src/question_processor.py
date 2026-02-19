@@ -263,9 +263,6 @@ class QuestionProcessor:
                     alternate_answer=getattr(question, 'alternate_answer', None)
                 )
 
-                # Display verification result without showing the full LLM response again
-                self.display_verification_result(verification, llm_response_text=None)
-
                 # Update verification stats
                 self.verification_stats["total"] += 1
                 if verification.verification_status == "correct":
@@ -274,6 +271,10 @@ class QuestionProcessor:
                     self.verification_stats["incorrect"] += 1
                 elif verification.verification_status == "unable_to_verify":
                     self.verification_stats["unable_to_verify"] += 1
+
+                # Display verification result without showing the full LLM response again
+                # after stats update so running accuracy reflects this question.
+                self.display_verification_result(verification, llm_response_text=None)
 
                 # Convert verification to dict for storage
                 verification_dict = {
@@ -414,8 +415,6 @@ class QuestionProcessor:
                     expected_answer=question.answer,
                     alternate_answer=getattr(question, 'alternate_answer', None)
                 )
-                self.display_verification_result(verification, llm_response_text=None)
-
                 self.verification_stats["total"] += 1
                 if verification.verification_status == "correct":
                     self.verification_stats["correct"] += 1
@@ -423,6 +422,9 @@ class QuestionProcessor:
                     self.verification_stats["incorrect"] += 1
                 elif verification.verification_status == "unable_to_verify":
                     self.verification_stats["unable_to_verify"] += 1
+
+                # Show verification after stat update so running accuracy is in sync.
+                self.display_verification_result(verification, llm_response_text=None)
 
                 verification_dict = {
                     "extracted_answer": verification.extracted_answer,
