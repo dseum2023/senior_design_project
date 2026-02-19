@@ -363,6 +363,91 @@ class QuestionProcessor:
                 else:
                     print("❌ Failed to export results")
 
+    def process_questions_auto(self, questions: List[Question]) -> None:
+        """
+        Process questions automatically and sequentially without per-question prompts
+
+        Args:
+            questions: List of questions to process
+        """
+        if not self.initialize_session(questions):
+            return
+
+        print(f"\n🚀 Starting automatic sequential processing")
+        print(f"📚 Total questions: {self.total_questions}")
+
+        if self.current_question_index >= len(questions):
+            print("🎉 All questions have been processed or skipped!")
+            self.show_progress_info()
+            return
+
+        for i in range(self.current_question_index, len(questions)):
+            self.current_question_index = i
+            question = questions[i]
+
+            question_number = self.current_question_index + 1
+            self.display_question(question, question_number)
+
+            print("\n🔄 Querying LLM...")
+            print("\n🤖 LLM Response (streaming):")
+            print("-" * 50)
+            response = self.ollama_client.query_llm(
+                question.question_text,
+                stream_callback=self._streaming_callback
+            )
+            print()
+            print("-" * 50)
+
+            if response.success:
+                print(f"⏱️  Processing Time: {response.processing_time:.2f} seconds")
+                print(f"🔧 Model: {response.model_used}")
+            else:
+                print(f"❌ Error: {response.error_message}")
+                print(f"⏱️  Time: {response.processing_time:.2f} seconds")
+            print("-" * 50)
+
+            verification_dict = None
+            if response.success:
+                print("\n🔍 Verifying answer...")
+                verification = verify_answer(
+                    llm_response=response.response_text,
+                    expected_answer=question.answer,
+                    alternate_answer=getattr(question, 'alternate_answer', None)
+                )
+                self.display_verification_result(verification, llm_response_text=None)
+
+                self.verification_stats["total"] += 1
+                if verification.verification_status == "correct":
+                    self.verification_stats["correct"] += 1
+                elif verification.verification_status == "incorrect":
+                    self.verification_stats["incorrect"] += 1
+                elif verification.verification_status == "unable_to_verify":
+                    self.verification_stats["unable_to_verify"] += 1
+
+                verification_dict = {
+                    "extracted_answer": verification.extracted_answer,
+                    "extraction_method": verification.extraction_method,
+                    "extraction_confidence": verification.extraction_confidence,
+                    "extracted_type": verification.extracted_normalized.answer_type.value if verification.extracted_normalized else None,
+                    "expected_type": verification.expected_normalized.answer_type.value,
+                    "is_correct": verification.is_correct,
+                    "comparison_confidence": verification.comparison_confidence,
+                    "match_type": verification.match_type,
+                    "matched_answer": verification.matched_answer,
+                    "verification_status": verification.verification_status
+                }
+
+            print(f"\n💾 Auto-saving result for question {question.id}...")
+            result = QuestionResult.from_question_and_response(question, response, verification_dict)
+            if self.storage_manager.save_result(result):
+                print("✅ Result auto-saved successfully to data/results.json")
+                self.processed_count += 1
+            else:
+                print("⚠️  Warning: Failed to auto-save result")
+
+        print("\n🏁 Automatic session complete!")
+        self.show_progress_info()
+
 
 def main():
     """Test the question processor"""

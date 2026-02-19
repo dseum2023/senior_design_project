@@ -1,0 +1,5409 @@
+{
+  "metadata": {
+    "name": "",
+    "total_problems": 0
+  },
+  "questions": [
+    {
+      "id": "1",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -4)^4",
+      "expected_answer": "f'(x) = 4(4x + -4)^3 · 4"
+    },
+    {
+      "id": "2",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^5",
+      "expected_answer": "f'(x) = 15x^4"
+    },
+    {
+      "id": "3",
+      "category": "Calculus I",
+      "question": "integral of 4x^6 dx",
+      "expected_answer": "(4/7)x^7 + C"
+    },
+    {
+      "id": "4",
+      "category": "Calculus I",
+      "question": "integral of 4sin(x) dx",
+      "expected_answer": "-4cos(x) + C"
+    },
+    {
+      "id": "5",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 4",
+      "expected_answer": "32"
+    },
+    {
+      "id": "6",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + -4x + 1",
+      "expected_answer": "x = 0.5"
+    },
+    {
+      "id": "7",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^2 + 4x^5 + 2",
+      "expected_answer": "f'(x) = 6x^1 + 20x^4"
+    },
+    {
+      "id": "8",
+      "category": "Calculus I",
+      "question": "integral of 7x^2 dx",
+      "expected_answer": "(7/3)x^3 + C"
+    },
+    {
+      "id": "9",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + 3)^5",
+      "expected_answer": "f'(x) = 5(4x + 3)^4 · 4"
+    },
+    {
+      "id": "10",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^5 + 3x^3 + -5",
+      "expected_answer": "f'(x) = 40x^4 + 9x^2"
+    },
+    {
+      "id": "11",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^3",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "12",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -4)^4",
+      "expected_answer": "f'(x) = 4(3x + -4)^3 · 3"
+    },
+    {
+      "id": "13",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 4)^6",
+      "expected_answer": "f'(x) = 6(5x + 4)^5 · 5"
+    },
+    {
+      "id": "14",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^10",
+      "expected_answer": "f'(x) = 80x^9"
+    },
+    {
+      "id": "15",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^9",
+      "expected_answer": "f'(x) = 81x^8"
+    },
+    {
+      "id": "16",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 0x + 10",
+      "expected_answer": "x = 0.0"
+    },
+    {
+      "id": "17",
+      "category": "Calculus I",
+      "question": "integral of 2x^8 dx",
+      "expected_answer": "(2/9)x^9 + C"
+    },
+    {
+      "id": "18",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "19",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^2",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "20",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + -9x + -5",
+      "expected_answer": "x = 0.9"
+    },
+    {
+      "id": "21",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^3 / 1x^3]",
+      "expected_answer": "4.0"
+    },
+    {
+      "id": "22",
+      "category": "Calculus I",
+      "question": "integral of 1x^6 dx",
+      "expected_answer": "(1/7)x^7 + C"
+    },
+    {
+      "id": "23",
+      "category": "Calculus I",
+      "question": "integral of 4x^1 dx",
+      "expected_answer": "(4/2)x^2 + C"
+    },
+    {
+      "id": "24",
+      "category": "Calculus I",
+      "question": "integral of 9x^3 dx",
+      "expected_answer": "(9/4)x^4 + C"
+    },
+    {
+      "id": "25",
+      "category": "Calculus I",
+      "question": "integral of 8x^7 dx",
+      "expected_answer": "(8/8)x^8 + C"
+    },
+    {
+      "id": "26",
+      "category": "Calculus I",
+      "question": "integral of 3sin(x) dx",
+      "expected_answer": "-3cos(x) + C"
+    },
+    {
+      "id": "27",
+      "category": "Calculus I",
+      "question": "lim(x->4) [1x^2 + -5x + 10]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "28",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^3",
+      "expected_answer": "f'(x) = 1x^0"
+    },
+    {
+      "id": "29",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 7 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "263.89"
+    },
+    {
+      "id": "30",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -3",
+      "expected_answer": "-30"
+    },
+    {
+      "id": "31",
+      "category": "Calculus I",
+      "question": "integral of 2cos(x) dx",
+      "expected_answer": "2sin(x) + C"
+    },
+    {
+      "id": "32",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^4",
+      "expected_answer": "f'(x) = 1x^0"
+    },
+    {
+      "id": "33",
+      "category": "Calculus I",
+      "question": "integral of 8x^8 dx",
+      "expected_answer": "(8/9)x^9 + C"
+    },
+    {
+      "id": "34",
+      "category": "Calculus I",
+      "question": "integral of 9x^2 dx",
+      "expected_answer": "(9/3)x^3 + C"
+    },
+    {
+      "id": "35",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 3x + 10",
+      "expected_answer": "x = -0.75"
+    },
+    {
+      "id": "36",
+      "category": "Calculus I",
+      "question": "integral of 2sin(x) dx",
+      "expected_answer": "-2cos(x) + C"
+    },
+    {
+      "id": "37",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^5 + 1x^3 + 9",
+      "expected_answer": "f'(x) = 35x^4 + 3x^2"
+    },
+    {
+      "id": "38",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^5",
+      "expected_answer": "f'(x) = 10x^4"
+    },
+    {
+      "id": "39",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^2 + 2x^2 + -9",
+      "expected_answer": "f'(x) = 4x^1 + 4x^1"
+    },
+    {
+      "id": "40",
+      "category": "Calculus I",
+      "question": "lim(x->-1) [4x^2 + 2x + -9]",
+      "expected_answer": "-7"
+    },
+    {
+      "id": "41",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^8",
+      "expected_answer": "f'(x) = 16x^7"
+    },
+    {
+      "id": "42",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = 5",
+      "expected_answer": "10"
+    },
+    {
+      "id": "43",
+      "category": "Calculus I",
+      "question": "integral of 10x^3 dx",
+      "expected_answer": "(10/4)x^4 + C"
+    },
+    {
+      "id": "44",
+      "category": "Calculus I",
+      "question": "integral of 5sin(x) dx",
+      "expected_answer": "-5cos(x) + C"
+    },
+    {
+      "id": "45",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^1",
+      "expected_answer": "f'(x) = 1x^0"
+    },
+    {
+      "id": "46",
+      "category": "Calculus I",
+      "question": "lim(x->10) [2x^2 + -6x + -10]",
+      "expected_answer": "130"
+    },
+    {
+      "id": "47",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^4 + 2x^5 + -5",
+      "expected_answer": "f'(x) = 24x^3 + 10x^4"
+    },
+    {
+      "id": "48",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 2)^6",
+      "expected_answer": "f'(x) = 6(5x + 2)^5 · 5"
+    },
+    {
+      "id": "49",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^2",
+      "expected_answer": "f'(x) = 12x^1"
+    },
+    {
+      "id": "50",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 2 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "51",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4 + 1x^5 + 4",
+      "expected_answer": "f'(x) = 12x^3 + 5x^4"
+    },
+    {
+      "id": "52",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -4)^6",
+      "expected_answer": "f'(x) = 6(2x + -4)^5 · 2"
+    },
+    {
+      "id": "53",
+      "category": "Calculus I",
+      "question": "integral from 2 to 3 of 3x^1 dx",
+      "expected_answer": "7.5"
+    },
+    {
+      "id": "54",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + -3x + 10",
+      "expected_answer": "x = 0.75"
+    },
+    {
+      "id": "55",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4 + 1x^2 + 6",
+      "expected_answer": "f'(x) = 12x^3 + 2x^1"
+    },
+    {
+      "id": "56",
+      "category": "Calculus I",
+      "question": "integral from 0 to 2 of 4x^3 dx",
+      "expected_answer": "16.0"
+    },
+    {
+      "id": "57",
+      "category": "Calculus I",
+      "question": "integral from 0 to 1 of 3x^3 dx",
+      "expected_answer": "0.75"
+    },
+    {
+      "id": "58",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "59",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 5 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "125.66"
+    },
+    {
+      "id": "60",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 3)^3",
+      "expected_answer": "f'(x) = 3(3x + 3)^2 · 3"
+    },
+    {
+      "id": "61",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^1",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "62",
+      "category": "Calculus I",
+      "question": "lim(x->6) [5x^2 + 1x + 9]",
+      "expected_answer": "195"
+    },
+    {
+      "id": "63",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "64",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + 4)^6",
+      "expected_answer": "f'(x) = 6(4x + 4)^5 · 4"
+    },
+    {
+      "id": "65",
+      "category": "Calculus I",
+      "question": "integral from 2 to 6 of 4x^4 dx",
+      "expected_answer": "6195.2"
+    },
+    {
+      "id": "66",
+      "category": "Calculus I",
+      "question": "integral of 2x^7 dx",
+      "expected_answer": "(2/8)x^8 + C"
+    },
+    {
+      "id": "67",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^4",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "68",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^4 + 2x^2 + -4",
+      "expected_answer": "f'(x) = 32x^3 + 4x^1"
+    },
+    {
+      "id": "69",
+      "category": "Calculus I",
+      "question": "lim(x->7) [3x^2 + 1x + 7]",
+      "expected_answer": "161"
+    },
+    {
+      "id": "70",
+      "category": "Calculus I",
+      "question": "integral of 1x^3 dx",
+      "expected_answer": "(1/4)x^4 + C"
+    },
+    {
+      "id": "71",
+      "category": "Calculus I",
+      "question": "integral from 1 to 4 of 3x^3 dx",
+      "expected_answer": "191.25"
+    },
+    {
+      "id": "72",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 2 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "25.13"
+    },
+    {
+      "id": "73",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 2x^2 dx",
+      "expected_answer": "126.0"
+    },
+    {
+      "id": "74",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "75",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "76",
+      "category": "Calculus I",
+      "question": "integral of 8x^7 dx",
+      "expected_answer": "(8/8)x^8 + C"
+    },
+    {
+      "id": "77",
+      "category": "Calculus I",
+      "question": "integral of 7x^8 dx",
+      "expected_answer": "(7/9)x^9 + C"
+    },
+    {
+      "id": "78",
+      "category": "Calculus I",
+      "question": "integral from 3 to 8 of 5x^4 dx",
+      "expected_answer": "32525.0"
+    },
+    {
+      "id": "79",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -1)^6",
+      "expected_answer": "f'(x) = 6(5x + -1)^5 · 5"
+    },
+    {
+      "id": "80",
+      "category": "Calculus I",
+      "question": "f(x) = x^1 / x^2",
+      "expected_answer": "f'(x) = -1x^-2"
+    },
+    {
+      "id": "81",
+      "category": "Calculus I",
+      "question": "lim(x->2) [(x^2 - 4) / (x - 2)]",
+      "expected_answer": "4"
+    },
+    {
+      "id": "82",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^3 + 5x^2 + -3",
+      "expected_answer": "f'(x) = 18x^2 + 10x^1"
+    },
+    {
+      "id": "83",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^2 + 2x^2 + 0",
+      "expected_answer": "f'(x) = 10x^1 + 4x^1"
+    },
+    {
+      "id": "84",
+      "category": "Calculus I",
+      "question": "integral of 4x^4 dx",
+      "expected_answer": "(4/5)x^5 + C"
+    },
+    {
+      "id": "85",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "86",
+      "category": "Calculus I",
+      "question": "integral from 1 to 4 of 1x^1 dx",
+      "expected_answer": "7.5"
+    },
+    {
+      "id": "87",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "88",
+      "category": "Calculus I",
+      "question": "lim(x->-2) [4x^2 + -8x + -6]",
+      "expected_answer": "26"
+    },
+    {
+      "id": "89",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -4)^6",
+      "expected_answer": "f'(x) = 6(4x + -4)^5 · 4"
+    },
+    {
+      "id": "90",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^2 + 6x^4 + -3",
+      "expected_answer": "f'(x) = 16x^1 + 24x^3"
+    },
+    {
+      "id": "91",
+      "category": "Calculus I",
+      "question": "integral of 8x^6 dx",
+      "expected_answer": "(8/7)x^7 + C"
+    },
+    {
+      "id": "92",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "93",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^2",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "94",
+      "category": "Calculus I",
+      "question": "lim(x->-8) [1x^2 + -5x + 0]",
+      "expected_answer": "104"
+    },
+    {
+      "id": "95",
+      "category": "Calculus I",
+      "question": "lim(x->-7) [3x^2 + 1x + -5]",
+      "expected_answer": "135"
+    },
+    {
+      "id": "96",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -1)^6",
+      "expected_answer": "f'(x) = 6(2x + -1)^5 · 2"
+    },
+    {
+      "id": "97",
+      "category": "Calculus I",
+      "question": "lim(x->2) [(x^2 - 4) / (x - 2)]",
+      "expected_answer": "4"
+    },
+    {
+      "id": "98",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 2x + -8",
+      "expected_answer": "x = -0.33"
+    },
+    {
+      "id": "99",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^2 / 5x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "100",
+      "category": "Calculus I",
+      "question": "integral from 2 to 3 of 3x^1 dx",
+      "expected_answer": "7.5"
+    },
+    {
+      "id": "101",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "102",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^9",
+      "expected_answer": "f'(x) = 18x^8"
+    },
+    {
+      "id": "103",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^2 + 1x^4 + 6",
+      "expected_answer": "f'(x) = 8x^1 + 4x^3"
+    },
+    {
+      "id": "104",
+      "category": "Calculus I",
+      "question": "integral from 3 to 4 of 3x^1 dx",
+      "expected_answer": "10.5"
+    },
+    {
+      "id": "105",
+      "category": "Calculus I",
+      "question": "integral from 3 to 7 of 5x^2 dx",
+      "expected_answer": "526.67"
+    },
+    {
+      "id": "106",
+      "category": "Calculus I",
+      "question": "f(x) = x^1 / x^1",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "107",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^2 + 2x^4 + -10",
+      "expected_answer": "f'(x) = 10x^1 + 8x^3"
+    },
+    {
+      "id": "108",
+      "category": "Calculus I",
+      "question": "integral of 5cos(x) dx",
+      "expected_answer": "5sin(x) + C"
+    },
+    {
+      "id": "109",
+      "category": "Calculus I",
+      "question": "integral of 1x^7 dx",
+      "expected_answer": "(1/8)x^8 + C"
+    },
+    {
+      "id": "110",
+      "category": "Calculus I",
+      "question": "integral from 1 to 6 of 3x^1 dx",
+      "expected_answer": "52.5"
+    },
+    {
+      "id": "111",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 9 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "226.19"
+    },
+    {
+      "id": "112",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + -10x + -5",
+      "expected_answer": "x = 1.67"
+    },
+    {
+      "id": "113",
+      "category": "Calculus I",
+      "question": "integral from 2 to 7 of 2x^3 dx",
+      "expected_answer": "1192.5"
+    },
+    {
+      "id": "114",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 3x^1 dx",
+      "expected_answer": "40.5"
+    },
+    {
+      "id": "115",
+      "category": "Calculus I",
+      "question": "integral from 0 to 5 of 4x^3 dx",
+      "expected_answer": "625.0"
+    },
+    {
+      "id": "116",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 5x + 8",
+      "expected_answer": "x = -0.62"
+    },
+    {
+      "id": "117",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^4 + 5x^5 + -8",
+      "expected_answer": "f'(x) = 24x^3 + 25x^4"
+    },
+    {
+      "id": "118",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "119",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -5)^2",
+      "expected_answer": "f'(x) = 2(3x + -5)^1 · 3"
+    },
+    {
+      "id": "120",
+      "category": "Calculus I",
+      "question": "lim(x->10) [4x^2 + 6x + -2]",
+      "expected_answer": "458"
+    },
+    {
+      "id": "121",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^3",
+      "expected_answer": "f'(x) = 12x^2"
+    },
+    {
+      "id": "122",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "123",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "124",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^8",
+      "expected_answer": "f'(x) = 32x^7"
+    },
+    {
+      "id": "125",
+      "category": "Calculus I",
+      "question": "lim(x->10) [4x^2 + 2x + 2]",
+      "expected_answer": "422"
+    },
+    {
+      "id": "126",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "127",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 2x + 3",
+      "expected_answer": "x = -0.5"
+    },
+    {
+      "id": "128",
+      "category": "Calculus I",
+      "question": "integral of 2sin(x) dx",
+      "expected_answer": "-2cos(x) + C"
+    },
+    {
+      "id": "129",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^4",
+      "expected_answer": "f'(x) = 8x^3"
+    },
+    {
+      "id": "130",
+      "category": "Calculus I",
+      "question": "lim(x->4) [(x^2 - 16) / (x - 4)]",
+      "expected_answer": "8"
+    },
+    {
+      "id": "131",
+      "category": "Calculus I",
+      "question": "lim(x->-10) [3x^2 + 1x + -3]",
+      "expected_answer": "287"
+    },
+    {
+      "id": "132",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^9",
+      "expected_answer": "f'(x) = 45x^8"
+    },
+    {
+      "id": "133",
+      "category": "Calculus I",
+      "question": "integral from 0 to 2 of 5x^2 dx",
+      "expected_answer": "13.33"
+    },
+    {
+      "id": "134",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + -1x + 6",
+      "expected_answer": "x = 0.17"
+    },
+    {
+      "id": "135",
+      "category": "Calculus I",
+      "question": "integral from 1 to 2 of 1x^2 dx",
+      "expected_answer": "2.33"
+    },
+    {
+      "id": "136",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^6",
+      "expected_answer": "f'(x) = 30x^5"
+    },
+    {
+      "id": "137",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 4)^5",
+      "expected_answer": "f'(x) = 5(3x + 4)^4 · 3"
+    },
+    {
+      "id": "138",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^2 / 5x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "139",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 2)^6",
+      "expected_answer": "f'(x) = 6(2x + 2)^5 · 2"
+    },
+    {
+      "id": "140",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 0x + -9",
+      "expected_answer": "x = 0.0"
+    },
+    {
+      "id": "141",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 5x + -8",
+      "expected_answer": "x = -0.83"
+    },
+    {
+      "id": "142",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "143",
+      "category": "Calculus I",
+      "question": "integral from 2 to 4 of 5x^3 dx",
+      "expected_answer": "300.0"
+    },
+    {
+      "id": "144",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4 + 3x^2 + 8",
+      "expected_answer": "f'(x) = 12x^3 + 6x^1"
+    },
+    {
+      "id": "145",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "146",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 1x + 10",
+      "expected_answer": "x = -0.17"
+    },
+    {
+      "id": "147",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 6x + -6",
+      "expected_answer": "x = -0.75"
+    },
+    {
+      "id": "148",
+      "category": "Calculus I",
+      "question": "integral of 2x^1 dx",
+      "expected_answer": "(2/2)x^2 + C"
+    },
+    {
+      "id": "149",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + -5x + -6",
+      "expected_answer": "x = 0.83"
+    },
+    {
+      "id": "150",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -2)^3",
+      "expected_answer": "f'(x) = 3(5x + -2)^2 · 5"
+    },
+    {
+      "id": "151",
+      "category": "Calculus I",
+      "question": "integral of 4x^6 dx",
+      "expected_answer": "(4/7)x^7 + C"
+    },
+    {
+      "id": "152",
+      "category": "Calculus I",
+      "question": "integral from 1 to 3 of 2x^3 dx",
+      "expected_answer": "40.0"
+    },
+    {
+      "id": "153",
+      "category": "Calculus I",
+      "question": "integral from 2 to 4 of 2x^4 dx",
+      "expected_answer": "396.8"
+    },
+    {
+      "id": "154",
+      "category": "Calculus I",
+      "question": "integral of 10x^2 dx",
+      "expected_answer": "(10/3)x^3 + C"
+    },
+    {
+      "id": "155",
+      "category": "Calculus I",
+      "question": "integral of 3x^2 dx",
+      "expected_answer": "(3/3)x^3 + C"
+    },
+    {
+      "id": "156",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -5)^2",
+      "expected_answer": "f'(x) = 2(2x + -5)^1 · 2"
+    },
+    {
+      "id": "157",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "158",
+      "category": "Calculus I",
+      "question": "integral of 5x^8 dx",
+      "expected_answer": "(5/9)x^9 + C"
+    },
+    {
+      "id": "159",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 7x + -4",
+      "expected_answer": "x = -0.88"
+    },
+    {
+      "id": "160",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "161",
+      "category": "Calculus I",
+      "question": "integral from 0 to 8 of 2x^2 dx",
+      "expected_answer": "341.33"
+    },
+    {
+      "id": "162",
+      "category": "Calculus I",
+      "question": "integral of 2x^4 dx",
+      "expected_answer": "(2/5)x^5 + C"
+    },
+    {
+      "id": "163",
+      "category": "Calculus I",
+      "question": "lim(x->10) [3x^2 + 1x + 9]",
+      "expected_answer": "319"
+    },
+    {
+      "id": "164",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 2)^2",
+      "expected_answer": "f'(x) = 2(2x + 2)^1 · 2"
+    },
+    {
+      "id": "165",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^3 / 5x^3]",
+      "expected_answer": "0.2"
+    },
+    {
+      "id": "166",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "167",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "168",
+      "category": "Calculus I",
+      "question": "lim(x->-1) [2x^2 + -5x + 0]",
+      "expected_answer": "7"
+    },
+    {
+      "id": "169",
+      "category": "Calculus I",
+      "question": "lim(x->10) [4x^2 + 2x + 0]",
+      "expected_answer": "420"
+    },
+    {
+      "id": "170",
+      "category": "Calculus I",
+      "question": "f(x) = x^1 / x^4",
+      "expected_answer": "f'(x) = -3x^-4"
+    },
+    {
+      "id": "171",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -3)^6",
+      "expected_answer": "f'(x) = 6(4x + -3)^5 · 4"
+    },
+    {
+      "id": "172",
+      "category": "Calculus I",
+      "question": "integral of 10x^6 dx",
+      "expected_answer": "(10/7)x^7 + C"
+    },
+    {
+      "id": "173",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "174",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -3)^2",
+      "expected_answer": "f'(x) = 2(3x + -3)^1 · 3"
+    },
+    {
+      "id": "175",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^4",
+      "expected_answer": "f'(x) = -2x^-3"
+    },
+    {
+      "id": "176",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "150.8"
+    },
+    {
+      "id": "177",
+      "category": "Calculus I",
+      "question": "integral of 8x^2 dx",
+      "expected_answer": "(8/3)x^3 + C"
+    },
+    {
+      "id": "178",
+      "category": "Calculus I",
+      "question": "integral from 1 to 8 of 4x^2 dx",
+      "expected_answer": "681.33"
+    },
+    {
+      "id": "179",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "180",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + -9x + -9",
+      "expected_answer": "x = 1.12"
+    },
+    {
+      "id": "181",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + 2)^2",
+      "expected_answer": "f'(x) = 2(4x + 2)^1 · 4"
+    },
+    {
+      "id": "182",
+      "category": "Calculus I",
+      "question": "integral from 1 to 3 of 5x^2 dx",
+      "expected_answer": "43.33"
+    },
+    {
+      "id": "183",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 3)^4",
+      "expected_answer": "f'(x) = 4(5x + 3)^3 · 5"
+    },
+    {
+      "id": "184",
+      "category": "Calculus I",
+      "question": "integral of 6x^6 dx",
+      "expected_answer": "(6/7)x^7 + C"
+    },
+    {
+      "id": "185",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^2 / 4x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "186",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "187",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 2x^3 dx",
+      "expected_answer": "607.5"
+    },
+    {
+      "id": "188",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^3 + 5x^2 + -3",
+      "expected_answer": "f'(x) = 3x^2 + 10x^1"
+    },
+    {
+      "id": "189",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^2 + 2x^4 + 0",
+      "expected_answer": "f'(x) = 6x^1 + 8x^3"
+    },
+    {
+      "id": "190",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 2)^6",
+      "expected_answer": "f'(x) = 6(2x + 2)^5 · 2"
+    },
+    {
+      "id": "191",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 2 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "62.83"
+    },
+    {
+      "id": "192",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "193",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 5x + -8",
+      "expected_answer": "x = -1.25"
+    },
+    {
+      "id": "194",
+      "category": "Calculus I",
+      "question": "integral from 2 to 6 of 2x^2 dx",
+      "expected_answer": "138.67"
+    },
+    {
+      "id": "195",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "196",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 / x^3",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "197",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [1x^2 + -7x + 2]",
+      "expected_answer": "62"
+    },
+    {
+      "id": "198",
+      "category": "Calculus I",
+      "question": "integral of 7x^7 dx",
+      "expected_answer": "(7/8)x^8 + C"
+    },
+    {
+      "id": "199",
+      "category": "Calculus I",
+      "question": "integral from 1 to 3 of 5x^1 dx",
+      "expected_answer": "20.0"
+    },
+    {
+      "id": "200",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 4x^1 dx",
+      "expected_answer": "120.0"
+    },
+    {
+      "id": "201",
+      "category": "Calculus I",
+      "question": "integral of 9x^5 dx",
+      "expected_answer": "(9/6)x^6 + C"
+    },
+    {
+      "id": "202",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^4",
+      "expected_answer": "f'(x) = 1x^0"
+    },
+    {
+      "id": "203",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "204",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^9",
+      "expected_answer": "f'(x) = 81x^8"
+    },
+    {
+      "id": "205",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 5 cm/s. Find the rate of change of the area when r = 3 cm. Use pi = 3.14159.",
+      "expected_answer": "94.25"
+    },
+    {
+      "id": "206",
+      "category": "Calculus I",
+      "question": "integral of 3x^6 dx",
+      "expected_answer": "(3/7)x^7 + C"
+    },
+    {
+      "id": "207",
+      "category": "Calculus I",
+      "question": "lim(x->-2) [5x^2 + -8x + 0]",
+      "expected_answer": "36"
+    },
+    {
+      "id": "208",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = -5",
+      "expected_answer": "-40"
+    },
+    {
+      "id": "209",
+      "category": "Calculus I",
+      "question": "lim(x->0) [2x^2 + 2x + -8]",
+      "expected_answer": "-8"
+    },
+    {
+      "id": "210",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^3 + 7x^4 + 5",
+      "expected_answer": "f'(x) = 18x^2 + 28x^3"
+    },
+    {
+      "id": "211",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^3 / 3x^3]",
+      "expected_answer": "1.0"
+    },
+    {
+      "id": "212",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "213",
+      "category": "Calculus I",
+      "question": "integral of 3x^1 dx",
+      "expected_answer": "(3/2)x^2 + C"
+    },
+    {
+      "id": "214",
+      "category": "Calculus I",
+      "question": "lim(x->3) [2x^2 + 6x + 2]",
+      "expected_answer": "38"
+    },
+    {
+      "id": "215",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^3",
+      "expected_answer": "f'(x) = 30x^2"
+    },
+    {
+      "id": "216",
+      "category": "Calculus I",
+      "question": "integral from 3 to 4 of 2x^1 dx",
+      "expected_answer": "7.0"
+    },
+    {
+      "id": "217",
+      "category": "Calculus I",
+      "question": "lim(x->4) [(x^2 - 16) / (x - 4)]",
+      "expected_answer": "8"
+    },
+    {
+      "id": "218",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^4 + 1x^2 + -9",
+      "expected_answer": "f'(x) = 20x^3 + 2x^1"
+    },
+    {
+      "id": "219",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^6",
+      "expected_answer": "f'(x) = 12x^5"
+    },
+    {
+      "id": "220",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + -7x + -1",
+      "expected_answer": "x = 3.5"
+    },
+    {
+      "id": "221",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 1)^5",
+      "expected_answer": "f'(x) = 5(5x + 1)^4 · 5"
+    },
+    {
+      "id": "222",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^3 / 4x^3]",
+      "expected_answer": "0.5"
+    },
+    {
+      "id": "223",
+      "category": "Calculus I",
+      "question": "lim(x->-2) [2x^2 + 4x + -5]",
+      "expected_answer": "-5"
+    },
+    {
+      "id": "224",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^2 + 5x^3 + -9",
+      "expected_answer": "f'(x) = 6x^1 + 15x^2"
+    },
+    {
+      "id": "225",
+      "category": "Calculus I",
+      "question": "integral from 1 to 4 of 2x^2 dx",
+      "expected_answer": "42.0"
+    },
+    {
+      "id": "226",
+      "category": "Calculus I",
+      "question": "integral of 2x^4 dx",
+      "expected_answer": "(2/5)x^5 + C"
+    },
+    {
+      "id": "227",
+      "category": "Calculus I",
+      "question": "integral from 0 to 1 of 4x^1 dx",
+      "expected_answer": "2.0"
+    },
+    {
+      "id": "228",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "226.19"
+    },
+    {
+      "id": "229",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^3 / 3x^3]",
+      "expected_answer": "0.67"
+    },
+    {
+      "id": "230",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "231",
+      "category": "Calculus I",
+      "question": "integral of 9x^2 dx",
+      "expected_answer": "(9/3)x^3 + C"
+    },
+    {
+      "id": "232",
+      "category": "Calculus I",
+      "question": "integral from 3 to 7 of 1x^3 dx",
+      "expected_answer": "580.0"
+    },
+    {
+      "id": "233",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [5x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "234",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^8",
+      "expected_answer": "f'(x) = 8x^7"
+    },
+    {
+      "id": "235",
+      "category": "Calculus I",
+      "question": "lim(x->-10) [4x^2 + 8x + 6]",
+      "expected_answer": "326"
+    },
+    {
+      "id": "236",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = 5",
+      "expected_answer": "50"
+    },
+    {
+      "id": "237",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 0)^4",
+      "expected_answer": "f'(x) = 4(3x + 0)^3 · 3"
+    },
+    {
+      "id": "238",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^5",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "239",
+      "category": "Calculus I",
+      "question": "integral of 5cos(x) dx",
+      "expected_answer": "5sin(x) + C"
+    },
+    {
+      "id": "240",
+      "category": "Calculus I",
+      "question": "lim(x->-4) [4x^2 + -9x + 9]",
+      "expected_answer": "109"
+    },
+    {
+      "id": "241",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^2",
+      "expected_answer": "f'(x) = 14x^1"
+    },
+    {
+      "id": "242",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 10x + 8",
+      "expected_answer": "x = -1.67"
+    },
+    {
+      "id": "243",
+      "category": "Calculus I",
+      "question": "integral of 1sin(x) dx",
+      "expected_answer": "-1cos(x) + C"
+    },
+    {
+      "id": "244",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "245",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 3)^3",
+      "expected_answer": "f'(x) = 3(5x + 3)^2 · 5"
+    },
+    {
+      "id": "246",
+      "category": "Calculus I",
+      "question": "integral of 5sin(x) dx",
+      "expected_answer": "-5cos(x) + C"
+    },
+    {
+      "id": "247",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = 2",
+      "expected_answer": "20"
+    },
+    {
+      "id": "248",
+      "category": "Calculus I",
+      "question": "integral from 1 to 5 of 1x^1 dx",
+      "expected_answer": "12.0"
+    },
+    {
+      "id": "249",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4",
+      "expected_answer": "f'(x) = 12x^3"
+    },
+    {
+      "id": "250",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^3 / 2x^3]",
+      "expected_answer": "1.5"
+    },
+    {
+      "id": "251",
+      "category": "Calculus I",
+      "question": "lim(x->-3) [3x^2 + 5x + -1]",
+      "expected_answer": "11"
+    },
+    {
+      "id": "252",
+      "category": "Calculus I",
+      "question": "integral of 6x^1 dx",
+      "expected_answer": "(6/2)x^2 + C"
+    },
+    {
+      "id": "253",
+      "category": "Calculus I",
+      "question": "integral of 1x^6 dx",
+      "expected_answer": "(1/7)x^7 + C"
+    },
+    {
+      "id": "254",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "255",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^4",
+      "expected_answer": "f'(x) = 24x^3"
+    },
+    {
+      "id": "256",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 4x + 6",
+      "expected_answer": "x = -0.4"
+    },
+    {
+      "id": "257",
+      "category": "Calculus I",
+      "question": "lim(x->-8) [5x^2 + -10x + 2]",
+      "expected_answer": "402"
+    },
+    {
+      "id": "258",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 7x + 0",
+      "expected_answer": "x = -3.5"
+    },
+    {
+      "id": "259",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^8",
+      "expected_answer": "f'(x) = 16x^7"
+    },
+    {
+      "id": "260",
+      "category": "Calculus I",
+      "question": "integral of 1cos(x) dx",
+      "expected_answer": "1sin(x) + C"
+    },
+    {
+      "id": "261",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^4 + 1x^5 + 2",
+      "expected_answer": "f'(x) = 8x^3 + 5x^4"
+    },
+    {
+      "id": "262",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "263",
+      "category": "Calculus I",
+      "question": "integral from 0 to 7 of 5x^1 dx",
+      "expected_answer": "122.5"
+    },
+    {
+      "id": "264",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "265",
+      "category": "Calculus I",
+      "question": "integral of 9x^2 dx",
+      "expected_answer": "(9/3)x^3 + C"
+    },
+    {
+      "id": "266",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^3 + 4x^5 + -9",
+      "expected_answer": "f'(x) = 15x^2 + 20x^4"
+    },
+    {
+      "id": "267",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^5 + 7x^2 + 5",
+      "expected_answer": "f'(x) = 25x^4 + 14x^1"
+    },
+    {
+      "id": "268",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^5",
+      "expected_answer": "f'(x) = -3x^-4"
+    },
+    {
+      "id": "269",
+      "category": "Calculus I",
+      "question": "integral of 1x^7 dx",
+      "expected_answer": "(1/8)x^8 + C"
+    },
+    {
+      "id": "270",
+      "category": "Calculus I",
+      "question": "lim(x->1) [3x^2 + -3x + -2]",
+      "expected_answer": "-2"
+    },
+    {
+      "id": "271",
+      "category": "Calculus I",
+      "question": "integral of 6x^4 dx",
+      "expected_answer": "(6/5)x^5 + C"
+    },
+    {
+      "id": "272",
+      "category": "Calculus I",
+      "question": "integral from 0 to 1 of 3x^1 dx",
+      "expected_answer": "1.5"
+    },
+    {
+      "id": "273",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^3 + 2x^2 + -2",
+      "expected_answer": "f'(x) = 24x^2 + 4x^1"
+    },
+    {
+      "id": "274",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^5",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "275",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 7 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "263.89"
+    },
+    {
+      "id": "276",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^5 + 7x^3 + 8",
+      "expected_answer": "f'(x) = 10x^4 + 21x^2"
+    },
+    {
+      "id": "277",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^7",
+      "expected_answer": "f'(x) = 49x^6"
+    },
+    {
+      "id": "278",
+      "category": "Calculus I",
+      "question": "integral of 9x^3 dx",
+      "expected_answer": "(9/4)x^4 + C"
+    },
+    {
+      "id": "279",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + -7x + 7",
+      "expected_answer": "x = 0.7"
+    },
+    {
+      "id": "280",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -1",
+      "expected_answer": "-10"
+    },
+    {
+      "id": "281",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 2 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "25.13"
+    },
+    {
+      "id": "282",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^7",
+      "expected_answer": "f'(x) = 21x^6"
+    },
+    {
+      "id": "283",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^10",
+      "expected_answer": "f'(x) = 30x^9"
+    },
+    {
+      "id": "284",
+      "category": "Calculus I",
+      "question": "integral from 1 to 2 of 1x^3 dx",
+      "expected_answer": "3.75"
+    },
+    {
+      "id": "285",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [5x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "286",
+      "category": "Calculus I",
+      "question": "lim(x->1) [1x^2 + -9x + 1]",
+      "expected_answer": "-7"
+    },
+    {
+      "id": "287",
+      "category": "Calculus I",
+      "question": "integral from 2 to 5 of 3x^4 dx",
+      "expected_answer": "1855.8"
+    },
+    {
+      "id": "288",
+      "category": "Calculus I",
+      "question": "integral of 8x^3 dx",
+      "expected_answer": "(8/4)x^4 + C"
+    },
+    {
+      "id": "289",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = -2",
+      "expected_answer": "-16"
+    },
+    {
+      "id": "290",
+      "category": "Calculus I",
+      "question": "lim(x->-9) [4x^2 + 4x + -2]",
+      "expected_answer": "286"
+    },
+    {
+      "id": "291",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -1)^2",
+      "expected_answer": "f'(x) = 2(4x + -1)^1 · 4"
+    },
+    {
+      "id": "292",
+      "category": "Calculus I",
+      "question": "integral from 0 to 6 of 2x^3 dx",
+      "expected_answer": "648.0"
+    },
+    {
+      "id": "293",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [2x^2 + 7x + -7]",
+      "expected_answer": "8"
+    },
+    {
+      "id": "294",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 2 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "25.13"
+    },
+    {
+      "id": "295",
+      "category": "Calculus I",
+      "question": "integral of 2x^2 dx",
+      "expected_answer": "(2/3)x^3 + C"
+    },
+    {
+      "id": "296",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 8 cm/s. Find the rate of change of the area when r = 3 cm. Use pi = 3.14159.",
+      "expected_answer": "150.8"
+    },
+    {
+      "id": "297",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 1x^3 dx",
+      "expected_answer": "303.75"
+    },
+    {
+      "id": "298",
+      "category": "Calculus I",
+      "question": "lim(x->-8) [3x^2 + 5x + -2]",
+      "expected_answer": "150"
+    },
+    {
+      "id": "299",
+      "category": "Calculus I",
+      "question": "integral of 2sin(x) dx",
+      "expected_answer": "-2cos(x) + C"
+    },
+    {
+      "id": "300",
+      "category": "Calculus I",
+      "question": "lim(x->5) [(x^2 - 25) / (x - 5)]",
+      "expected_answer": "10"
+    },
+    {
+      "id": "301",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^8",
+      "expected_answer": "f'(x) = 40x^7"
+    },
+    {
+      "id": "302",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^2 + 5x^5 + -6",
+      "expected_answer": "f'(x) = 12x^1 + 25x^4"
+    },
+    {
+      "id": "303",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 1)^3",
+      "expected_answer": "f'(x) = 3(3x + 1)^2 · 3"
+    },
+    {
+      "id": "304",
+      "category": "Calculus I",
+      "question": "lim(x->4) [5x^2 + 0x + 3]",
+      "expected_answer": "83"
+    },
+    {
+      "id": "305",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "306",
+      "category": "Calculus I",
+      "question": "integral of 5x^7 dx",
+      "expected_answer": "(5/8)x^8 + C"
+    },
+    {
+      "id": "307",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "308",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "309",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 7x + 1",
+      "expected_answer": "x = -0.88"
+    },
+    {
+      "id": "310",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "311",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + -10x + -7",
+      "expected_answer": "x = 1.67"
+    },
+    {
+      "id": "312",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^4 + 3x^2 + -8",
+      "expected_answer": "f'(x) = 24x^3 + 6x^1"
+    },
+    {
+      "id": "313",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^6",
+      "expected_answer": "f'(x) = 60x^5"
+    },
+    {
+      "id": "314",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^8",
+      "expected_answer": "f'(x) = 72x^7"
+    },
+    {
+      "id": "315",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4 + 4x^5 + -3",
+      "expected_answer": "f'(x) = 16x^3 + 20x^4"
+    },
+    {
+      "id": "316",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -4)^4",
+      "expected_answer": "f'(x) = 4(4x + -4)^3 · 4"
+    },
+    {
+      "id": "317",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^4",
+      "expected_answer": "f'(x) = 36x^3"
+    },
+    {
+      "id": "318",
+      "category": "Calculus I",
+      "question": "integral of 1x^4 dx",
+      "expected_answer": "(1/5)x^5 + C"
+    },
+    {
+      "id": "319",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 10x + 0",
+      "expected_answer": "x = -5.0"
+    },
+    {
+      "id": "320",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^4",
+      "expected_answer": "f'(x) = 40x^3"
+    },
+    {
+      "id": "321",
+      "category": "Calculus I",
+      "question": "integral from 2 to 7 of 5x^4 dx",
+      "expected_answer": "16775.0"
+    },
+    {
+      "id": "322",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^5",
+      "expected_answer": "f'(x) = 20x^4"
+    },
+    {
+      "id": "323",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "324",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 2x^2 at x = 1",
+      "expected_answer": "4"
+    },
+    {
+      "id": "325",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "326",
+      "category": "Calculus I",
+      "question": "integral from 2 to 4 of 3x^3 dx",
+      "expected_answer": "180.0"
+    },
+    {
+      "id": "327",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^10",
+      "expected_answer": "f'(x) = 50x^9"
+    },
+    {
+      "id": "328",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 1)^4",
+      "expected_answer": "f'(x) = 4(3x + 1)^3 · 3"
+    },
+    {
+      "id": "329",
+      "category": "Calculus I",
+      "question": "integral of 8x^1 dx",
+      "expected_answer": "(8/2)x^2 + C"
+    },
+    {
+      "id": "330",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -1)^6",
+      "expected_answer": "f'(x) = 6(4x + -1)^5 · 4"
+    },
+    {
+      "id": "331",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = -5",
+      "expected_answer": "-10"
+    },
+    {
+      "id": "332",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^9",
+      "expected_answer": "f'(x) = 54x^8"
+    },
+    {
+      "id": "333",
+      "category": "Calculus I",
+      "question": "integral of 4sin(x) dx",
+      "expected_answer": "-4cos(x) + C"
+    },
+    {
+      "id": "334",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^5",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "335",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 3 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "336",
+      "category": "Calculus I",
+      "question": "lim(x->5) [(x^2 - 25) / (x - 5)]",
+      "expected_answer": "10"
+    },
+    {
+      "id": "337",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "338",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 2",
+      "expected_answer": "16"
+    },
+    {
+      "id": "339",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^5 + 1x^5 + 3",
+      "expected_answer": "f'(x) = 15x^4 + 5x^4"
+    },
+    {
+      "id": "340",
+      "category": "Calculus I",
+      "question": "lim(x->-4) [1x^2 + 4x + -10]",
+      "expected_answer": "-10"
+    },
+    {
+      "id": "341",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4 + 8x^5 + -6",
+      "expected_answer": "f'(x) = 28x^3 + 40x^4"
+    },
+    {
+      "id": "342",
+      "category": "Calculus I",
+      "question": "integral of 10x^3 dx",
+      "expected_answer": "(10/4)x^4 + C"
+    },
+    {
+      "id": "343",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 3x^2 dx",
+      "expected_answer": "189.0"
+    },
+    {
+      "id": "344",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -2)^3",
+      "expected_answer": "f'(x) = 3(3x + -2)^2 · 3"
+    },
+    {
+      "id": "345",
+      "category": "Calculus I",
+      "question": "integral from 0 to 7 of 3x^1 dx",
+      "expected_answer": "73.5"
+    },
+    {
+      "id": "346",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 3x + 9",
+      "expected_answer": "x = -0.38"
+    },
+    {
+      "id": "347",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^3",
+      "expected_answer": "f'(x) = 24x^2"
+    },
+    {
+      "id": "348",
+      "category": "Calculus I",
+      "question": "integral of 6x^1 dx",
+      "expected_answer": "(6/2)x^2 + C"
+    },
+    {
+      "id": "349",
+      "category": "Calculus I",
+      "question": "lim(x->2) [(x^2 - 4) / (x - 2)]",
+      "expected_answer": "4"
+    },
+    {
+      "id": "350",
+      "category": "Calculus I",
+      "question": "integral from 0 to 6 of 5x^3 dx",
+      "expected_answer": "1620.0"
+    },
+    {
+      "id": "351",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^2 / 4x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "352",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^3 / 3x^3]",
+      "expected_answer": "1.33"
+    },
+    {
+      "id": "353",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^2",
+      "expected_answer": "f'(x) = 16x^1"
+    },
+    {
+      "id": "354",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -2)^6",
+      "expected_answer": "f'(x) = 6(3x + -2)^5 · 3"
+    },
+    {
+      "id": "355",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 3x^2 at x = 2",
+      "expected_answer": "12"
+    },
+    {
+      "id": "356",
+      "category": "Calculus I",
+      "question": "lim(x->5) [(x^2 - 25) / (x - 5)]",
+      "expected_answer": "10"
+    },
+    {
+      "id": "357",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4 + 6x^3 + -3",
+      "expected_answer": "f'(x) = 28x^3 + 18x^2"
+    },
+    {
+      "id": "358",
+      "category": "Calculus I",
+      "question": "lim(x->1) [5x^2 + -8x + 10]",
+      "expected_answer": "7"
+    },
+    {
+      "id": "359",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 10 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "251.33"
+    },
+    {
+      "id": "360",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^2",
+      "expected_answer": "f'(x) = 8x^1"
+    },
+    {
+      "id": "361",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 2)^2",
+      "expected_answer": "f'(x) = 2(3x + 2)^1 · 3"
+    },
+    {
+      "id": "362",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + -8x + 2",
+      "expected_answer": "x = 4.0"
+    },
+    {
+      "id": "363",
+      "category": "Calculus I",
+      "question": "integral of 1x^2 dx",
+      "expected_answer": "(1/3)x^3 + C"
+    },
+    {
+      "id": "364",
+      "category": "Calculus I",
+      "question": "lim(x->-1) [3x^2 + 10x + -5]",
+      "expected_answer": "-12"
+    },
+    {
+      "id": "365",
+      "category": "Calculus I",
+      "question": "integral from 2 to 6 of 1x^3 dx",
+      "expected_answer": "320.0"
+    },
+    {
+      "id": "366",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^5 + 2x^4 + 7",
+      "expected_answer": "f'(x) = 10x^4 + 8x^3"
+    },
+    {
+      "id": "367",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^4",
+      "expected_answer": "f'(x) = 4x^3"
+    },
+    {
+      "id": "368",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = 4",
+      "expected_answer": "8"
+    },
+    {
+      "id": "369",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + -6x + 2",
+      "expected_answer": "x = 1.0"
+    },
+    {
+      "id": "370",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4 + 2x^5 + 10",
+      "expected_answer": "f'(x) = 28x^3 + 10x^4"
+    },
+    {
+      "id": "371",
+      "category": "Calculus I",
+      "question": "integral from 1 to 2 of 1x^2 dx",
+      "expected_answer": "2.33"
+    },
+    {
+      "id": "372",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 4 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "150.8"
+    },
+    {
+      "id": "373",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^2 + 4x^3 + 6",
+      "expected_answer": "f'(x) = 6x^1 + 12x^2"
+    },
+    {
+      "id": "374",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 0",
+      "expected_answer": "0"
+    },
+    {
+      "id": "375",
+      "category": "Calculus I",
+      "question": "integral of 1cos(x) dx",
+      "expected_answer": "1sin(x) + C"
+    },
+    {
+      "id": "376",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [5x^2 / 1x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "377",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^10",
+      "expected_answer": "f'(x) = 20x^9"
+    },
+    {
+      "id": "378",
+      "category": "Calculus I",
+      "question": "integral from 1 to 4 of 1x^2 dx",
+      "expected_answer": "21.0"
+    },
+    {
+      "id": "379",
+      "category": "Calculus I",
+      "question": "integral of 9x^7 dx",
+      "expected_answer": "(9/8)x^8 + C"
+    },
+    {
+      "id": "380",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 7 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "263.89"
+    },
+    {
+      "id": "381",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^3 + 4x^2 + -3",
+      "expected_answer": "f'(x) = 15x^2 + 8x^1"
+    },
+    {
+      "id": "382",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^6",
+      "expected_answer": "f'(x) = 6x^5"
+    },
+    {
+      "id": "383",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "384",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 4x^2 dx",
+      "expected_answer": "672.0"
+    },
+    {
+      "id": "385",
+      "category": "Calculus I",
+      "question": "lim(x->-6) [2x^2 + 6x + 1]",
+      "expected_answer": "37"
+    },
+    {
+      "id": "386",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 5)^4",
+      "expected_answer": "f'(x) = 4(2x + 5)^3 · 2"
+    },
+    {
+      "id": "387",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "388",
+      "category": "Calculus I",
+      "question": "integral of 9x^2 dx",
+      "expected_answer": "(9/3)x^3 + C"
+    },
+    {
+      "id": "389",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^3",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "390",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4 + 5x^2 + -5",
+      "expected_answer": "f'(x) = 16x^3 + 10x^1"
+    },
+    {
+      "id": "391",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + -10x + 0",
+      "expected_answer": "x = 2.5"
+    },
+    {
+      "id": "392",
+      "category": "Calculus I",
+      "question": "lim(x->7) [1x^2 + 2x + 2]",
+      "expected_answer": "65"
+    },
+    {
+      "id": "393",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -5)^2",
+      "expected_answer": "f'(x) = 2(2x + -5)^1 · 2"
+    },
+    {
+      "id": "394",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 9 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "282.74"
+    },
+    {
+      "id": "395",
+      "category": "Calculus I",
+      "question": "integral from 1 to 8 of 2x^4 dx",
+      "expected_answer": "13106.8"
+    },
+    {
+      "id": "396",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 5x^2 dx",
+      "expected_answer": "840.0"
+    },
+    {
+      "id": "397",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^3 / 3x^3]",
+      "expected_answer": "1.0"
+    },
+    {
+      "id": "398",
+      "category": "Calculus I",
+      "question": "lim(x->-3) [2x^2 + -5x + 7]",
+      "expected_answer": "40"
+    },
+    {
+      "id": "399",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4 + 1x^2 + 2",
+      "expected_answer": "f'(x) = 28x^3 + 2x^1"
+    },
+    {
+      "id": "400",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^3 + 8x^2 + 9",
+      "expected_answer": "f'(x) = 3x^2 + 16x^1"
+    },
+    {
+      "id": "401",
+      "category": "Calculus I",
+      "question": "integral from 3 to 4 of 3x^3 dx",
+      "expected_answer": "131.25"
+    },
+    {
+      "id": "402",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^9",
+      "expected_answer": "f'(x) = 81x^8"
+    },
+    {
+      "id": "403",
+      "category": "Calculus I",
+      "question": "integral from 3 to 5 of 5x^3 dx",
+      "expected_answer": "680.0"
+    },
+    {
+      "id": "404",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "405",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 1x + 8",
+      "expected_answer": "x = -0.12"
+    },
+    {
+      "id": "406",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 0",
+      "expected_answer": "0"
+    },
+    {
+      "id": "407",
+      "category": "Calculus I",
+      "question": "integral from 0 to 7 of 4x^3 dx",
+      "expected_answer": "2401.0"
+    },
+    {
+      "id": "408",
+      "category": "Calculus I",
+      "question": "lim(x->0) [1x^2 + -3x + 4]",
+      "expected_answer": "4"
+    },
+    {
+      "id": "409",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 2)^5",
+      "expected_answer": "f'(x) = 5(2x + 2)^4 · 2"
+    },
+    {
+      "id": "410",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -2)^2",
+      "expected_answer": "f'(x) = 2(5x + -2)^1 · 5"
+    },
+    {
+      "id": "411",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4",
+      "expected_answer": "f'(x) = 16x^3"
+    },
+    {
+      "id": "412",
+      "category": "Calculus I",
+      "question": "lim(x->8) [1x^2 + 10x + -6]",
+      "expected_answer": "138"
+    },
+    {
+      "id": "413",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^2",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "414",
+      "category": "Calculus I",
+      "question": "integral from 2 to 3 of 1x^4 dx",
+      "expected_answer": "42.2"
+    },
+    {
+      "id": "415",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4",
+      "expected_answer": "f'(x) = 12x^3"
+    },
+    {
+      "id": "416",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "417",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = -2",
+      "expected_answer": "-16"
+    },
+    {
+      "id": "418",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^3 + 2x^3 + 0",
+      "expected_answer": "f'(x) = 24x^2 + 6x^2"
+    },
+    {
+      "id": "419",
+      "category": "Calculus I",
+      "question": "lim(x->5) [(x^2 - 25) / (x - 5)]",
+      "expected_answer": "10"
+    },
+    {
+      "id": "420",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "421",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^9",
+      "expected_answer": "f'(x) = 36x^8"
+    },
+    {
+      "id": "422",
+      "category": "Calculus I",
+      "question": "lim(x->-9) [2x^2 + 3x + -2]",
+      "expected_answer": "133"
+    },
+    {
+      "id": "423",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [3x^2 + -1x + -7]",
+      "expected_answer": "73"
+    },
+    {
+      "id": "424",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "425",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "426",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^2",
+      "expected_answer": "f'(x) = 12x^1"
+    },
+    {
+      "id": "427",
+      "category": "Calculus I",
+      "question": "integral of 1x^4 dx",
+      "expected_answer": "(1/5)x^5 + C"
+    },
+    {
+      "id": "428",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^2",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "429",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "430",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "431",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^3 / 4x^3]",
+      "expected_answer": "0.75"
+    },
+    {
+      "id": "432",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "433",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 0)^2",
+      "expected_answer": "f'(x) = 2(2x + 0)^1 · 2"
+    },
+    {
+      "id": "434",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + -6x + 4",
+      "expected_answer": "x = 1.5"
+    },
+    {
+      "id": "435",
+      "category": "Calculus I",
+      "question": "lim(x->-10) [2x^2 + -6x + 1]",
+      "expected_answer": "261"
+    },
+    {
+      "id": "436",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 1)^3",
+      "expected_answer": "f'(x) = 3(2x + 1)^2 · 2"
+    },
+    {
+      "id": "437",
+      "category": "Calculus I",
+      "question": "integral of 8x^1 dx",
+      "expected_answer": "(8/2)x^2 + C"
+    },
+    {
+      "id": "438",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4 + 2x^3 + -5",
+      "expected_answer": "f'(x) = 16x^3 + 6x^2"
+    },
+    {
+      "id": "439",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^7",
+      "expected_answer": "f'(x) = 42x^6"
+    },
+    {
+      "id": "440",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + -6x + 2",
+      "expected_answer": "x = 0.6"
+    },
+    {
+      "id": "441",
+      "category": "Calculus I",
+      "question": "lim(x->-6) [4x^2 + 5x + 1]",
+      "expected_answer": "115"
+    },
+    {
+      "id": "442",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "443",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 8x + 4",
+      "expected_answer": "x = -4.0"
+    },
+    {
+      "id": "444",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 / x^1",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "445",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^9",
+      "expected_answer": "f'(x) = 27x^8"
+    },
+    {
+      "id": "446",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 0)^6",
+      "expected_answer": "f'(x) = 6(2x + 0)^5 · 2"
+    },
+    {
+      "id": "447",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^2 / 4x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "448",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^5 + 2x^5 + 0",
+      "expected_answer": "f'(x) = 25x^4 + 10x^4"
+    },
+    {
+      "id": "449",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^7",
+      "expected_answer": "f'(x) = 63x^6"
+    },
+    {
+      "id": "450",
+      "category": "Calculus I",
+      "question": "integral of 5cos(x) dx",
+      "expected_answer": "5sin(x) + C"
+    },
+    {
+      "id": "451",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 5x^3 dx",
+      "expected_answer": "5100.0"
+    },
+    {
+      "id": "452",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^8",
+      "expected_answer": "f'(x) = 16x^7"
+    },
+    {
+      "id": "453",
+      "category": "Calculus I",
+      "question": "integral of 1x^3 dx",
+      "expected_answer": "(1/4)x^4 + C"
+    },
+    {
+      "id": "454",
+      "category": "Calculus I",
+      "question": "lim(x->5) [2x^2 + -7x + -3]",
+      "expected_answer": "12"
+    },
+    {
+      "id": "455",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^5 + 6x^3 + 6",
+      "expected_answer": "f'(x) = 40x^4 + 18x^2"
+    },
+    {
+      "id": "456",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "188.5"
+    },
+    {
+      "id": "457",
+      "category": "Calculus I",
+      "question": "integral from 0 to 5 of 3x^3 dx",
+      "expected_answer": "468.75"
+    },
+    {
+      "id": "458",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^4 + 8x^2 + 8",
+      "expected_answer": "f'(x) = 4x^3 + 16x^1"
+    },
+    {
+      "id": "459",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 7 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "263.89"
+    },
+    {
+      "id": "460",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "461",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^8",
+      "expected_answer": "f'(x) = 48x^7"
+    },
+    {
+      "id": "462",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "463",
+      "category": "Calculus I",
+      "question": "lim(x->5) [3x^2 + 2x + -7]",
+      "expected_answer": "78"
+    },
+    {
+      "id": "464",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "465",
+      "category": "Calculus I",
+      "question": "integral of 3x^3 dx",
+      "expected_answer": "(3/4)x^4 + C"
+    },
+    {
+      "id": "466",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -2)^4",
+      "expected_answer": "f'(x) = 4(5x + -2)^3 · 5"
+    },
+    {
+      "id": "467",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 9x + 5",
+      "expected_answer": "x = -0.9"
+    },
+    {
+      "id": "468",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 2x^2 at x = -3",
+      "expected_answer": "-12"
+    },
+    {
+      "id": "469",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 2)^6",
+      "expected_answer": "f'(x) = 6(2x + 2)^5 · 2"
+    },
+    {
+      "id": "470",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^2 + 1x^2 + -10",
+      "expected_answer": "f'(x) = 6x^1 + 2x^1"
+    },
+    {
+      "id": "471",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 0x + 3",
+      "expected_answer": "x = 0.0"
+    },
+    {
+      "id": "472",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^3",
+      "expected_answer": "f'(x) = -1x^-2"
+    },
+    {
+      "id": "473",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4",
+      "expected_answer": "f'(x) = 12x^3"
+    },
+    {
+      "id": "474",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "475",
+      "category": "Calculus I",
+      "question": "integral of 2x^4 dx",
+      "expected_answer": "(2/5)x^5 + C"
+    },
+    {
+      "id": "476",
+      "category": "Calculus I",
+      "question": "integral of 3x^7 dx",
+      "expected_answer": "(3/8)x^8 + C"
+    },
+    {
+      "id": "477",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 8 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "301.59"
+    },
+    {
+      "id": "478",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 / x^4",
+      "expected_answer": "f'(x) = -1x^-2"
+    },
+    {
+      "id": "479",
+      "category": "Calculus I",
+      "question": "integral of 7x^1 dx",
+      "expected_answer": "(7/2)x^2 + C"
+    },
+    {
+      "id": "480",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 2x^3 dx",
+      "expected_answer": "607.5"
+    },
+    {
+      "id": "481",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^4",
+      "expected_answer": "f'(x) = 40x^3"
+    },
+    {
+      "id": "482",
+      "category": "Calculus I",
+      "question": "integral of 4sin(x) dx",
+      "expected_answer": "-4cos(x) + C"
+    },
+    {
+      "id": "483",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + -9x + -1",
+      "expected_answer": "x = 0.9"
+    },
+    {
+      "id": "484",
+      "category": "Calculus I",
+      "question": "lim(x->2) [3x^2 + 5x + 1]",
+      "expected_answer": "23"
+    },
+    {
+      "id": "485",
+      "category": "Calculus I",
+      "question": "integral of 2x^4 dx",
+      "expected_answer": "(2/5)x^5 + C"
+    },
+    {
+      "id": "486",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4 + 4x^2 + -8",
+      "expected_answer": "f'(x) = 16x^3 + 8x^1"
+    },
+    {
+      "id": "487",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^6",
+      "expected_answer": "f'(x) = 24x^5"
+    },
+    {
+      "id": "488",
+      "category": "Calculus I",
+      "question": "integral of 5cos(x) dx",
+      "expected_answer": "5sin(x) + C"
+    },
+    {
+      "id": "489",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 2x^2 dx",
+      "expected_answer": "126.0"
+    },
+    {
+      "id": "490",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -5)^3",
+      "expected_answer": "f'(x) = 3(4x + -5)^2 · 4"
+    },
+    {
+      "id": "491",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 5x + -8",
+      "expected_answer": "x = -2.5"
+    },
+    {
+      "id": "492",
+      "category": "Calculus I",
+      "question": "lim(x->-7) [2x^2 + 4x + -3]",
+      "expected_answer": "67"
+    },
+    {
+      "id": "493",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 3x^4 dx",
+      "expected_answer": "4519.8"
+    },
+    {
+      "id": "494",
+      "category": "Calculus I",
+      "question": "integral from 3 to 4 of 5x^4 dx",
+      "expected_answer": "781.0"
+    },
+    {
+      "id": "495",
+      "category": "Calculus I",
+      "question": "lim(x->-2) [4x^2 + 4x + 0]",
+      "expected_answer": "8"
+    },
+    {
+      "id": "496",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = -1",
+      "expected_answer": "-8"
+    },
+    {
+      "id": "497",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^7",
+      "expected_answer": "f'(x) = 28x^6"
+    },
+    {
+      "id": "498",
+      "category": "Calculus I",
+      "question": "integral from 2 to 6 of 3x^2 dx",
+      "expected_answer": "208.0"
+    },
+    {
+      "id": "499",
+      "category": "Calculus I",
+      "question": "integral of 3sin(x) dx",
+      "expected_answer": "-3cos(x) + C"
+    },
+    {
+      "id": "500",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "501",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = 2",
+      "expected_answer": "4"
+    },
+    {
+      "id": "502",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^3",
+      "expected_answer": "f'(x) = 30x^2"
+    },
+    {
+      "id": "503",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 2x + -10",
+      "expected_answer": "x = -0.5"
+    },
+    {
+      "id": "504",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4",
+      "expected_answer": "f'(x) = 28x^3"
+    },
+    {
+      "id": "505",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^2 / 3x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "506",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "507",
+      "category": "Calculus I",
+      "question": "lim(x->-7) [5x^2 + -7x + 0]",
+      "expected_answer": "294"
+    },
+    {
+      "id": "508",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 5 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "188.5"
+    },
+    {
+      "id": "509",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^3 / 4x^3]",
+      "expected_answer": "1.0"
+    },
+    {
+      "id": "510",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -4)^5",
+      "expected_answer": "f'(x) = 5(3x + -4)^4 · 3"
+    },
+    {
+      "id": "511",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^4",
+      "expected_answer": "f'(x) = 24x^3"
+    },
+    {
+      "id": "512",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 4",
+      "expected_answer": "32"
+    },
+    {
+      "id": "513",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^5 + 4x^5 + -5",
+      "expected_answer": "f'(x) = 15x^4 + 20x^4"
+    },
+    {
+      "id": "514",
+      "category": "Calculus I",
+      "question": "integral of 3sin(x) dx",
+      "expected_answer": "-3cos(x) + C"
+    },
+    {
+      "id": "515",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 4x^2 dx",
+      "expected_answer": "672.0"
+    },
+    {
+      "id": "516",
+      "category": "Calculus I",
+      "question": "integral of 4x^2 dx",
+      "expected_answer": "(4/3)x^3 + C"
+    },
+    {
+      "id": "517",
+      "category": "Calculus I",
+      "question": "integral of 9x^1 dx",
+      "expected_answer": "(9/2)x^2 + C"
+    },
+    {
+      "id": "518",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^2 + 3x^4 + -3",
+      "expected_answer": "f'(x) = 16x^1 + 12x^3"
+    },
+    {
+      "id": "519",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^8",
+      "expected_answer": "f'(x) = 40x^7"
+    },
+    {
+      "id": "520",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 9 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "226.19"
+    },
+    {
+      "id": "521",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 5)^4",
+      "expected_answer": "f'(x) = 4(3x + 5)^3 · 3"
+    },
+    {
+      "id": "522",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 0)^2",
+      "expected_answer": "f'(x) = 2(2x + 0)^1 · 2"
+    },
+    {
+      "id": "523",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "524",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 0)^3",
+      "expected_answer": "f'(x) = 3(3x + 0)^2 · 3"
+    },
+    {
+      "id": "525",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 5x + -3",
+      "expected_answer": "x = -0.83"
+    },
+    {
+      "id": "526",
+      "category": "Calculus I",
+      "question": "integral of 7x^2 dx",
+      "expected_answer": "(7/3)x^3 + C"
+    },
+    {
+      "id": "527",
+      "category": "Calculus I",
+      "question": "lim(x->8) [3x^2 + -2x + -10]",
+      "expected_answer": "166"
+    },
+    {
+      "id": "528",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [3x^2 / 3x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "529",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "530",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "531",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^5 + 2x^2 + 0",
+      "expected_answer": "f'(x) = 5x^4 + 4x^1"
+    },
+    {
+      "id": "532",
+      "category": "Calculus I",
+      "question": "lim(x->4) [5x^2 + -5x + 10]",
+      "expected_answer": "70"
+    },
+    {
+      "id": "533",
+      "category": "Calculus I",
+      "question": "integral of 7x^2 dx",
+      "expected_answer": "(7/3)x^3 + C"
+    },
+    {
+      "id": "534",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^4",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "535",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "536",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = 1",
+      "expected_answer": "10"
+    },
+    {
+      "id": "537",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^3",
+      "expected_answer": "f'(x) = -1x^-2"
+    },
+    {
+      "id": "538",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^6",
+      "expected_answer": "f'(x) = 36x^5"
+    },
+    {
+      "id": "539",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + -7x + 3",
+      "expected_answer": "x = 1.75"
+    },
+    {
+      "id": "540",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 3)^6",
+      "expected_answer": "f'(x) = 6(5x + 3)^5 · 5"
+    },
+    {
+      "id": "541",
+      "category": "Calculus I",
+      "question": "integral of 7x^6 dx",
+      "expected_answer": "(7/7)x^7 + C"
+    },
+    {
+      "id": "542",
+      "category": "Calculus I",
+      "question": "integral from 1 to 6 of 2x^4 dx",
+      "expected_answer": "3110.0"
+    },
+    {
+      "id": "543",
+      "category": "Calculus I",
+      "question": "lim(x->4) [(x^2 - 16) / (x - 4)]",
+      "expected_answer": "8"
+    },
+    {
+      "id": "544",
+      "category": "Calculus I",
+      "question": "integral from 3 to 4 of 4x^2 dx",
+      "expected_answer": "49.33"
+    },
+    {
+      "id": "545",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 2x^2 at x = 0",
+      "expected_answer": "0"
+    },
+    {
+      "id": "546",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 8 cm/s. Find the rate of change of the area when r = 3 cm. Use pi = 3.14159.",
+      "expected_answer": "150.8"
+    },
+    {
+      "id": "547",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 7 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "263.89"
+    },
+    {
+      "id": "548",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 3x + 5",
+      "expected_answer": "x = -0.5"
+    },
+    {
+      "id": "549",
+      "category": "Calculus I",
+      "question": "integral of 5cos(x) dx",
+      "expected_answer": "5sin(x) + C"
+    },
+    {
+      "id": "550",
+      "category": "Calculus I",
+      "question": "integral of 3sin(x) dx",
+      "expected_answer": "-3cos(x) + C"
+    },
+    {
+      "id": "551",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 7x + -7",
+      "expected_answer": "x = -3.5"
+    },
+    {
+      "id": "552",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = -5",
+      "expected_answer": "-10"
+    },
+    {
+      "id": "553",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 3 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "554",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4 + 1x^3 + 8",
+      "expected_answer": "f'(x) = 12x^3 + 3x^2"
+    },
+    {
+      "id": "555",
+      "category": "Calculus I",
+      "question": "integral of 4x^6 dx",
+      "expected_answer": "(4/7)x^7 + C"
+    },
+    {
+      "id": "556",
+      "category": "Calculus I",
+      "question": "integral of 2sin(x) dx",
+      "expected_answer": "-2cos(x) + C"
+    },
+    {
+      "id": "557",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^3",
+      "expected_answer": "f'(x) = -1x^-2"
+    },
+    {
+      "id": "558",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "559",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^1",
+      "expected_answer": "f'(x) = 4x^3"
+    },
+    {
+      "id": "560",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4",
+      "expected_answer": "f'(x) = 16x^3"
+    },
+    {
+      "id": "561",
+      "category": "Calculus I",
+      "question": "integral of 2cos(x) dx",
+      "expected_answer": "2sin(x) + C"
+    },
+    {
+      "id": "562",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "563",
+      "category": "Calculus I",
+      "question": "lim(x->2) [(x^2 - 4) / (x - 2)]",
+      "expected_answer": "4"
+    },
+    {
+      "id": "564",
+      "category": "Calculus I",
+      "question": "integral of 9x^4 dx",
+      "expected_answer": "(9/5)x^5 + C"
+    },
+    {
+      "id": "565",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^10",
+      "expected_answer": "f'(x) = 50x^9"
+    },
+    {
+      "id": "566",
+      "category": "Calculus I",
+      "question": "lim(x->2) [3x^2 + -7x + 8]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "567",
+      "category": "Calculus I",
+      "question": "lim(x->0) [2x^2 + 0x + 1]",
+      "expected_answer": "1"
+    },
+    {
+      "id": "568",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -5)^2",
+      "expected_answer": "f'(x) = 2(2x + -5)^1 · 2"
+    },
+    {
+      "id": "569",
+      "category": "Calculus I",
+      "question": "integral from 1 to 7 of 5x^3 dx",
+      "expected_answer": "3000.0"
+    },
+    {
+      "id": "570",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^3 + 7x^3 + 2",
+      "expected_answer": "f'(x) = 21x^2 + 21x^2"
+    },
+    {
+      "id": "571",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "572",
+      "category": "Calculus I",
+      "question": "lim(x->6) [1x^2 + 7x + -1]",
+      "expected_answer": "77"
+    },
+    {
+      "id": "573",
+      "category": "Calculus I",
+      "question": "lim(x->2) [(x^2 - 4) / (x - 2)]",
+      "expected_answer": "4"
+    },
+    {
+      "id": "574",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "575",
+      "category": "Calculus I",
+      "question": "integral from 2 to 6 of 1x^4 dx",
+      "expected_answer": "1548.8"
+    },
+    {
+      "id": "576",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^9",
+      "expected_answer": "f'(x) = 63x^8"
+    },
+    {
+      "id": "577",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^3",
+      "expected_answer": "f'(x) = 9x^2"
+    },
+    {
+      "id": "578",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^2",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "579",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 / x^4",
+      "expected_answer": "f'(x) = -1x^-2"
+    },
+    {
+      "id": "580",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 3x^1 dx",
+      "expected_answer": "90.0"
+    },
+    {
+      "id": "581",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^5",
+      "expected_answer": "f'(x) = 30x^4"
+    },
+    {
+      "id": "582",
+      "category": "Calculus I",
+      "question": "integral of 10x^2 dx",
+      "expected_answer": "(10/3)x^3 + C"
+    },
+    {
+      "id": "583",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + -10x + -5",
+      "expected_answer": "x = 1.25"
+    },
+    {
+      "id": "584",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 8x + 9",
+      "expected_answer": "x = -1.33"
+    },
+    {
+      "id": "585",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^2 + 4x^4 + 9",
+      "expected_answer": "f'(x) = 2x^1 + 16x^3"
+    },
+    {
+      "id": "586",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^8",
+      "expected_answer": "f'(x) = 72x^7"
+    },
+    {
+      "id": "587",
+      "category": "Calculus I",
+      "question": "integral from 3 to 4 of 5x^3 dx",
+      "expected_answer": "218.75"
+    },
+    {
+      "id": "588",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 0x + 3",
+      "expected_answer": "x = 0.0"
+    },
+    {
+      "id": "589",
+      "category": "Calculus I",
+      "question": "integral from 0 to 7 of 3x^1 dx",
+      "expected_answer": "73.5"
+    },
+    {
+      "id": "590",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [3x^2 + 1x + -3]",
+      "expected_answer": "67"
+    },
+    {
+      "id": "591",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^2",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "592",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^2 + 1x^2 + -5",
+      "expected_answer": "f'(x) = 4x^1 + 2x^1"
+    },
+    {
+      "id": "593",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + -3)^5",
+      "expected_answer": "f'(x) = 5(3x + -3)^4 · 3"
+    },
+    {
+      "id": "594",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^4 + 1x^3 + 2",
+      "expected_answer": "f'(x) = 20x^3 + 3x^2"
+    },
+    {
+      "id": "595",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -1)^2",
+      "expected_answer": "f'(x) = 2(2x + -1)^1 · 2"
+    },
+    {
+      "id": "596",
+      "category": "Calculus I",
+      "question": "integral from 1 to 5 of 3x^1 dx",
+      "expected_answer": "36.0"
+    },
+    {
+      "id": "597",
+      "category": "Calculus I",
+      "question": "integral from 0 to 2 of 5x^4 dx",
+      "expected_answer": "32.0"
+    },
+    {
+      "id": "598",
+      "category": "Calculus I",
+      "question": "integral from 0 to 2 of 1x^2 dx",
+      "expected_answer": "2.67"
+    },
+    {
+      "id": "599",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 3x^2 dx",
+      "expected_answer": "189.0"
+    },
+    {
+      "id": "600",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [5x^3 / 3x^3]",
+      "expected_answer": "1.67"
+    },
+    {
+      "id": "601",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 1)^3",
+      "expected_answer": "f'(x) = 3(2x + 1)^2 · 2"
+    },
+    {
+      "id": "602",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "603",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 9x + 7",
+      "expected_answer": "x = -2.25"
+    },
+    {
+      "id": "604",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 3x^2 at x = 2",
+      "expected_answer": "12"
+    },
+    {
+      "id": "605",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 4 cm. Use pi = 3.14159.",
+      "expected_answer": "150.8"
+    },
+    {
+      "id": "606",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 4x^2 dx",
+      "expected_answer": "672.0"
+    },
+    {
+      "id": "607",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^2 + 6x^5 + -9",
+      "expected_answer": "f'(x) = 14x^1 + 30x^4"
+    },
+    {
+      "id": "608",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^5 + 4x^2 + -7",
+      "expected_answer": "f'(x) = 35x^4 + 8x^1"
+    },
+    {
+      "id": "609",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^2 / 5x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "610",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^2 + 1x^5 + 6",
+      "expected_answer": "f'(x) = 8x^1 + 5x^4"
+    },
+    {
+      "id": "611",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [1x^2 + -1x + -1]",
+      "expected_answer": "29"
+    },
+    {
+      "id": "612",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^2",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "613",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "614",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^3",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "615",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "616",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 6x + 8",
+      "expected_answer": "x = -1.5"
+    },
+    {
+      "id": "617",
+      "category": "Calculus I",
+      "question": "lim(x->5) [(x^2 - 25) / (x - 5)]",
+      "expected_answer": "10"
+    },
+    {
+      "id": "618",
+      "category": "Calculus I",
+      "question": "integral from 2 to 4 of 5x^1 dx",
+      "expected_answer": "30.0"
+    },
+    {
+      "id": "619",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "620",
+      "category": "Calculus I",
+      "question": "integral from 0 to 4 of 1x^4 dx",
+      "expected_answer": "204.8"
+    },
+    {
+      "id": "621",
+      "category": "Calculus I",
+      "question": "lim(x->6) [2x^2 + -6x + 9]",
+      "expected_answer": "45"
+    },
+    {
+      "id": "622",
+      "category": "Calculus I",
+      "question": "integral from 2 to 6 of 4x^2 dx",
+      "expected_answer": "277.33"
+    },
+    {
+      "id": "623",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^7",
+      "expected_answer": "f'(x) = 56x^6"
+    },
+    {
+      "id": "624",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 9 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "282.74"
+    },
+    {
+      "id": "625",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 10 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "125.66"
+    },
+    {
+      "id": "626",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^2 / 3x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "627",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^2",
+      "expected_answer": "f'(x) = 2x^1"
+    },
+    {
+      "id": "628",
+      "category": "Calculus I",
+      "question": "integral of 4x^5 dx",
+      "expected_answer": "(4/6)x^6 + C"
+    },
+    {
+      "id": "629",
+      "category": "Calculus I",
+      "question": "integral from 1 to 3 of 2x^1 dx",
+      "expected_answer": "8.0"
+    },
+    {
+      "id": "630",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 8x + 3",
+      "expected_answer": "x = -0.8"
+    },
+    {
+      "id": "631",
+      "category": "Calculus I",
+      "question": "lim(x->1) [3x^2 + -7x + 0]",
+      "expected_answer": "-4"
+    },
+    {
+      "id": "632",
+      "category": "Calculus I",
+      "question": "integral of 6x^2 dx",
+      "expected_answer": "(6/3)x^3 + C"
+    },
+    {
+      "id": "633",
+      "category": "Calculus I",
+      "question": "integral of 5x^4 dx",
+      "expected_answer": "(5/5)x^5 + C"
+    },
+    {
+      "id": "634",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 5",
+      "expected_answer": "40"
+    },
+    {
+      "id": "635",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -2)^2",
+      "expected_answer": "f'(x) = 2(4x + -2)^1 · 4"
+    },
+    {
+      "id": "636",
+      "category": "Calculus I",
+      "question": "lim(x->9) [4x^2 + 6x + -8]",
+      "expected_answer": "370"
+    },
+    {
+      "id": "637",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 1)^4",
+      "expected_answer": "f'(x) = 4(5x + 1)^3 · 5"
+    },
+    {
+      "id": "638",
+      "category": "Calculus I",
+      "question": "integral of 4sin(x) dx",
+      "expected_answer": "-4cos(x) + C"
+    },
+    {
+      "id": "639",
+      "category": "Calculus I",
+      "question": "lim(x->-7) [1x^2 + -5x + 5]",
+      "expected_answer": "89"
+    },
+    {
+      "id": "640",
+      "category": "Calculus I",
+      "question": "integral of 1x^3 dx",
+      "expected_answer": "(1/4)x^4 + C"
+    },
+    {
+      "id": "641",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "226.19"
+    },
+    {
+      "id": "642",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 2x^2 at x = 2",
+      "expected_answer": "8"
+    },
+    {
+      "id": "643",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^2 + 8x^3 + 6",
+      "expected_answer": "f'(x) = 2x^1 + 24x^2"
+    },
+    {
+      "id": "644",
+      "category": "Calculus I",
+      "question": "integral of 1cos(x) dx",
+      "expected_answer": "1sin(x) + C"
+    },
+    {
+      "id": "645",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "646",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 7x + -10",
+      "expected_answer": "x = -0.88"
+    },
+    {
+      "id": "647",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 0x + 1",
+      "expected_answer": "x = 0.0"
+    },
+    {
+      "id": "648",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4 + 6x^3 + -9",
+      "expected_answer": "f'(x) = 28x^3 + 18x^2"
+    },
+    {
+      "id": "649",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 2x^2 at x = -1",
+      "expected_answer": "-4"
+    },
+    {
+      "id": "650",
+      "category": "Calculus I",
+      "question": "integral from 3 to 8 of 1x^3 dx",
+      "expected_answer": "1003.75"
+    },
+    {
+      "id": "651",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^4",
+      "expected_answer": "f'(x) = 1x^0"
+    },
+    {
+      "id": "652",
+      "category": "Calculus I",
+      "question": "integral of 2cos(x) dx",
+      "expected_answer": "2sin(x) + C"
+    },
+    {
+      "id": "653",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 8x + -9",
+      "expected_answer": "x = -1.0"
+    },
+    {
+      "id": "654",
+      "category": "Calculus I",
+      "question": "integral of 2cos(x) dx",
+      "expected_answer": "2sin(x) + C"
+    },
+    {
+      "id": "655",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^3 + 5x^2 + -4",
+      "expected_answer": "f'(x) = 9x^2 + 10x^1"
+    },
+    {
+      "id": "656",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^5",
+      "expected_answer": "f'(x) = 40x^4"
+    },
+    {
+      "id": "657",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + 2)^3",
+      "expected_answer": "f'(x) = 3(4x + 2)^2 · 4"
+    },
+    {
+      "id": "658",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 2x + 2",
+      "expected_answer": "x = -1.0"
+    },
+    {
+      "id": "659",
+      "category": "Calculus I",
+      "question": "integral of 6x^1 dx",
+      "expected_answer": "(6/2)x^2 + C"
+    },
+    {
+      "id": "660",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^2 / 3x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "661",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^7",
+      "expected_answer": "f'(x) = 70x^6"
+    },
+    {
+      "id": "662",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 3x^2 dx",
+      "expected_answer": "189.0"
+    },
+    {
+      "id": "663",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = 3",
+      "expected_answer": "30"
+    },
+    {
+      "id": "664",
+      "category": "Calculus I",
+      "question": "integral of 1x^6 dx",
+      "expected_answer": "(1/7)x^7 + C"
+    },
+    {
+      "id": "665",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^2",
+      "expected_answer": "f'(x) = 4x^1"
+    },
+    {
+      "id": "666",
+      "category": "Calculus I",
+      "question": "lim(x->6) [5x^2 + 8x + -10]",
+      "expected_answer": "218"
+    },
+    {
+      "id": "667",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 3)^3",
+      "expected_answer": "f'(x) = 3(5x + 3)^2 · 5"
+    },
+    {
+      "id": "668",
+      "category": "Calculus I",
+      "question": "integral from 3 to 8 of 2x^2 dx",
+      "expected_answer": "323.33"
+    },
+    {
+      "id": "669",
+      "category": "Calculus I",
+      "question": "integral of 6x^3 dx",
+      "expected_answer": "(6/4)x^4 + C"
+    },
+    {
+      "id": "670",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + -6x + -4",
+      "expected_answer": "x = 0.75"
+    },
+    {
+      "id": "671",
+      "category": "Calculus I",
+      "question": "integral of 4x^4 dx",
+      "expected_answer": "(4/5)x^5 + C"
+    },
+    {
+      "id": "672",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [4x^2 + -5x + -2]",
+      "expected_answer": "123"
+    },
+    {
+      "id": "673",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^5 + 1x^5 + 7",
+      "expected_answer": "f'(x) = 30x^4 + 5x^4"
+    },
+    {
+      "id": "674",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -4",
+      "expected_answer": "-40"
+    },
+    {
+      "id": "675",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^4 + 7x^3 + 7",
+      "expected_answer": "f'(x) = 28x^3 + 21x^2"
+    },
+    {
+      "id": "676",
+      "category": "Calculus I",
+      "question": "integral from 3 to 5 of 4x^4 dx",
+      "expected_answer": "2305.6"
+    },
+    {
+      "id": "677",
+      "category": "Calculus I",
+      "question": "integral from 1 to 6 of 5x^3 dx",
+      "expected_answer": "1618.75"
+    },
+    {
+      "id": "678",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^2 / 3x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "679",
+      "category": "Calculus I",
+      "question": "integral of 9x^2 dx",
+      "expected_answer": "(9/3)x^3 + C"
+    },
+    {
+      "id": "680",
+      "category": "Calculus I",
+      "question": "integral from 3 to 8 of 4x^4 dx",
+      "expected_answer": "26020.0"
+    },
+    {
+      "id": "681",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^5 + 1x^5 + -9",
+      "expected_answer": "f'(x) = 35x^4 + 5x^4"
+    },
+    {
+      "id": "682",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^3 / 4x^3]",
+      "expected_answer": "0.25"
+    },
+    {
+      "id": "683",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^5 + 1x^3 + 3",
+      "expected_answer": "f'(x) = 30x^4 + 3x^2"
+    },
+    {
+      "id": "684",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "685",
+      "category": "Calculus I",
+      "question": "lim(x->4) [(x^2 - 16) / (x - 4)]",
+      "expected_answer": "8"
+    },
+    {
+      "id": "686",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 / x^1",
+      "expected_answer": "f'(x) = 1x^0"
+    },
+    {
+      "id": "687",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 7x + -8",
+      "expected_answer": "x = -0.88"
+    },
+    {
+      "id": "688",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + 1)^4",
+      "expected_answer": "f'(x) = 4(4x + 1)^3 · 4"
+    },
+    {
+      "id": "689",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^3 / 5x^3]",
+      "expected_answer": "0.2"
+    },
+    {
+      "id": "690",
+      "category": "Calculus I",
+      "question": "integral from 2 to 7 of 1x^3 dx",
+      "expected_answer": "596.25"
+    },
+    {
+      "id": "691",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^9",
+      "expected_answer": "f'(x) = 9x^8"
+    },
+    {
+      "id": "692",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^7",
+      "expected_answer": "f'(x) = 7x^6"
+    },
+    {
+      "id": "693",
+      "category": "Calculus I",
+      "question": "integral of 1cos(x) dx",
+      "expected_answer": "1sin(x) + C"
+    },
+    {
+      "id": "694",
+      "category": "Calculus I",
+      "question": "lim(x->0) [2x^2 + -4x + -2]",
+      "expected_answer": "-2"
+    },
+    {
+      "id": "695",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [5x^2 / 1x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "696",
+      "category": "Calculus I",
+      "question": "integral of 10x^6 dx",
+      "expected_answer": "(10/7)x^7 + C"
+    },
+    {
+      "id": "697",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^3 + 6x^3 + 3",
+      "expected_answer": "f'(x) = 12x^2 + 18x^2"
+    },
+    {
+      "id": "698",
+      "category": "Calculus I",
+      "question": "integral of 1x^2 dx",
+      "expected_answer": "(1/3)x^3 + C"
+    },
+    {
+      "id": "699",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 2)^3",
+      "expected_answer": "f'(x) = 3(3x + 2)^2 · 3"
+    },
+    {
+      "id": "700",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 4x + 5",
+      "expected_answer": "x = -0.4"
+    },
+    {
+      "id": "701",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "702",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 9x + 2",
+      "expected_answer": "x = -0.9"
+    },
+    {
+      "id": "703",
+      "category": "Calculus I",
+      "question": "integral of 1sin(x) dx",
+      "expected_answer": "-1cos(x) + C"
+    },
+    {
+      "id": "704",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^4",
+      "expected_answer": "f'(x) = 32x^3"
+    },
+    {
+      "id": "705",
+      "category": "Calculus I",
+      "question": "lim(x->5) [(x^2 - 25) / (x - 5)]",
+      "expected_answer": "10"
+    },
+    {
+      "id": "706",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 6 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "707",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^3 + 4x^4 + 9",
+      "expected_answer": "f'(x) = 24x^2 + 16x^3"
+    },
+    {
+      "id": "708",
+      "category": "Calculus I",
+      "question": "integral of 9x^4 dx",
+      "expected_answer": "(9/5)x^5 + C"
+    },
+    {
+      "id": "709",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -3)^4",
+      "expected_answer": "f'(x) = 4(5x + -3)^3 · 5"
+    },
+    {
+      "id": "710",
+      "category": "Calculus I",
+      "question": "f(x) = x^1 / x^3",
+      "expected_answer": "f'(x) = -2x^-3"
+    },
+    {
+      "id": "711",
+      "category": "Calculus I",
+      "question": "integral of 2x^3 dx",
+      "expected_answer": "(2/4)x^4 + C"
+    },
+    {
+      "id": "712",
+      "category": "Calculus I",
+      "question": "integral of 1cos(x) dx",
+      "expected_answer": "1sin(x) + C"
+    },
+    {
+      "id": "713",
+      "category": "Calculus I",
+      "question": "integral of 1cos(x) dx",
+      "expected_answer": "1sin(x) + C"
+    },
+    {
+      "id": "714",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "715",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -1)^2",
+      "expected_answer": "f'(x) = 2(4x + -1)^1 · 4"
+    },
+    {
+      "id": "716",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^5 + 5x^5 + -3",
+      "expected_answer": "f'(x) = 15x^4 + 25x^4"
+    },
+    {
+      "id": "717",
+      "category": "Calculus I",
+      "question": "integral from 0 to 1 of 1x^3 dx",
+      "expected_answer": "0.25"
+    },
+    {
+      "id": "718",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "719",
+      "category": "Calculus I",
+      "question": "integral of 2x^2 dx",
+      "expected_answer": "(2/3)x^3 + C"
+    },
+    {
+      "id": "720",
+      "category": "Calculus I",
+      "question": "lim(x->6) [5x^2 + 7x + -7]",
+      "expected_answer": "215"
+    },
+    {
+      "id": "721",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^2 + 8x^5 + -10",
+      "expected_answer": "f'(x) = 8x^1 + 40x^4"
+    },
+    {
+      "id": "722",
+      "category": "Calculus I",
+      "question": "lim(x->5) [5x^2 + -10x + -4]",
+      "expected_answer": "71"
+    },
+    {
+      "id": "723",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "724",
+      "category": "Calculus I",
+      "question": "integral of 4x^4 dx",
+      "expected_answer": "(4/5)x^5 + C"
+    },
+    {
+      "id": "725",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^3 / 3x^3]",
+      "expected_answer": "1.33"
+    },
+    {
+      "id": "726",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "727",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^3",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "728",
+      "category": "Calculus I",
+      "question": "integral of 5x^4 dx",
+      "expected_answer": "(5/5)x^5 + C"
+    },
+    {
+      "id": "729",
+      "category": "Calculus I",
+      "question": "integral of 7x^5 dx",
+      "expected_answer": "(7/6)x^6 + C"
+    },
+    {
+      "id": "730",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^10",
+      "expected_answer": "f'(x) = 30x^9"
+    },
+    {
+      "id": "731",
+      "category": "Calculus I",
+      "question": "integral from 0 to 7 of 4x^3 dx",
+      "expected_answer": "2401.0"
+    },
+    {
+      "id": "732",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^7",
+      "expected_answer": "f'(x) = 14x^6"
+    },
+    {
+      "id": "733",
+      "category": "Calculus I",
+      "question": "integral from 2 to 3 of 1x^2 dx",
+      "expected_answer": "6.33"
+    },
+    {
+      "id": "734",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^6",
+      "expected_answer": "f'(x) = 42x^5"
+    },
+    {
+      "id": "735",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "736",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + -4x + 9",
+      "expected_answer": "x = 0.67"
+    },
+    {
+      "id": "737",
+      "category": "Calculus I",
+      "question": "lim(x->-4) [4x^2 + -7x + 1]",
+      "expected_answer": "93"
+    },
+    {
+      "id": "738",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + -9x + 7",
+      "expected_answer": "x = 4.5"
+    },
+    {
+      "id": "739",
+      "category": "Calculus I",
+      "question": "integral of 3x^6 dx",
+      "expected_answer": "(3/7)x^7 + C"
+    },
+    {
+      "id": "740",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -1",
+      "expected_answer": "-10"
+    },
+    {
+      "id": "741",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 3x^2 + 3x + -10",
+      "expected_answer": "x = -0.5"
+    },
+    {
+      "id": "742",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -5)^3",
+      "expected_answer": "f'(x) = 3(4x + -5)^2 · 4"
+    },
+    {
+      "id": "743",
+      "category": "Calculus I",
+      "question": "integral of 10x^6 dx",
+      "expected_answer": "(10/7)x^7 + C"
+    },
+    {
+      "id": "744",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^10",
+      "expected_answer": "f'(x) = 60x^9"
+    },
+    {
+      "id": "745",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^3",
+      "expected_answer": "f'(x) = 6x^2"
+    },
+    {
+      "id": "746",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^9",
+      "expected_answer": "f'(x) = 36x^8"
+    },
+    {
+      "id": "747",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^4",
+      "expected_answer": "f'(x) = 16x^3"
+    },
+    {
+      "id": "748",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + -5)^5",
+      "expected_answer": "f'(x) = 5(4x + -5)^4 · 4"
+    },
+    {
+      "id": "749",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4",
+      "expected_answer": "f'(x) = 12x^3"
+    },
+    {
+      "id": "750",
+      "category": "Calculus I",
+      "question": "lim(x->6) [3x^2 + -2x + 4]",
+      "expected_answer": "100"
+    },
+    {
+      "id": "751",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 3x + -7",
+      "expected_answer": "x = -0.38"
+    },
+    {
+      "id": "752",
+      "category": "Calculus I",
+      "question": "integral of 7x^7 dx",
+      "expected_answer": "(7/8)x^8 + C"
+    },
+    {
+      "id": "753",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 / x^1",
+      "expected_answer": "f'(x) = 4x^3"
+    },
+    {
+      "id": "754",
+      "category": "Calculus I",
+      "question": "integral of 8x^3 dx",
+      "expected_answer": "(8/4)x^4 + C"
+    },
+    {
+      "id": "755",
+      "category": "Calculus I",
+      "question": "integral from 3 to 8 of 3x^3 dx",
+      "expected_answer": "3011.25"
+    },
+    {
+      "id": "756",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^3 + 3x^5 + 5",
+      "expected_answer": "f'(x) = 24x^2 + 15x^4"
+    },
+    {
+      "id": "757",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 3x^2 at x = -1",
+      "expected_answer": "-6"
+    },
+    {
+      "id": "758",
+      "category": "Calculus I",
+      "question": "integral of 9x^6 dx",
+      "expected_answer": "(9/7)x^7 + C"
+    },
+    {
+      "id": "759",
+      "category": "Calculus I",
+      "question": "lim(x->3) [(x^2 - 9) / (x - 3)]",
+      "expected_answer": "6"
+    },
+    {
+      "id": "760",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "761",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "762",
+      "category": "Calculus I",
+      "question": "lim(x->4) [3x^2 + -7x + 5]",
+      "expected_answer": "25"
+    },
+    {
+      "id": "763",
+      "category": "Calculus I",
+      "question": "lim(x->-7) [2x^2 + -4x + -7]",
+      "expected_answer": "119"
+    },
+    {
+      "id": "764",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "765",
+      "category": "Calculus I",
+      "question": "integral from 3 to 8 of 2x^3 dx",
+      "expected_answer": "2007.5"
+    },
+    {
+      "id": "766",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "767",
+      "category": "Calculus I",
+      "question": "integral from 1 to 3 of 2x^3 dx",
+      "expected_answer": "40.0"
+    },
+    {
+      "id": "768",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 3x + -5",
+      "expected_answer": "x = -0.38"
+    },
+    {
+      "id": "769",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 1x + 3",
+      "expected_answer": "x = -0.1"
+    },
+    {
+      "id": "770",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^2 + 1x^2 + 7",
+      "expected_answer": "f'(x) = 6x^1 + 2x^1"
+    },
+    {
+      "id": "771",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + -3x + -6",
+      "expected_answer": "x = 1.5"
+    },
+    {
+      "id": "772",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^4 + 7x^3 + 9",
+      "expected_answer": "f'(x) = 12x^3 + 21x^2"
+    },
+    {
+      "id": "773",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^7",
+      "expected_answer": "f'(x) = 70x^6"
+    },
+    {
+      "id": "774",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 3 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "113.1"
+    },
+    {
+      "id": "775",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^2 + 5x^4 + -1",
+      "expected_answer": "f'(x) = 10x^1 + 20x^3"
+    },
+    {
+      "id": "776",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [1x^3 / 4x^3]",
+      "expected_answer": "0.25"
+    },
+    {
+      "id": "777",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "778",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^2 + 2x^2 + 3",
+      "expected_answer": "f'(x) = 16x^1 + 4x^1"
+    },
+    {
+      "id": "779",
+      "category": "Calculus I",
+      "question": "lim(x->-9) [3x^2 + 4x + -6]",
+      "expected_answer": "201"
+    },
+    {
+      "id": "780",
+      "category": "Calculus I",
+      "question": "integral of 4x^2 dx",
+      "expected_answer": "(4/3)x^3 + C"
+    },
+    {
+      "id": "781",
+      "category": "Calculus I",
+      "question": "lim(x->5) [3x^2 + -8x + -10]",
+      "expected_answer": "25"
+    },
+    {
+      "id": "782",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -4",
+      "expected_answer": "-40"
+    },
+    {
+      "id": "783",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 2x^4 dx",
+      "expected_answer": "3013.2"
+    },
+    {
+      "id": "784",
+      "category": "Calculus I",
+      "question": "integral from 2 to 8 of 1x^4 dx",
+      "expected_answer": "6547.2"
+    },
+    {
+      "id": "785",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "786",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^3",
+      "expected_answer": "f'(x) = 21x^2"
+    },
+    {
+      "id": "787",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^6",
+      "expected_answer": "f'(x) = 30x^5"
+    },
+    {
+      "id": "788",
+      "category": "Calculus I",
+      "question": "integral of 4sin(x) dx",
+      "expected_answer": "-4cos(x) + C"
+    },
+    {
+      "id": "789",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 4 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "125.66"
+    },
+    {
+      "id": "790",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "791",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + 1)^5",
+      "expected_answer": "f'(x) = 5(5x + 1)^4 · 5"
+    },
+    {
+      "id": "792",
+      "category": "Calculus I",
+      "question": "integral of 8x^5 dx",
+      "expected_answer": "(8/6)x^6 + C"
+    },
+    {
+      "id": "793",
+      "category": "Calculus I",
+      "question": "lim(x->-3) [1x^2 + -8x + -1]",
+      "expected_answer": "32"
+    },
+    {
+      "id": "794",
+      "category": "Calculus I",
+      "question": "lim(x->-6) [1x^2 + -7x + 4]",
+      "expected_answer": "82"
+    },
+    {
+      "id": "795",
+      "category": "Calculus I",
+      "question": "integral of 7x^2 dx",
+      "expected_answer": "(7/3)x^3 + C"
+    },
+    {
+      "id": "796",
+      "category": "Calculus I",
+      "question": "integral of 7x^3 dx",
+      "expected_answer": "(7/4)x^4 + C"
+    },
+    {
+      "id": "797",
+      "category": "Calculus I",
+      "question": "lim(x->9) [5x^2 + 6x + 4]",
+      "expected_answer": "463"
+    },
+    {
+      "id": "798",
+      "category": "Calculus I",
+      "question": "integral of 2x^6 dx",
+      "expected_answer": "(2/7)x^7 + C"
+    },
+    {
+      "id": "799",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + -5)^3",
+      "expected_answer": "f'(x) = 3(2x + -5)^2 · 2"
+    },
+    {
+      "id": "800",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^6",
+      "expected_answer": "f'(x) = 24x^5"
+    },
+    {
+      "id": "801",
+      "category": "Calculus I",
+      "question": "lim(x->2) [5x^2 + -5x + -7]",
+      "expected_answer": "3"
+    },
+    {
+      "id": "802",
+      "category": "Calculus I",
+      "question": "lim(x->-8) [5x^2 + 2x + -5]",
+      "expected_answer": "299"
+    },
+    {
+      "id": "803",
+      "category": "Calculus I",
+      "question": "integral from 2 to 7 of 2x^4 dx",
+      "expected_answer": "6710.0"
+    },
+    {
+      "id": "804",
+      "category": "Calculus I",
+      "question": "integral from 1 to 5 of 3x^2 dx",
+      "expected_answer": "124.0"
+    },
+    {
+      "id": "805",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 4 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "125.66"
+    },
+    {
+      "id": "806",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 10 cm/s. Find the rate of change of the area when r = 2 cm. Use pi = 3.14159.",
+      "expected_answer": "125.66"
+    },
+    {
+      "id": "807",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^3 / 5x^3]",
+      "expected_answer": "0.8"
+    },
+    {
+      "id": "808",
+      "category": "Calculus I",
+      "question": "f(x) = x^1 / x^3",
+      "expected_answer": "f'(x) = -2x^-3"
+    },
+    {
+      "id": "809",
+      "category": "Calculus I",
+      "question": "integral from 3 to 6 of 3x^2 dx",
+      "expected_answer": "189.0"
+    },
+    {
+      "id": "810",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 2x^2 + 1x + -3",
+      "expected_answer": "x = -0.25"
+    },
+    {
+      "id": "811",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -3)^2",
+      "expected_answer": "f'(x) = 2(5x + -3)^1 · 5"
+    },
+    {
+      "id": "812",
+      "category": "Calculus I",
+      "question": "lim(x->7) [1x^2 + 1x + 4]",
+      "expected_answer": "60"
+    },
+    {
+      "id": "813",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "814",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 4x^2 at x = 1",
+      "expected_answer": "8"
+    },
+    {
+      "id": "815",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "816",
+      "category": "Calculus I",
+      "question": "integral of 4x^5 dx",
+      "expected_answer": "(4/6)x^6 + C"
+    },
+    {
+      "id": "817",
+      "category": "Calculus I",
+      "question": "integral from 1 to 7 of 2x^4 dx",
+      "expected_answer": "6722.4"
+    },
+    {
+      "id": "818",
+      "category": "Calculus I",
+      "question": "integral of 10x^8 dx",
+      "expected_answer": "(10/9)x^9 + C"
+    },
+    {
+      "id": "819",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -4",
+      "expected_answer": "-40"
+    },
+    {
+      "id": "820",
+      "category": "Calculus I",
+      "question": "f(x) = (3x + 0)^5",
+      "expected_answer": "f'(x) = 5(3x + 0)^4 · 3"
+    },
+    {
+      "id": "821",
+      "category": "Calculus I",
+      "question": "integral of 5cos(x) dx",
+      "expected_answer": "5sin(x) + C"
+    },
+    {
+      "id": "822",
+      "category": "Calculus I",
+      "question": "integral of 1x^1 dx",
+      "expected_answer": "(1/2)x^2 + C"
+    },
+    {
+      "id": "823",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^2 / 3x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "824",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^2 / 2x^3]",
+      "expected_answer": "0"
+    },
+    {
+      "id": "825",
+      "category": "Calculus I",
+      "question": "integral of 5x^7 dx",
+      "expected_answer": "(5/8)x^8 + C"
+    },
+    {
+      "id": "826",
+      "category": "Calculus I",
+      "question": "f(x) = x^2 · sin(x)",
+      "expected_answer": "f'(x) = 2x^1·sin(x) + x^2·cos(x)"
+    },
+    {
+      "id": "827",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "828",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 10 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "376.99"
+    },
+    {
+      "id": "829",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -5",
+      "expected_answer": "-50"
+    },
+    {
+      "id": "830",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^9",
+      "expected_answer": "f'(x) = 9x^8"
+    },
+    {
+      "id": "831",
+      "category": "Calculus I",
+      "question": "lim(x->-5) [1x^2 + 9x + 9]",
+      "expected_answer": "-11"
+    },
+    {
+      "id": "832",
+      "category": "Calculus I",
+      "question": "f(x) = x^1 / x^1",
+      "expected_answer": "f'(x) = 0"
+    },
+    {
+      "id": "833",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^5 + 3x^4 + 6",
+      "expected_answer": "f'(x) = 15x^4 + 12x^3"
+    },
+    {
+      "id": "834",
+      "category": "Calculus I",
+      "question": "integral of 4cos(x) dx",
+      "expected_answer": "4sin(x) + C"
+    },
+    {
+      "id": "835",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + 9x + -9",
+      "expected_answer": "x = -4.5"
+    },
+    {
+      "id": "836",
+      "category": "Calculus I",
+      "question": "integral of 5x^1 dx",
+      "expected_answer": "(5/2)x^2 + C"
+    },
+    {
+      "id": "837",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^1",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "838",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^10",
+      "expected_answer": "f'(x) = 80x^9"
+    },
+    {
+      "id": "839",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = 2",
+      "expected_answer": "4"
+    },
+    {
+      "id": "840",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 5x^2 + 4x + -1",
+      "expected_answer": "x = -0.4"
+    },
+    {
+      "id": "841",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [4x^3 / 5x^3]",
+      "expected_answer": "0.8"
+    },
+    {
+      "id": "842",
+      "category": "Calculus I",
+      "question": "integral of 5x^2 dx",
+      "expected_answer": "(5/3)x^3 + C"
+    },
+    {
+      "id": "843",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^4 + 7x^5 + -6",
+      "expected_answer": "f'(x) = 4x^3 + 35x^4"
+    },
+    {
+      "id": "844",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^3 / 2x^3]",
+      "expected_answer": "1.0"
+    },
+    {
+      "id": "845",
+      "category": "Calculus I",
+      "question": "f(x) = 1x^4 + 4x^5 + 0",
+      "expected_answer": "f'(x) = 4x^3 + 20x^4"
+    },
+    {
+      "id": "846",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^4 + 8x^2 + 9",
+      "expected_answer": "f'(x) = 8x^3 + 16x^1"
+    },
+    {
+      "id": "847",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 8 cm/s. Find the rate of change of the area when r = 6 cm. Use pi = 3.14159.",
+      "expected_answer": "301.59"
+    },
+    {
+      "id": "848",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^5 + 2x^3 + -2",
+      "expected_answer": "f'(x) = 20x^4 + 6x^2"
+    },
+    {
+      "id": "849",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^8",
+      "expected_answer": "f'(x) = 56x^7"
+    },
+    {
+      "id": "850",
+      "category": "Calculus I",
+      "question": "lim(x->-4) [4x^2 + -10x + 6]",
+      "expected_answer": "110"
+    },
+    {
+      "id": "851",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 3)^5",
+      "expected_answer": "f'(x) = 5(2x + 3)^4 · 2"
+    },
+    {
+      "id": "852",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^8",
+      "expected_answer": "f'(x) = 56x^7"
+    },
+    {
+      "id": "853",
+      "category": "Calculus I",
+      "question": "integral from 1 to 4 of 1x^3 dx",
+      "expected_answer": "63.75"
+    },
+    {
+      "id": "854",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = -3",
+      "expected_answer": "-30"
+    },
+    {
+      "id": "855",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^3",
+      "expected_answer": "f'(x) = 24x^2"
+    },
+    {
+      "id": "856",
+      "category": "Calculus I",
+      "question": "integral from 1 to 2 of 1x^4 dx",
+      "expected_answer": "6.2"
+    },
+    {
+      "id": "857",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "858",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = 4",
+      "expected_answer": "8"
+    },
+    {
+      "id": "859",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + 5x + 9",
+      "expected_answer": "x = -0.62"
+    },
+    {
+      "id": "860",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^10",
+      "expected_answer": "f'(x) = 100x^9"
+    },
+    {
+      "id": "861",
+      "category": "Calculus I",
+      "question": "integral of 3sin(x) dx",
+      "expected_answer": "-3cos(x) + C"
+    },
+    {
+      "id": "862",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "863",
+      "category": "Calculus I",
+      "question": "integral of 4sin(x) dx",
+      "expected_answer": "-4cos(x) + C"
+    },
+    {
+      "id": "864",
+      "category": "Calculus I",
+      "question": "integral of 7x^1 dx",
+      "expected_answer": "(7/2)x^2 + C"
+    },
+    {
+      "id": "865",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 · sin(x)",
+      "expected_answer": "f'(x) = 4x^3·sin(x) + x^4·cos(x)"
+    },
+    {
+      "id": "866",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^4",
+      "expected_answer": "f'(x) = 32x^3"
+    },
+    {
+      "id": "867",
+      "category": "Calculus I",
+      "question": "f(x) = 8x^5",
+      "expected_answer": "f'(x) = 40x^4"
+    },
+    {
+      "id": "868",
+      "category": "Calculus I",
+      "question": "f(x) = 3x^3",
+      "expected_answer": "f'(x) = 9x^2"
+    },
+    {
+      "id": "869",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 1x^2 + -5x + 3",
+      "expected_answer": "x = 2.5"
+    },
+    {
+      "id": "870",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 1x^2 at x = -2",
+      "expected_answer": "-4"
+    },
+    {
+      "id": "871",
+      "category": "Calculus I",
+      "question": "f(x) = 7x^3 + 2x^3 + 2",
+      "expected_answer": "f'(x) = 21x^2 + 6x^2"
+    },
+    {
+      "id": "872",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 4 cm/s. Find the rate of change of the area when r = 5 cm. Use pi = 3.14159.",
+      "expected_answer": "125.66"
+    },
+    {
+      "id": "873",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^1",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "874",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^3",
+      "expected_answer": "f'(x) = 18x^2"
+    },
+    {
+      "id": "875",
+      "category": "Calculus I",
+      "question": "f(x) = 5x^3 + 7x^2 + 8",
+      "expected_answer": "f'(x) = 15x^2 + 14x^1"
+    },
+    {
+      "id": "876",
+      "category": "Calculus I",
+      "question": "f(x) = 9x^8",
+      "expected_answer": "f'(x) = 72x^7"
+    },
+    {
+      "id": "877",
+      "category": "Calculus I",
+      "question": "f(x) = (5x + -4)^6",
+      "expected_answer": "f'(x) = 6(5x + -4)^5 · 5"
+    },
+    {
+      "id": "878",
+      "category": "Calculus I",
+      "question": "integral of 3cos(x) dx",
+      "expected_answer": "3sin(x) + C"
+    },
+    {
+      "id": "879",
+      "category": "Calculus I",
+      "question": "integral from 2 to 7 of 4x^1 dx",
+      "expected_answer": "90.0"
+    },
+    {
+      "id": "880",
+      "category": "Calculus I",
+      "question": "f(x) = 4x^10",
+      "expected_answer": "f'(x) = 40x^9"
+    },
+    {
+      "id": "881",
+      "category": "Calculus I",
+      "question": "integral of 3x^4 dx",
+      "expected_answer": "(3/5)x^5 + C"
+    },
+    {
+      "id": "882",
+      "category": "Calculus I",
+      "question": "f(x) = 10x^2",
+      "expected_answer": "f'(x) = 20x^1"
+    },
+    {
+      "id": "883",
+      "category": "Calculus I",
+      "question": "The radius of a circle is increasing at 4 cm/s. Find the rate of change of the area when r = 3 cm. Use pi = 3.14159.",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "884",
+      "category": "Calculus I",
+      "question": "integral from 1 to 5 of 2x^4 dx",
+      "expected_answer": "1249.6"
+    },
+    {
+      "id": "885",
+      "category": "Calculus I",
+      "question": "f(x) = x^4 / x^1",
+      "expected_answer": "f'(x) = 3x^2"
+    },
+    {
+      "id": "886",
+      "category": "Calculus I",
+      "question": "lim(x->1) [(x^2 - 1) / (x - 1)]",
+      "expected_answer": "2"
+    },
+    {
+      "id": "887",
+      "category": "Calculus I",
+      "question": "lim(x->infinity) [2x^3 / 4x^3]",
+      "expected_answer": "0.5"
+    },
+    {
+      "id": "888",
+      "category": "Calculus I",
+      "question": "f(x) = x^3 · sin(x)",
+      "expected_answer": "f'(x) = 3x^2·sin(x) + x^3·cos(x)"
+    },
+    {
+      "id": "889",
+      "category": "Calculus I",
+      "question": "Find the slope of the tangent line to f(x) = 5x^2 at x = 4",
+      "expected_answer": "40"
+    },
+    {
+      "id": "890",
+      "category": "Calculus I",
+      "question": "Find the critical points of f(x) = 4x^2 + -6x + 2",
+      "expected_answer": "x = 0.75"
+    },
+    {
+      "id": "891",
+      "category": "Calculus I",
+      "question": "f(x) = (2x + 4)^2",
+      "expected_answer": "f'(x) = 2(2x + 4)^1 · 2"
+    },
+    {
+      "id": "892",
+      "category": "Calculus I",
+      "question": "lim(x->7) [2x^2 + 10x + -7]",
+      "expected_answer": "161"
+    },
+    {
+      "id": "893",
+      "category": "Calculus I",
+      "question": "f(x) = (4x + 4)^3",
+      "expected_answer": "f'(x) = 3(4x + 4)^2 · 4"
+    },
+    {
+      "id": "894",
+      "category": "Calculus I",
+      "question": "f(x) = x^5 · sin(x)",
+      "expected_answer": "f'(x) = 5x^4·sin(x) + x^5·cos(x)"
+    },
+    {
+      "id": "895",
+      "category": "Calculus I",
+      "question": "integral of 4x^8 dx",
+      "expected_answer": "(4/9)x^9 + C"
+    },
+    {
+      "id": "896",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^5",
+      "expected_answer": "f'(x) = 30x^4"
+    },
+    {
+      "id": "897",
+      "category": "Calculus I",
+      "question": "f(x) = 2x^3 + 1x^4 + 4",
+      "expected_answer": "f'(x) = 6x^2 + 4x^3"
+    },
+    {
+      "id": "898",
+      "category": "Calculus I",
+      "question": "lim(x->-3) [4x^2 + -4x + 5]",
+      "expected_answer": "53"
+    },
+    {
+      "id": "899",
+      "category": "Calculus I",
+      "question": "f(x) = 6x^5",
+      "expected_answer": "f'(x) = 30x^4"
+    },
+    {
+      "id": "900",
+      "category": "Calculus I",
+      "question": "lim(x->-8) [3x^2 + 1x + 9]",
+      "expected_answer": "193"
+    }
+  ],
+  "total_questions": 900
+}

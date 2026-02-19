@@ -64,33 +64,64 @@ class StorageManager:
         
         # Initialize files if they don't exist
         self._initialize_files()
+
+    def _empty_results_payload(self) -> Dict[str, Any]:
+        """Build an empty results payload."""
+        return {
+            "metadata": {
+                "created": datetime.now().isoformat(),
+                "total_questions": 0,
+                "processed_questions": 0,
+                "successful_responses": 0,
+                "failed_responses": 0
+            },
+            "results": []
+        }
+
+    def _empty_progress_payload(self) -> Dict[str, Any]:
+        """Build an empty progress payload."""
+        return {
+            "last_processed_id": None,
+            "processed_ids": [],
+            "skipped_ids": [],
+            "failed_ids": [],
+            "session_start": datetime.now().isoformat()
+        }
     
     def _initialize_files(self):
         """Initialize storage files if they don't exist"""
         if not os.path.exists(self.results_file):
-            initial_data = {
-                "metadata": {
-                    "created": datetime.now().isoformat(),
-                    "total_questions": 0,
-                    "processed_questions": 0,
-                    "successful_responses": 0,
-                    "failed_responses": 0
-                },
-                "results": []
-            }
+            initial_data = self._empty_results_payload()
             with open(self.results_file, 'w', encoding='utf-8') as f:
                 json.dump(initial_data, f, indent=2, ensure_ascii=False)
         
         if not os.path.exists(self.progress_file):
-            progress_data = {
-                "last_processed_id": None,
-                "processed_ids": [],
-                "skipped_ids": [],
-                "failed_ids": [],
-                "session_start": datetime.now().isoformat()
-            }
+            progress_data = self._empty_progress_payload()
             with open(self.progress_file, 'w', encoding='utf-8') as f:
                 json.dump(progress_data, f, indent=2, ensure_ascii=False)
+
+    def start_new_run(self, run_name: Optional[str] = None) -> str:
+        """
+        Start a fresh run by switching to a new results file and resetting progress.
+
+        Args:
+            run_name: Optional run name. If not provided, a timestamped name is used.
+
+        Returns:
+            str: Path to the newly created results file.
+        """
+        if not run_name:
+            run_name = datetime.now().strftime("results_%Y%m%d_%H%M%S")
+
+        self.results_file = os.path.join(self.data_dir, f"{run_name}.json")
+
+        with open(self.results_file, 'w', encoding='utf-8') as f:
+            json.dump(self._empty_results_payload(), f, indent=2, ensure_ascii=False)
+
+        with open(self.progress_file, 'w', encoding='utf-8') as f:
+            json.dump(self._empty_progress_payload(), f, indent=2, ensure_ascii=False)
+
+        return self.results_file
     
     def save_result(self, result: QuestionResult) -> bool:
         """

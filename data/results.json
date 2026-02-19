@@ -2,10 +2,10 @@
   "metadata": {
     "created": "2025-10-26T19:54:16.841042",
     "total_questions": 0,
-    "processed_questions": 13,
-    "successful_responses": 13,
+    "processed_questions": 15,
+    "successful_responses": 15,
     "failed_responses": 0,
-    "last_updated": "2025-11-23T21:06:58.201115"
+    "last_updated": "2026-02-19T15:30:20.848394"
   },
   "results": [
     {
@@ -317,6 +317,56 @@
       "alternate_answer": null,
       "verification": {
         "extracted_answer": "-2",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "13",
+      "category": "limits",
+      "question_text": "Find the limit: lim(x→3) [9*x**4 - 10*x**3 - 7*x**2 + x + 6]",
+      "expected_answer": "405",
+      "llm_response": "To find the limit of a polynomial as \\(x\\) approaches a specific value, we can simply evaluate the polynomial at that value because polynomials are continuous everywhere.\n\nGiven the polynomial:\n\\[\nP(x)=9x^4 - 10x^3 - 7x^2 + x + 6\n\\]\n\nWe need:\n\\[\n\\lim_{x\\to 3} P(x) = P(3)\n\\]\n\nCompute each term at \\(x=3\\):\n\n1. \\(9x^4\\) at \\(x=3\\):\n   \\[\n   9(3)^4 = 9 \\times 81 = 729\n   \\]\n\n2. \\(-10x^3\\) at \\(x=3\\):\n   \\[\n   -10(3)^3 = -10 \\times 27 = -270\n   \\]\n\n3. \\(-7x^2\\) at \\(x=3\\):\n   \\[\n   -7(3)^2 = -7 \\times 9 = -63\n   \\]\n\n4. \\(+x\\) at \\(x=3\\):\n   \\[\n   +3\n   \\]\n\n5. \\(+6\\) (constant term):\n   \\[\n   +6\n   \\]\n\nNow sum them:\n\\[\n729 - 270 - 63 + 3 + 6\n\\]\n\nStep-by-step addition:\n\\[\n729 - 270 = 459\n\\]\n\\[\n459 - 63 = 396\n\\]\n\\[\n396 + 3 = 399\n\\]\n\\[\n399 + 6 = 405\n\\]\n\nThus,\n\\[\n\\lim_{x\\to 3} (9x^4 - 10x^3 - 7x^2 + x + 6) = 405\n\\]\n\nFINAL_ANSWER: 405",
+      "processing_time": 48.02935028076172,
+      "timestamp": "2026-02-19T15:15:20.499137",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "405",
+        "extraction_method": "FINAL_ANSWER",
+        "extraction_confidence": 1.0,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
+      }
+    },
+    {
+      "question_id": "14",
+      "category": "Advanced Probability & Statistics",
+      "question_text": "How many ways can you choose 3 items from 11 distinct items?",
+      "expected_answer": "165",
+      "llm_response": "To find the number of ways to choose 3 items from 11 distinct items, we use the combination formula:\n\n\\[\n\\binom{n}{k} = \\frac{n!}{k!(n-k)!}\n\\]\n\nHere, \\(n = 11\\) and \\(k = 3\\).\n\n\\[\n\\binom{11}{3} = \\frac{11!}{3!(11-3)!} = \\frac{11!}{3! \\cdot 8!}\n\\]\n\nSimplify by canceling the common factorial terms:\n\n\\[\n\\frac{11!}{8!} = 11 \\times 10 \\times 9\n\\]\n\nNow divide by \\(3! = 6\\):\n\n\\[\n\\frac{11 \\times 10 \\times 9}{6} = \\frac{990}{6} = 165\n\\]\n\nThus, there are **165** different ways to choose 3 items from 11 distinct items.\n\nFINAL_ANSWER: 165",
+      "processing_time": 74.90976047515869,
+      "timestamp": "2026-02-19T15:30:20.841224",
+      "success": true,
+      "error_message": null,
+      "model_used": "gpt-oss:20b",
+      "alternate_answer": null,
+      "verification": {
+        "extracted_answer": "165",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
