@@ -1,24 +1,7 @@
 {
-  "last_processed_id": "14",
-  "processed_ids": [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "test_1",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14"
-  ],
+  "last_processed_id": null,
+  "processed_ids": [],
   "skipped_ids": [],
   "failed_ids": [],
-  "session_start": "2025-10-26T19:54:16.841997",
-  "last_updated": "2026-02-19T15:30:20.852913"
+  "session_start": "2026-02-19T16:08:29.663650"
 }

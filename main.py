@@ -232,7 +232,7 @@ def setup_components(ollama_url: str, model_name: str) -> Optional[tuple]:
         ollama_client = OllamaClient(base_url=ollama_url, model=model_name)
 
         print("💾 Initializing storage manager...")
-        storage_manager = StorageManager()
+        storage_manager = StorageManager(data_dir="data", results_dir="results")
 
         print("⚙️  Initializing question processor...")
         processor = QuestionProcessor(ollama_client, storage_manager)
@@ -298,7 +298,7 @@ def select_processing_mode() -> str:
     print("⚙️ PROCESSING MODE")
     print("=" * 50)
     print("1. Question-by-question (interactive)")
-    print("2. Automatic sequential (run all remaining)")
+    print("2. Automatic sequential (run full dataset this run)")
 
     while True:
         choice = input("Select processing mode (1-2): ").strip()
@@ -410,6 +410,16 @@ def process_selected_datasets(
     """Process all selected datasets in the chosen mode"""
     for dataset in selected_datasets:
         xml_file = dataset["file"]
+        try:
+            results_file = processor.storage_manager.start_new_dataset_run(
+                dataset_file=xml_file,
+                model_name=processor.ollama_client.model,
+            )
+            print(f"\n🗂️ New results file for {dataset['name']}: {results_file}")
+        except Exception as e:
+            print(f"❌ Failed to initialize results file for dataset '{dataset['name']}': {e}")
+            return False
+
         questions = get_dataset_questions(xml_file, loaded_datasets)
         if questions is None:
             return False
