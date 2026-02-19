@@ -211,7 +211,12 @@ class StorageManager:
         """Start a new run for a specific dataset."""
         dataset_base_name = os.path.splitext(os.path.basename(dataset_file))[0] or "dataset"
         safe_dataset_name = self._sanitize_file_component(dataset_base_name)
-        run_name = f"{safe_dataset_name}_{self._filename_timestamp(datetime.now())}"
+        timestamp = self._filename_timestamp(datetime.now())
+        if model_name:
+            safe_model_name = self._sanitize_file_component(model_name)
+            run_name = f"{safe_dataset_name}_{safe_model_name}_{timestamp}"
+        else:
+            run_name = f"{safe_dataset_name}_{timestamp}"
         return self.start_new_run(
             run_name=run_name,
             dataset_file=dataset_file,
