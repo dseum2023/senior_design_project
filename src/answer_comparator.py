@@ -150,6 +150,29 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
     expr1 = str(ans1.value).strip()
     expr2 = str(ans2.value).strip()
 
+    def _strip_assignment_label(expr: str) -> tuple[str, bool]:
+        """
+        Strip simple assignment labels from expressions.
+
+        Examples:
+            f'(x)=15x^4 -> 15x^4
+            y=3x+1 -> 3x+1
+            x+1=0 -> unchanged (not treated as a label assignment)
+        """
+        expr_clean = re.sub(r'\s+', '', expr)
+        if '=' not in expr_clean:
+            return expr_clean, False
+
+        left, right = expr_clean.split('=', 1)
+
+        # Simple variable/function label, optionally with prime(s) and arguments
+        #   x, y, f(x), f'(x), g''(t)
+        label_pattern = r"^[a-zA-Z]\w*(?:'+)?(?:\([^=+\-*/^]+\))?$"
+        if re.match(label_pattern, left):
+            return right, True
+
+        return expr_clean, False
+
     # Remove all whitespace for comparison
     expr1_clean = re.sub(r'\s+', '', expr1)
     expr2_clean = re.sub(r'\s+', '', expr2)
@@ -161,13 +184,94 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
             match_type="exact",
             details=f"Expression match: {expr1}"
         )
+
+    # Fallback: allow equivalent expressions when one/both sides include
+    # assignment-style labels such as f'(x)=, y=, x=
+    expr1_rhs, stripped1 = _strip_assignment_label(expr1)
+    expr2_rhs, stripped2 = _strip_assignment_label(expr2)
+    if (stripped1 or stripped2) and expr1_rhs == expr2_rhs:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="equivalent",
+            details=f"Expression match after removing assignment label: '{expr1_rhs}'"
+        )
+
+    return ComparisonResult(
+        is_correct=False,
+        confidence=1.0,
+        match_type="no_match",
+        details=f"Expression mismatch: '{expr1}' vs '{expr2}'"
+    )
+
+
+def compare_coordinate_and_scalar(
+    coordinate_ans: NormalizedAnswer, scalar_ans: NormalizedAnswer
+) -> ComparisonResult:
+    """
+    Compare coordinate answer (e.g., x = 1.67) against scalar-only value (e.g., 1.67).
+    """
+    if coordinate_ans.answer_type != AnswerType.COORDINATE:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="type_mismatch",
+            details="Internal error: first argument is not coordinate"
+        )
+
+    var_name, coord_value = coordinate_ans.value
+
+    scalar_value = None
+    scalar_precision = scalar_ans.precision if scalar_ans.precision is not None else 2
+
+    if scalar_ans.answer_type == AnswerType.INTEGER:
+        scalar_value = float(scalar_ans.value)
+        scalar_precision = 0
+    elif scalar_ans.answer_type == AnswerType.DECIMAL:
+        scalar_value = float(scalar_ans.value)
+    elif scalar_ans.answer_type == AnswerType.FRACTION:
+        num, den = scalar_ans.value
+        if den == 0:
+            return ComparisonResult(
+                is_correct=False,
+                confidence=1.0,
+                match_type="no_match",
+                details="Invalid fraction denominator 0 in scalar answer"
+            )
+        scalar_value = num / den
+        scalar_precision = 6
+    elif scalar_ans.answer_type == AnswerType.SCIENTIFIC_NOTATION:
+        coef, exp = scalar_ans.value
+        scalar_value = float(coef * (10 ** exp))
+        scalar_precision = 6
     else:
         return ComparisonResult(
             is_correct=False,
             confidence=1.0,
-            match_type="no_match",
-            details=f"Expression mismatch: '{expr1}' vs '{expr2}'"
+            match_type="type_mismatch",
+            details=f"Type mismatch: coordinate vs {scalar_ans.answer_type.value}"
         )
+
+    precision = max(coordinate_ans.precision or 2, scalar_precision)
+    tolerance = 0.5 * (10 ** -precision)
+    diff = abs(coord_value - scalar_value)
+
+    if diff <= tolerance:
+        match_type = "exact" if diff == 0 else "tolerance"
+        confidence = 1.0 if diff == 0 else (1.0 - (diff / tolerance))
+        return ComparisonResult(
+            is_correct=True,
+            confidence=confidence,
+            match_type=match_type,
+            details=f"Coordinate/scalar match: {var_name}={coord_value} and {scalar_value}"
+        )
+
+    return ComparisonResult(
+        is_correct=False,
+        confidence=1.0,
+        match_type="no_match",
+        details=f"Coordinate/scalar values differ: {var_name}={coord_value} vs {scalar_value}"
+    )
 
 
 def compare_text(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
@@ -298,6 +402,18 @@ def _compare_single(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compariso
     """
     # CRITICAL: Type must match
     if ans1.answer_type != ans2.answer_type:
+        # Allow coordinate value vs scalar-only value (e.g., "x = 1.67" vs "1.67")
+        scalar_types = {
+            AnswerType.INTEGER,
+            AnswerType.DECIMAL,
+            AnswerType.FRACTION,
+            AnswerType.SCIENTIFIC_NOTATION,
+        }
+        if ans1.answer_type == AnswerType.COORDINATE and ans2.answer_type in scalar_types:
+            return compare_coordinate_and_scalar(ans1, ans2)
+        if ans2.answer_type == AnswerType.COORDINATE and ans1.answer_type in scalar_types:
+            return compare_coordinate_and_scalar(ans2, ans1)
+
         return ComparisonResult(
             is_correct=False,
             confidence=1.0,
