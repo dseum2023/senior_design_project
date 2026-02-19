@@ -66,13 +66,46 @@ def _extract_boxed(text: str) -> Optional[str]:
     Pattern: \\boxed{answer}
     Handles nested braces if needed
     """
-    # Simple pattern for non-nested braces
-    pattern = r'\\boxed\{([^}]+)\}'
-    matches = re.findall(pattern, text)
+    # Robust parse for nested braces, e.g. \boxed{\frac{4x^7}{7} + C}
+    marker = r'\boxed{'
+    boxed_contents = []
+    start_idx = 0
 
-    if matches:
+    while True:
+        marker_idx = text.find(marker, start_idx)
+        if marker_idx == -1:
+            break
+
+        content_start = marker_idx + len(marker)
+        depth = 1
+        i = content_start
+
+        while i < len(text):
+            char = text[i]
+            if char == '{':
+                depth += 1
+            elif char == '}':
+                depth -= 1
+                if depth == 0:
+                    content = text[content_start:i].strip()
+                    if content:
+                        boxed_contents.append(content)
+                    start_idx = i + 1
+                    break
+            i += 1
+        else:
+            # Unbalanced braces; stop parsing boxed sections.
+            break
+
+    if boxed_contents:
         # Return the last boxed answer (typically the final answer)
-        return matches[-1].strip()
+        return _clean_extracted_answer(boxed_contents[-1])
+
+    # Fallback for simple non-nested forms
+    pattern = r'\\boxed\{([^}\n]+)\}'
+    matches = re.findall(pattern, text)
+    if matches:
+        return _clean_extracted_answer(matches[-1].strip())
 
     return None
 
