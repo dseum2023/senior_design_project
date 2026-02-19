@@ -211,6 +211,13 @@ def normalize_expression(text: str) -> NormalizedAnswer:
     """
     text = text.strip()
 
+    # Normalize common LaTeX expression forms
+    # \frac{a}{b} -> (a/b), \cdot -> ·
+    text = re.sub(r'\\frac\s*\{([^{}]+)\}\s*\{([^{}]+)\}', r'(\1/\2)', text)
+    text = text.replace('\\cdot', '·').replace('\\times', '·')
+    text = text.replace('\\left', '').replace('\\right', '')
+    text = text.replace('\\,', '')
+
     # Standardize spacing around =
     text = re.sub(r'\s*=\s*', ' = ', text)
 
@@ -219,13 +226,22 @@ def normalize_expression(text: str) -> NormalizedAnswer:
     text = re.sub(r'([^0-9])x\^1([^0-9])', r'\1x\2', text)
     text = re.sub(r'([^0-9])x\^1$', r'\1x', text)
 
-    # Try to sort polynomial terms if this is a polynomial expression
-    # Pattern: f'(x) = term + term + ...
+    # Try to sort polynomial terms only for simple polynomial sums.
+    # Skip complex forms (parentheses, multiplication, division, unicode dot)
+    # to avoid corrupting expressions like: 4(4x-4)^3 · 4
     if 'f\'(x)' in text or 'f(x)' in text:
         parts = text.split('=', 1)
         if len(parts) == 2:
             left_side = parts[0].strip()
             right_side = parts[1].strip()
+
+            has_complex_ops = any(op in right_side for op in ['(', ')', '*', '/', '·'])
+            if has_complex_ops:
+                return NormalizedAnswer(
+                    value=text,
+                    answer_type=AnswerType.EXPRESSION,
+                    original_text=text
+                )
 
             # Try to parse and sort terms (simple case)
             # Look for patterns like "8x + 40x^4"

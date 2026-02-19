@@ -173,6 +173,68 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
 
         return expr_clean, False
 
+    def _to_evaluable(expr: str) -> Optional[str]:
+        """
+        Convert a math expression string into a Python-evaluable expression.
+        Returns None when unsupported tokens are present.
+        """
+        expr = (
+            expr.replace("·", "*")
+            .replace("⋅", "*")
+            .replace("×", "*")
+            .replace("?", "*")
+            .replace("−", "-")
+        )
+        expr = re.sub(r"\s+", "", expr)
+        expr = expr.replace("^", "**")
+
+        # Normalize common sign combinations.
+        while "+-" in expr or "--" in expr or "-+" in expr:
+            expr = expr.replace("+-", "-").replace("--", "+").replace("-+", "-")
+
+        # Allow only a strict safe subset.
+        if not re.match(r"^[0-9a-zA-Z+\-*/().*]+$", expr):
+            return None
+
+        # Insert implicit multiplication:
+        # 2x -> 2*x, 2(x+1) -> 2*(x+1), )x -> )*x, )( -> )*(
+        expr = re.sub(r"(?<=[0-9a-zA-Z\)])(?=\()", "*", expr)
+        expr = re.sub(r"(?<=[0-9\)])(?=[a-zA-Z])", "*", expr)
+        expr = re.sub(r"(?<=[a-zA-Z\)])(?=\d)", "*", expr)
+
+        return expr
+
+    def _numeric_equivalent(expr_a: str, expr_b: str) -> bool:
+        """
+        Numeric fallback for equivalent algebraic forms (e.g., expanded/factored).
+        """
+        eval_a = _to_evaluable(expr_a)
+        eval_b = _to_evaluable(expr_b)
+        if eval_a is None or eval_b is None:
+            return False
+
+        vars_a = set(re.findall(r"[a-zA-Z]", eval_a))
+        vars_b = set(re.findall(r"[a-zA-Z]", eval_b))
+        variables = sorted(vars_a.union(vars_b))
+
+        test_points = [-2.5, -1.7, -0.9, -0.3, 0.4, 1.1, 2.2]
+        checked = 0
+
+        for p in test_points:
+            env = {var: p for var in variables}
+            try:
+                val_a = eval(eval_a, {"__builtins__": {}}, env)
+                val_b = eval(eval_b, {"__builtins__": {}}, env)
+            except Exception:
+                continue
+
+            checked += 1
+            tolerance = max(1e-8, 1e-6 * max(1.0, abs(val_a), abs(val_b)))
+            if abs(val_a - val_b) > tolerance:
+                return False
+
+        return checked >= 3
+
     # Remove all whitespace for comparison
     expr1_clean = re.sub(r'\s+', '', expr1)
     expr2_clean = re.sub(r'\s+', '', expr2)
@@ -195,6 +257,15 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
             confidence=1.0,
             match_type="equivalent",
             details=f"Expression match after removing assignment label: '{expr1_rhs}'"
+        )
+
+    # Numeric fallback for algebraically equivalent forms.
+    if _numeric_equivalent(expr1_rhs, expr2_rhs):
+        return ComparisonResult(
+            is_correct=True,
+            confidence=0.95,
+            match_type="equivalent",
+            details="Expression match by numeric equivalence check"
         )
 
     return ComparisonResult(

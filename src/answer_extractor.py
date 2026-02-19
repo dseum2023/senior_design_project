@@ -17,6 +17,23 @@ class ExtractionResult:
     raw_text: str  # Original LLM response
 
 
+def _clean_extracted_answer(answer: str) -> str:
+    """
+    Clean extracted answer text from common LaTeX wrapper artifacts.
+    """
+    answer = answer.strip()
+
+    # Remove surrounding dollar math delimiters
+    if answer.startswith("$") and answer.endswith("$") and len(answer) >= 2:
+        answer = answer[1:-1].strip()
+
+    # Handle artifacts from patterns like \text{FINAL_ANSWER: } <answer>
+    # where generic extraction may capture a leading "}".
+    answer = re.sub(r'^\}\s*', '', answer)
+
+    return answer.strip()
+
+
 def _extract_final_answer_keyword(text: str) -> Optional[str]:
     """
     Extract answer using FINAL_ANSWER: keyword format (PRIMARY method)
@@ -24,13 +41,20 @@ def _extract_final_answer_keyword(text: str) -> Optional[str]:
     Pattern: FINAL_ANSWER: [answer]
     Case-insensitive
     """
-    # Case-insensitive search for FINAL_ANSWER:
-    pattern = r'FINAL_ANSWER:\s*(.+?)(?:\n|$)'
-    match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+    patterns = [
+        # LaTeX text wrapper variant:
+        # \text{FINAL_ANSWER: } \frac{4}{7}x^7 + C
+        r'\\text\{FINAL_ANSWER:\s*\}\s*(.+?)(?:\n|$)',
+        # Standard variant:
+        r'FINAL_ANSWER:\s*(.+?)(?:\n|$)',
+    ]
 
-    if match:
-        answer = match.group(1).strip()
-        return answer
+    for pattern in patterns:
+        match = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+        if match:
+            answer = _clean_extracted_answer(match.group(1))
+            if answer:
+                return answer
 
     return None
 
