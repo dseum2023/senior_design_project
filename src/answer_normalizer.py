@@ -295,6 +295,7 @@ def normalize_expression(text: str) -> NormalizedAnswer:
     text = text.replace('\\cdot', '·').replace('\\times', '·')
     text = text.replace('\\left', '').replace('\\right', '')
     text = text.replace('\\,', '')
+    text = re.sub(r'\\(sin|cos|tan|sec|csc|cot|ln|log|exp)\b', r'\1', text)
 
     # Standardize spacing around =
     text = re.sub(r'\s*=\s*', ' = ', text)
