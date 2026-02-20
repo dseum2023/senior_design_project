@@ -112,6 +112,56 @@ def compare_decimals(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Comparis
         )
 
 
+def compare_fraction_and_decimal(
+    fraction_ans: NormalizedAnswer, decimal_ans: NormalizedAnswer
+) -> ComparisonResult:
+    """
+    Compare fraction vs decimal using decimal precision tolerance.
+
+    Example:
+        40/3 vs 13.33 -> MATCH (within 0.005 for precision=2)
+    """
+    if fraction_ans.answer_type != AnswerType.FRACTION or decimal_ans.answer_type != AnswerType.DECIMAL:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="type_mismatch",
+            details=f"Type mismatch: {fraction_ans.answer_type.value} vs {decimal_ans.answer_type.value}",
+        )
+
+    num, den = fraction_ans.value
+    if den == 0:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details="Invalid fraction denominator 0",
+        )
+
+    frac_value = num / den
+    dec_value = float(decimal_ans.value)
+    precision = decimal_ans.precision if decimal_ans.precision is not None else 2
+    tolerance = 0.5 * (10 ** -precision)
+    diff = abs(frac_value - dec_value)
+
+    if diff <= tolerance:
+        match_type = "exact" if diff == 0 else "tolerance"
+        confidence = 1.0 if diff == 0 else (1.0 - (diff / tolerance))
+        return ComparisonResult(
+            is_correct=True,
+            confidence=confidence,
+            match_type=match_type,
+            details=f"Fraction/decimal match: {num}/{den} ~= {dec_value} within tolerance {tolerance}",
+        )
+
+    return ComparisonResult(
+        is_correct=False,
+        confidence=1.0,
+        match_type="no_match",
+        details=f"Fraction/decimal differ: |{frac_value} - {dec_value}| = {diff:.6f} > {tolerance}",
+    )
+
+
 def compare_integers(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
     """
     Compare two integers (exact match only)
@@ -293,6 +343,7 @@ def compare_coordinate_and_scalar(
     var_name, coord_value = coordinate_ans.value
 
     scalar_value = None
+    coord_precision = coordinate_ans.precision if coordinate_ans.precision is not None else 2
     scalar_precision = scalar_ans.precision if scalar_ans.precision is not None else 2
 
     if scalar_ans.answer_type == AnswerType.INTEGER:
@@ -310,11 +361,12 @@ def compare_coordinate_and_scalar(
                 details="Invalid fraction denominator 0 in scalar answer"
             )
         scalar_value = num / den
-        scalar_precision = 6
+        # Use coordinate precision when comparing exact fraction to rounded coordinate.
+        scalar_precision = coord_precision
     elif scalar_ans.answer_type == AnswerType.SCIENTIFIC_NOTATION:
         coef, exp = scalar_ans.value
         scalar_value = float(coef * (10 ** exp))
-        scalar_precision = 6
+        scalar_precision = coord_precision
     else:
         return ComparisonResult(
             is_correct=False,
@@ -323,7 +375,7 @@ def compare_coordinate_and_scalar(
             details=f"Type mismatch: coordinate vs {scalar_ans.answer_type.value}"
         )
 
-    precision = max(coordinate_ans.precision or 2, scalar_precision)
+    precision = max(coord_precision, scalar_precision)
     tolerance = 0.5 * (10 ** -precision)
     diff = abs(coord_value - scalar_value)
 
@@ -484,6 +536,10 @@ def _compare_single(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compariso
             return compare_coordinate_and_scalar(ans1, ans2)
         if ans2.answer_type == AnswerType.COORDINATE and ans1.answer_type in scalar_types:
             return compare_coordinate_and_scalar(ans2, ans1)
+        if ans1.answer_type == AnswerType.FRACTION and ans2.answer_type == AnswerType.DECIMAL:
+            return compare_fraction_and_decimal(ans1, ans2)
+        if ans2.answer_type == AnswerType.FRACTION and ans1.answer_type == AnswerType.DECIMAL:
+            return compare_fraction_and_decimal(ans2, ans1)
 
         return ComparisonResult(
             is_correct=False,

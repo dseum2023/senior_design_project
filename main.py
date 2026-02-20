@@ -31,6 +31,9 @@ MODEL_OPTIONS = {
     "1": "gpt-oss:20b",
     "2": "qwen3:8b",
     "3": "gemma3:12b",
+    "4": "qwen3:4b",
+    "5": "phi3:3.8b",
+    "6": "gemma3:4b",
 }
 
 DATASET_OPTIONS = {

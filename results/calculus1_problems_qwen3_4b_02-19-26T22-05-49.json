@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "total_time_seconds": 0.0,
+    "average_time_per_question_seconds": 0.0,
+    "questions_answered": 0,
+    "questions_correct": 0,
+    "percent_correct": 0.0
+  },
+  "metadata": {
+    "created": "2026-02-19T22:05:49.472823",
+    "requested_timestamp_format": "02-19-26T22:05:49",
+    "filename_timestamp": "02-19-26T22-05-49",
+    "dataset_file": "calculus1_problems.xml",
+    "model_name": "qwen3:4b",
+    "total_questions": 0,
+    "processed_questions": 0,
+    "successful_responses": 0,
+    "failed_responses": 0,
+    "last_updated": "2026-02-19T22:05:49.472823"
+  },
+  "results": []
+}
