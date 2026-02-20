@@ -4,6 +4,7 @@ Type-aware comparison of normalized answers
 """
 
 import re
+import math
 from math import gcd
 from dataclasses import dataclass
 from typing import Optional
@@ -70,7 +71,7 @@ def compare_fractions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compari
 
 def compare_decimals(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
     """
-    Compare two decimals with tolerance based on precision
+    Compare two decimals with tolerance based on least precision.
 
     Tolerance = 0.5 * (10 ** -precision)
     Examples:
@@ -81,8 +82,9 @@ def compare_decimals(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Comparis
     val1 = ans1.value
     val2 = ans2.value
 
-    # Determine tolerance based on precision
-    precision = max(ans1.precision or 2, ans2.precision or 2)
+    # Determine tolerance based on the less precise decimal representation.
+    # This allows equivalent rounded values (e.g., 125.6636 vs 125.66) to match.
+    precision = min(ans1.precision or 2, ans2.precision or 2)
     tolerance = 0.5 * (10 ** -precision)
 
     diff = abs(val1 - val2)
@@ -254,27 +256,75 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
 
         return expr
 
+    def _to_evaluable_safe(expr: str) -> Optional[str]:
+        """
+        Convert a math expression to a Python-evaluable form with trig/log support.
+        """
+        expr = (
+            expr.replace("·", "*")
+            .replace("⋅", "*")
+            .replace("×", "*")
+            .replace("Â·", "*")
+            .replace("â‹…", "*")
+            .replace("Ã—", "*")
+            .replace("?", "*")
+            .replace("−", "-")
+            .replace("âˆ’", "-")
+        )
+        expr = re.sub(r"\bln\s*\(", "log(", expr)
+        expr = re.sub(r"\s+", "", expr)
+        expr = expr.replace("^", "**")
+
+        while "+-" in expr or "--" in expr or "-+" in expr:
+            expr = expr.replace("+-", "-").replace("--", "+").replace("-+", "-")
+
+        if not re.match(r"^[0-9a-zA-Z_+\-*/().]+$", expr):
+            return None
+
+        # Implicit multiplication:
+        # 2x -> 2*x, 2(x+1) -> 2*(x+1), x(x+1) -> x*(x+1), )x -> )*x
+        # Keep function calls like sin(x), cos(x), log(x) intact.
+        expr = re.sub(r"(?<=[0-9\)])(?=\()", "*", expr)
+        expr = re.sub(r"(?<=\b[a-zA-Z])(?=\()", "*", expr)
+        expr = re.sub(r"(?<=[0-9\)])(?=[a-zA-Z])", "*", expr)
+        expr = re.sub(r"(?<=[a-zA-Z\)])(?=\d)", "*", expr)
+
+        return expr
+
     def _numeric_equivalent(expr_a: str, expr_b: str) -> bool:
         """
         Numeric fallback for equivalent algebraic forms (e.g., expanded/factored).
         """
-        eval_a = _to_evaluable(expr_a)
-        eval_b = _to_evaluable(expr_b)
+        eval_a = _to_evaluable_safe(expr_a)
+        eval_b = _to_evaluable_safe(expr_b)
         if eval_a is None or eval_b is None:
             return False
 
-        vars_a = set(re.findall(r"[a-zA-Z]", eval_a))
-        vars_b = set(re.findall(r"[a-zA-Z]", eval_b))
-        variables = sorted(vars_a.union(vars_b))
+        function_names = {"sin", "cos", "tan", "sec", "csc", "cot", "log", "exp"}
+        tokens_a = set(re.findall(r"[A-Za-z_]+", eval_a))
+        tokens_b = set(re.findall(r"[A-Za-z_]+", eval_b))
+        variables = sorted((tokens_a.union(tokens_b)) - function_names)
 
         test_points = [-2.5, -1.7, -0.9, -0.3, 0.4, 1.1, 2.2]
         checked = 0
+        safe_globals = {
+            "__builtins__": {},
+            "sin": math.sin,
+            "cos": math.cos,
+            "tan": math.tan,
+            "log": math.log,
+            "exp": math.exp,
+            "sec": lambda x: 1.0 / math.cos(x),
+            "csc": lambda x: 1.0 / math.sin(x),
+            "cot": lambda x: 1.0 / math.tan(x),
+            "abs": abs,
+        }
 
         for p in test_points:
             env = {var: p for var in variables}
             try:
-                val_a = eval(eval_a, {"__builtins__": {}}, env)
-                val_b = eval(eval_b, {"__builtins__": {}}, env)
+                val_a = eval(eval_a, safe_globals, env)
+                val_b = eval(eval_b, safe_globals, env)
             except Exception:
                 continue
 
