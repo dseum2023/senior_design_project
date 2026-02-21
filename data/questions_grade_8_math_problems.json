@@ -1,0 +1,3873 @@
+{
+  "metadata": {
+    "name": "",
+    "total_problems": 0
+  },
+  "questions": [
+    {
+      "id": "1",
+      "category": "The Number System",
+      "question": "0.551(35)",
+      "expected_answer": "54584/99000"
+    },
+    {
+      "id": "2",
+      "category": "The Number System",
+      "question": "0.30(41)",
+      "expected_answer": "3011/9900"
+    },
+    {
+      "id": "3",
+      "category": "The Number System",
+      "question": "35.1(39)",
+      "expected_answer": "34788/990"
+    },
+    {
+      "id": "4",
+      "category": "The Number System",
+      "question": "5.7(4)",
+      "expected_answer": "517/90"
+    },
+    {
+      "id": "5",
+      "category": "The Number System",
+      "question": "8.151(51)",
+      "expected_answer": "807000/99000"
+    },
+    {
+      "id": "6",
+      "category": "The Number System",
+      "question": "5.545(9)",
+      "expected_answer": "49914/9000"
+    },
+    {
+      "id": "7",
+      "category": "The Number System",
+      "question": "6.41(32)",
+      "expected_answer": "63491/9900"
+    },
+    {
+      "id": "8",
+      "category": "The Number System",
+      "question": "3.28(9)",
+      "expected_answer": "2961/900"
+    },
+    {
+      "id": "9",
+      "category": "The Number System",
+      "question": "0.5(31)",
+      "expected_answer": "526/990"
+    },
+    {
+      "id": "10",
+      "category": "The Number System",
+      "question": "0.83(1)",
+      "expected_answer": "748/900"
+    },
+    {
+      "id": "11",
+      "category": "The Number System",
+      "question": "SQRT(81)",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "12",
+      "category": "The Number System",
+      "question": "56.5(191)",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "13",
+      "category": "The Number System",
+      "question": "SQRT(83)",
+      "expected_answer": "Irrational"
+    },
+    {
+      "id": "14",
+      "category": "The Number System",
+      "question": "24π",
+      "expected_answer": "Irrational"
+    },
+    {
+      "id": "15",
+      "category": "The Number System",
+      "question": "90.790170......",
+      "expected_answer": "Irrational"
+    },
+    {
+      "id": "16",
+      "category": "The Number System",
+      "question": "60/52",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "17",
+      "category": "The Number System",
+      "question": "70.300722",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "18",
+      "category": "The Number System",
+      "question": "22",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "19",
+      "category": "The Number System",
+      "question": "14",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "20",
+      "category": "The Number System",
+      "question": "22/38",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "21",
+      "category": "The Number System",
+      "question": "23/24",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "22",
+      "category": "The Number System",
+      "question": "46.547415",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "23",
+      "category": "The Number System",
+      "question": "SQRT(64)",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "24",
+      "category": "The Number System",
+      "question": "8/14",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "25",
+      "category": "The Number System",
+      "question": "SQRT(109)",
+      "expected_answer": "Irrational"
+    },
+    {
+      "id": "26",
+      "category": "The Number System",
+      "question": "82.208701......",
+      "expected_answer": "Irrational"
+    },
+    {
+      "id": "27",
+      "category": "The Number System",
+      "question": "11.236(54)",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "28",
+      "category": "The Number System",
+      "question": "SQRT(100)",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "29",
+      "category": "The Number System",
+      "question": "55/51",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "30",
+      "category": "The Number System",
+      "question": "19.525305",
+      "expected_answer": "Rational"
+    },
+    {
+      "id": "31",
+      "category": "The Number System",
+      "question": "Is SQRT(75) closer to 8 or 9?",
+      "expected_answer": "9"
+    },
+    {
+      "id": "32",
+      "category": "The Number System",
+      "question": "Is SQRT(7) closer to 2 or 3?",
+      "expected_answer": "3"
+    },
+    {
+      "id": "33",
+      "category": "The Number System",
+      "question": "Is SQRT(65) closer to 8 or 9?",
+      "expected_answer": "8"
+    },
+    {
+      "id": "34",
+      "category": "The Number System",
+      "question": "Is SQRT(92) closer to 9 or 10?",
+      "expected_answer": "10"
+    },
+    {
+      "id": "35",
+      "category": "The Number System",
+      "question": "Is SQRT(93) closer to 9 or 10?",
+      "expected_answer": "10"
+    },
+    {
+      "id": "36",
+      "category": "The Number System",
+      "question": "Is SQRT(3) closer to 1 or 2?",
+      "expected_answer": "2"
+    },
+    {
+      "id": "37",
+      "category": "The Number System",
+      "question": "Is SQRT(86) closer to 9 or 10?",
+      "expected_answer": "9"
+    },
+    {
+      "id": "38",
+      "category": "The Number System",
+      "question": "Is SQRT(22) closer to 4 or 5?",
+      "expected_answer": "5"
+    },
+    {
+      "id": "39",
+      "category": "The Number System",
+      "question": "Is SQRT(88) closer to 9 or 10?",
+      "expected_answer": "9"
+    },
+    {
+      "id": "40",
+      "category": "The Number System",
+      "question": "Is SQRT(21) closer to 4 or 5?",
+      "expected_answer": "5"
+    },
+    {
+      "id": "41",
+      "category": "The Number System",
+      "question": "Is SQRT(66) closer to 8 or 9?",
+      "expected_answer": "8"
+    },
+    {
+      "id": "42",
+      "category": "The Number System",
+      "question": "Is SQRT(97) closer to 9 or 10?",
+      "expected_answer": "10"
+    },
+    {
+      "id": "43",
+      "category": "The Number System",
+      "question": "Is SQRT(34) closer to 5 or 6?",
+      "expected_answer": "6"
+    },
+    {
+      "id": "44",
+      "category": "The Number System",
+      "question": "Is SQRT(99) closer to 9 or 10?",
+      "expected_answer": "10"
+    },
+    {
+      "id": "45",
+      "category": "The Number System",
+      "question": "Is SQRT(20) closer to 4 or 5?",
+      "expected_answer": "4"
+    },
+    {
+      "id": "46",
+      "category": "The Number System",
+      "question": "Is SQRT(63) closer to 7 or 8?",
+      "expected_answer": "8"
+    },
+    {
+      "id": "47",
+      "category": "The Number System",
+      "question": "Is SQRT(89) closer to 9 or 10?",
+      "expected_answer": "9"
+    },
+    {
+      "id": "48",
+      "category": "The Number System",
+      "question": "Is SQRT(33) closer to 5 or 6?",
+      "expected_answer": "6"
+    },
+    {
+      "id": "49",
+      "category": "The Number System",
+      "question": "Is SQRT(52) closer to 7 or 8?",
+      "expected_answer": "7"
+    },
+    {
+      "id": "50",
+      "category": "The Number System",
+      "question": "Is SQRT(70) closer to 8 or 9?",
+      "expected_answer": "8"
+    },
+    {
+      "id": "51",
+      "category": "The Number System",
+      "question": "SQRT(65)",
+      "expected_answer": "8 and 9"
+    },
+    {
+      "id": "52",
+      "category": "The Number System",
+      "question": "SQRT(8)",
+      "expected_answer": "2 and 3"
+    },
+    {
+      "id": "53",
+      "category": "The Number System",
+      "question": "SQRT(66)",
+      "expected_answer": "8 and 9"
+    },
+    {
+      "id": "54",
+      "category": "The Number System",
+      "question": "SQRT(93)",
+      "expected_answer": "9 and 10"
+    },
+    {
+      "id": "55",
+      "category": "The Number System",
+      "question": "SQRT(94)",
+      "expected_answer": "9 and 10"
+    },
+    {
+      "id": "56",
+      "category": "The Number System",
+      "question": "SQRT(17)",
+      "expected_answer": "4 and 5"
+    },
+    {
+      "id": "57",
+      "category": "The Number System",
+      "question": "SQRT(87)",
+      "expected_answer": "9 and 10"
+    },
+    {
+      "id": "58",
+      "category": "The Number System",
+      "question": "SQRT(23)",
+      "expected_answer": "4 and 5"
+    },
+    {
+      "id": "59",
+      "category": "The Number System",
+      "question": "SQRT(5)",
+      "expected_answer": "2 and 3"
+    },
+    {
+      "id": "60",
+      "category": "The Number System",
+      "question": "SQRT(22)",
+      "expected_answer": "4 and 5"
+    },
+    {
+      "id": "61",
+      "category": "The Number System",
+      "question": "SQRT(67)",
+      "expected_answer": "8 and 9"
+    },
+    {
+      "id": "62",
+      "category": "The Number System",
+      "question": "SQRT(98)",
+      "expected_answer": "9 and 10"
+    },
+    {
+      "id": "63",
+      "category": "The Number System",
+      "question": "SQRT(35)",
+      "expected_answer": "5 and 6"
+    },
+    {
+      "id": "64",
+      "category": "The Number System",
+      "question": "SQRT(10)",
+      "expected_answer": "3 and 4"
+    },
+    {
+      "id": "65",
+      "category": "The Number System",
+      "question": "SQRT(21)",
+      "expected_answer": "4 and 5"
+    },
+    {
+      "id": "66",
+      "category": "The Number System",
+      "question": "SQRT(29)",
+      "expected_answer": "5 and 6"
+    },
+    {
+      "id": "67",
+      "category": "The Number System",
+      "question": "SQRT(90)",
+      "expected_answer": "9 and 10"
+    },
+    {
+      "id": "68",
+      "category": "The Number System",
+      "question": "SQRT(34)",
+      "expected_answer": "5 and 6"
+    },
+    {
+      "id": "69",
+      "category": "The Number System",
+      "question": "SQRT(53)",
+      "expected_answer": "7 and 8"
+    },
+    {
+      "id": "70",
+      "category": "The Number System",
+      "question": "SQRT(71)",
+      "expected_answer": "8 and 9"
+    },
+    {
+      "id": "71",
+      "category": "The Number System",
+      "question": "SQRT(22-6)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "72",
+      "category": "The Number System",
+      "question": "SQRT(2+47)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "73",
+      "category": "The Number System",
+      "question": "3ROOT(5*5*5)",
+      "expected_answer": "5"
+    },
+    {
+      "id": "74",
+      "category": "The Number System",
+      "question": "3ROOT(6*6*6)",
+      "expected_answer": "6"
+    },
+    {
+      "id": "75",
+      "category": "The Number System",
+      "question": "3ROOT(8*8*8)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "76",
+      "category": "The Number System",
+      "question": "3ROOT(1019-19)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "77",
+      "category": "The Number System",
+      "question": "SQRT(155-11)",
+      "expected_answer": "12"
+    },
+    {
+      "id": "78",
+      "category": "The Number System",
+      "question": "SQRT(9*9)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "79",
+      "category": "The Number System",
+      "question": "SQRT(4+5)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "80",
+      "category": "The Number System",
+      "question": "SQRT(37+63)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "81",
+      "category": "The Number System",
+      "question": "3ROOT(1029/3)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "82",
+      "category": "The Number System",
+      "question": "3ROOT(2916/4)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "83",
+      "category": "The Number System",
+      "question": "SQRT(2*2)",
+      "expected_answer": "2"
+    },
+    {
+      "id": "84",
+      "category": "The Number System",
+      "question": "3ROOT(256/4)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "85",
+      "category": "The Number System",
+      "question": "SQRT(256/4)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "86",
+      "category": "The Number System",
+      "question": "SQRT(21+4)",
+      "expected_answer": "5"
+    },
+    {
+      "id": "87",
+      "category": "The Number System",
+      "question": "5*5*23",
+      "expected_answer": "5^2 * 23"
+    },
+    {
+      "id": "88",
+      "category": "The Number System",
+      "question": "3*3*3*31",
+      "expected_answer": "3^2 * 93"
+    },
+    {
+      "id": "89",
+      "category": "The Number System",
+      "question": "3*3*53",
+      "expected_answer": "3^2 * 53"
+    },
+    {
+      "id": "90",
+      "category": "The Number System",
+      "question": "2*2*2*2*3*5",
+      "expected_answer": "4^2 * 15"
+    },
+    {
+      "id": "91",
+      "category": "The Number System",
+      "question": "2*2",
+      "expected_answer": "2^2"
+    },
+    {
+      "id": "92",
+      "category": "The Number System",
+      "question": "2*2*17",
+      "expected_answer": "2^2 * 17"
+    },
+    {
+      "id": "93",
+      "category": "The Number System",
+      "question": "2*2*2*3*17",
+      "expected_answer": "2^2 * 102"
+    },
+    {
+      "id": "94",
+      "category": "The Number System",
+      "question": "2*2*2*31",
+      "expected_answer": "2^2 * 62"
+    },
+    {
+      "id": "95",
+      "category": "The Number System",
+      "question": "11*11",
+      "expected_answer": "11^2"
+    },
+    {
+      "id": "96",
+      "category": "The Number System",
+      "question": "2*2*11*11",
+      "expected_answer": "22^2"
+    },
+    {
+      "id": "97",
+      "category": "The Number System",
+      "question": "2*2*2*2*53",
+      "expected_answer": "4^2 * 53"
+    },
+    {
+      "id": "98",
+      "category": "The Number System",
+      "question": "2*3*3*47",
+      "expected_answer": "3^2 * 94"
+    },
+    {
+      "id": "99",
+      "category": "The Number System",
+      "question": "2*2",
+      "expected_answer": "2^2"
+    },
+    {
+      "id": "100",
+      "category": "The Number System",
+      "question": "2*2*2*7*11",
+      "expected_answer": "2^2 * 154"
+    },
+    {
+      "id": "101",
+      "category": "The Number System",
+      "question": "2*2*2*2*3*3*3",
+      "expected_answer": "12^2 * 3"
+    },
+    {
+      "id": "102",
+      "category": "The Number System",
+      "question": "2*3*3*5",
+      "expected_answer": "3^2 * 10"
+    },
+    {
+      "id": "103",
+      "category": "The Number System",
+      "question": "2*3*3*29",
+      "expected_answer": "3^2 * 58"
+    },
+    {
+      "id": "104",
+      "category": "The Number System",
+      "question": "2*3*3*3*17",
+      "expected_answer": "3^2 * 102"
+    },
+    {
+      "id": "105",
+      "category": "The Number System",
+      "question": "2*3*3*31",
+      "expected_answer": "3^2 * 62"
+    },
+    {
+      "id": "106",
+      "category": "The Number System",
+      "question": "3*3*47",
+      "expected_answer": "3^2 * 47"
+    },
+    {
+      "id": "107",
+      "category": "unknown",
+      "question": "SQRT(48)",
+      "expected_answer": "4*SQRT(3)"
+    },
+    {
+      "id": "108",
+      "category": "The Number System",
+      "question": "SQRT(56)",
+      "expected_answer": "2*SQRT(14)"
+    },
+    {
+      "id": "109",
+      "category": "The Number System",
+      "question": "SQRT(28)",
+      "expected_answer": "2*SQRT(7)"
+    },
+    {
+      "id": "110",
+      "category": "The Number System",
+      "question": "SQRT(80)",
+      "expected_answer": "4*SQRT(5)"
+    },
+    {
+      "id": "111",
+      "category": "The Number System",
+      "question": "SQRT(75)",
+      "expected_answer": "5*SQRT(3)"
+    },
+    {
+      "id": "112",
+      "category": "The Number System",
+      "question": "SQRT(27)",
+      "expected_answer": "3*SQRT(3)"
+    },
+    {
+      "id": "113",
+      "category": "The Number System",
+      "question": "SQRT(18)",
+      "expected_answer": "3*SQRT(2)"
+    },
+    {
+      "id": "114",
+      "category": "The Number System",
+      "question": "SQRT(92)",
+      "expected_answer": "2*SQRT(23)"
+    },
+    {
+      "id": "115",
+      "category": "The Number System",
+      "question": "SQRT(16)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "116",
+      "category": "The Number System",
+      "question": "SQRT(81)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "117",
+      "category": "The Number System",
+      "question": "SQRT(100)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "118",
+      "category": "The Number System",
+      "question": "SQRT(90)",
+      "expected_answer": "3*SQRT(10)"
+    },
+    {
+      "id": "119",
+      "category": "The Number System",
+      "question": "SQRT(45)",
+      "expected_answer": "3*SQRT(5)"
+    },
+    {
+      "id": "120",
+      "category": "The Number System",
+      "question": "SQRT(36)",
+      "expected_answer": "6"
+    },
+    {
+      "id": "121",
+      "category": "The Number System",
+      "question": "SQRT(44)",
+      "expected_answer": "2*SQRT(11)"
+    },
+    {
+      "id": "122",
+      "category": "The Number System",
+      "question": "SQRT(54)",
+      "expected_answer": "3*SQRT(6)"
+    },
+    {
+      "id": "123",
+      "category": "The Number System",
+      "question": "SQRT(20)",
+      "expected_answer": "2*SQRT(5)"
+    },
+    {
+      "id": "124",
+      "category": "The Number System",
+      "question": "SQRT(40)",
+      "expected_answer": "2*SQRT(10)"
+    },
+    {
+      "id": "125",
+      "category": "The Number System",
+      "question": "SQRT(63)",
+      "expected_answer": "3*SQRT(7)"
+    },
+    {
+      "id": "126",
+      "category": "The Number System",
+      "question": "SQRT(49)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "127",
+      "category": "The Number System",
+      "question": "SQRT(65)",
+      "expected_answer": "8.1"
+    },
+    {
+      "id": "128",
+      "category": "The Number System",
+      "question": "SQRT(8)",
+      "expected_answer": "2.8"
+    },
+    {
+      "id": "129",
+      "category": "The Number System",
+      "question": "SQRT(66)",
+      "expected_answer": "8.1"
+    },
+    {
+      "id": "130",
+      "category": "The Number System",
+      "question": "SQRT(93)",
+      "expected_answer": "9.6"
+    },
+    {
+      "id": "131",
+      "category": "The Number System",
+      "question": "SQRT(94)",
+      "expected_answer": "9.7"
+    },
+    {
+      "id": "132",
+      "category": "The Number System",
+      "question": "SQRT(17)",
+      "expected_answer": "4.1"
+    },
+    {
+      "id": "133",
+      "category": "The Number System",
+      "question": "SQRT(87)",
+      "expected_answer": "9.3"
+    },
+    {
+      "id": "134",
+      "category": "The Number System",
+      "question": "SQRT(23)",
+      "expected_answer": "4.8"
+    },
+    {
+      "id": "135",
+      "category": "The Number System",
+      "question": "SQRT(5)",
+      "expected_answer": "2.2"
+    },
+    {
+      "id": "136",
+      "category": "The Number System",
+      "question": "SQRT(22)",
+      "expected_answer": "4.7"
+    },
+    {
+      "id": "137",
+      "category": "The Number System",
+      "question": "SQRT(67)",
+      "expected_answer": "8.2"
+    },
+    {
+      "id": "138",
+      "category": "The Number System",
+      "question": "SQRT(98)",
+      "expected_answer": "9.9"
+    },
+    {
+      "id": "139",
+      "category": "The Number System",
+      "question": "SQRT(35)",
+      "expected_answer": "5.9"
+    },
+    {
+      "id": "140",
+      "category": "The Number System",
+      "question": "SQRT(10)",
+      "expected_answer": "3.2"
+    },
+    {
+      "id": "141",
+      "category": "The Number System",
+      "question": "SQRT(21)",
+      "expected_answer": "4.6"
+    },
+    {
+      "id": "142",
+      "category": "The Number System",
+      "question": "SQRT(64)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "143",
+      "category": "The Number System",
+      "question": "SQRT(90)",
+      "expected_answer": "9.5"
+    },
+    {
+      "id": "144",
+      "category": "The Number System",
+      "question": "SQRT(34)",
+      "expected_answer": "5.8"
+    },
+    {
+      "id": "145",
+      "category": "The Number System",
+      "question": "SQRT(53)",
+      "expected_answer": "7.3"
+    },
+    {
+      "id": "146",
+      "category": "The Number System",
+      "question": "SQRT(71)",
+      "expected_answer": "8.4"
+    },
+    {
+      "id": "147",
+      "category": "The Number System",
+      "question": "x^(3)=1000^(-1)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "148",
+      "category": "The Number System",
+      "question": "x^(-3)=8^(-1)",
+      "expected_answer": "2"
+    },
+    {
+      "id": "149",
+      "category": "The Number System",
+      "question": "x^(3)=27^(-1)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "150",
+      "category": "The Number System",
+      "question": "x^(3)=64^(-1)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "151",
+      "category": "The Number System",
+      "question": "x^(3)=125^(-1)",
+      "expected_answer": "5"
+    },
+    {
+      "id": "152",
+      "category": "The Number System",
+      "question": "x^(3)=216^(-1)",
+      "expected_answer": "6"
+    },
+    {
+      "id": "153",
+      "category": "The Number System",
+      "question": "x^(3)=343^(-1)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "154",
+      "category": "The Number System",
+      "question": "x^(3)=512^(-1)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "155",
+      "category": "The Number System",
+      "question": "x^(3)=729^(-1)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "156",
+      "category": "The Number System",
+      "question": "x^(2)=1^(-1)",
+      "expected_answer": "1"
+    },
+    {
+      "id": "157",
+      "category": "The Number System",
+      "question": "x^(2)=4^(-1)",
+      "expected_answer": "2"
+    },
+    {
+      "id": "158",
+      "category": "The Number System",
+      "question": "x^(2)=9^(-1)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "159",
+      "category": "The Number System",
+      "question": "x^(2)=16^(-1)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "160",
+      "category": "The Number System",
+      "question": "x^(2)=25^(-1)",
+      "expected_answer": "5"
+    },
+    {
+      "id": "161",
+      "category": "The Number System",
+      "question": "x^(2)=36^(-1)",
+      "expected_answer": "6"
+    },
+    {
+      "id": "162",
+      "category": "The Number System",
+      "question": "x^(2)=49^(-1)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "163",
+      "category": "The Number System",
+      "question": "x^(2)=64^(-1)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "164",
+      "category": "The Number System",
+      "question": "x^(2)=81^(-1)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "165",
+      "category": "The Number System",
+      "question": "x^(2)=100^(-1)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "166",
+      "category": "Expressions and Equations",
+      "question": "3^0",
+      "expected_answer": "1"
+    },
+    {
+      "id": "167",
+      "category": "Expressions and Equations",
+      "question": "3^3 * 3^(-5)",
+      "expected_answer": "3^(-2)"
+    },
+    {
+      "id": "168",
+      "category": "Expressions and Equations",
+      "question": "(1/7)^3",
+      "expected_answer": "1/(7^3)"
+    },
+    {
+      "id": "169",
+      "category": "Expressions and Equations",
+      "question": "(7 × 2)^2",
+      "expected_answer": "7^2 × 2^2"
+    },
+    {
+      "id": "170",
+      "category": "Expressions and Equations",
+      "question": "(8 × 3)^9",
+      "expected_answer": "8^9 × 3^9"
+    },
+    {
+      "id": "171",
+      "category": "Expressions and Equations",
+      "question": "(1/4)^8",
+      "expected_answer": "1/(4^8)"
+    },
+    {
+      "id": "172",
+      "category": "Expressions and Equations",
+      "question": "8^0",
+      "expected_answer": "1"
+    },
+    {
+      "id": "173",
+      "category": "Expressions and Equations",
+      "question": "7^8 * 7^5",
+      "expected_answer": "7^13"
+    },
+    {
+      "id": "174",
+      "category": "Expressions and Equations",
+      "question": "5^3 * 5^2",
+      "expected_answer": "5^5"
+    },
+    {
+      "id": "175",
+      "category": "Expressions and Equations",
+      "question": "4^(-8)",
+      "expected_answer": "1/(4^8)"
+    },
+    {
+      "id": "176",
+      "category": "Expressions and Equations",
+      "question": "7^1",
+      "expected_answer": "7"
+    },
+    {
+      "id": "177",
+      "category": "Expressions and Equations",
+      "question": "(8 * 6)^9",
+      "expected_answer": "8^9 × 6^9"
+    },
+    {
+      "id": "178",
+      "category": "Expressions and Equations",
+      "question": "4^8 * 4^(-7)",
+      "expected_answer": "4^1"
+    },
+    {
+      "id": "179",
+      "category": "Expressions and Equations",
+      "question": "4^4 * 4^3",
+      "expected_answer": "4^7"
+    },
+    {
+      "id": "180",
+      "category": "Expressions and Equations",
+      "question": "(8^4)^3",
+      "expected_answer": "8^12"
+    },
+    {
+      "id": "181",
+      "category": "Expressions and Equations",
+      "question": "6^3 * 6^(-9)",
+      "expected_answer": "6^(-6)"
+    },
+    {
+      "id": "182",
+      "category": "Expressions and Equations",
+      "question": "3^0",
+      "expected_answer": "1"
+    },
+    {
+      "id": "183",
+      "category": "Expressions and Equations",
+      "question": "6^1",
+      "expected_answer": "6"
+    },
+    {
+      "id": "184",
+      "category": "Expressions and Equations",
+      "question": "8^(-5)",
+      "expected_answer": "1/(8^5)"
+    },
+    {
+      "id": "185",
+      "category": "Expressions and Equations",
+      "question": "(5^3)^5",
+      "expected_answer": "5^15"
+    },
+    {
+      "id": "186",
+      "category": "Expressions and Equations",
+      "question": "(1/3)^2",
+      "expected_answer": "1/9"
+    },
+    {
+      "id": "187",
+      "category": "Expressions and Equations",
+      "question": "3^(-2) * 3^3",
+      "expected_answer": "3"
+    },
+    {
+      "id": "188",
+      "category": "Expressions and Equations",
+      "question": "3^0",
+      "expected_answer": "1"
+    },
+    {
+      "id": "189",
+      "category": "Expressions and Equations",
+      "question": "2^(-2)",
+      "expected_answer": "1/4"
+    },
+    {
+      "id": "190",
+      "category": "Expressions and Equations",
+      "question": "2^1",
+      "expected_answer": "2"
+    },
+    {
+      "id": "191",
+      "category": "Expressions and Equations",
+      "question": "(2 × 3)^2",
+      "expected_answer": "36"
+    },
+    {
+      "id": "192",
+      "category": "Expressions and Equations",
+      "question": "3^2 * 3^3",
+      "expected_answer": "243"
+    },
+    {
+      "id": "193",
+      "category": "Expressions and Equations",
+      "question": "(3^2)^4",
+      "expected_answer": "6,561"
+    },
+    {
+      "id": "194",
+      "category": "Expressions and Equations",
+      "question": "2^3 * 2^(-2)",
+      "expected_answer": "2"
+    },
+    {
+      "id": "195",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 216  B. (x^2) = 18  C. (x^3) = 36  D. (x^2) = 216",
+      "expected_answer": "A"
+    },
+    {
+      "id": "196",
+      "category": "Expressions and Equations",
+      "question": "A. (x^2) = 81  B. (x^2) = 729  C. (x^3) = 729  D. (x^3) = 27",
+      "expected_answer": "C"
+    },
+    {
+      "id": "197",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 125  B. (x^3) = 15  C. (x^2) = 125  D. (x^2) = 25",
+      "expected_answer": "A"
+    },
+    {
+      "id": "198",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 16  B. (x^2) = 8  C. (x^2) = 16  D. (x^3) = 8",
+      "expected_answer": "C"
+    },
+    {
+      "id": "199",
+      "category": "Expressions and Equations",
+      "question": "A. (x^2) = 1000  B. (x^3) = 30  C. (x^2) = 30  D. (x^3) = 1000",
+      "expected_answer": "D"
+    },
+    {
+      "id": "200",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 14  B. (x^3) = 343  C. (x^2) = 343  D. (x^2) = 49",
+      "expected_answer": "D"
+    },
+    {
+      "id": "201",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 100  B. (x^2) = 100  C. (x^2) = 1000  D. (x^2) = 20",
+      "expected_answer": "B"
+    },
+    {
+      "id": "202",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 12  B. (x^3) = 36  C. (x^2) = 12  D. (x^2) = 36",
+      "expected_answer": "D"
+    },
+    {
+      "id": "203",
+      "category": "Expressions and Equations",
+      "question": "A. (x^3) = 512  B. (x^2) = 512  C. (x^2) = 24  D. (x^2) = 64",
+      "expected_answer": "A"
+    },
+    {
+      "id": "204",
+      "category": "Expressions and Equations",
+      "question": "A. (x^2) = 18  B. (x^3) = 729  C. (x^3) = 18  D. (x^2) = 81",
+      "expected_answer": "D"
+    },
+    {
+      "id": "205",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 4",
+      "expected_answer": "2"
+    },
+    {
+      "id": "206",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 9",
+      "expected_answer": "3"
+    },
+    {
+      "id": "207",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 125",
+      "expected_answer": "5"
+    },
+    {
+      "id": "208",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 144",
+      "expected_answer": "12"
+    },
+    {
+      "id": "209",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 49",
+      "expected_answer": "7"
+    },
+    {
+      "id": "210",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 64",
+      "expected_answer": "4"
+    },
+    {
+      "id": "211",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 81",
+      "expected_answer": "9"
+    },
+    {
+      "id": "212",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 25",
+      "expected_answer": "5"
+    },
+    {
+      "id": "213",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 1",
+      "expected_answer": "1"
+    },
+    {
+      "id": "214",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 1000",
+      "expected_answer": "10"
+    },
+    {
+      "id": "215",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 8",
+      "expected_answer": "2"
+    },
+    {
+      "id": "216",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 512",
+      "expected_answer": "8"
+    },
+    {
+      "id": "217",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 64",
+      "expected_answer": "8"
+    },
+    {
+      "id": "218",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 343",
+      "expected_answer": "7"
+    },
+    {
+      "id": "219",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 216",
+      "expected_answer": "6"
+    },
+    {
+      "id": "220",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 121",
+      "expected_answer": "11"
+    },
+    {
+      "id": "221",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 100",
+      "expected_answer": "10"
+    },
+    {
+      "id": "222",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 729",
+      "expected_answer": "9"
+    },
+    {
+      "id": "223",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 36",
+      "expected_answer": "6"
+    },
+    {
+      "id": "224",
+      "category": "Expressions and Equations",
+      "question": "(x^2) = 16",
+      "expected_answer": "4"
+    },
+    {
+      "id": "225",
+      "category": "Expressions and Equations",
+      "question": "(x^3) = 27",
+      "expected_answer": "3"
+    },
+    {
+      "id": "226",
+      "category": "Expressions and Equations",
+      "question": "SQRT(16)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "227",
+      "category": "Expressions and Equations",
+      "question": "SQRT(4)",
+      "expected_answer": "2"
+    },
+    {
+      "id": "228",
+      "category": "Expressions and Equations",
+      "question": "SQRT(25)",
+      "expected_answer": "5"
+    },
+    {
+      "id": "229",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(64)",
+      "expected_answer": "4"
+    },
+    {
+      "id": "230",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(125)",
+      "expected_answer": "5"
+    },
+    {
+      "id": "231",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(343)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "232",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(729)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "233",
+      "category": "Expressions and Equations",
+      "question": "SQRT(100)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "234",
+      "category": "Expressions and Equations",
+      "question": "SQRT(49)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "235",
+      "category": "Expressions and Equations",
+      "question": "SQRT(1)",
+      "expected_answer": "1"
+    },
+    {
+      "id": "236",
+      "category": "Expressions and Equations",
+      "question": "SQRT(64)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "237",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(216)",
+      "expected_answer": "6"
+    },
+    {
+      "id": "238",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(512)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "239",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(1000)",
+      "expected_answer": "10"
+    },
+    {
+      "id": "240",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(27)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "241",
+      "category": "Expressions and Equations",
+      "question": "SQRT(36)",
+      "expected_answer": "6"
+    },
+    {
+      "id": "242",
+      "category": "Expressions and Equations",
+      "question": "SQRT(9)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "243",
+      "category": "Expressions and Equations",
+      "question": "SQRT(81)",
+      "expected_answer": "9"
+    },
+    {
+      "id": "244",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(8)",
+      "expected_answer": "2"
+    },
+    {
+      "id": "245",
+      "category": "Expressions and Equations",
+      "question": "3ROOT(1)",
+      "expected_answer": "1"
+    },
+    {
+      "id": "246",
+      "category": "Expressions and Equations",
+      "question": "800,000,000",
+      "expected_answer": "8 * 10^8"
+    },
+    {
+      "id": "247",
+      "category": "Expressions and Equations",
+      "question": "50,000,000,000",
+      "expected_answer": "5 * 10^10"
+    },
+    {
+      "id": "248",
+      "category": "Expressions and Equations",
+      "question": "8,000,000",
+      "expected_answer": "8 * 10^6"
+    },
+    {
+      "id": "249",
+      "category": "Expressions and Equations",
+      "question": "50",
+      "expected_answer": "5 * 10^1"
+    },
+    {
+      "id": "250",
+      "category": "Expressions and Equations",
+      "question": "10,000,000,000",
+      "expected_answer": "1 * 10^10"
+    },
+    {
+      "id": "251",
+      "category": "Expressions and Equations",
+      "question": "5,000",
+      "expected_answer": "5 * 10^3"
+    },
+    {
+      "id": "252",
+      "category": "Expressions and Equations",
+      "question": "600,000,000,000",
+      "expected_answer": "6 * 10^11"
+    },
+    {
+      "id": "253",
+      "category": "Expressions and Equations",
+      "question": "3,000",
+      "expected_answer": "3 * 10^3"
+    },
+    {
+      "id": "254",
+      "category": "Expressions and Equations",
+      "question": "400,000,000",
+      "expected_answer": "4 * 10^8"
+    },
+    {
+      "id": "255",
+      "category": "Expressions and Equations",
+      "question": "100,000,000",
+      "expected_answer": "1 * 10^8"
+    },
+    {
+      "id": "256",
+      "category": "Expressions and Equations",
+      "question": "0.05",
+      "expected_answer": "5 * 10^(-2)"
+    },
+    {
+      "id": "257",
+      "category": "Expressions and Equations",
+      "question": "0.00009",
+      "expected_answer": "9 * 10^(-5)"
+    },
+    {
+      "id": "258",
+      "category": "Expressions and Equations",
+      "question": "0.7",
+      "expected_answer": "7 * 10^(-1)"
+    },
+    {
+      "id": "259",
+      "category": "Expressions and Equations",
+      "question": "0",
+      "expected_answer": "4 * 10^(-11)"
+    },
+    {
+      "id": "260",
+      "category": "Expressions and Equations",
+      "question": "0.000009",
+      "expected_answer": "9 * 10^(-6)"
+    },
+    {
+      "id": "261",
+      "category": "Expressions and Equations",
+      "question": "0.00000006",
+      "expected_answer": "6 * 10^(-8)"
+    },
+    {
+      "id": "262",
+      "category": "Expressions and Equations",
+      "question": "0.0000001",
+      "expected_answer": "1 * 10^(-7)"
+    },
+    {
+      "id": "263",
+      "category": "Expressions and Equations",
+      "question": "0",
+      "expected_answer": "9 * 10^(-12)"
+    },
+    {
+      "id": "264",
+      "category": "Expressions and Equations",
+      "question": "0.000000009",
+      "expected_answer": "9 * 10^(-9)"
+    },
+    {
+      "id": "265",
+      "category": "Expressions and Equations",
+      "question": "0.00000009",
+      "expected_answer": "9 * 10^(-8)"
+    },
+    {
+      "id": "266",
+      "category": "Expressions and Equations",
+      "question": "(3 * 10^6) is ____ * the value of (9 * 10^8)",
+      "expected_answer": "0.00333"
+    },
+    {
+      "id": "267",
+      "category": "Expressions and Equations",
+      "question": "(3 * 10^3) is ____ * the value of (7 * 10^5)",
+      "expected_answer": "0.00429"
+    },
+    {
+      "id": "268",
+      "category": "Expressions and Equations",
+      "question": "(7 * 10^3) is ____ * the value of (3 * 10^6)",
+      "expected_answer": "0.002333"
+    },
+    {
+      "id": "269",
+      "category": "Expressions and Equations",
+      "question": "(7 * 10^2) is ____ * the value of (2 * 10^5)",
+      "expected_answer": "0.0035"
+    },
+    {
+      "id": "270",
+      "category": "Expressions and Equations",
+      "question": "(8 * 10^9) is ____ * the value of (3 * 10^6)",
+      "expected_answer": "2,667"
+    },
+    {
+      "id": "271",
+      "category": "Expressions and Equations",
+      "question": "(4 * 10^8) is ____ * the value of (7 * 10^2)",
+      "expected_answer": "571,000"
+    },
+    {
+      "id": "272",
+      "category": "Expressions and Equations",
+      "question": "(8 * 10^5) is ____ * the value of (4 * 10^3)",
+      "expected_answer": "200"
+    },
+    {
+      "id": "273",
+      "category": "Expressions and Equations",
+      "question": "(7 * 10^8) is ____ * the value of (4 * 10^5)",
+      "expected_answer": "1,750"
+    },
+    {
+      "id": "274",
+      "category": "Expressions and Equations",
+      "question": "(5 * 10^3) is ____ * the value of (4 * 10^2)",
+      "expected_answer": "12.5"
+    },
+    {
+      "id": "275",
+      "category": "Expressions and Equations",
+      "question": "(9.6 * 10^7) * (4.3 * 10^4)",
+      "expected_answer": "4.128 * 10^12"
+    },
+    {
+      "id": "276",
+      "category": "Expressions and Equations",
+      "question": "(8.7 * 10^4) * (2.4 * 10^9)",
+      "expected_answer": "2.088 * 10^14"
+    },
+    {
+      "id": "277",
+      "category": "Expressions and Equations",
+      "question": "(1 * 10^4) * (1.6 * 10^9)",
+      "expected_answer": "1.6 * 10^13"
+    },
+    {
+      "id": "278",
+      "category": "Expressions and Equations",
+      "question": "(1 * 10^3) * (7.7 * 10^9)",
+      "expected_answer": "7.7 * 10^12"
+    },
+    {
+      "id": "279",
+      "category": "Expressions and Equations",
+      "question": "(9.04 * 10^10) * (5.74 * 10^9)",
+      "expected_answer": "5.18896 * 10^20"
+    },
+    {
+      "id": "280",
+      "category": "Expressions and Equations",
+      "question": "(3.51 * 10^8) * (4.9 * 10^3)",
+      "expected_answer": "1.7199 * 10^12"
+    },
+    {
+      "id": "281",
+      "category": "Expressions and Equations",
+      "question": "(9.05 * 10^6) × (4.62 * 10^3)",
+      "expected_answer": "4.1811 * 10^10"
+    },
+    {
+      "id": "282",
+      "category": "Expressions and Equations",
+      "question": "(9.4 * 10^9) * (2.6 * 10^4)",
+      "expected_answer": "2.444 * 10^14"
+    },
+    {
+      "id": "283",
+      "category": "Expressions and Equations",
+      "question": "(5.4 * 10^5) * (1.5 * 10^3)",
+      "expected_answer": "8.1 * 10^8"
+    },
+    {
+      "id": "284",
+      "category": "Expressions and Equations",
+      "question": "(8.52 * 10^9) * (4.47 * 10^9)",
+      "expected_answer": "3.80844 * 10^19"
+    },
+    {
+      "id": "285",
+      "category": "Expressions and Equations",
+      "question": "4.96E+08",
+      "expected_answer": "496,385,000"
+    },
+    {
+      "id": "286",
+      "category": "Expressions and Equations",
+      "question": "5.44E+10",
+      "expected_answer": "54,400,100,000"
+    },
+    {
+      "id": "287",
+      "category": "Expressions and Equations",
+      "question": "8.00E+09",
+      "expected_answer": "8,000,000,000"
+    },
+    {
+      "id": "288",
+      "category": "Expressions and Equations",
+      "question": "5.16E+07",
+      "expected_answer": "51,595,700"
+    },
+    {
+      "id": "289",
+      "category": "Expressions and Equations",
+      "question": "1.40E+12",
+      "expected_answer": "1,397,420,000,000"
+    },
+    {
+      "id": "290",
+      "category": "Expressions and Equations",
+      "question": "5.00E+10",
+      "expected_answer": "50,000,000,000"
+    },
+    {
+      "id": "291",
+      "category": "Expressions and Equations",
+      "question": "3.63E+10",
+      "expected_answer": "36,339,000,000"
+    },
+    {
+      "id": "292",
+      "category": "Expressions and Equations",
+      "question": "4.77E+09",
+      "expected_answer": "4,773,090,000"
+    },
+    {
+      "id": "293",
+      "category": "Expressions and Equations",
+      "question": "4.00E+11",
+      "expected_answer": "400,000,000,000"
+    },
+    {
+      "id": "294",
+      "category": "Expressions and Equations",
+      "question": "6.72E+08",
+      "expected_answer": "671,626,000"
+    },
+    {
+      "id": "295",
+      "category": "Expressions and Equations",
+      "question": "5.3 * 10^3",
+      "expected_answer": "5,300"
+    },
+    {
+      "id": "296",
+      "category": "Expressions and Equations",
+      "question": "9.60844 * 10^8",
+      "expected_answer": "960,844,000"
+    },
+    {
+      "id": "297",
+      "category": "Expressions and Equations",
+      "question": "6.65 * 10^2",
+      "expected_answer": "665"
+    },
+    {
+      "id": "298",
+      "category": "Expressions and Equations",
+      "question": "9.2957 * 10^2",
+      "expected_answer": "929.57"
+    },
+    {
+      "id": "299",
+      "category": "Expressions and Equations",
+      "question": "3.86 * 10^5",
+      "expected_answer": "386,000"
+    },
+    {
+      "id": "300",
+      "category": "Expressions and Equations",
+      "question": "2.86606442 * 10^4",
+      "expected_answer": "28,660.64"
+    },
+    {
+      "id": "301",
+      "category": "Expressions and Equations",
+      "question": "0.69 * 10^(-1)",
+      "expected_answer": "0.069"
+    },
+    {
+      "id": "302",
+      "category": "Expressions and Equations",
+      "question": "5.5 * 10^1",
+      "expected_answer": "55"
+    },
+    {
+      "id": "303",
+      "category": "Expressions and Equations",
+      "question": "5.9 * 10^1",
+      "expected_answer": "59"
+    },
+    {
+      "id": "304",
+      "category": "Expressions and Equations",
+      "question": "2.26 * 10^0",
+      "expected_answer": "2.26"
+    },
+    {
+      "id": "305",
+      "category": "Expressions and Equations",
+      "question": "9.77 * 10^4",
+      "expected_answer": "97,700"
+    },
+    {
+      "id": "306",
+      "category": "Expressions and Equations",
+      "question": "3.06 * 10^0",
+      "expected_answer": "3.06"
+    },
+    {
+      "id": "307",
+      "category": "Expressions and Equations",
+      "question": "7 * 10^3",
+      "expected_answer": "7,000"
+    },
+    {
+      "id": "308",
+      "category": "Expressions and Equations",
+      "question": "6.64186 * 10^1",
+      "expected_answer": "66.4186"
+    },
+    {
+      "id": "309",
+      "category": "Expressions and Equations",
+      "question": "8.82 * 10^(-1)",
+      "expected_answer": "0.882"
+    },
+    {
+      "id": "310",
+      "category": "Expressions and Equations",
+      "question": "5.4 * 10^2",
+      "expected_answer": "540"
+    },
+    {
+      "id": "311",
+      "category": "Expressions and Equations",
+      "question": "4.4959177 * 10^7",
+      "expected_answer": "44,959,177"
+    },
+    {
+      "id": "312",
+      "category": "Expressions and Equations",
+      "question": "3.14263545* 10^3",
+      "expected_answer": "3,142.64"
+    },
+    {
+      "id": "313",
+      "category": "Expressions and Equations",
+      "question": "7.38 * 10^2",
+      "expected_answer": "738"
+    },
+    {
+      "id": "314",
+      "category": "Expressions and Equations",
+      "question": "6.44924043 * 10^3",
+      "expected_answer": "6,449.24"
+    },
+    {
+      "id": "315",
+      "category": "Expressions and Equations",
+      "question": "5,300",
+      "expected_answer": "5.3 * 10^3"
+    },
+    {
+      "id": "316",
+      "category": "Expressions and Equations",
+      "question": "960,844,000",
+      "expected_answer": "9.60844 * 10^8"
+    },
+    {
+      "id": "317",
+      "category": "Expressions and Equations",
+      "question": "665",
+      "expected_answer": "6.65 * 10^2"
+    },
+    {
+      "id": "318",
+      "category": "Expressions and Equations",
+      "question": "929.57",
+      "expected_answer": "9.2957 * 10^2"
+    },
+    {
+      "id": "319",
+      "category": "Expressions and Equations",
+      "question": "386,000",
+      "expected_answer": "3.86 * 10^5"
+    },
+    {
+      "id": "320",
+      "category": "Expressions and Equations",
+      "question": "28,660.64",
+      "expected_answer": "2.86606442 * 10^4"
+    },
+    {
+      "id": "321",
+      "category": "Expressions and Equations",
+      "question": "0.069",
+      "expected_answer": "0.69 * 10^(-1)"
+    },
+    {
+      "id": "322",
+      "category": "Expressions and Equations",
+      "question": "55",
+      "expected_answer": "5.5 * 10^1"
+    },
+    {
+      "id": "323",
+      "category": "Expressions and Equations",
+      "question": "59",
+      "expected_answer": "5.9 * 10^1"
+    },
+    {
+      "id": "324",
+      "category": "Expressions and Equations",
+      "question": "2.26",
+      "expected_answer": "2.26 * 10^0"
+    },
+    {
+      "id": "325",
+      "category": "Expressions and Equations",
+      "question": "97,700",
+      "expected_answer": "9.77 * 10^4"
+    },
+    {
+      "id": "326",
+      "category": "Expressions and Equations",
+      "question": "3.06",
+      "expected_answer": "3.06 * 10^0"
+    },
+    {
+      "id": "327",
+      "category": "Expressions and Equations",
+      "question": "7,000",
+      "expected_answer": "7 * 10^3"
+    },
+    {
+      "id": "328",
+      "category": "Expressions and Equations",
+      "question": "66.4186",
+      "expected_answer": "6.64186 * 10^1"
+    },
+    {
+      "id": "329",
+      "category": "Expressions and Equations",
+      "question": "0.882",
+      "expected_answer": "8.82 * 10^(-1)"
+    },
+    {
+      "id": "330",
+      "category": "Expressions and Equations",
+      "question": "540",
+      "expected_answer": "5.4 * 10^2"
+    },
+    {
+      "id": "331",
+      "category": "Expressions and Equations",
+      "question": "44,959,177",
+      "expected_answer": "4.4959177 * 10^7"
+    },
+    {
+      "id": "332",
+      "category": "Expressions and Equations",
+      "question": "3,142.64",
+      "expected_answer": "3.14263545 * 10^3"
+    },
+    {
+      "id": "333",
+      "category": "Expressions and Equations",
+      "question": "738",
+      "expected_answer": "7.38 * 10^2"
+    },
+    {
+      "id": "334",
+      "category": "Expressions and Equations",
+      "question": "6,449.24",
+      "expected_answer": "6.44924043 * 10^3"
+    },
+    {
+      "id": "335",
+      "category": "Expressions and Equations",
+      "question": "-9y + 4 - 7 = 3 + 8y - 57",
+      "expected_answer": "y = 3"
+    },
+    {
+      "id": "336",
+      "category": "Expressions and Equations",
+      "question": "7y + 3 * 8 = 2y + (4 * 9) + 3",
+      "expected_answer": "y = 3"
+    },
+    {
+      "id": "337",
+      "category": "Expressions and Equations",
+      "question": "-(3y * 9) * 7 = -2y * 5 - 1253",
+      "expected_answer": "y = 7"
+    },
+    {
+      "id": "338",
+      "category": "Expressions and Equations",
+      "question": "(2y - 3 * 3) = -(8 + 9y - 8) + 68",
+      "expected_answer": "y = 7"
+    },
+    {
+      "id": "339",
+      "category": "Expressions and Equations",
+      "question": "8 - (9 - 3y) = -6 + 8 + 4y - 11",
+      "expected_answer": "y = 8"
+    },
+    {
+      "id": "340",
+      "category": "Expressions and Equations",
+      "question": "4y - 8 * 8 = 9y + (8 * 8) - 148",
+      "expected_answer": "y = 4"
+    },
+    {
+      "id": "341",
+      "category": "Expressions and Equations",
+      "question": "(4y * 5) = -3 + 4 * 5y + 3",
+      "expected_answer": "y = 8"
+    },
+    {
+      "id": "342",
+      "category": "Expressions and Equations",
+      "question": "y = 1.5x + 2 ; y = 5.5x - 6",
+      "expected_answer": "(2 , 5)"
+    },
+    {
+      "id": "343",
+      "category": "Expressions and Equations",
+      "question": "y = 0.7x - 2 ; y = 0.6x - 3",
+      "expected_answer": "(-10 , -9)"
+    },
+    {
+      "id": "344",
+      "category": "Expressions and Equations",
+      "question": "y = -0.5x - 4 ; y = -0.6x - 3",
+      "expected_answer": "(10 , -9)"
+    },
+    {
+      "id": "345",
+      "category": "Expressions and Equations",
+      "question": "y = -4.5x - 9 ; y = -3.25x - 4",
+      "expected_answer": "(-4 , 9)"
+    },
+    {
+      "id": "346",
+      "category": "Expressions and Equations",
+      "question": "y = -0.5x - 5 ; y = 0.9x + 9",
+      "expected_answer": "(-10 , 0)"
+    },
+    {
+      "id": "347",
+      "category": "Expressions and Equations",
+      "question": "y = 0.1x - 1 ; y = -0.5x + 5",
+      "expected_answer": "(10 , 0)"
+    },
+    {
+      "id": "348",
+      "category": "Expressions and Equations",
+      "question": "y = 0.1x + 9 ; y = -0.2x + 6",
+      "expected_answer": "(-10 , 8)"
+    },
+    {
+      "id": "349",
+      "category": "Expressions and Equations",
+      "question": "y = 0.5x - 5 ; y = 0.75x - 7",
+      "expected_answer": "(8 , -1)"
+    },
+    {
+      "id": "350",
+      "category": "Expressions and Equations",
+      "question": "y = -0.5x + 2 ; y = 2.25x - 9",
+      "expected_answer": "(4 , 0)"
+    },
+    {
+      "id": "351",
+      "category": "Expressions and Equations",
+      "question": "y = 4.25x - 9 ; y = 3.25x - 5",
+      "expected_answer": "(4 , 8)"
+    },
+    {
+      "id": "352",
+      "category": "Functions",
+      "question": "y - 7 = x",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "353",
+      "category": "Functions",
+      "question": "y^8 = 2 * x",
+      "expected_answer": "no"
+    },
+    {
+      "id": "354",
+      "category": "Functions",
+      "question": "x + 8 = y^2",
+      "expected_answer": "no"
+    },
+    {
+      "id": "355",
+      "category": "Functions",
+      "question": "y - 8 = x - 9",
+      "expected_answer": "no"
+    },
+    {
+      "id": "356",
+      "category": "Functions",
+      "question": "x / 7 = y^8",
+      "expected_answer": "no"
+    },
+    {
+      "id": "357",
+      "category": "Functions",
+      "question": "x - 9 = y^8",
+      "expected_answer": "no"
+    },
+    {
+      "id": "358",
+      "category": "Functions",
+      "question": "x = 8 + y",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "359",
+      "category": "Functions",
+      "question": "y = x^7",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "360",
+      "category": "Functions",
+      "question": "x = 6 / y",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "361",
+      "category": "Functions",
+      "question": "y^9 = x^4",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "362",
+      "category": "Functions",
+      "question": "y = x + 4",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "363",
+      "category": "Functions",
+      "question": "y = x - 2",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "364",
+      "category": "Functions",
+      "question": "y^(-8) + 7 = x",
+      "expected_answer": "no"
+    },
+    {
+      "id": "365",
+      "category": "Functions",
+      "question": "y * 8 = x",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "366",
+      "category": "Functions",
+      "question": "y + 2 = x",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "367",
+      "category": "Functions",
+      "question": "y(-8) = 8x",
+      "expected_answer": "no"
+    },
+    {
+      "id": "368",
+      "category": "Functions",
+      "question": "y = 9 - x",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "369",
+      "category": "Functions",
+      "question": "y^4 = 2 - x",
+      "expected_answer": "no"
+    },
+    {
+      "id": "370",
+      "category": "Functions",
+      "question": "y^2 + x = 6",
+      "expected_answer": "no"
+    },
+    {
+      "id": "371",
+      "category": "Functions",
+      "question": "x * 5 = y^6",
+      "expected_answer": "no"
+    },
+    {
+      "id": "372",
+      "category": "Functions",
+      "question": "The Y Intercept is 6. While X increases by 6, Y decreases by 2.",
+      "expected_answer": "-2/6"
+    },
+    {
+      "id": "373",
+      "category": "Functions",
+      "question": "The Y Intercept is 9. While X decreases by 10, Y increases by 6.",
+      "expected_answer": "6/-10"
+    },
+    {
+      "id": "374",
+      "category": "Functions",
+      "question": "The Y Intercept is -9. While X increases by 10, Y increases by 2.",
+      "expected_answer": "2/10"
+    },
+    {
+      "id": "375",
+      "category": "Functions",
+      "question": "The Y Intercept is -3. While X decreases by 10, Y increases by 8.",
+      "expected_answer": "8/-10"
+    },
+    {
+      "id": "376",
+      "category": "Functions",
+      "question": "The Y Intercept is 6. While X decreases by 8, Y decreases by 1.",
+      "expected_answer": "-1/-8"
+    },
+    {
+      "id": "377",
+      "category": "Functions",
+      "question": "The Y Intercept is 0. While X increases by 10, Y increases by 9.",
+      "expected_answer": "9/10"
+    },
+    {
+      "id": "378",
+      "category": "Functions",
+      "question": "The Y Intercept is 10. While X decreases by 9, Y increases by 3.",
+      "expected_answer": "3/-9"
+    },
+    {
+      "id": "379",
+      "category": "Functions",
+      "question": "The Y Intercept is -8. While X increases by 4, Y decreases by 4.",
+      "expected_answer": "-1"
+    },
+    {
+      "id": "380",
+      "category": "Functions",
+      "question": "The Y Intercept is -4. While X increases by 6, Y increases by 5.",
+      "expected_answer": "5/6"
+    },
+    {
+      "id": "381",
+      "category": "Functions",
+      "question": "The Y Intercept is -1. While X increases by 6, Y increases by 2.",
+      "expected_answer": "2/6"
+    },
+    {
+      "id": "382",
+      "category": "Functions",
+      "question": "The Y Intercept is 6. While X decreases by 9, Y increases by 7.",
+      "expected_answer": "7/-9"
+    },
+    {
+      "id": "383",
+      "category": "Functions",
+      "question": "The Y Intercept is 7. While X decreases by 3, Y decreases by 2.",
+      "expected_answer": "-2/-3"
+    },
+    {
+      "id": "384",
+      "category": "Functions",
+      "question": "The Y Intercept is 2. While X decreases by 1, Y increases by 5.",
+      "expected_answer": "-5"
+    },
+    {
+      "id": "385",
+      "category": "Functions",
+      "question": "The Y Intercept is 8. While X decreases by 3, Y increases by 7.",
+      "expected_answer": "7/-3"
+    },
+    {
+      "id": "386",
+      "category": "Functions",
+      "question": "The Y Intercept is 1. While X increases by 1, Y decreases by 3.",
+      "expected_answer": "-3"
+    },
+    {
+      "id": "387",
+      "category": "Functions",
+      "question": "The Y Intercept is -8. While X decreases by 8, Y decreases by 9.",
+      "expected_answer": "-9/-8"
+    },
+    {
+      "id": "388",
+      "category": "Functions",
+      "question": "The Y Intercept is 5. While X increases by 5, Y increases by 3.",
+      "expected_answer": "3/5"
+    },
+    {
+      "id": "389",
+      "category": "Functions",
+      "question": "The Y Intercept is 7. While X increases by 1, Y increases by 8.",
+      "expected_answer": "8"
+    },
+    {
+      "id": "390",
+      "category": "Functions",
+      "question": "The Y Intercept is 7. While X increases by 1, Y decreases by 8.",
+      "expected_answer": "-8"
+    },
+    {
+      "id": "391",
+      "category": "Functions",
+      "question": "The Y Intercept is -5. While X decreases by 6, Y decreases by 9.",
+      "expected_answer": "-9/-6"
+    },
+    {
+      "id": "392",
+      "category": "Functions",
+      "question": "Y = 9*X + (X*-1)",
+      "expected_answer": "8"
+    },
+    {
+      "id": "393",
+      "category": "Functions",
+      "question": "Y = X - 8",
+      "expected_answer": "1"
+    },
+    {
+      "id": "394",
+      "category": "Functions",
+      "question": "Y = X*3",
+      "expected_answer": "3"
+    },
+    {
+      "id": "395",
+      "category": "Functions",
+      "question": "Y = 2*X - (X + 2)",
+      "expected_answer": "1"
+    },
+    {
+      "id": "396",
+      "category": "Functions",
+      "question": "Y = X + 3",
+      "expected_answer": "1"
+    },
+    {
+      "id": "397",
+      "category": "Functions",
+      "question": "Y = 7*X",
+      "expected_answer": "7"
+    },
+    {
+      "id": "398",
+      "category": "Functions",
+      "question": "Y = -X",
+      "expected_answer": "-1"
+    },
+    {
+      "id": "399",
+      "category": "Functions",
+      "question": "Y = 4*X - (X - 8)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "400",
+      "category": "Functions",
+      "question": "Y = 8*X*8",
+      "expected_answer": "64"
+    },
+    {
+      "id": "401",
+      "category": "Functions",
+      "question": "Y = 5*X + 8",
+      "expected_answer": "5"
+    },
+    {
+      "id": "402",
+      "category": "Functions",
+      "question": "Y = (-2/6)*X + 6",
+      "expected_answer": "-2/6"
+    },
+    {
+      "id": "403",
+      "category": "Functions",
+      "question": "Y = (6/-10)*X + 9",
+      "expected_answer": "6/-10"
+    },
+    {
+      "id": "404",
+      "category": "Functions",
+      "question": "Y = (2/10)*X - 9",
+      "expected_answer": "2/10"
+    },
+    {
+      "id": "405",
+      "category": "Functions",
+      "question": "Y = (8/-10)*X - 3",
+      "expected_answer": "8/-10"
+    },
+    {
+      "id": "406",
+      "category": "Functions",
+      "question": "Y = (-1/-8)*X + 6",
+      "expected_answer": "-1/-8"
+    },
+    {
+      "id": "407",
+      "category": "Functions",
+      "question": "Y = (9/10)*X + 0",
+      "expected_answer": "9/10"
+    },
+    {
+      "id": "408",
+      "category": "Functions",
+      "question": "Y = (3/-9)*X + 10",
+      "expected_answer": "3/-9"
+    },
+    {
+      "id": "409",
+      "category": "Functions",
+      "question": "Y = -1*X - 8",
+      "expected_answer": "-1"
+    },
+    {
+      "id": "410",
+      "category": "Functions",
+      "question": "Y = (5/6)*X - 4",
+      "expected_answer": "5/6"
+    },
+    {
+      "id": "411",
+      "category": "Functions",
+      "question": "Y = (2/6)*X - 1",
+      "expected_answer": "2/6"
+    },
+    {
+      "id": "412",
+      "category": "Functions",
+      "question": "Y = 3*X*(X + 3)",
+      "expected_answer": "0"
+    },
+    {
+      "id": "413",
+      "category": "Functions",
+      "question": "Y = 7*X - (X - 3)",
+      "expected_answer": "3"
+    },
+    {
+      "id": "414",
+      "category": "Functions",
+      "question": "Y = 3*X*(X - 3)",
+      "expected_answer": "0"
+    },
+    {
+      "id": "415",
+      "category": "Functions",
+      "question": "Y = X + (2*-1)",
+      "expected_answer": "-2"
+    },
+    {
+      "id": "416",
+      "category": "Functions",
+      "question": "Y = X + 3",
+      "expected_answer": "3"
+    },
+    {
+      "id": "417",
+      "category": "Functions",
+      "question": "Y = 4*X*(X*7)",
+      "expected_answer": "0"
+    },
+    {
+      "id": "418",
+      "category": "Functions",
+      "question": "Y = 4*X - (X*5)",
+      "expected_answer": "0"
+    },
+    {
+      "id": "419",
+      "category": "Functions",
+      "question": "Y = 4*X + (X*-1)",
+      "expected_answer": "0"
+    },
+    {
+      "id": "420",
+      "category": "Functions",
+      "question": "Y = X*5",
+      "expected_answer": "0"
+    },
+    {
+      "id": "421",
+      "category": "Functions",
+      "question": "Y = 5*X + (X - 8)",
+      "expected_answer": "-8"
+    },
+    {
+      "id": "422",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 9)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "423",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 7)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "424",
+      "category": "Functions",
+      "question": "Y = 5*X - (X*-1)",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "425",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 2)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "426",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 3)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "427",
+      "category": "Functions",
+      "question": "Y = -X - 4",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "428",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 4)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "429",
+      "category": "Functions",
+      "question": "Y = 5 * X + 5^2",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "430",
+      "category": "Functions",
+      "question": "Y = (X/8)*5",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "431",
+      "category": "Functions",
+      "question": "Y = 7*X - (X + 5)",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "432",
+      "category": "Functions",
+      "question": "Y = X + 6",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "433",
+      "category": "Functions",
+      "question": "Y = -X + 4",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "434",
+      "category": "Functions",
+      "question": "Y = -X",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "435",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 7)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "436",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 8)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "437",
+      "category": "Functions",
+      "question": "Y = 5 + X",
+      "expected_answer": "yes"
+    },
+    {
+      "id": "438",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 6)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "439",
+      "category": "Functions",
+      "question": "Y = SQRT(X^2 - 5)",
+      "expected_answer": "no"
+    },
+    {
+      "id": "440",
+      "category": "Geometry",
+      "question": "(-1, 2) and (5, 7)",
+      "expected_answer": "7.81"
+    },
+    {
+      "id": "441",
+      "category": "Geometry",
+      "question": "(0, 0) and (2, 8)",
+      "expected_answer": "8.25"
+    },
+    {
+      "id": "442",
+      "category": "Geometry",
+      "question": "(6, 3) and (-4, -3)",
+      "expected_answer": "11.67"
+    },
+    {
+      "id": "443",
+      "category": "Geometry",
+      "question": "(5, 6) and (-9, 1)",
+      "expected_answer": "14.87"
+    },
+    {
+      "id": "444",
+      "category": "Geometry",
+      "question": "(4, 8) and (-5, -6)",
+      "expected_answer": "16.64"
+    },
+    {
+      "id": "445",
+      "category": "Geometry",
+      "question": "(4, -1) and (4, -8)",
+      "expected_answer": "7"
+    },
+    {
+      "id": "446",
+      "category": "Geometry",
+      "question": "(4, 8) and (6, 4)",
+      "expected_answer": "4.47"
+    },
+    {
+      "id": "447",
+      "category": "Geometry",
+      "question": "(8, 4) and (-3, 3)",
+      "expected_answer": "11.05"
+    },
+    {
+      "id": "448",
+      "category": "Geometry",
+      "question": "(6, 8) and (-5, 4)",
+      "expected_answer": "11.7"
+    },
+    {
+      "id": "449",
+      "category": "Geometry",
+      "question": "(9, -2) and (-4, 6)",
+      "expected_answer": "15.26"
+    },
+    {
+      "id": "450",
+      "category": "Geometry",
+      "question": "(-4, 5) and (4, 8)",
+      "expected_answer": "8.54"
+    },
+    {
+      "id": "451",
+      "category": "Geometry",
+      "question": "(-2, 14) and (5, 9)",
+      "expected_answer": "8.6"
+    },
+    {
+      "id": "452",
+      "category": "Geometry",
+      "question": "(-10, 7) and (-2, 5)",
+      "expected_answer": "(-6, 6)"
+    },
+    {
+      "id": "453",
+      "category": "Geometry",
+      "question": "(0, 0) and (9, 7)",
+      "expected_answer": "(4.5, 3.5)"
+    },
+    {
+      "id": "454",
+      "category": "Geometry",
+      "question": "(4, 3) and (-2, -8)",
+      "expected_answer": "(1, -2.5)"
+    },
+    {
+      "id": "455",
+      "category": "Geometry",
+      "question": "(-1, 7) and (19, 1)",
+      "expected_answer": "(9, 4)"
+    },
+    {
+      "id": "456",
+      "category": "Geometry",
+      "question": "(-6, 8) and (5, -6)",
+      "expected_answer": "(-0.5, 1)"
+    },
+    {
+      "id": "457",
+      "category": "Geometry",
+      "question": "(4, -11) and (12, -8)",
+      "expected_answer": "(8, -9.5)"
+    },
+    {
+      "id": "458",
+      "category": "Geometry",
+      "question": "(-2, 8) and (8, -1)",
+      "expected_answer": "(3, 3.5)"
+    },
+    {
+      "id": "459",
+      "category": "Geometry",
+      "question": "(-4, -5) and (8, 3)",
+      "expected_answer": "(2, -1)"
+    },
+    {
+      "id": "460",
+      "category": "Geometry",
+      "question": "(-8, 4) and (-6, 12)",
+      "expected_answer": "(-7, 8)"
+    },
+    {
+      "id": "461",
+      "category": "Geometry",
+      "question": "(9, 12) and (-5, 2)",
+      "expected_answer": "(2, 7)"
+    },
+    {
+      "id": "462",
+      "category": "Geometry",
+      "question": "(-9, 5) and (3, 1)",
+      "expected_answer": "(-3, 3)"
+    },
+    {
+      "id": "463",
+      "category": "Geometry",
+      "question": "(-5, 4) and (11, 5)",
+      "expected_answer": "(3, 4.5)"
+    },
+    {
+      "id": "464",
+      "category": "Geometry",
+      "question": "Square with sides of length 3.",
+      "expected_answer": "12"
+    },
+    {
+      "id": "465",
+      "category": "Geometry",
+      "question": "Triangle with sides of length 5, 5, and 5.",
+      "expected_answer": "15"
+    },
+    {
+      "id": "466",
+      "category": "Geometry",
+      "question": "Rectangle with sides of length 4 and 5.",
+      "expected_answer": "18"
+    },
+    {
+      "id": "467",
+      "category": "Geometry",
+      "question": "Triangle with sides of length 10, 10, and 4.",
+      "expected_answer": "24"
+    },
+    {
+      "id": "468",
+      "category": "Geometry",
+      "question": "Square with sides of length 7.",
+      "expected_answer": "28"
+    },
+    {
+      "id": "469",
+      "category": "Geometry",
+      "question": "Rectangle with sides of length 3 and 10.",
+      "expected_answer": "26"
+    },
+    {
+      "id": "470",
+      "category": "Geometry",
+      "question": "Triangle with sides of length 12, 12, and 12.",
+      "expected_answer": "36"
+    },
+    {
+      "id": "471",
+      "category": "Geometry",
+      "question": "Rectangle with sides of length 5 and 20.",
+      "expected_answer": "50"
+    },
+    {
+      "id": "472",
+      "category": "Geometry",
+      "question": "Triangle with sides of length 11, 11, 9.",
+      "expected_answer": "31"
+    },
+    {
+      "id": "473",
+      "category": "Geometry",
+      "question": "a= 12, b = 16, find c.",
+      "expected_answer": "c = 20"
+    },
+    {
+      "id": "474",
+      "category": "Geometry",
+      "question": "b = 10, c = 11, find a.",
+      "expected_answer": "a = SQRT(21)"
+    },
+    {
+      "id": "475",
+      "category": "Geometry",
+      "question": "12, b = 35, find c.",
+      "expected_answer": "c = 37"
+    },
+    {
+      "id": "476",
+      "category": "Geometry",
+      "question": "11, b = 14, find c.",
+      "expected_answer": "c = SQRT(317)"
+    },
+    {
+      "id": "477",
+      "category": "Geometry",
+      "question": "b = 40, c = 41, find a.",
+      "expected_answer": "a = 9"
+    },
+    {
+      "id": "478",
+      "category": "Geometry",
+      "question": "6, c = 15, find b.",
+      "expected_answer": "b = SQRT(189)"
+    },
+    {
+      "id": "479",
+      "category": "Geometry",
+      "question": "15, b = 24, find c.",
+      "expected_answer": "c = SQRT(801)"
+    },
+    {
+      "id": "480",
+      "category": "Geometry",
+      "question": "9, b = 12, find c.",
+      "expected_answer": "c = 15"
+    },
+    {
+      "id": "481",
+      "category": "Geometry",
+      "question": "5, b = 9, find c.",
+      "expected_answer": "c = SQRT(106)"
+    },
+    {
+      "id": "482",
+      "category": "Geometry",
+      "question": "4, c = 21, find b.",
+      "expected_answer": "b = SQRT(425)"
+    },
+    {
+      "id": "483",
+      "category": "Geometry",
+      "question": "10, b = 14, find c.",
+      "expected_answer": "c = SQRT(296)"
+    },
+    {
+      "id": "484",
+      "category": "Geometry",
+      "question": "12, b = 16, find c.",
+      "expected_answer": "c = 20"
+    },
+    {
+      "id": "485",
+      "category": "Geometry",
+      "question": "Base = 11, height = 8, slanted side = 9.7",
+      "expected_answer": "88"
+    },
+    {
+      "id": "486",
+      "category": "Geometry",
+      "question": "Base = 14, height = 9, slanted side = 16",
+      "expected_answer": "126"
+    },
+    {
+      "id": "487",
+      "category": "Geometry",
+      "question": "Base = 35, height = 10, slanted side = 22",
+      "expected_answer": "350"
+    },
+    {
+      "id": "488",
+      "category": "Geometry",
+      "question": "Base = 8, height = 10, slanted side = 12",
+      "expected_answer": "80"
+    },
+    {
+      "id": "489",
+      "category": "Geometry",
+      "question": "Base = 7.75, height = 5, slanted side = 4.5",
+      "expected_answer": "38.75"
+    },
+    {
+      "id": "490",
+      "category": "Geometry",
+      "question": "Base = 38, height = 13.5, slanted side = 14.8",
+      "expected_answer": "513"
+    },
+    {
+      "id": "491",
+      "category": "Geometry",
+      "question": "Base = 8, height = 6",
+      "expected_answer": "24"
+    },
+    {
+      "id": "492",
+      "category": "Geometry",
+      "question": "Base = 3, height = 4",
+      "expected_answer": "6"
+    },
+    {
+      "id": "493",
+      "category": "Geometry",
+      "question": "Base = 12, height = 5",
+      "expected_answer": "30"
+    },
+    {
+      "id": "494",
+      "category": "Geometry",
+      "question": "Base = 10, height = 11",
+      "expected_answer": "55"
+    },
+    {
+      "id": "495",
+      "category": "Geometry",
+      "question": "Base = 5, height = 11",
+      "expected_answer": "27.5"
+    },
+    {
+      "id": "496",
+      "category": "Geometry",
+      "question": "Base = 8, height = 15",
+      "expected_answer": "60"
+    },
+    {
+      "id": "497",
+      "category": "Geometry",
+      "question": "Base 1 = 14, base 2 = 10, height = 8",
+      "expected_answer": "96"
+    },
+    {
+      "id": "498",
+      "category": "Geometry",
+      "question": "Base 1 = 23, base 2 = 11, height = 9",
+      "expected_answer": "153"
+    },
+    {
+      "id": "499",
+      "category": "Geometry",
+      "question": "Base 1 = 15, base 2 = 20, height = 10",
+      "expected_answer": "175"
+    },
+    {
+      "id": "500",
+      "category": "Geometry",
+      "question": "Base 1 = 13, base 2 = 7, height = 5.5",
+      "expected_answer": "55"
+    },
+    {
+      "id": "501",
+      "category": "Geometry",
+      "question": "Base 1 = 14, base 2 = 7, height = 11",
+      "expected_answer": "115.5"
+    },
+    {
+      "id": "502",
+      "category": "Geometry",
+      "question": "Base 1 = 33, base 2 = 13, height = 7",
+      "expected_answer": "161"
+    },
+    {
+      "id": "503",
+      "category": "Geometry",
+      "question": "Base = 6, height = 4",
+      "expected_answer": "12"
+    },
+    {
+      "id": "504",
+      "category": "Geometry",
+      "question": "Base = 18, height = 24",
+      "expected_answer": "216"
+    },
+    {
+      "id": "505",
+      "category": "Geometry",
+      "question": "Base = 57, height = 24",
+      "expected_answer": "684"
+    },
+    {
+      "id": "506",
+      "category": "Geometry",
+      "question": "Base = 10, height = 12",
+      "expected_answer": "60"
+    },
+    {
+      "id": "507",
+      "category": "Geometry",
+      "question": "Base = 15, height = 6",
+      "expected_answer": "45"
+    },
+    {
+      "id": "508",
+      "category": "Geometry",
+      "question": "Base = 5, height = 4.3",
+      "expected_answer": "10.75"
+    },
+    {
+      "id": "509",
+      "category": "Geometry",
+      "question": "Diameter = 4",
+      "expected_answer": "12.57"
+    },
+    {
+      "id": "510",
+      "category": "Geometry",
+      "question": "Radius = 7",
+      "expected_answer": "153.94"
+    },
+    {
+      "id": "511",
+      "category": "Geometry",
+      "question": "Diameter = 8",
+      "expected_answer": "50.27"
+    },
+    {
+      "id": "512",
+      "category": "Geometry",
+      "question": "Radius = 16",
+      "expected_answer": "804.25"
+    },
+    {
+      "id": "513",
+      "category": "Geometry",
+      "question": "Diameter = 20",
+      "expected_answer": "314.16"
+    },
+    {
+      "id": "514",
+      "category": "Geometry",
+      "question": "Radius = 5",
+      "expected_answer": "78.54"
+    },
+    {
+      "id": "515",
+      "category": "Geometry",
+      "question": "Diameter = 7",
+      "expected_answer": "38.48"
+    },
+    {
+      "id": "516",
+      "category": "Geometry",
+      "question": "Radius = 17",
+      "expected_answer": "907.92"
+    },
+    {
+      "id": "517",
+      "category": "Geometry",
+      "question": "Diameter = 24",
+      "expected_answer": "452.39"
+    },
+    {
+      "id": "518",
+      "category": "Geometry",
+      "question": "Circle with diameter = 3",
+      "expected_answer": "9.42"
+    },
+    {
+      "id": "519",
+      "category": "Geometry",
+      "question": "Circle with radius = 12",
+      "expected_answer": "75.4"
+    },
+    {
+      "id": "520",
+      "category": "Geometry",
+      "question": "Circle with diameter = 25",
+      "expected_answer": "78.54"
+    },
+    {
+      "id": "521",
+      "category": "Geometry",
+      "question": "Circle with radius = 8",
+      "expected_answer": "50.27"
+    },
+    {
+      "id": "522",
+      "category": "Geometry",
+      "question": "Circle with diameter = 8",
+      "expected_answer": "25.13"
+    },
+    {
+      "id": "523",
+      "category": "Geometry",
+      "question": "Circle with radius = 10",
+      "expected_answer": "62.83"
+    },
+    {
+      "id": "524",
+      "category": "Geometry",
+      "question": "Circle with diameter = 16",
+      "expected_answer": "50.27"
+    },
+    {
+      "id": "525",
+      "category": "Geometry",
+      "question": "Circle with radius = 3",
+      "expected_answer": "18.85"
+    },
+    {
+      "id": "526",
+      "category": "Geometry",
+      "question": "Circle with diameter = 25",
+      "expected_answer": "6.28"
+    },
+    {
+      "id": "527",
+      "category": "Geometry",
+      "question": "Length = 4, Width = 3, Height = 2",
+      "expected_answer": "24"
+    },
+    {
+      "id": "528",
+      "category": "Geometry",
+      "question": "Length = 6, Width = 3, Height = 4",
+      "expected_answer": "72"
+    },
+    {
+      "id": "529",
+      "category": "Geometry",
+      "question": "Length = 12, Width = 4, Height = 2",
+      "expected_answer": "96"
+    },
+    {
+      "id": "530",
+      "category": "Geometry",
+      "question": "Length = 10, Width = 5, Height = 3",
+      "expected_answer": "150"
+    },
+    {
+      "id": "531",
+      "category": "Geometry",
+      "question": "Length = 6, Width = 8, Height = 10",
+      "expected_answer": "480"
+    },
+    {
+      "id": "532",
+      "category": "Geometry",
+      "question": "Length = 14, Width = 7, Height = 6",
+      "expected_answer": "588"
+    },
+    {
+      "id": "533",
+      "category": "Geometry",
+      "question": "Radius = 4, Height = 8",
+      "expected_answer": "134"
+    },
+    {
+      "id": "534",
+      "category": "Geometry",
+      "question": "Radius = 3, Height = 11",
+      "expected_answer": "103.4"
+    },
+    {
+      "id": "535",
+      "category": "Geometry",
+      "question": "Radius = 5, Height = 14",
+      "expected_answer": "366.5"
+    },
+    {
+      "id": "536",
+      "category": "Geometry",
+      "question": "Radius = 9, Height = 21",
+      "expected_answer": "1781.3"
+    },
+    {
+      "id": "537",
+      "category": "Geometry",
+      "question": "Radius = 3.1, Height = 10",
+      "expected_answer": "100.6"
+    },
+    {
+      "id": "538",
+      "category": "Geometry",
+      "question": "Radius = 6.25, Height = 18.5",
+      "expected_answer": "756.8"
+    },
+    {
+      "id": "539",
+      "category": "Geometry",
+      "question": "Radius = 7.2, Height = 27",
+      "expected_answer": "1465.7"
+    },
+    {
+      "id": "540",
+      "category": "Geometry",
+      "question": "Radius = 21.7, Height = 44.9",
+      "expected_answer": "22140.9"
+    },
+    {
+      "id": "541",
+      "category": "Geometry",
+      "question": "Radius = 4, Height = 6",
+      "expected_answer": "301.6"
+    },
+    {
+      "id": "542",
+      "category": "Geometry",
+      "question": "Radius = 7, Height = 8",
+      "expected_answer": "1231.5"
+    },
+    {
+      "id": "543",
+      "category": "Geometry",
+      "question": "Radius = 3, Height = 12",
+      "expected_answer": "339.3"
+    },
+    {
+      "id": "544",
+      "category": "Geometry",
+      "question": "Radius = 14, Height = 8",
+      "expected_answer": "4926"
+    },
+    {
+      "id": "545",
+      "category": "Geometry",
+      "question": "Radius = 4.8, Height = 7.3",
+      "expected_answer": "528.4"
+    },
+    {
+      "id": "546",
+      "category": "Geometry",
+      "question": "Radius = 1.5, Height = 8.6",
+      "expected_answer": "60.8"
+    },
+    {
+      "id": "547",
+      "category": "Geometry",
+      "question": "Radius = 5.75, Height = 11.3",
+      "expected_answer": "1173.7"
+    },
+    {
+      "id": "548",
+      "category": "Geometry",
+      "question": "Radius = 33.1, Height = 28.4",
+      "expected_answer": "97751.7"
+    },
+    {
+      "id": "549",
+      "category": "Geometry",
+      "question": "Radius = 2",
+      "expected_answer": "33.51"
+    },
+    {
+      "id": "550",
+      "category": "Geometry",
+      "question": "Radius = 10",
+      "expected_answer": "4188.79"
+    },
+    {
+      "id": "551",
+      "category": "Geometry",
+      "question": "Radius = 7",
+      "expected_answer": "1436.76"
+    },
+    {
+      "id": "552",
+      "category": "Geometry",
+      "question": "Radius = 2.5",
+      "expected_answer": "65.45"
+    },
+    {
+      "id": "553",
+      "category": "Geometry",
+      "question": "Radius = 12",
+      "expected_answer": "7238.23"
+    },
+    {
+      "id": "554",
+      "category": "Geometry",
+      "question": "Radius = 0.25",
+      "expected_answer": "0.07"
+    },
+    {
+      "id": "555",
+      "category": "Geometry",
+      "question": "Radius = 15",
+      "expected_answer": "14137.17"
+    },
+    {
+      "id": "556",
+      "category": "Geometry",
+      "question": "Radius = 3.1",
+      "expected_answer": "124.79"
+    },
+    {
+      "id": "557",
+      "category": "Geometry",
+      "question": "Length = 10, Width = 6, Height = 7",
+      "expected_answer": "344"
+    },
+    {
+      "id": "558",
+      "category": "Geometry",
+      "question": "Length = 16, Width = 7, Height = 9",
+      "expected_answer": "638"
+    },
+    {
+      "id": "559",
+      "category": "Geometry",
+      "question": "Length = 10, Width = 8, Height = 10",
+      "expected_answer": "520"
+    },
+    {
+      "id": "560",
+      "category": "Geometry",
+      "question": "Length = 9, Width = 7, Height = 14",
+      "expected_answer": "574"
+    },
+    {
+      "id": "561",
+      "category": "Geometry",
+      "question": "Radius = 3, Height = 7",
+      "expected_answer": "100.1"
+    },
+    {
+      "id": "562",
+      "category": "Geometry",
+      "question": "Radius = 6, Height = 8",
+      "expected_answer": "301.6"
+    },
+    {
+      "id": "563",
+      "category": "Geometry",
+      "question": "Radius = 10, Height = 14",
+      "expected_answer": "854.7"
+    },
+    {
+      "id": "564",
+      "category": "Geometry",
+      "question": "Radius = 12, Height = 17",
+      "expected_answer": "1236.9"
+    },
+    {
+      "id": "565",
+      "category": "Geometry",
+      "question": "Radius = 6.5, Height = 18.5",
+      "expected_answer": "532.2"
+    },
+    {
+      "id": "566",
+      "category": "Geometry",
+      "question": "Radius = 5.7, Height = 15",
+      "expected_answer": "389.4"
+    },
+    {
+      "id": "567",
+      "category": "Geometry",
+      "question": "Radius = 1.3, Height = 5.2",
+      "expected_answer": "27.2"
+    },
+    {
+      "id": "568",
+      "category": "Geometry",
+      "question": "Radius = 11.7, Height = 24",
+      "expected_answer": "1411.5"
+    },
+    {
+      "id": "569",
+      "category": "Geometry",
+      "question": "Radius = 4, Height = 7",
+      "expected_answer": "276.5"
+    },
+    {
+      "id": "570",
+      "category": "Geometry",
+      "question": "Radius = 6, Height = 11",
+      "expected_answer": "640.9"
+    },
+    {
+      "id": "571",
+      "category": "Geometry",
+      "question": "Radius = 9, Height = 10",
+      "expected_answer": "1074.4"
+    },
+    {
+      "id": "572",
+      "category": "Geometry",
+      "question": "Radius = 12, Height = 8",
+      "expected_answer": "4825.5"
+    },
+    {
+      "id": "573",
+      "category": "Geometry",
+      "question": "Radius = 7.2, Height = 8.2",
+      "expected_answer": "696.7"
+    },
+    {
+      "id": "574",
+      "category": "Geometry",
+      "question": "Radius = 7.3, Height = 19",
+      "expected_answer": "1206.3"
+    },
+    {
+      "id": "575",
+      "category": "Geometry",
+      "question": "Radius = 9.25, Height = 21",
+      "expected_answer": "4591.4"
+    },
+    {
+      "id": "576",
+      "category": "Geometry",
+      "question": "Radius = 23.63, Height = 33.3",
+      "expected_answer": "8452.5"
+    },
+    {
+      "id": "577",
+      "category": "Geometry",
+      "question": "Radius = 3",
+      "expected_answer": "113.1"
+    },
+    {
+      "id": "578",
+      "category": "Geometry",
+      "question": "Radius = 10",
+      "expected_answer": "1256.6"
+    },
+    {
+      "id": "579",
+      "category": "Geometry",
+      "question": "Diameter = 18",
+      "expected_answer": "1017.9"
+    },
+    {
+      "id": "580",
+      "category": "Geometry",
+      "question": "Radius = 6.5",
+      "expected_answer": "530.9"
+    },
+    {
+      "id": "581",
+      "category": "Geometry",
+      "question": "Diameter = 42",
+      "expected_answer": "5541.8"
+    },
+    {
+      "id": "582",
+      "category": "Geometry",
+      "question": "Radius = 2.3",
+      "expected_answer": "66.5"
+    },
+    {
+      "id": "583",
+      "category": "Geometry",
+      "question": "Diameter = 27",
+      "expected_answer": "2290.2"
+    },
+    {
+      "id": "584",
+      "category": "Geometry",
+      "question": "Diameter = 34.8",
+      "expected_answer": "3804.6"
+    },
+    {
+      "id": "585",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a 6?",
+      "expected_answer": "1/6"
+    },
+    {
+      "id": "586",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a number smaller than 3?",
+      "expected_answer": "1/3"
+    },
+    {
+      "id": "587",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a number greater than 2?",
+      "expected_answer": "2/3"
+    },
+    {
+      "id": "588",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling an odd number?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "589",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling an even number?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "590",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a 4 or a 5?",
+      "expected_answer": "1/3"
+    },
+    {
+      "id": "591",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a 5?",
+      "expected_answer": "1/6"
+    },
+    {
+      "id": "592",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a prime number?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "593",
+      "category": "Statistics and Probability",
+      "question": "A single die is rolled once. What is the probability of rolling a 7?",
+      "expected_answer": "0"
+    },
+    {
+      "id": "594",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on 5?",
+      "expected_answer": "1/10"
+    },
+    {
+      "id": "595",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on an odd number?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "596",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on a number greater than 3?",
+      "expected_answer": "7/10"
+    },
+    {
+      "id": "597",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on a number less than 5?",
+      "expected_answer": "2/5"
+    },
+    {
+      "id": "598",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on a multiple of 3?",
+      "expected_answer": "3/10"
+    },
+    {
+      "id": "599",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on a multiple of 5?",
+      "expected_answer": "1/5"
+    },
+    {
+      "id": "600",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on 13?",
+      "expected_answer": "0"
+    },
+    {
+      "id": "601",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of landing on a number greater than 1 but less than 9?",
+      "expected_answer": "4/5"
+    },
+    {
+      "id": "602",
+      "category": "Statistics and Probability",
+      "question": "A spinner has numbers 1 through 10. What is the probability of not landing on 2?",
+      "expected_answer": "9/10"
+    },
+    {
+      "id": "603",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that the first coin lands on heads?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "604",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that all three land on tails?",
+      "expected_answer": "1/8"
+    },
+    {
+      "id": "605",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that none land on heads?",
+      "expected_answer": "1/8"
+    },
+    {
+      "id": "606",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that at least one coin lands on tails?",
+      "expected_answer": "7/8"
+    },
+    {
+      "id": "607",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that exactly two coins land on heads?",
+      "expected_answer": "3/8"
+    },
+    {
+      "id": "608",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that all three land on the same side?",
+      "expected_answer": "1/4"
+    },
+    {
+      "id": "609",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that at least two coins do not land on tails?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "610",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that the second coin lands tails and both the first and third coins land on heads?",
+      "expected_answer": "1/8"
+    },
+    {
+      "id": "611",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that at least two of the coins land on the same side?",
+      "expected_answer": "1"
+    },
+    {
+      "id": "612",
+      "category": "Statistics and Probability",
+      "question": "If three coins are flipped, what is the probability that at least one coin lands on heads and at least one lands on tails?",
+      "expected_answer": "3/4"
+    },
+    {
+      "id": "613",
+      "category": "Statistics and Probability",
+      "question": "Write all possible outcomes of the roll.",
+      "expected_answer": "{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}"
+    },
+    {
+      "id": "614",
+      "category": "Statistics and Probability",
+      "question": "Is rolling an even number on a 12-sided die equally as likely as rolling an odd number? Yes or no.",
+      "expected_answer": "Yes"
+    },
+    {
+      "id": "615",
+      "category": "Statistics and Probability",
+      "question": "Is rolling a multiple of 2 equally as likely as rolling a multiple of 3 on a 12-sided die? Yes or no.",
+      "expected_answer": "No"
+    },
+    {
+      "id": "616",
+      "category": "Statistics and Probability",
+      "question": "Is rolling a number divisible by 3 equally as likely as rolling a number divisible by 5 on a 12-sided die? Yes or no.",
+      "expected_answer": "No"
+    },
+    {
+      "id": "617",
+      "category": "Statistics and Probability",
+      "question": "A 12-sided die labeled 1 through 12 is rolled once. What is the probability of rolling a 2?",
+      "expected_answer": "1/12"
+    },
+    {
+      "id": "618",
+      "category": "Statistics and Probability",
+      "question": "A 12-sided die labeled 1 through 12 is rolled once. What is the probability of rolling a 15?",
+      "expected_answer": "0"
+    },
+    {
+      "id": "619",
+      "category": "Statistics and Probability",
+      "question": "A 12-sided die labeled 1 through 12 is rolled once. What is the probability of rolling a 7 or an 11?",
+      "expected_answer": "2/12"
+    },
+    {
+      "id": "620",
+      "category": "Statistics and Probability",
+      "question": "A 12-sided die labeled 1 through 12 is rolled once. What is the probability of rolling a single-digit number?",
+      "expected_answer": "9/12"
+    },
+    {
+      "id": "621",
+      "category": "Statistics and Probability",
+      "question": "A 12-sided die labeled 1 through 12 is rolled once. What is the probability of rolling a double-digit number?",
+      "expected_answer": "3/12"
+    },
+    {
+      "id": "622",
+      "category": "Statistics and Probability",
+      "question": "One fruit was selected at random from the basket. What is the probability that the selected fruit is a Kiwi or a Pear?",
+      "expected_answer": "1/4"
+    },
+    {
+      "id": "623",
+      "category": "Statistics and Probability",
+      "question": "One fruit was selected at random from the basket. What is the probability of selecting a fruit that is not a Dragon Fruit or a Mango?",
+      "expected_answer": "5/12"
+    },
+    {
+      "id": "624",
+      "category": "Statistics and Probability",
+      "question": "One fruit was selected at random from the basket. What is the probability of selecting a fruit that is a Pomegranate, a Mango, or an Orange?",
+      "expected_answer": "1/2"
+    },
+    {
+      "id": "625",
+      "category": "Statistics and Probability",
+      "question": "One fruit was selected at random from the basket. What is the probability of selecting a fruit that is not a Pomegranate or a Dragon Fruit?",
+      "expected_answer": "1/3"
+    },
+    {
+      "id": "626",
+      "category": "Statistics and Probability",
+      "question": "One fruit was selected at random from the basket. What is the probability that a fruit selected at random is not a Pear?",
+      "expected_answer": "8/9"
+    },
+    {
+      "id": "627",
+      "category": "Statistics and Probability",
+      "question": "All of the mangos are removed from the basket. What is the probability of selecting a Kiwi now?",
+      "expected_answer": "5/24"
+    },
+    {
+      "id": "628",
+      "category": "Statistics and Probability",
+      "question": "A marble is selected from the jar at random. What is the probability of selecting a blue marble?",
+      "expected_answer": "5/30"
+    },
+    {
+      "id": "629",
+      "category": "Statistics and Probability",
+      "question": "A marble is selected from the jar at random. What is the probability of selecting a black marble?",
+      "expected_answer": "10/30"
+    },
+    {
+      "id": "630",
+      "category": "Statistics and Probability",
+      "question": "A marble is selected from the jar at random. What is the probability of selecting a red or yellow marble?",
+      "expected_answer": "9/30"
+    },
+    {
+      "id": "631",
+      "category": "Statistics and Probability",
+      "question": "A marble is selected from the jar at random. What is the probability of selecting a marble that is not blue?",
+      "expected_answer": "25/30"
+    },
+    {
+      "id": "632",
+      "category": "Statistics and Probability",
+      "question": "A marble is selected from the jar at random. What is the probability of selecting a purple marble?",
+      "expected_answer": "0/30"
+    },
+    {
+      "id": "633",
+      "category": "Statistics and Probability",
+      "question": "A marble is selected from the jar at random. Which color is most likely to be selected?",
+      "expected_answer": "Black"
+    },
+    {
+      "id": "634",
+      "category": "Statistics and Probability",
+      "question": "If 20 purple marbles were added to the jar, what would be the probability of selecting a black marble at random from the jar?",
+      "expected_answer": "10/50"
+    },
+    {
+      "id": "635",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a green gummy bear?",
+      "expected_answer": "7/23"
+    },
+    {
+      "id": "636",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a red gummy bear?",
+      "expected_answer": "5/23"
+    },
+    {
+      "id": "637",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a purple gummy bear?",
+      "expected_answer": "2/23"
+    },
+    {
+      "id": "638",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a blue gummy bear?",
+      "expected_answer": "9/23"
+    },
+    {
+      "id": "639",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a yellow gummy bear?",
+      "expected_answer": "0/23"
+    },
+    {
+      "id": "640",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. Which color is most likely to be picked?",
+      "expected_answer": "Blue"
+    },
+    {
+      "id": "641",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. Which color is least likely to be picked?",
+      "expected_answer": "Purple"
+    },
+    {
+      "id": "642",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a purple or blue gummy bear?",
+      "expected_answer": "11/23"
+    },
+    {
+      "id": "643",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. What is the probability of selecting a red or green gummy bear?",
+      "expected_answer": "12/23"
+    },
+    {
+      "id": "644",
+      "category": "Statistics and Probability",
+      "question": "A gummy bear is selected from the bag at random. Are you more likely to pick a green or red gummy bear?",
+      "expected_answer": "Green"
+    }
+  ],
+  "total_questions": 644
+}
