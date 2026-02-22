@@ -3,8 +3,8 @@
     "total_time_seconds": 5551.637986421585,
     "average_time_per_question_seconds": 5.551637986421585,
     "questions_answered": 1000,
-    "questions_correct": 382,
-    "percent_correct": 38.2
+    "questions_correct": 395,
+    "percent_correct": 39.5
   },
   "metadata": {
     "created": "2026-02-20T00:27:05.803414",
@@ -32,7 +32,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Z-score for X=13 in this normal distribution is approximately 2.50 when rounding to the nearest hundredth place.",
+        "extracted_answer": "Z-score for X=13 in this normal distribution is approximately 2.50 when rounding to the nearest hundredth place",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -110,7 +110,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(11, 2) = (39916800 / (2 * 362880)) = 165 ways.",
+        "extracted_answer": "C(11, 2) = (39916800 / (2 * 362880)) = 165 ways",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -370,7 +370,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "165. So there are 165 ways to choose 3 items from a set of 11 distinct items.",
+        "extracted_answer": "165. So there are 165 ways to choose 3 items from a set of 11 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -422,7 +422,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "210 ways we can arrange three items from seven distinct objects.",
+        "extracted_answer": "210 ways we can arrange three items from seven distinct objects",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -448,7 +448,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 120 different arrangements possible when selecting and arranging three items from a set of six unique items.",
+        "extracted_answer": "There are 120 different arrangements possible when selecting and arranging three items from a set of six unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -708,7 +708,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "16800 ways to arrange 5 items from a set of 8 distinct items when order matters and repetitions aren't allowed.",
+        "extracted_answer": "16800 ways to arrange 5 items from a set of 8 distinct items when order matters and repetitions aren't allowed",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -895,13 +895,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.7999999999999998,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "35",
@@ -916,7 +916,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is about 0.444 or 44.4%.",
+        "extracted_answer": "The probability of selecting a red ball is about 0.444 or 44.4%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1020,7 +1020,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "15 ways to choose four items from six distinct ones.",
+        "extracted_answer": "15 ways to choose four items from six distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1306,7 +1306,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 42 different arrangements for selecting and ordering three distinct items out of seven available options.",
+        "extracted_answer": "There are 42 different arrangements for selecting and ordering three distinct items out of seven available options",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -1332,7 +1332,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 36 ways to choose 2 items from a set of 9 unique items.",
+        "extracted_answer": "There are 36 ways to choose 2 items from a set of 9 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1699,15 +1699,15 @@
         "extracted_answer": "3,024",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "range",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "66",
@@ -1800,7 +1800,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "56 ways to arrange three items from eight distinct ones.",
+        "extracted_answer": "56 ways to arrange three items from eight distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -2450,18 +2450,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "66.",
+        "extracted_answer": "66",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "95",
@@ -2528,7 +2528,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 495 ways to choose 4 items out of 12 unique items, using a combination formula and factorial operations for calculation.",
+        "extracted_answer": "There are 495 ways to choose 4 items out of 12 unique items, using a combination formula and factorial operations for calculation",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -2554,7 +2554,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "315 ways we can arrange the items.",
+        "extracted_answer": "315 ways we can arrange the items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -2788,7 +2788,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 21 different ways to select 5 items out of 7 unique objects.",
+        "extracted_answer": "There are 21 different ways to select 5 items out of 7 unique objects",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -2892,7 +2892,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided information does not allow us to calculate E(X). Please check your inputs and try again, ensuring that all probabilities are non-negative numbers which sum up to 1 or less.",
+        "extracted_answer": "The provided information does not allow us to calculate E(X). Please check your inputs and try again, ensuring that all probabilities are non-negative numbers which sum up to 1 or less",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -2970,7 +2970,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 165 ways to select 3 items out of 11 distinct items.",
+        "extracted_answer": "There are 165 ways to select 3 items out of 11 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -2996,7 +2996,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "90 different ways to arrange pairs of items from among a set of ten distinct objects.",
+        "extracted_answer": "90 different ways to arrange pairs of items from among a set of ten distinct objects",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3074,7 +3074,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Without the correct distribution data and assuming an error in provided inputs as mentioned above, it is not possible to calculate E(X). Please provide accurate probabilities for each outcome of X that sum up to 1 so we can proceed with finding E(X).",
+        "extracted_answer": "Without the correct distribution data and assuming an error in provided inputs as mentioned above, it is not possible to calculate E(X). Please provide accurate probabilities for each outcome of X that sum up to 1 so we can proceed with finding E(X)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -3126,7 +3126,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 360 different arrangements possible for this problem.",
+        "extracted_answer": "There are 360 different arrangements possible for this problem",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3334,7 +3334,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "5040 different arrangements possible when choosing four from ten unique items, considering that arrangement is important (order does matter).",
+        "extracted_answer": "5040 different arrangements possible when choosing four from ten unique items, considering that arrangement is important (order does matter)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3412,7 +3412,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided probability distribution is incorrect and incomplete; hence E(X) cannot be calculated accurately from it.",
+        "extracted_answer": "The provided probability distribution is incorrect and incomplete; hence E(X) cannot be calculated accurately from it",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -3516,7 +3516,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The z-score when X = 11 in our normal distribution with mean of 3 and standard deviation of 4 is exactly 2.00 (rounded to two decimal places).",
+        "extracted_answer": "The z-score when X = 11 in our normal distribution with mean of 3 and standard deviation of 4 is exactly 2.00 (rounded to two decimal places)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -3568,7 +3568,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "P(A and B) is approximately equal to \\(0.301\\).",
+        "extracted_answer": "P(A and B) is approximately equal to \\(0.301\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -3594,7 +3594,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The z-score when X=-2 is -1.60.",
+        "extracted_answer": "The z-score when X=-2 is -1.60",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3620,7 +3620,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Z score when X=15 rounded to 2 decimal places is 3.50.",
+        "extracted_answer": "Z score when X=15 rounded to 2 decimal places is 3.50",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3724,7 +3724,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 165 ways to choose 3 items from 11 distinct items.",
+        "extracted_answer": "There are 165 ways to choose 3 items from 11 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3958,7 +3958,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "E[X] = 26.9 (rounded to two decimal places).",
+        "extracted_answer": "E[X] = 26.9 (rounded to two decimal places)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4010,18 +4010,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "9.",
+        "extracted_answer": "9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "155",
@@ -4036,7 +4036,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 220 ways to select 3 items from a set of 12 distinct items when the selection's order does not matter.",
+        "extracted_answer": "There are 220 ways to select 3 items from a set of 12 distinct items when the selection's order does not matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4114,7 +4114,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 120 different ways you can arrange 4 items out of 5 distinct items.",
+        "extracted_answer": "There are 120 different ways you can arrange 4 items out of 5 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4218,7 +4218,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "35 ways to choose 3 items from a set of 7 distinct items.",
+        "extracted_answer": "35 ways to choose 3 items from a set of 7 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4244,7 +4244,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "840 ways to arrange four items from seven distinct ones.",
+        "extracted_answer": "840 ways to arrange four items from seven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4530,7 +4530,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "55 ways to choose 2 items from a set of 11 distinct items.",
+        "extracted_answer": "55 ways to choose 2 items from a set of 11 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4790,7 +4790,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 720 different ways to arrange 5 items from 6 unique ones.",
+        "extracted_answer": "There are 720 different ways to arrange 5 items from 6 unique ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4842,7 +4842,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 6 different ways to select 5 out of 6 distinct items.",
+        "extracted_answer": "There are 6 different ways to select 5 out of 6 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4894,7 +4894,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The corresponding z-score is approximately 0.25.",
+        "extracted_answer": "The corresponding z-score is approximately 0.25",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5154,7 +5154,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "This question contains invalid data; the provided values cannot form a legitimate discrete random variable's distribution.",
+        "extracted_answer": "This question contains invalid data; the provided values cannot form a legitimate discrete random variable's distribution",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -5180,7 +5180,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "1680 ways to arrange 4 items out of 8 unique items.",
+        "extracted_answer": "1680 ways to arrange 4 items out of 8 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5362,7 +5362,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.964' for numeric answers.",
+        "extracted_answer": "0.964' for numeric answers",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5804,7 +5804,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Undetermined based on given data with identified errors or missing values.",
+        "extracted_answer": "Undetermined based on given data with identified errors or missing values",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -5934,7 +5934,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "2772 different ways to choose six items from eleven distinct ones.",
+        "extracted_answer": "2772 different ways to choose six items from eleven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6064,7 +6064,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 45 different arrangements possible when selecting and arranging any two out of ten distinct items.",
+        "extracted_answer": "There are 45 different arrangements possible when selecting and arranging any two out of ten distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -6168,7 +6168,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "35 ways to choose three items from seven distinct ones.",
+        "extracted_answer": "35 ways to choose three items from seven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6220,7 +6220,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "462 ways of choosing six items from eleven distinct ones.",
+        "extracted_answer": "462 ways of choosing six items from eleven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6324,7 +6324,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The z-score is approximately 1.67 when X = 14.",
+        "extracted_answer": "The z-score is approximately 1.67 when X = 14",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6454,7 +6454,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided probabilities do not form a valid probability distribution and therefore the expected value (E(X)) cannot be calculated from them.",
+        "extracted_answer": "The provided probabilities do not form a valid probability distribution and therefore the expected value (E(X)) cannot be calculated from them",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -6480,7 +6480,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "z-score is approximately -0.67 when X = 6 in the given normal distribution.",
+        "extracted_answer": "z-score is approximately -0.67 when X = 6 in the given normal distribution",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6584,7 +6584,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "30 ways to arrange two items from six distinct ones.",
+        "extracted_answer": "30 ways to arrange two items from six distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6792,7 +6792,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "56 ways to arrange two items from eight distinct ones.",
+        "extracted_answer": "56 ways to arrange two items from eight distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6844,7 +6844,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "210 ways to arrange three items from seven distinct ones.",
+        "extracted_answer": "210 ways to arrange three items from seven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6948,7 +6948,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "20 ways of choosing three items from six distinct ones without considering the order in which they're chosen.",
+        "extracted_answer": "20 ways of choosing three items from six distinct ones without considering the order in which they're chosen",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7000,7 +7000,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 126 ways to select 4 items from a set of 9 unique items when order does not matter.",
+        "extracted_answer": "There are 126 ways to select 4 items from a set of 9 unique items when order does not matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7104,7 +7104,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 66 different ways to choose 2 items from a set of 12 distinct items.",
+        "extracted_answer": "There are 66 different ways to choose 2 items from a set of 12 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7208,7 +7208,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 840 ways to arrange 4 items from a set of 7 distinct items.",
+        "extracted_answer": "There are 840 ways to arrange 4 items from a set of 7 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7338,7 +7338,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 45 different ways you can arrange or select 2 items out of 10 distinct ones without considering their arrangement among each other.",
+        "extracted_answer": "There are 45 different ways you can arrange or select 2 items out of 10 distinct ones without considering their arrangement among each other",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7390,14 +7390,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "14.",
+        "extracted_answer": "14",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7546,7 +7546,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 77 different ways to choose 5 items from a set of 9 distinct items.",
+        "extracted_answer": "There are 77 different ways to choose 5 items from a set of 9 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7780,18 +7780,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.148.",
+        "extracted_answer": "0.148",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "300",
@@ -8352,7 +8352,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "120 ways can you choose three items from ten distinct items without considering order in selection or arrangement.",
+        "extracted_answer": "120 ways can you choose three items from ten distinct items without considering order in selection or arrangement",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8456,7 +8456,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 30 ways to arrange two items from six distinct ones.",
+        "extracted_answer": "There are 30 ways to arrange two items from six distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8534,18 +8534,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "-5.",
+        "extracted_answer": "-5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "329",
@@ -8638,7 +8638,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 168 different ways to choose four items from nine distinct ones.",
+        "extracted_answer": "There are 168 different ways to choose four items from nine distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8690,7 +8690,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "15 ways to choose four items from six distinct ones.",
+        "extracted_answer": "15 ways to choose four items from six distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8742,7 +8742,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 6720 different arrangements for selecting and ordering five out of eight unique items.",
+        "extracted_answer": "There are 6720 different arrangements for selecting and ordering five out of eight unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -8768,7 +8768,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "105 ways to choose four items from nine distinct ones without regard for the order of selection.",
+        "extracted_answer": "105 ways to choose four items from nine distinct ones without regard for the order of selection",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8820,7 +8820,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "210 ways to choose six items from ten distinct ones.",
+        "extracted_answer": "210 ways to choose six items from ten distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9106,7 +9106,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Error/Misunderstanding detected; please review and provide correct values to proceed with variance calculation.",
+        "extracted_answer": "Error/Misunderstanding detected; please review and provide correct values to proceed with variance calculation",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9132,7 +9132,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 5040 ways to arrange four items from ten distinct ones using permutations.",
+        "extracted_answer": "There are 5040 ways to arrange four items from ten distinct ones using permutations",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9314,7 +9314,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 56 possible arrangements for selecting and arranging 2 items out of a group of 8 unique items.",
+        "extracted_answer": "There are 56 possible arrangements for selecting and arranging 2 items out of a group of 8 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9392,7 +9392,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "210 ways to choose six items from ten distinct ones.",
+        "extracted_answer": "210 ways to choose six items from ten distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9470,7 +9470,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 10 ways to arrange 2 items from 5 distinct items using combinations where the order doesn't matter.",
+        "extracted_answer": "There are 10 ways to arrange 2 items from 5 distinct items using combinations where the order doesn't matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9730,7 +9730,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "90 ways of arranging 2 items from a set of 10 distinct ones.",
+        "extracted_answer": "90 ways of arranging 2 items from a set of 10 distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9756,7 +9756,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The problem statement seems to have an error as probabilities for discrete random variables should sum up to '1'. Please provide a valid distribution.",
+        "extracted_answer": "The problem statement seems to have an error as probabilities for discrete random variables should sum up to '1'. Please provide a valid distribution",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9782,7 +9782,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "210 ways of choosing six items from ten distinct items.",
+        "extracted_answer": "210 ways of choosing six items from ten distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9808,7 +9808,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The expected value E(X) cannot be determined from the given information due to an apparent error in the provided probabilities and missing data points.",
+        "extracted_answer": "The expected value E(X) cannot be determined from the given information due to an apparent error in the provided probabilities and missing data points",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9860,7 +9860,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is about 0.333 or 1/3 rounded off to three places after the decimal point.",
+        "extracted_answer": "The probability of selecting a red ball is about 0.333 or 1/3 rounded off to three places after the decimal point",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9886,7 +9886,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 504 ways to choose 4 items from a set of 9 distinct items.",
+        "extracted_answer": "There are 504 ways to choose 4 items from a set of 9 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9964,7 +9964,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Cannot be determined without the correct value for P(X=54).",
+        "extracted_answer": "Cannot be determined without the correct value for P(X=54)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9990,7 +9990,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "E(X) = 45.46 (rounded off).",
+        "extracted_answer": "E(X) = 45.46 (rounded off)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10146,7 +10146,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "P(A \\text{ and } B) = 0.218\\).",
+        "extracted_answer": "P(A \\text{ and } B) = 0.218\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -10172,7 +10172,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.180\\).",
+        "extracted_answer": "0.180\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -10406,7 +10406,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided probabilities are inconsistent and do not allow for the calculation of expected value (E(X)).",
+        "extracted_answer": "The provided probabilities are inconsistent and do not allow for the calculation of expected value (E(X))",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -10458,7 +10458,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 35 different combinations when choosing 4 items out of a set of 7 unique items.",
+        "extracted_answer": "There are 35 different combinations when choosing 4 items out of a set of 7 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10510,18 +10510,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "28.",
+        "extracted_answer": "28",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "405",
@@ -10614,7 +10614,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are exactly 462 ways to choose five items from eleven distinct ones.",
+        "extracted_answer": "There are exactly 462 ways to choose five items from eleven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10640,7 +10640,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "z-score for X=12 is approximately 1.33.",
+        "extracted_answer": "z-score for X=12 is approximately 1.33",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10744,7 +10744,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "35 ways to choose three items from seven distinct ones.",
+        "extracted_answer": "35 ways to choose three items from seven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10900,7 +10900,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 924 different combinations possible when choosing 6 out of 12 unique items, so C(12, 6) = 924.",
+        "extracted_answer": "There are 924 different combinations possible when choosing 6 out of 12 unique items, so C(12, 6) = 924",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11030,7 +11030,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The calculated z-score for X=15 in our normal distribution N(mean=8, std_dev=4) is approximately 1.75 when rounded to two decimal places.",
+        "extracted_answer": "The calculated z-score for X=15 in our normal distribution N(mean=8, std_dev=4) is approximately 1.75 when rounded to two decimal places",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11108,7 +11108,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "166,488 different combinations of selecting six out of the total twelve unique objects available to us herein presented.",
+        "extracted_answer": "166,488 different combinations of selecting six out of the total twelve unique objects available to us herein presented",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11732,7 +11732,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are exactly 495 ways of choosing four items from twelve distinct ones.",
+        "extracted_answer": "There are exactly 495 ways of choosing four items from twelve distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12044,7 +12044,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 6760 unique ways to arrange the selected items.",
+        "extracted_answer": "There are 6760 unique ways to arrange the selected items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12122,7 +12122,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "z-score is approximately 1.33.",
+        "extracted_answer": "z-score is approximately 1.33",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12148,7 +12148,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball from the bag is roughly 0.038 or in other words there's about a 3.8% chance to draw one out at random without replacement.",
+        "extracted_answer": "The probability of selecting a red ball from the bag is roughly 0.038 or in other words there's about a 3.8% chance to draw one out at random without replacement",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12200,7 +12200,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "We can't complete E(X) without correcting or providing all probabilities and outcomes for X that sum to one.",
+        "extracted_answer": "We can't complete E(X) without correcting or providing all probabilities and outcomes for X that sum to one",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12252,7 +12252,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The calculation does not make sense in a standard interpretation of probability theory. Please check the values given or provide additional context to accurately compute E(X).",
+        "extracted_answer": "The calculation does not make sense in a standard interpretation of probability theory. Please check the values given or provide additional context to accurately compute E(X)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -12356,18 +12356,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "45.",
+        "extracted_answer": "45",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "476",
@@ -12460,7 +12460,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball from this bag and rounding to three decimal places would be 0.111 or simply expressed as the fraction 1/9.",
+        "extracted_answer": "The probability of selecting a red ball from this bag and rounding to three decimal places would be 0.111 or simply expressed as the fraction 1/9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12564,7 +12564,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 56 permutations.",
+        "extracted_answer": "There are 56 permutations",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12694,7 +12694,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 28 different ways to select five items from eight unique ones when the selection order does not matter.",
+        "extracted_answer": "There are 28 different ways to select five items from eight unique ones when the selection order does not matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12772,7 +12772,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "35 different ways to choose three items from seven distinct ones.",
+        "extracted_answer": "35 different ways to choose three items from seven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12928,7 +12928,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "1695 ways to arrange the four items from eight distinct ones.",
+        "extracted_answer": "1695 ways to arrange the four items from eight distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13006,7 +13006,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 10 ways to choose 3 items from a set of 5 distinct items.",
+        "extracted_answer": "There are 10 ways to choose 3 items from a set of 5 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13032,7 +13032,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "146.17 (rounded to two decimal places).",
+        "extracted_answer": "146.17 (rounded to two decimal places)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13058,7 +13058,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "120 ways to arrange these five distinct items.",
+        "extracted_answer": "120 ways to arrange these five distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13110,7 +13110,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Approximately 0.929 or in fraction form, it's approximately 13/14.",
+        "extracted_answer": "Approximately 0.929 or in fraction form, it's approximately 13/14",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13214,7 +13214,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(8, 5) = 56/5 or simply put it is not a whole number which indicates an error because combinations should always result in integers when dealing with distinct items being chosen without replacement where order does not matter and we cannot have fractions of selections.",
+        "extracted_answer": "C(8, 5) = 56/5 or simply put it is not a whole number which indicates an error because combinations should always result in integers when dealing with distinct items being chosen without replacement where order does not matter and we cannot have fractions of selections",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -13240,7 +13240,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "504 ways to arrange 3 items from a set of 9 distinct items.",
+        "extracted_answer": "504 ways to arrange 3 items from a set of 9 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13474,7 +13474,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.226 (rounded to three decimal places).",
+        "extracted_answer": "0.226 (rounded to three decimal places)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13500,7 +13500,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.352\\).",
+        "extracted_answer": "0.352\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -13812,7 +13812,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided probabilities do not constitute a valid discrete random variable distribution.",
+        "extracted_answer": "The provided probabilities do not constitute a valid discrete random variable distribution",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -13838,7 +13838,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The given information does not provide a correct or possible set of values and their associated probabilities to find an expectation (mean) because some provided probabilities exceed 1, which is against the rules of probability theory where all individual outcomes' probabilities must sum up to exactly one.",
+        "extracted_answer": "The given information does not provide a correct or possible set of values and their associated probabilities to find an expectation (mean) because some provided probabilities exceed 1, which is against the rules of probability theory where all individual outcomes' probabilities must sum up to exactly one",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -13916,7 +13916,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is approximately 0.593 or 59.3%.",
+        "extracted_answer": "The probability of selecting a red ball is approximately 0.593 or 59.3%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14046,18 +14046,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "36.",
+        "extracted_answer": "36",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "541",
@@ -14202,7 +14202,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(7,2) is equal to 21.",
+        "extracted_answer": "C(7,2) is equal to 21",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14254,7 +14254,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are C(9,4) = 126 different combinations when choosing 4 out of 9 unique items.",
+        "extracted_answer": "There are C(9,4) = 126 different combinations when choosing 4 out of 9 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14306,7 +14306,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "126 different ways to choose six items from a set of ten distinct objects without considering the order in which they're chosen.",
+        "extracted_answer": "126 different ways to choose six items from a set of ten distinct objects without considering the order in which they're chosen",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14384,7 +14384,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.230\\).",
+        "extracted_answer": "0.230\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14514,14 +14514,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "42.",
+        "extracted_answer": "42",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -14540,7 +14540,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 56 different ways you could select 3 items from 8 unique items, when order does not matter.",
+        "extracted_answer": "There are 56 different ways you could select 3 items from 8 unique items, when order does not matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15008,7 +15008,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The calculated Z-score for X=5 in the given normal distribution N(mean=-4, std_dev=5) is about 1.80 (rounded to two decimal points).",
+        "extracted_answer": "The calculated Z-score for X=5 in the given normal distribution N(mean=-4, std_dev=5) is about 1.80 (rounded to two decimal points)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15164,7 +15164,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided information seems incorrect or incomplete. Please provide correct probabilities of each outcome for X=69 & X=61 so we can compute the Expected Value E(X).",
+        "extracted_answer": "The provided information seems incorrect or incomplete. Please provide correct probabilities of each outcome for X=69 & X=61 so we can compute the Expected Value E(X)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15294,7 +15294,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "-0.32 \\).",
+        "extracted_answer": "-0.32 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15320,7 +15320,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The expected value cannot be determined with the given incorrect or incomplete information about probabilities for each outcome of random variable X.",
+        "extracted_answer": "The expected value cannot be determined with the given incorrect or incomplete information about probabilities for each outcome of random variable X",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -15346,7 +15346,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "385 ways to choose four items from eleven distinct items.",
+        "extracted_answer": "385 ways to choose four items from eleven distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15398,7 +15398,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "210` ways of choosing four items from ten distinct ones.",
+        "extracted_answer": "210` ways of choosing four items from ten distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15450,7 +15450,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "28 ways to arrange 2 items from a set of 8 distinct items.",
+        "extracted_answer": "28 ways to arrange 2 items from a set of 8 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15476,7 +15476,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 720 different arrangements for selecting and ordering 3 objects from a set of 10 unique elements, assuming no item is repeated in an arrangement.",
+        "extracted_answer": "There are 720 different arrangements for selecting and ordering 3 objects from a set of 10 unique elements, assuming no item is repeated in an arrangement",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15502,7 +15502,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.496\\).",
+        "extracted_answer": "0.496\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15528,7 +15528,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "252 different ways to choose five items from ten distinct items.",
+        "extracted_answer": "252 different ways to choose five items from ten distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15658,7 +15658,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided distribution is incorrect as it violates basic rules in probability theory; hence E(X) can't be calculated from these given values due to their inconsistency with fundamental principles of probability theory, which states that the sum of probabilities should equal one and each individual probability must lie between 0 and 1 inclusive.",
+        "extracted_answer": "The provided distribution is incorrect as it violates basic rules in probability theory; hence E(X) can't be calculated from these given values due to their inconsistency with fundamental principles of probability theory, which states that the sum of probabilities should equal one and each individual probability must lie between 0 and 1 inclusive",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15736,7 +15736,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 2520 different arrangements possible with these four distinct items from a set of ten unique ones.",
+        "extracted_answer": "There are 2520 different arrangements possible with these four distinct items from a set of ten unique ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15814,7 +15814,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "165\\).",
+        "extracted_answer": "165\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15840,7 +15840,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The given information is invalid as the total probability exceeds one or contains negative values which aren't possible in a distribution of probabilities for random variables; thus E(X) cannot be calculated without correcting these errors.",
+        "extracted_answer": "The given information is invalid as the total probability exceeds one or contains negative values which aren't possible in a distribution of probabilities for random variables; thus E(X) cannot be calculated without correcting these errors",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -15892,14 +15892,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "6 .",
+        "extracted_answer": "6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -15996,7 +15996,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "z-score is approximately 0.40 when X equals zero for a normal distribution with mean -2 and standard deviation of 5.",
+        "extracted_answer": "z-score is approximately 0.40 when X equals zero for a normal distribution with mean -2 and standard deviation of 5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -16100,18 +16100,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.257.",
+        "extracted_answer": "0.257",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "620",
@@ -16178,7 +16178,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "28 ways to choose 2 items from a set of 8 distinct items.",
+        "extracted_answer": "28 ways to choose 2 items from a set of 8 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16282,7 +16282,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 462 ways to select groups/combinations containing exactly six objects each time from a total pool or set of twelve unique items.",
+        "extracted_answer": "There are 462 ways to select groups/combinations containing exactly six objects each time from a total pool or set of twelve unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16620,7 +16620,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is about 0.381 (rounded off to three decimal points).",
+        "extracted_answer": "The probability of selecting a red ball is about 0.381 (rounded off to three decimal points)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16698,7 +16698,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 28 ways of selecting six items from eight distinct ones.",
+        "extracted_answer": "There are 28 ways of selecting six items from eight distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16776,7 +16776,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 90 ways to arrange 2 items from 10 distinct items.",
+        "extracted_answer": "There are 90 ways to arrange 2 items from 10 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16883,11 +16883,11 @@
         "extracted_answer": "3,024",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "range",
+        "extracted_type": "integer",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -16932,7 +16932,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "42 ways to arrange 2 items from a set of 7 distinct ones when the order matters (permutations).",
+        "extracted_answer": "42 ways to arrange 2 items from a set of 7 distinct ones when the order matters (permutations)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16989,13 +16989,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.7999999999999998,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "654",
@@ -17010,7 +17010,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "120 ways to arrange four items from five distinct ones.",
+        "extracted_answer": "120 ways to arrange four items from five distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17270,7 +17270,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\frac{7}{2}\\) or \\(3.5\\) if expressed as a decimal.",
+        "extracted_answer": "\\(\\frac{7}{2}\\) or \\(3.5\\) if expressed as a decimal",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17296,7 +17296,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The z-score for X=-8 in this normal distribution is exactly 0. This makes sense because a value that's equal to the mean will always have a z-score of zero since it lies right at the center of our bell curve representing the standardized values around the mean, with no deviation from it.",
+        "extracted_answer": "The z-score for X=-8 in this normal distribution is exactly 0. This makes sense because a value that's equal to the mean will always have a z-score of zero since it lies right at the center of our bell curve representing the standardized values around the mean, with no deviation from it",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17478,7 +17478,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "E(X) is approximately 77 when rounded off to the nearest whole number, but since we're asked for a decimal value up to two places after the point and our calculation resulted in an integer without any fractional component; hence FINAL_ANSWER would be simply that.",
+        "extracted_answer": "E(X) is approximately 77 when rounded off to the nearest whole number, but since we're asked for a decimal value up to two places after the point and our calculation resulted in an integer without any fractional component; hence FINAL_ANSWER would be simply that",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -17556,7 +17556,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Var(X) is approximately equal to 4.41 when rounding up to two decimal points.",
+        "extracted_answer": "Var(X) is approximately equal to 4.41 when rounding up to two decimal points",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17634,7 +17634,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 7 different ways to select 6 out of 7 unique items.",
+        "extracted_answer": "There are 7 different ways to select 6 out of 7 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17686,7 +17686,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.274\\).",
+        "extracted_answer": "0.274\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -17998,7 +17998,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 84 different ways to choose 6 items from 9 distinct items.",
+        "extracted_answer": "There are 84 different ways to choose 6 items from 9 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -18388,7 +18388,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of drawing a red ball is approximately 3.333%.",
+        "extracted_answer": "The probability of drawing a red ball is approximately 3.333%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -18518,7 +18518,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 20 different combinations to choose 3 items out of 6 unique options.",
+        "extracted_answer": "There are 20 different combinations to choose 3 items out of 6 unique options",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -18622,7 +18622,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Cannot be calculated accurately without additional information about other possible outcomes/values of X with their respective non-zero probability distributions.",
+        "extracted_answer": "Cannot be calculated accurately without additional information about other possible outcomes/values of X with their respective non-zero probability distributions",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -18804,7 +18804,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Error in provided probabilities; please verify the input before calculating E(X).",
+        "extracted_answer": "Error in provided probabilities; please verify the input before calculating E(X)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -18882,7 +18882,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 15120 different arrangements for selecting and ordering five out of nine unique items.",
+        "extracted_answer": "There are 15120 different arrangements for selecting and ordering five out of nine unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -18908,7 +18908,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "2520 ways to arrange five items from seven distinct ones without repetition and order matters in the arrangement (permutation).",
+        "extracted_answer": "2520 ways to arrange five items from seven distinct ones without repetition and order matters in the arrangement (permutation)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -19064,7 +19064,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "15,120 different arrangements of choosing and arranging five items from a set of nine unique items.",
+        "extracted_answer": "15,120 different arrangements of choosing and arranging five items from a set of nine unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -19324,7 +19324,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There is one way you can choose the items from a group of six distinct items when choosing six out of them all.",
+        "extracted_answer": "There is one way you can choose the items from a group of six distinct items when choosing six out of them all",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -19376,7 +19376,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(9, 5) = 126 ways.",
+        "extracted_answer": "C(9, 5) = 126 ways",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19407,13 +19407,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.7999999999999998,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "747",
@@ -19428,7 +19428,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(9, 9) is equal to 1.",
+        "extracted_answer": "C(9, 9) is equal to 1",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19454,7 +19454,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The provided probabilities are incorrect as they do not sum up to one and contain negative value, thus E(X) cannot be calculated accurately.",
+        "extracted_answer": "The provided probabilities are incorrect as they do not sum up to one and contain negative value, thus E(X) cannot be calculated accurately",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -19584,10 +19584,10 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "-3.00.",
+        "extracted_answer": "-3.00",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -19688,7 +19688,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(7,2) or simply 21 ways to choose 2 items from a set of 7 distinct items.",
+        "extracted_answer": "C(7,2) or simply 21 ways to choose 2 items from a set of 7 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19792,7 +19792,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 330 different ways to choose 5 items from a set of 11 distinct items when the order does not matter.",
+        "extracted_answer": "There are 330 different ways to choose 5 items from a set of 11 distinct items when the order does not matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19870,7 +19870,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 35 different ways to select four items from an assortment of eight unique items.",
+        "extracted_answer": "There are 35 different ways to select four items from an assortment of eight unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19948,7 +19948,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.330\\).",
+        "extracted_answer": "0.330\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -20026,7 +20026,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(9,3) = 84\\).",
+        "extracted_answer": "C(9,3) = 84\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20234,7 +20234,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "792 ways to choose 5 items from a set of 12 distinct items.",
+        "extracted_answer": "792 ways to choose 5 items from a set of 12 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20494,18 +20494,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "11.",
+        "extracted_answer": "11",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "789",
@@ -20598,7 +20598,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "840 ways to arrange four items from seven distinct ones.",
+        "extracted_answer": "840 ways to arrange four items from seven distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20676,7 +20676,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "60 possible ways to arrange three items out of five.",
+        "extracted_answer": "60 possible ways to arrange three items out of five",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20728,7 +20728,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is approximately 0.412 or, expressed as fractional form for precision sake (and without round-off), it would be represented by the ratio F/T = 7 / 17 .",
+        "extracted_answer": "The probability of selecting a red ball is approximately 0.412 or, expressed as fractional form for precision sake (and without round-off), it would be represented by the ratio F/T = 7 / 17",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20754,7 +20754,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is approximately 0.471 or rounded off from the unrounded form which was calculated as above steps.",
+        "extracted_answer": "The probability of selecting a red ball is approximately 0.471 or rounded off from the unrounded form which was calculated as above steps",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20780,7 +20780,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are C(12,5) = 735 ways to choose five items from twelve distinct ones without considering the order in which they were chosen.",
+        "extracted_answer": "There are C(12,5) = 735 ways to choose five items from twelve distinct ones without considering the order in which they were chosen",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21014,7 +21014,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.273\\).",
+        "extracted_answer": "0.273\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -21274,7 +21274,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.053 (rounded from the original fractional probability).",
+        "extracted_answer": "0.053 (rounded from the original fractional probability)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21300,7 +21300,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 10,520 different arrangements of 4 items chosen out of a total of 8 distinct items.",
+        "extracted_answer": "There are 10,520 different arrangements of 4 items chosen out of a total of 8 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21560,7 +21560,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "70 ways to choose 4 items from a set of 8 distinct items.",
+        "extracted_answer": "70 ways to choose 4 items from a set of 8 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21690,7 +21690,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 360 ways to arrange four items from six distinct ones.",
+        "extracted_answer": "There are 360 ways to arrange four items from six distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21768,7 +21768,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Cannot be determined due to incorrect/insufficient probability distribution data for random variable X.",
+        "extracted_answer": "Cannot be determined due to incorrect/insufficient probability distribution data for random variable X",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -21898,7 +21898,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.198\\).",
+        "extracted_answer": "0.198\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -22080,7 +22080,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 6 different ways to choose 5 items from a set of 6 unique items.",
+        "extracted_answer": "There are 6 different ways to choose 5 items from a set of 6 unique items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22236,7 +22236,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 15,120 different arrangements of five items chosen from a set of nine unique objects when considering permutations with no replacement or repeated elements.",
+        "extracted_answer": "There are 15,120 different arrangements of five items chosen from a set of nine unique objects when considering permutations with no replacement or repeated elements",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22262,7 +22262,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "90 ways you can arrange 2 items from 10 distinct ones.",
+        "extracted_answer": "90 ways you can arrange 2 items from 10 distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22314,7 +22314,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 120 combinations.",
+        "extracted_answer": "There are 120 combinations",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22496,7 +22496,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "15,400 ways to arrange the five items from nine distinct ones.",
+        "extracted_answer": "15,400 ways to arrange the five items from nine distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22678,7 +22678,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 90 different arrangements of selecting and arranging two objects out of a set of ten unique objects.",
+        "extracted_answer": "There are 90 different arrangements of selecting and arranging two objects out of a set of ten unique objects",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -22860,7 +22860,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "280 ways to choose six items from eight distinct ones.",
+        "extracted_answer": "280 ways to choose six items from eight distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -23068,7 +23068,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of selecting a red ball is about 0.750 or 75%.",
+        "extracted_answer": "The probability of selecting a red ball is about 0.750 or 75%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -23224,7 +23224,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "C(7, 3) = 35 ways.",
+        "extracted_answer": "C(7, 3) = 35 ways",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -23510,7 +23510,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "36 ways to choose two items from nine distinct ones.",
+        "extracted_answer": "36 ways to choose two items from nine distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -24056,7 +24056,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Error in given probabilities and calculation methodology; please provide correct distribution.",
+        "extracted_answer": "Error in given probabilities and calculation methodology; please provide correct distribution",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -24238,7 +24238,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Z-score is approximately equal to 1.67.",
+        "extracted_answer": "Z-score is approximately equal to 1.67",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -24290,7 +24290,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 42 different ways to arrange 2 items from the group of 7 distinct items.",
+        "extracted_answer": "There are 42 different ways to arrange 2 items from the group of 7 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -24836,7 +24836,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "6 ways to choose 5 items from a set of 6 distinct items.",
+        "extracted_answer": "6 ways to choose 5 items from a set of 6 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -25070,7 +25070,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "5040 ways we can arrange the items from a set of 10 distinct ones in groups of four where order matters.",
+        "extracted_answer": "5040 ways we can arrange the items from a set of 10 distinct ones in groups of four where order matters",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -25096,7 +25096,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 360 ways to arrange four items from six distinct ones.",
+        "extracted_answer": "There are 360 ways to arrange four items from six distinct ones",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -25122,7 +25122,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "10C3 ways to choose three items from ten distinct ones without considering order in selection process.",
+        "extracted_answer": "10C3 ways to choose three items from ten distinct ones without considering order in selection process",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -25148,7 +25148,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Error in the provided distribution data; please check and provide correct information to continue calculation.",
+        "extracted_answer": "Error in the provided distribution data; please check and provide correct information to continue calculation",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -25200,7 +25200,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are 84 ways to choose 3 items from a set of 9 distinct items.",
+        "extracted_answer": "There are 84 ways to choose 3 items from a set of 9 distinct items",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -25356,7 +25356,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "60 ways to arrange the items from a set of five distinct ones when choosing three at a time without repetition and where order matters.",
+        "extracted_answer": "60 ways to arrange the items from a set of five distinct ones when choosing three at a time without repetition and where order matters",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -25538,7 +25538,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "12 different combinations possible in this case.",
+        "extracted_answer": "12 different combinations possible in this case",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -25902,7 +25902,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are ten possible arrangements for selecting three distinct objects from a set of five, when the arrangement's order does not matter.",
+        "extracted_answer": "There are ten possible arrangements for selecting three distinct objects from a set of five, when the arrangement's order does not matter",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -25928,7 +25928,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Cannot determine E(X) from the provided incorrect or incomplete data.",
+        "extracted_answer": "Cannot determine E(X) from the provided incorrect or incomplete data",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",

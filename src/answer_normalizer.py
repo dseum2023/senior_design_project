@@ -76,6 +76,16 @@ class NormalizedAnswer:
             self.metadata = {}
 
 
+def _is_thousands_formatted_number(text: str) -> bool:
+    """
+    Check if text is a number using comma thousands separators.
+
+    Examples: '6,561', '28,660.64', '960,844,000'
+    Non-examples: '5,6' (range), '1,2,3' (not thousands pattern)
+    """
+    return bool(re.match(r'^-?\d{1,3}(?:,\d{3})+(?:\.\d+)?$', text))
+
+
 def detect_answer_type(text: str) -> AnswerType:
     """
     Auto-detect answer type from string
@@ -92,13 +102,24 @@ def detect_answer_type(text: str) -> AnswerType:
     if "f'(x)" in text or "f(x)" in text or "+ C" in text or "·" in text:
         return AnswerType.EXPRESSION
 
-    # Coordinate pattern (x = value, y = value)
+    # Coordinate pattern (x = value, y = value) — decimal form
     if re.match(r'^[a-z]\s*=\s*-?\d+\.?\d*$', text, re.IGNORECASE):
+        return AnswerType.COORDINATE
+
+    # Coordinate pattern with fraction value (x = 1/2, x = -3/4)
+    if re.match(r'^[a-z]\s*=\s*-?\d+\s*/\s*-?\d+$', text, re.IGNORECASE):
         return AnswerType.COORDINATE
 
     # Scientific notation (5 * 10^3)
     if re.match(r'^\d+\s*\*\s*10\^', text):
         return AnswerType.SCIENTIFIC_NOTATION
+
+    # Thousands-formatted number (6,561 or 28,660.64) — check before range
+    if ',' in text and _is_thousands_formatted_number(text):
+        no_comma = text.replace(',', '')
+        if '.' in no_comma:
+            return AnswerType.DECIMAL
+        return AnswerType.INTEGER
 
     # Range pattern (5 and 6, or 5, 6)
     if " and " in text or re.match(r'^\d+,\s*\d+$', text):
@@ -212,8 +233,9 @@ def normalize_decimal(text: str) -> NormalizedAnswer:
         "8.1" -> 8.1 (precision=1)
         "42.67" -> 42.67 (precision=2)
         "0.129" -> 0.129 (precision=3)
+        "28,660.64" -> 28660.64 (precision=2, thousands separator stripped)
     """
-    text = text.strip()
+    text = text.strip().replace(',', '')  # Strip thousands separators
 
     # Handle special case of integers with .0
     if text.endswith('.0'):
@@ -252,8 +274,9 @@ def normalize_integer(text: str) -> NormalizedAnswer:
     Examples:
         "6720" -> 6720
         "-133" -> -133
+        "6,561" -> 6561 (thousands separator stripped)
     """
-    text = text.strip()
+    text = text.strip().replace(',', '')  # Strip thousands separators
 
     try:
         value = int(text)
@@ -296,6 +319,17 @@ def normalize_expression(text: str) -> NormalizedAnswer:
     text = text.replace('\\left', '').replace('\\right', '')
     text = text.replace('\\,', '')
     text = re.sub(r'\\(sin|cos|tan|sec|csc|cot|ln|log|exp)\b', r'\1', text)
+
+    # Normalize SQRT notation to unified SQRT(...) form
+    # LaTeX: \sqrt{3} -> SQRT(3)
+    text = re.sub(r'\\sqrt\s*\{([^}]+)\}', r'SQRT(\1)', text)
+    # Unicode: √(3) -> SQRT(3), √3 -> SQRT(3)
+    text = re.sub(r'√\(([^)]+)\)', r'SQRT(\1)', text)
+    text = re.sub(r'√(\w+)', r'SQRT(\1)', text)
+    # Lowercase: sqrt(...) -> SQRT(...)
+    text = re.sub(r'\bsqrt\s*\(', 'SQRT(', text)
+    # Add implicit multiplication: 4SQRT( -> 4*SQRT(
+    text = re.sub(r'(\d)(SQRT)', r'\1*\2', text)
 
     # Standardize spacing around =
     text = re.sub(r'\s*=\s*', ' = ', text)
@@ -451,11 +485,13 @@ def normalize_coordinate(text: str) -> NormalizedAnswer:
     Examples:
         "x = 1.67" -> ('x', 1.67, precision=2)
         "y = -2.5" -> ('y', -2.5, precision=1)
+        "x = 1/2"  -> ('x', 0.5, precision=2)   (fraction form)
+        "x = -3/4" -> ('x', -0.75, precision=2)  (fraction form)
     """
     text = text.strip()
 
+    # Decimal/integer form: x = 1.67
     match = re.match(r'^([a-z])\s*=\s*(-?\d+\.?\d*)$', text, re.IGNORECASE)
-
     if match:
         variable = match.group(1).lower()
         value_str = match.group(2)
@@ -478,6 +514,24 @@ def normalize_coordinate(text: str) -> NormalizedAnswer:
             )
         except ValueError:
             pass
+
+    # Fraction form: x = 1/2, x = -3/4
+    frac_match = re.match(r'^([a-z])\s*=\s*(-?\d+)\s*/\s*(-?\d+)$', text, re.IGNORECASE)
+    if frac_match:
+        variable = frac_match.group(1).lower()
+        numerator = int(frac_match.group(2))
+        denominator = int(frac_match.group(3))
+
+        if denominator != 0:
+            value = numerator / denominator
+            # Use precision=2 so fraction coordinates compare with same
+            # tolerance as 2-decimal-place expected answers
+            return NormalizedAnswer(
+                value=(variable, value),
+                answer_type=AnswerType.COORDINATE,
+                original_text=text,
+                precision=2
+            )
 
     return NormalizedAnswer(
         value=text,
@@ -504,6 +558,17 @@ def normalize_answer(text: str) -> NormalizedAnswer:
             original_text=text,
             metadata={"error": "Empty text"}
         )
+
+    # Pre-process Unicode notation so type detection works correctly.
+    # 1. Unicode multiplication signs and superscripts (e.g. "9 × 10⁻⁸").
+    text = text.replace('×', '*').replace('⋅', '*')
+    text = _normalize_unicode_superscripts(text)
+    # 2. Unicode radical sign √ and LaTeX \sqrt — normalise to SQRT() now so
+    #    type detection sees a known expression pattern rather than UNKNOWN.
+    text = re.sub(r'\\sqrt\s*\{([^}]+)\}', r'SQRT(\1)', text)   # \sqrt{3}
+    text = re.sub(r'√\(([^)]+)\)', r'SQRT(\1)', text)            # √(3)
+    text = re.sub(r'√(\w+)', r'SQRT(\1)', text)                  # √3
+    text = re.sub(r'(\d)(SQRT)', r'\1*\2', text)                 # 4SQRT → 4*SQRT
 
     # Detect type
     answer_type = detect_answer_type(text)

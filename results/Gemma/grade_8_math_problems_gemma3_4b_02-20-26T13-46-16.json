@@ -3,8 +3,8 @@
     "total_time_seconds": 4254.51784491539,
     "average_time_per_question_seconds": 6.606394169123276,
     "questions_answered": 644,
-    "questions_correct": 142,
-    "percent_correct": 22.049689440993788
+    "questions_correct": 187,
+    "percent_correct": 29.037267080745345
   },
   "metadata": {
     "created": "2026-02-20T13:46:16.665952",
@@ -396,10 +396,10 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "90.790170...",
+        "extracted_answer": "90.790170",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "text",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1335,7 +1335,7 @@
         "extracted_answer": "√65",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1361,7 +1361,7 @@
         "extracted_answer": "2√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1621,7 +1621,7 @@
         "extracted_answer": "7√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1907,7 +1907,7 @@
         "extracted_answer": "15√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1959,7 +1959,7 @@
         "extracted_answer": "48√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1985,7 +1985,7 @@
         "extracted_answer": "30√10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -2115,7 +2115,7 @@
         "extracted_answer": "21√7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -2791,15 +2791,15 @@
         "extracted_answer": "4√3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "108",
@@ -2817,11 +2817,11 @@
         "extracted_answer": "2√7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -2843,15 +2843,15 @@
         "extracted_answer": "2√7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "110",
@@ -2869,15 +2869,15 @@
         "extracted_answer": "4√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "111",
@@ -2892,18 +2892,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "5√3**",
+        "extracted_answer": "5√3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "112",
@@ -2921,15 +2921,15 @@
         "extracted_answer": "3√3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "113",
@@ -2947,15 +2947,15 @@
         "extracted_answer": "3√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "114",
@@ -3103,15 +3103,15 @@
         "extracted_answer": "3√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "120",
@@ -3155,15 +3155,15 @@
         "extracted_answer": "2√11",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "122",
@@ -3181,15 +3181,15 @@
         "extracted_answer": "3√6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "123",
@@ -3207,15 +3207,15 @@
         "extracted_answer": "2√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "124",
@@ -3233,15 +3233,15 @@
         "extracted_answer": "2√10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "125",
@@ -3259,15 +3259,15 @@
         "extracted_answer": "3√7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "126",
@@ -3311,7 +3311,7 @@
         "extracted_answer": "√65",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -3337,7 +3337,7 @@
         "extracted_answer": "2√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -3365,13 +3365,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.5192399999999822,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "130",
@@ -3391,13 +3391,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.11999999999999034,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "131",
@@ -3417,13 +3417,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9071950000000086,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "132",
@@ -3443,13 +3443,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.5378874876467812,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "133",
@@ -3469,13 +3469,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.4519999999999982,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "134",
@@ -3495,13 +3495,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9160000000000004,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "135",
@@ -3542,18 +3542,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "4.69041575982**",
+        "extracted_answer": "4.69041575982",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.8083151963999882,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "137",
@@ -3573,13 +3573,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.7080000000000055,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "138",
@@ -3597,7 +3597,7 @@
         "extracted_answer": "7√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -3625,13 +3625,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.6799999999999997,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "140",
@@ -3651,13 +3651,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.24555319999999625,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "141",
@@ -3675,7 +3675,7 @@
         "extracted_answer": "√21",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -3729,13 +3729,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.7360000000000113,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "144",
@@ -3755,13 +3755,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.399999999999995,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "145",
@@ -3781,13 +3781,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.6020000000000039,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "146",
@@ -3807,13 +3807,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.47800000000000864,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "147",
@@ -3958,10 +3958,10 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "1/6**",
+        "extracted_answer": "1/6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -4114,7 +4114,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = 1/3, -1/3**",
+        "extracted_answer": "x = 1/3, -1/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5028,14 +5028,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "194",
@@ -5778,18 +5778,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "9**",
+        "extracted_answer": "9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "223",
@@ -5986,10 +5986,10 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "15√5**",
+        "extracted_answer": "15√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6171,7 +6171,7 @@
         "extracted_answer": "18√6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6197,7 +6197,7 @@
         "extracted_answer": "48√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6353,7 +6353,7 @@
         "extracted_answer": "6√2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6405,7 +6405,7 @@
         "extracted_answer": "800,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "scientific",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6431,7 +6431,7 @@
         "extracted_answer": "50,000,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "scientific",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6457,7 +6457,7 @@
         "extracted_answer": "8,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "scientific",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6561,7 +6561,7 @@
         "extracted_answer": "600,000,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "scientific",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6639,7 +6639,7 @@
         "extracted_answer": "100,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "scientific",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6948,18 +6948,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.0042857142857...",
+        "extracted_answer": "0.0042857142857",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.1428571399998405,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "268",
@@ -6974,18 +6974,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.0023333...",
+        "extracted_answer": "0.0023333",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.40000000000009384,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "269",
@@ -7030,7 +7030,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7056,7 +7056,7 @@
         "extraction_method": "keyword",
         "extraction_confidence": 0.6,
         "extracted_type": "expression",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7108,14 +7108,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "274",
@@ -7420,10 +7420,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7446,10 +7446,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7472,14 +7472,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "288",
@@ -7498,10 +7498,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7524,10 +7524,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7550,10 +7550,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7576,10 +7576,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7602,10 +7602,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7628,10 +7628,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7654,10 +7654,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7680,14 +7680,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "296",
@@ -7706,14 +7706,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "297",
@@ -7784,14 +7784,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "300",
@@ -7810,14 +7810,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.16000000011990778,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "301",
@@ -7940,14 +7940,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "306",
@@ -7992,14 +7992,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "308",
@@ -8096,7 +8096,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -8122,14 +8122,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.09000000006926712,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "313",
@@ -8174,14 +8174,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.9139999999897555,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "315",
@@ -8225,11 +8225,11 @@
         "extracted_answer": "960,844,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -8329,11 +8329,11 @@
         "extracted_answer": "28,660.64",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -8693,11 +8693,11 @@
         "extracted_answer": "6,449.24",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -9106,7 +9106,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = 4, y = 0**",
+        "extracted_answer": "x = 4, y = 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9184,7 +9184,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = y⁸ / 2**",
+        "extracted_answer": "x = y⁸ / 2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9210,7 +9210,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = y^2 - 8**",
+        "extracted_answer": "x = y^2 - 8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9262,7 +9262,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = 7y^8**",
+        "extracted_answer": "x = 7y^8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9288,7 +9288,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = y^8 + 9**",
+        "extracted_answer": "x = y^8 + 9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9912,7 +9912,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "y = (1/3)x - 1**",
+        "extracted_answer": "y = (1/3)x - 1",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10120,7 +10120,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "y = 8x + 7**",
+        "extracted_answer": "y = 8x + 7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10744,7 +10744,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Y = 6X + 3**",
+        "extracted_answer": "Y = 6X + 3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10796,7 +10796,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Y = X - 2**",
+        "extracted_answer": "Y = X - 2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11657,7 +11657,7 @@
         "extracted_answer": "√137",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -11865,11 +11865,11 @@
         "extracted_answer": "√317 ≈ 17.80",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -11943,11 +11943,11 @@
         "extracted_answer": "4√13",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -12333,11 +12333,11 @@
         "extracted_answer": "√221",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -12385,11 +12385,11 @@
         "extracted_answer": "√317 ≈ 17.804",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -12465,13 +12465,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "480",
@@ -12517,13 +12517,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "482",
@@ -12567,15 +12567,15 @@
         "extracted_answer": "2√74",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "484",
@@ -12876,18 +12876,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "27.5**",
+        "extracted_answer": "27.5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "496",
@@ -14207,13 +14207,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.3000000000000682,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "547",
@@ -14254,14 +14254,14 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "102125.52**",
+        "extracted_answer": "102125.52",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -16646,7 +16646,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "All colors are equally likely to be picked.",
+        "extracted_answer": "All colors are equally likely to be picked",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -16672,7 +16672,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The color with the fewest gummy bears in the bag.",
+        "extracted_answer": "The color with the fewest gummy bears in the bag",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -16750,7 +16750,7 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "It depends on the number of green and red gummy bears in the bag. If there are an equal number of green and red gummy bears, then the probability of picking a green gummy bear is equal to the probability of picking a red gummy bear.",
+        "extracted_answer": "It depends on the number of green and red gummy bears in the bag. If there are an equal number of green and red gummy bears, then the probability of picking a green gummy bear is equal to the probability of picking a red gummy bear",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",

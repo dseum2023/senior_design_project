@@ -300,7 +300,8 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
         if eval_a is None or eval_b is None:
             return False
 
-        function_names = {"sin", "cos", "tan", "sec", "csc", "cot", "log", "exp"}
+        function_names = {"sin", "cos", "tan", "sec", "csc", "cot", "log", "exp",
+                          "sqrt", "SQRT"}
         tokens_a = set(re.findall(r"[A-Za-z_]+", eval_a))
         tokens_b = set(re.findall(r"[A-Za-z_]+", eval_b))
         variables = sorted((tokens_a.union(tokens_b)) - function_names)
@@ -318,6 +319,8 @@ def compare_expressions(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
             "csc": lambda x: 1.0 / math.sin(x),
             "cot": lambda x: 1.0 / math.tan(x),
             "abs": abs,
+            "sqrt": math.sqrt,
+            "SQRT": math.sqrt,
         }
 
         for p in test_points:

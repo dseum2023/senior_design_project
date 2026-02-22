@@ -3,8 +3,8 @@
     "total_time_seconds": 5957.808623075485,
     "average_time_per_question_seconds": 6.619787358972761,
     "questions_answered": 900,
-    "questions_correct": 623,
-    "percent_correct": 69.22222222222221
+    "questions_correct": 773,
+    "percent_correct": 85.88888888888889
   },
   "metadata": {
     "created": "2026-02-20T03:14:07.579765",
@@ -165,15 +165,15 @@
         "extracted_answer": "x = 1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "7",
@@ -479,13 +479,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "19",
@@ -529,15 +529,15 @@
         "extracted_answer": "x = 9/10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "21",
@@ -578,18 +578,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^7/7 + C**",
+        "extracted_answer": "x^7/7 + C",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "23",
@@ -765,13 +765,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.28800000000137516,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "30",
@@ -919,15 +919,15 @@
         "extracted_answer": "x = -3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "36",
@@ -1311,13 +1311,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.8192000000000235,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "51",
@@ -1413,15 +1413,15 @@
         "extracted_answer": "x = 3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "55",
@@ -1519,13 +1519,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "59",
@@ -1545,13 +1545,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.27999999999883585,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "60",
@@ -1566,18 +1566,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "9(3x + 3)^2**",
+        "extracted_answer": "9(3x + 3)^2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "61",
@@ -1883,13 +1883,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.45599999999998886,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "73",
@@ -1935,13 +1935,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "75",
@@ -1961,13 +1961,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "76",
@@ -2273,13 +2273,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "88",
@@ -2403,13 +2403,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "93",
@@ -2557,15 +2557,15 @@
         "extracted_answer": "x = -1/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333334014,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "99",
@@ -2637,13 +2637,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "102",
@@ -2897,13 +2897,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.09999999999854481,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "112",
@@ -3025,11 +3025,11 @@
         "extracted_answer": "x = -5/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -3183,13 +3183,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "123",
@@ -3209,13 +3209,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "124",
@@ -3287,13 +3287,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "127",
@@ -3311,15 +3311,15 @@
         "extracted_answer": "x = -1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "128",
@@ -3493,15 +3493,15 @@
         "extracted_answer": "x = 1/6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333332904,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "135",
@@ -3675,15 +3675,15 @@
         "extracted_answer": "x = -5/6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333331794,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "142",
@@ -3781,13 +3781,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "146",
@@ -3805,15 +3805,15 @@
         "extracted_answer": "x = -1/6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333332904,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "147",
@@ -3831,15 +3831,15 @@
         "extracted_answer": "x = -3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "148",
@@ -4143,11 +4143,11 @@
         "extracted_answer": "x = -7/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -4171,13 +4171,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "161",
@@ -4327,13 +4327,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "167",
@@ -4353,13 +4353,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "168",
@@ -4509,13 +4509,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "174",
@@ -4587,13 +4587,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9343999999996413,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "177",
@@ -4665,13 +4665,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "180",
@@ -4972,18 +4972,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "62.8316**",
+        "extracted_answer": "62.8316",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.6799999999993247,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "192",
@@ -5027,15 +5027,15 @@
         "extracted_answer": "x = -5/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "194",
@@ -5081,13 +5081,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "196",
@@ -5289,13 +5289,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "204",
@@ -5341,13 +5341,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.7399999999998954,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "206",
@@ -5523,13 +5523,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "213",
@@ -5752,18 +5752,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "25(5x + 1)^4**",
+        "extracted_answer": "25(5x + 1)^4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "222",
@@ -5830,18 +5830,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 15x^2 + 6x**",
+        "extracted_answer": "f'(x) = 15x^2 + 6x",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "225",
@@ -5991,13 +5991,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "231",
@@ -6301,15 +6301,15 @@
         "extracted_answer": "x = -5/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333336235,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "243",
@@ -6329,13 +6329,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "244",
@@ -6355,13 +6355,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "245",
@@ -6558,18 +6558,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "3x^2 + C**",
+        "extracted_answer": "3x^2 + C",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "253",
@@ -6615,13 +6615,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "255",
@@ -6665,15 +6665,15 @@
         "extracted_answer": "x = -2/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "257",
@@ -6717,15 +6717,15 @@
         "extracted_answer": "x = -7/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "259",
@@ -6771,13 +6771,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "261",
@@ -7317,13 +7317,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.45599999999998886,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "282",
@@ -7655,13 +7655,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.45599999999998886,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "295",
@@ -7707,13 +7707,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9231999999994969,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "297",
@@ -7832,18 +7832,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 40x^7**",
+        "extracted_answer": "f'(x) = 40x^7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "302",
@@ -7941,13 +7941,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "306",
@@ -7993,13 +7993,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "308",
@@ -8043,11 +8043,11 @@
         "extracted_answer": "x = -7/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -8071,13 +8071,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9631999999999721,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "311",
@@ -8095,15 +8095,15 @@
         "extracted_answer": "x = 5/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333336235,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "312",
@@ -8274,18 +8274,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^5/5 + C**",
+        "extracted_answer": "x^5/5 + C",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "319",
@@ -8326,18 +8326,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 40x^3**",
+        "extracted_answer": "f'(x) = 40x^3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "321",
@@ -8721,13 +8721,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9631999999999721,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "336",
@@ -9005,11 +9005,11 @@
         "extracted_answer": "x = -3/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -9345,13 +9345,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.43999999999846295,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "360",
@@ -9761,13 +9761,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "376",
@@ -9969,13 +9969,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "384",
@@ -10073,13 +10073,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "388",
@@ -10255,13 +10255,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.37999999999647116,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "395",
@@ -10276,18 +10276,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "65534/5**",
+        "extracted_answer": "65534/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "decimal",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "396",
@@ -10515,13 +10515,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "405",
@@ -10539,11 +10539,11 @@
         "extracted_answer": "x = -1/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -10931,13 +10931,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "421",
@@ -11108,18 +11108,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^5 / 5 + C**",
+        "extracted_answer": "x^5 / 5 + C",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "428",
@@ -11191,13 +11191,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "431",
@@ -11449,15 +11449,15 @@
         "extracted_answer": "x = 3/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "441",
@@ -11503,13 +11503,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "443",
@@ -11971,13 +11971,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "461",
@@ -12023,13 +12023,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "463",
@@ -12075,13 +12075,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "465",
@@ -12151,15 +12151,15 @@
         "extracted_answer": "x = -9/10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "468",
@@ -12335,13 +12335,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "475",
@@ -12413,13 +12413,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.47199999999156717,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "478",
@@ -12775,15 +12775,15 @@
         "extracted_answer": "x = -5/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "492",
@@ -13011,13 +13011,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "501",
@@ -13087,15 +13087,15 @@
         "extracted_answer": "x = -1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "504",
@@ -13219,13 +13219,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9079999999997881,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "509",
@@ -13531,13 +13531,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.10399999999981446,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "521",
@@ -13609,13 +13609,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "524",
@@ -13659,15 +13659,15 @@
         "extracted_answer": "x = -5/6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333331794,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "526",
@@ -13765,13 +13765,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "530",
@@ -13791,13 +13791,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "531",
@@ -14207,13 +14207,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9263999999999442,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "547",
@@ -14257,15 +14257,15 @@
         "extracted_answer": "x = -1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "549",
@@ -14335,15 +14335,15 @@
         "extracted_answer": "x = -7/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "552",
@@ -14389,13 +14389,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9631999999999721,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "554",
@@ -14519,13 +14519,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "559",
@@ -14623,13 +14623,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "563",
@@ -14857,13 +14857,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "572",
@@ -15167,15 +15167,15 @@
         "extracted_answer": "x = 5/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "584",
@@ -15193,15 +15193,15 @@
         "extracted_answer": "x = -4/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333336235,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "585",
@@ -15242,18 +15242,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "72x^7**",
+        "extracted_answer": "72x^7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "587",
@@ -15663,13 +15663,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "603",
@@ -15687,15 +15687,15 @@
         "extracted_answer": "x = -9/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "604",
@@ -15741,13 +15741,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9263999999999442,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "606",
@@ -15762,18 +15762,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "672**",
+        "extracted_answer": "672",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "607",
@@ -15949,13 +15949,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "614",
@@ -16025,15 +16025,15 @@
         "extracted_answer": "x = -3/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "617",
@@ -16235,13 +16235,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.37999999999647116,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "625",
@@ -16261,13 +16261,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.27999999999883585,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "626",
@@ -16389,15 +16389,15 @@
         "extracted_answer": "x = -4/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "631",
@@ -16490,18 +16490,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "40**",
+        "extracted_answer": "40",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "635",
@@ -16677,13 +16677,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.10399999999981446,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "642",
@@ -16755,13 +16755,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "645",
@@ -16781,13 +16781,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "646",
@@ -16805,11 +16805,11 @@
         "extracted_answer": "x = -7/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -17795,13 +17795,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "685",
@@ -17871,11 +17871,11 @@
         "extracted_answer": "x = -7/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -18029,13 +18029,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "694",
@@ -18209,15 +18209,15 @@
         "extracted_answer": "x = -2/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "701",
@@ -18261,15 +18261,15 @@
         "extracted_answer": "x = -9/10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "703",
@@ -18289,13 +18289,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "704",
@@ -18367,13 +18367,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9631999999999721,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "707",
@@ -18523,13 +18523,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "713",
@@ -18549,13 +18549,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "714",
@@ -18575,13 +18575,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "715",
@@ -18986,18 +18986,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "30x^9**",
+        "extracted_answer": "30x^9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "731",
@@ -19197,15 +19197,15 @@
         "extracted_answer": "x = 9/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "739",
@@ -19275,15 +19275,15 @@
         "extracted_answer": "x = -1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "742",
@@ -19535,11 +19535,11 @@
         "extracted_answer": "x = -3/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -19771,13 +19771,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "761",
@@ -19927,13 +19927,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "767",
@@ -19977,11 +19977,11 @@
         "extracted_answer": "x = -3/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -20003,15 +20003,15 @@
         "extracted_answer": "x = -1/10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "770",
@@ -20104,18 +20104,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "70x^6**",
+        "extracted_answer": "70x^6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "774",
@@ -20135,13 +20135,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9448000000001002,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "775",
@@ -20213,13 +20213,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "778",
@@ -20421,13 +20421,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "786",
@@ -20525,13 +20525,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.27999999999883585,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "790",
@@ -20551,13 +20551,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "791",
@@ -20967,13 +20967,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.27999999999883585,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "807",
@@ -21069,15 +21069,15 @@
         "extracted_answer": "x = -1/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "811",
@@ -21149,13 +21149,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "814",
@@ -21487,13 +21487,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "827",
@@ -21513,13 +21513,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "828",
@@ -21539,13 +21539,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.8400000000060572,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "829",
@@ -21849,15 +21849,15 @@
         "extracted_answer": "x = -2/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "841",
@@ -22158,18 +22158,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "56x^7**",
+        "extracted_answer": "56x^7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "853",
@@ -22293,13 +22293,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "858",
@@ -22343,11 +22343,11 @@
         "extracted_answer": "x = -5/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -22423,13 +22423,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "863",
@@ -22501,13 +22501,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "866",
@@ -22683,13 +22683,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.27999999999883585,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "873",
@@ -22969,13 +22969,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9631999999999721,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "884",
@@ -23099,13 +23099,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "889",
@@ -23149,15 +23149,15 @@
         "extracted_answer": "x = 3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "891",
@@ -23224,18 +23224,18 @@
       "model_used": "gemma3:4b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "12(4x + 4)^2**",
+        "extracted_answer": "12(4x + 4)^2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "894",
@@ -23255,13 +23255,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "895",

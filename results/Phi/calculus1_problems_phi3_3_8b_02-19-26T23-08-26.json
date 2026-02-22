@@ -3,8 +3,8 @@
     "total_time_seconds": 4670.700768470764,
     "average_time_per_question_seconds": 5.189667520523071,
     "questions_answered": 900,
-    "questions_correct": 385,
-    "percent_correct": 42.77777777777778
+    "questions_correct": 458,
+    "percent_correct": 50.888888888888886
   },
   "metadata": {
     "created": "2026-02-19T23:08:26.910639",
@@ -58,7 +58,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 15x^4.",
+        "extracted_answer": "f'(x) = 15x^4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -136,7 +136,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line at x=4 for f(x) is 32.",
+        "extracted_answer": "The slope of the tangent line at x=4 for f(x) is 32",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -165,15 +165,15 @@
         "extracted_answer": "x = 1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "7",
@@ -448,7 +448,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\int 2x^8 dx = \\frac{2x^9}{9} + C\\).",
+        "extracted_answer": "\\int 2x^8 dx = \\frac{2x^9}{9} + C\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -479,13 +479,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "19",
@@ -786,7 +786,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 5x^2 at x = -3 is -30.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 5x^2 at x = -3 is -30",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -864,7 +864,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The integral of 8x^8 dx is \\(\\frac{8}{9} x^9 + C\\).",
+        "extracted_answer": "The integral of 8x^8 dx is \\(\\frac{8}{9} x^9 + C\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -916,18 +916,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "-3/4.",
+        "extracted_answer": "-3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "36",
@@ -1384,18 +1384,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "15/2.",
+        "extracted_answer": "15/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "decimal",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "54",
@@ -1413,15 +1413,15 @@
         "extracted_answer": "x = 3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "55",
@@ -1514,18 +1514,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 4x^3 * sin(x) + x^4 * cos(x).",
+        "extracted_answer": "f'(x) = 4x^3 * sin(x) + x^4 * cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "59",
@@ -1644,7 +1644,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "lim(x->3) [(x^2 - 9) / (x - 3)] = x + 3 evaluated at x=3, thus FINAL_ANSWER: 6.",
+        "extracted_answer": "lim(x->3) [(x^2 - 9) / (x - 3)] = x + 3 evaluated at x=3, thus FINAL_ANSWER: 6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1670,7 +1670,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 24*(4x + 4)^5.",
+        "extracted_answer": "f'(x) = 24*(4x + 4)^5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1878,7 +1878,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area is approximately 25.13272 cm²/s when r=2cm and dr/dt equals to 2 cm/s.",
+        "extracted_answer": "The rate of change of the area is approximately 25.13272 cm²/s when r=2cm and dr/dt equals to 2 cm/s",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -1935,13 +1935,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "75",
@@ -1961,13 +1961,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "76",
@@ -1987,13 +1987,13 @@
         "extraction_confidence": 0.6,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "77",
@@ -2008,7 +2008,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\frac{7}{9} x^{9} + C\\).",
+        "extracted_answer": "\\(\\frac{7}{9} x^{9} + C\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -2273,13 +2273,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "88",
@@ -2403,13 +2403,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "93",
@@ -2762,7 +2762,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f(x) = 1, with the understanding that this is true for all real numbers except when x=0.",
+        "extracted_answer": "f(x) = 1, with the understanding that this is true for all real numbers except when x=0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -2892,7 +2892,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the circle's area when r = 4 cm is approximately 226.195 cm²/s, using pi as approximated to five decimal places (3.14159).",
+        "extracted_answer": "The rate of change of the circle's area when r = 4 cm is approximately 226.195 cm²/s, using pi as approximated to five decimal places (3.14159)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3178,18 +3178,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 4x^3 sin(x) + x^4 cos(x).",
+        "extracted_answer": "f'(x) = 4x^3 sin(x) + x^4 cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "123",
@@ -3209,13 +3209,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "124",
@@ -3256,18 +3256,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "422.",
+        "extracted_answer": "422",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "126",
@@ -3287,13 +3287,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "127",
@@ -3464,18 +3464,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(40/3).",
+        "extracted_answer": "(40/3)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.3333333333332291,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "134",
@@ -3490,7 +3490,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are no critical points for the given function in its entire domain of all real numbers.",
+        "extracted_answer": "There are no critical points for the given function in its entire domain of all real numbers",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -3594,18 +3594,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.",
+        "extracted_answer": "0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "139",
@@ -3646,7 +3646,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function has one critical point at x=0 which is a local minima.",
+        "extracted_answer": "The function has one critical point at x=0 which is a local minima",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3698,18 +3698,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "6.",
+        "extracted_answer": "6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "143",
@@ -3802,7 +3802,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function has a single critical point at x = -1/6.",
+        "extracted_answer": "The function has a single critical point at x = -1/6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3880,7 +3880,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The only critical point of f(x) = 3x^2 -5x -6 is at x=5/6, which corresponds to a local minimum.",
+        "extracted_answer": "The only critical point of f(x) = 3x^2 -5x -6 is at x=5/6, which corresponds to a local minimum",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4140,7 +4140,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The only critical point for f(x) = 4x^2 + 7x - 4 occurs when x=-7/8.",
+        "extracted_answer": "The only critical point for f(x) = 4x^2 + 7x - 4 occurs when x=-7/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4171,13 +4171,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "161",
@@ -4192,7 +4192,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The definite integral of the function from x=0 to x=8 is approximately 170.67.",
+        "extracted_answer": "The definite integral of the function from x=0 to x=8 is approximately 170.67",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4327,13 +4327,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "167",
@@ -4353,13 +4353,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "168",
@@ -4374,7 +4374,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The limit as x approaches -1 is `3`.",
+        "extracted_answer": "The limit as x approaches -1 is `3`",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4509,13 +4509,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "174",
@@ -4665,13 +4665,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "180",
@@ -4686,7 +4686,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point is at x = 9/8 or approximately 1.125.",
+        "extracted_answer": "The critical point is at x = 9/8 or approximately 1.125",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4842,7 +4842,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "lim(x->1) [(x^2 - 1) / (x - 1)] = 1.",
+        "extracted_answer": "lim(x->1) [(x^2 - 1) / (x - 1)] = 1",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4972,7 +4972,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area when r=5 cm is dA/dt = 62.8318 cm^2/s (or exactly as '20*pi' if we want to leave it in terms of pi).",
+        "extracted_answer": "The rate of change of the area when r=5 cm is dA/dt = 62.8318 cm^2/s (or exactly as '20*pi' if we want to leave it in terms of pi)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5050,7 +5050,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The integral from 2 to 6 of 2x^2 dx is equal to 140/3 or approximately 46.67 when rounded off to two decimal places.",
+        "extracted_answer": "The integral from 2 to 6 of 2x^2 dx is equal to 140/3 or approximately 46.67 when rounded off to two decimal places",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5102,7 +5102,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "For all \\(x \\neq 0\\), f(x) equals 1.",
+        "extracted_answer": "For all \\(x \\neq 0\\), f(x) equals 1",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5206,7 +5206,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "We will solve this definite integral using basic integration rules for power functions of the form x^n where n != -1, which states that ∫x^n dx = (x^(n+1))/(n+1) + C, with 'C' being a constant.",
+        "extracted_answer": "We will solve this definite integral using basic integration rules for power functions of the form x^n where n != -1, which states that ∫x^n dx = (x^(n+1))/(n+1) + C, with 'C' being a constant",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5289,13 +5289,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "204",
@@ -5414,7 +5414,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x=-5 is -40.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x=-5 is -40",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5518,7 +5518,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = x^4 sin(x) + x^5 cos(x).",
+        "extracted_answer": "f'(x) = x^4 sin(x) + x^5 cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5570,7 +5570,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The limit as x approaches 3 of [2x^2 + 6x + 2] equals 38.",
+        "extracted_answer": "The limit as x approaches 3 of [2x^2 + 6x + 2] equals 38",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5622,18 +5622,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "7.",
+        "extracted_answer": "7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "217",
@@ -5991,13 +5991,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "231",
@@ -6246,7 +6246,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The limit is 109.",
+        "extracted_answer": "The limit is 109",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6298,7 +6298,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point of f(x) = 3x^2 + 10x + 8 occurs at x = -5/3 and corresponds to a local minimum value for the function.",
+        "extracted_answer": "The critical point of f(x) = 3x^2 + 10x + 8 occurs at x = -5/3 and corresponds to a local minimum value for the function",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6329,13 +6329,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "244",
@@ -6355,13 +6355,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "245",
@@ -6376,18 +6376,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 15*(25x^2 + 30x + 9).",
+        "extracted_answer": "f'(x) = 15*(25x^2 + 30x + 9)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "246",
@@ -6428,7 +6428,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 5x^2 at x=2 is 20.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 5x^2 at x=2 is 20",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6615,13 +6615,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "255",
@@ -6688,7 +6688,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The limit of f(x) = 5x^2 + (-10x) + 2 as x approaches -8 is 402.",
+        "extracted_answer": "The limit of f(x) = 5x^2 + (-10x) + 2 as x approaches -8 is 402",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6771,13 +6771,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "261",
@@ -6792,7 +6792,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function f(x) = 2x^4 + x^5 + 2 cannot be further simplified without additional context or operations to apply to it.",
+        "extracted_answer": "The function f(x) = 2x^4 + x^5 + 2 cannot be further simplified without additional context or operations to apply to it",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6922,7 +6922,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 15x^2 + 20x^4.",
+        "extracted_answer": "f'(x) = 15x^2 + 20x^4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7260,7 +7260,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Critical Points are located at (7/10).",
+        "extracted_answer": "Critical Points are located at (7/10)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7286,7 +7286,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to \\(f(x) = 5x^2\\) when 'x' equals -1 is -10.",
+        "extracted_answer": "The slope of the tangent line to \\(f(x) = 5x^2\\) when 'x' equals -1 is -10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7494,7 +7494,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(2x^4 + C\\).",
+        "extracted_answer": "\\(2x^4 + C\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7520,7 +7520,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line is -16 at \\(x = -2\\).",
+        "extracted_answer": "The slope of the tangent line is -16 at \\(x = -2\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7650,7 +7650,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate at which the area is changing, dA/dt, is approximately 25.13272 cm²/s when the radius equals to two centims and its growth speed (dr/dt) equals to 2cm/s with pi as 3.14159.",
+        "extracted_answer": "The rate at which the area is changing, dA/dt, is approximately 25.13272 cm²/s when the radius equals to two centims and its growth speed (dr/dt) equals to 2cm/s with pi as 3.14159",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -7806,18 +7806,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "10.",
+        "extracted_answer": "10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "301",
@@ -7941,13 +7941,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "306",
@@ -7993,13 +7993,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "308",
@@ -8043,11 +8043,11 @@
         "extracted_answer": "x = -7/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -8092,7 +8092,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The only critical point is at x = 5/3, which gives us the y-coordinate as -64/9. Hence our minimum occurs at (5/3,-64/9) and there are no maximum points in this function's domain since it opens upwards everywhere due to positive second derivative for all 'x'.",
+        "extracted_answer": "The only critical point is at x = 5/3, which gives us the y-coordinate as -64/9. Hence our minimum occurs at (5/3,-64/9) and there are no maximum points in this function's domain since it opens upwards everywhere due to positive second derivative for all 'x'",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -8248,7 +8248,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 36x^3.",
+        "extracted_answer": "f'(x) = 36x^3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8430,7 +8430,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) at x = 1 is 4.",
+        "extracted_answer": "The slope of the tangent line to f(x) at x = 1 is 4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8716,7 +8716,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area when r = 4 cm is approximately 75.39824 square centimeters per second.",
+        "extracted_answer": "The rate of change of the area when r = 4 cm is approximately 75.39824 square centimeters per second",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8794,7 +8794,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x = 2 is 16.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x = 2 is 16",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8924,7 +8924,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The definite integral from 3 to 6 of \\(3x^2 dx\\) is 189.",
+        "extracted_answer": "The definite integral from 3 to 6 of \\(3x^2 dx\\) is 189",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9002,7 +9002,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point of f(x) = 4x^2 + 3x + 9 occurs at x = -3/8 and corresponds to a local minimum value for the function.",
+        "extracted_answer": "The critical point of f(x) = 4x^2 + 3x + 9 occurs at x = -3/8 and corresponds to a local minimum value for the function",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9054,7 +9054,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\int 6x dx = 3x^2 + C\\).",
+        "extracted_answer": "\\(\\int 6x dx = 3x^2 + C\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9418,7 +9418,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point of f(x) = x^2 - 8x + 2 occurs at (4,f(4)) which equals to the pair (4,-10).",
+        "extracted_answer": "The critical point of f(x) = x^2 - 8x + 2 occurs at (4,f(4)) which equals to the pair (4,-10)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9574,7 +9574,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 1x^2 at x = 4 is 8.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 1x^2 at x = 4 is 8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9600,7 +9600,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point of the function is at x=1 and y=-1 with a local max value there.",
+        "extracted_answer": "The critical point of the function is at x=1 and y=-1 with a local max value there",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9652,7 +9652,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "2.33 (rounded to two decimal places).",
+        "extracted_answer": "2.33 (rounded to two decimal places)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9730,7 +9730,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x = 0 is `0`.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x = 0 is `0`",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9912,7 +9912,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 15x^2 + 8x.",
+        "extracted_answer": "f'(x) = 15x^2 + 8x",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9990,10 +9990,10 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\frac{1568}{3}\\).",
+        "extracted_answer": "\\(\\frac{1568}{3}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "fraction",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -10073,13 +10073,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "388",
@@ -10510,18 +10510,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 5x^4 sin(x) + x^5 cos(x).",
+        "extracted_answer": "f'(x) = 5x^4 sin(x) + x^5 cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "405",
@@ -10562,7 +10562,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) at x = 0 is 0.",
+        "extracted_answer": "The slope of the tangent line to f(x) at x = 0 is 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10926,18 +10926,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 5x^4*sin(x) + x^5*cos(x).",
+        "extracted_answer": "f'(x) = 5x^4*sin(x) + x^5*cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "421",
@@ -11191,13 +11191,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "431",
@@ -11238,18 +11238,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.",
+        "extracted_answer": "0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "433",
@@ -11290,7 +11290,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(3/2, -0.5).",
+        "extracted_answer": "(3/2, -0.5)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -11446,7 +11446,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical points of f(x) are at `x=3/5`.",
+        "extracted_answer": "The critical points of f(x) are at `x=3/5`",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11498,18 +11498,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 5x^4sin(x) + x^5cos(x).",
+        "extracted_answer": "f'(x) = 5x^4sin(x) + x^5cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "443",
@@ -11524,7 +11524,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function f(x) = x^2 + 8x + 4 has one critical point at x=-4. This is actually the location of a local minimum due to concavity, not maximum as initially thought.",
+        "extracted_answer": "The function f(x) = x^2 + 8x + 4 has one critical point at x=-4. This is actually the location of a local minimum due to concavity, not maximum as initially thought",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11940,7 +11940,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area when r=6 cm and dr/dt=7 cm/s is approximately `263.89304 cm^2/s`.",
+        "extracted_answer": "The rate of change of the area when r=6 cm and dr/dt=7 cm/s is approximately `263.89304 cm^2/s`",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12023,13 +12023,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "463",
@@ -12075,13 +12075,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "465",
@@ -12148,7 +12148,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The only critical point of the function is at x = -9/10.",
+        "extracted_answer": "The only critical point of the function is at x = -9/10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12174,7 +12174,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) at x=-3 is -12.",
+        "extracted_answer": "The slope of the tangent line to f(x) at x=-3 is -12",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12226,7 +12226,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The simplified form of f(x) is 4x^2 - 10.",
+        "extracted_answer": "The simplified form of f(x) is 4x^2 - 10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12252,7 +12252,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The sole critical point of f(x) = 5x^2 + 3 occurs when x equals zero.",
+        "extracted_answer": "The sole critical point of f(x) = 5x^2 + 3 occurs when x equals zero",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12330,18 +12330,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 4x^3*sin(x) + x^4*cos(x).",
+        "extracted_answer": "f'(x) = 4x^3*sin(x) + x^4*cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "475",
@@ -12486,7 +12486,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The integral from 3 to 6 of \\( 2x^3 \\) is equal to 607.5.",
+        "extracted_answer": "The integral from 3 to 6 of \\( 2x^3 \\) is equal to 607.5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12772,7 +12772,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(-5/2, -14.25).",
+        "extracted_answer": "(-5/2, -14.25)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12902,7 +12902,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x = -1 is -8.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 4x^2 at x = -1 is -8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13011,13 +13011,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "501",
@@ -13032,7 +13032,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope at \\(x = 2\\) is 4.",
+        "extracted_answer": "The slope at \\(x = 2\\) is 4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13084,7 +13084,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Critical point is at x = -1/2.",
+        "extracted_answer": "Critical point is at x = -1/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13214,7 +13214,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "dA/dt = 60 * pi cm^2/s or approximately equal to 188.5 when rounded up, which is the rate of change for area with respect to time at this specific instant (r=6cm and dr/dt=5cm/s).",
+        "extracted_answer": "dA/dt = 60 * pi cm^2/s or approximately equal to 188.5 when rounded up, which is the rate of change for area with respect to time at this specific instant (r=6cm and dr/dt=5cm/s)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -13318,7 +13318,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope is 32.",
+        "extracted_answer": "The slope is 32",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13604,18 +13604,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 2x·sin(x) + x^2·cos(x).",
+        "extracted_answer": "f'(x) = 2x·sin(x) + x^2·cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "524",
@@ -13656,7 +13656,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function f(x) = 3x^2 + 5x - 3 has a critical point at (-5/6, -19/12), which corresponds to a local minimum.",
+        "extracted_answer": "The function f(x) = 3x^2 + 5x - 3 has a critical point at (-5/6, -19/12), which corresponds to a local minimum",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13765,13 +13765,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "530",
@@ -13786,18 +13786,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "5x^4 sin(x) + x^5 cos(x).",
+        "extracted_answer": "5x^4 sin(x) + x^5 cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "531",
@@ -13942,7 +13942,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) = 5x^2 at x = 1 is 10.",
+        "extracted_answer": "The slope of the tangent line to f(x) = 5x^2 at x = 1 is 10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14020,7 +14020,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point occurs at x=7/4, which approximates to 1.75 in decimal form.",
+        "extracted_answer": "The critical point occurs at x=7/4, which approximates to 1.75 in decimal form",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14176,7 +14176,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to \\(f(x) = 2x^2\\) at \\(x = 0\\) is 0.",
+        "extracted_answer": "The slope of the tangent line to \\(f(x) = 2x^2\\) at \\(x = 0\\) is 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14306,7 +14306,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The indefinite integral of \\(3\\sin(x)\\) is \\(-3\\cos(x) + C\\).",
+        "extracted_answer": "The indefinite integral of \\(3\\sin(x)\\) is \\(-3\\cos(x) + C\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14519,13 +14519,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "559",
@@ -14618,18 +14618,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^5 cos(x) + 5x^4 sin(x).",
+        "extracted_answer": "x^5 cos(x) + 5x^4 sin(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "563",
@@ -14774,7 +14774,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f(x) = 4x^2 - 20x + 25.",
+        "extracted_answer": "f(x) = 4x^2 - 20x + 25",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14852,18 +14852,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 2x·sin(x) + x^2·cos(x).",
+        "extracted_answer": "f'(x) = 2x·sin(x) + x^2·cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "572",
@@ -14904,7 +14904,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The limit of the given expression as x approaches 2 equals to 4.",
+        "extracted_answer": "The limit of the given expression as x approaches 2 equals to 4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14956,7 +14956,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(1890/5)=378.",
+        "extracted_answer": "(1890/5)=378",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15034,7 +15034,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The original expression simplifies everywhere except at x=0 where it's undefined. For all other values of x, the function equals one and is thus a constant function with no slope or rate of change.",
+        "extracted_answer": "The original expression simplifies everywhere except at x=0 where it's undefined. For all other values of x, the function equals one and is thus a constant function with no slope or rate of change",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15190,7 +15190,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function \\(f(x) = 3x^2 + 8x + 9\\) has one critical point at x=-4/3, which is a minimum.",
+        "extracted_answer": "The function \\(f(x) = 3x^2 + 8x + 9\\) has one critical point at x=-4/3, which is a minimum",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15242,7 +15242,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 72x^7.",
+        "extracted_answer": "f'(x) = 72x^7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15294,7 +15294,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The only critical point occurs at x = 0 with the corresponding minimum value being f(0) = 0.",
+        "extracted_answer": "The only critical point occurs at x = 0 with the corresponding minimum value being f(0) = 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15476,7 +15476,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f(x) = 4x^2 - 4x + 1.",
+        "extracted_answer": "f(x) = 4x^2 - 4x + 1",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15632,7 +15632,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The derivative of f(x) = (2x + 1)^3 using the chain rule is f'(x) = 6(2x + 1)^2. At x=3, this rate of change equals 294.",
+        "extracted_answer": "The derivative of f(x) = (2x + 1)^3 using the chain rule is f'(x) = 6(2x + 1)^2. At x=3, this rate of change equals 294",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15663,13 +15663,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "603",
@@ -15687,15 +15687,15 @@
         "extracted_answer": "x = -9/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "604",
@@ -15710,7 +15710,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) at x=2 is 12.",
+        "extracted_answer": "The slope of the tangent line to f(x) at x=2 is 12",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15736,7 +15736,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area at this instant when r=4 cm and dr/dt = 6 cm/s, rounded off to two decimal places is approximately equal to 229.18 square centimeters per second (cm^2/s).",
+        "extracted_answer": "The rate of change of the area at this instant when r=4 cm and dr/dt = 6 cm/s, rounded off to two decimal places is approximately equal to 229.18 square centimeters per second (cm^2/s)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15840,18 +15840,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.",
+        "extracted_answer": "0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "610",
@@ -15866,7 +15866,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 8x + 30x^4.",
+        "extracted_answer": "f'(x) = 8x + 30x^4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16022,7 +16022,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "All critical numbers are inflection points and there is no local maximum or minimum for f(x) = 2x^2 + 6x + 8.",
+        "extracted_answer": "All critical numbers are inflection points and there is no local maximum or minimum for f(x) = 2x^2 + 6x + 8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16074,7 +16074,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "∫[from 2 to 4] (5x) dx = [10/2 * x^2] evaluated from 2 to 4.",
+        "extracted_answer": "∫[from 2 to 4] (5x) dx = [10/2 * x^2] evaluated from 2 to 4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16178,7 +16178,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "256`.",
+        "extracted_answer": "256`",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -16230,7 +16230,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "d(A)/dt=282.74 cm^2/s (rounded off).",
+        "extracted_answer": "d(A)/dt=282.74 cm^2/s (rounded off)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16256,7 +16256,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "125.66 cm^2/s.",
+        "extracted_answer": "125.66 cm^2/s",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16282,7 +16282,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The limit is 0.",
+        "extracted_answer": "The limit is 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16389,15 +16389,15 @@
         "extracted_answer": "x = -4/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "631",
@@ -16490,7 +16490,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line at x=5 is 40.",
+        "extracted_answer": "The slope of the tangent line at x=5 is 40",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16672,7 +16672,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area when r=6 cm is approximately 226.195 cm²/s.",
+        "extracted_answer": "The rate of change of the area when r=6 cm is approximately 226.195 cm²/s",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16698,7 +16698,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to f(x) at x = 2 is 8.",
+        "extracted_answer": "The slope of the tangent line to f(x) at x = 2 is 8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16724,7 +16724,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Derivative is f'(x) = 2x + 24x^2.",
+        "extracted_answer": "Derivative is f'(x) = 2x + 24x^2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16755,13 +16755,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "645",
@@ -16828,7 +16828,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The only critical point of f(x) = x^2 + 1 is at x = 0.",
+        "extracted_answer": "The only critical point of f(x) = x^2 + 1 is at x = 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16984,7 +16984,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(-1, -17). The function f(x) has a local minimum at x=-1 and this point corresponds to y=-17.",
+        "extracted_answer": "(-1, -17). The function f(x) has a local minimum at x=-1 and this point corresponds to y=-17",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17114,7 +17114,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Critical point at x = -1.",
+        "extracted_answer": "Critical point at x = -1",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17244,7 +17244,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to \\(f(x) = 5x^2\\) at \\(x = 3\\) is 30.",
+        "extracted_answer": "The slope of the tangent line to \\(f(x) = 5x^2\\) at \\(x = 3\\) is 30",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17660,7 +17660,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The integral of 9x^2 dx = x^3 + C.",
+        "extracted_answer": "The integral of 9x^2 dx = x^3 + C",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -17795,13 +17795,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "685",
@@ -17868,7 +17868,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The function has one critical point at x = -7/8, which corresponds to a local minimum.",
+        "extracted_answer": "The function has one critical point at x = -7/8, which corresponds to a local minimum",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -18029,13 +18029,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "694",
@@ -18336,18 +18336,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "10.",
+        "extracted_answer": "10",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "706",
@@ -18570,18 +18570,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^5 cos(x) + 5x^4 sin(x).",
+        "extracted_answer": "x^5 cos(x) + 5x^4 sin(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "715",
@@ -18752,7 +18752,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The derivative of the function f(x) = 4x^2 + 8x^5 - 10 is f'(x) = 8x + 40x^4 and its value at x=2 is 656.",
+        "extracted_answer": "The derivative of the function f(x) = 4x^2 + 8x^5 - 10 is f'(x) = 8x + 40x^4 and its value at x=2 is 656",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -18830,7 +18830,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(4/5)x^5 + C and see if it matches with 4x^4, which is the original function before differentiation as expected in reverse operation from integration to derivation.",
+        "extracted_answer": "(4/5)x^5 + C and see if it matches with 4x^4, which is the original function before differentiation as expected in reverse operation from integration to derivation",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -18960,7 +18960,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^6 - 142857...",
+        "extracted_answer": "x^6 - 142857",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19142,18 +19142,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = 2/3.",
+        "extracted_answer": "x = 2/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.33333333333331794,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "737",
@@ -19168,7 +19168,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "`93`.",
+        "extracted_answer": "`93`",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -19194,7 +19194,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point of \\( f(x) = 1x^2 - 9x + 7 \\) is at \\( x = \\frac{9}{2} \\).",
+        "extracted_answer": "The critical point of \\( f(x) = 1x^2 - 9x + 7 \\) is at \\( x = \\frac{9}{2} \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19246,7 +19246,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "-10. The negative sign indicates that the tangent line is sloping downwards at x=-1 on f(x) = 5x^2.",
+        "extracted_answer": "-10. The negative sign indicates that the tangent line is sloping downwards at x=-1 on f(x) = 5x^2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19376,7 +19376,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 6x^2.",
+        "extracted_answer": "f'(x) = 6x^2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -19535,11 +19535,11 @@
         "extracted_answer": "x = -3/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "coordinate",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -19927,13 +19927,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "767",
@@ -19974,7 +19974,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point of \\(f(x)\\) occurs at \\(x = \\frac{-3}{8}\\).",
+        "extracted_answer": "The critical point of \\(f(x)\\) occurs at \\(x = \\frac{-3}{8}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20130,7 +20130,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area when R=6 cm is approximately 113.09728 cm²/s, using pi as given in this problem statement and rounding to five decimal places for accuracy.",
+        "extracted_answer": "The rate of change of the area when R=6 cm is approximately 113.09728 cm²/s, using pi as given in this problem statement and rounding to five decimal places for accuracy",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -20213,13 +20213,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "778",
@@ -20416,18 +20416,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^5 * cos(x) + 5x^4 * sin(x).",
+        "extracted_answer": "x^5 * cos(x) + 5x^4 * sin(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "786",
@@ -20546,18 +20546,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 4x^3sin(x) + x^4cos(x).",
+        "extracted_answer": "f'(x) = 4x^3sin(x) + x^4cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "791",
@@ -20780,7 +20780,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\( f(x) = 8x^3 - 60x^2 + 150x - 125 \\).",
+        "extracted_answer": "\\( f(x) = 8x^3 - 60x^2 + 150x - 125 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -20884,7 +20884,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The value of the integral from 2 to 7 of 2x^4 dx is 3347.48.",
+        "extracted_answer": "The value of the integral from 2 to 7 of 2x^4 dx is 3347.48",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21066,7 +21066,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical points is at x = -1/4.",
+        "extracted_answer": "The critical points is at x = -1/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21149,13 +21149,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "814",
@@ -21170,7 +21170,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line to \\(f(x) = 4x^2\\) at x=1 is 8.",
+        "extracted_answer": "The slope of the tangent line to \\(f(x) = 4x^2\\) at x=1 is 8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21196,18 +21196,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = (2x) · sin(x) + x^2 · cos(x).",
+        "extracted_answer": "f'(x) = (2x) · sin(x) + x^2 · cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "816",
@@ -21300,7 +21300,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line at x=-4 is -40.",
+        "extracted_answer": "The slope of the tangent line at x=-4 is -40",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21326,7 +21326,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 1215*x^4.",
+        "extracted_answer": "f'(x) = 1215*x^4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21482,18 +21482,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 2x*sin(x) + x^2*cos(x).",
+        "extracted_answer": "f'(x) = 2x*sin(x) + x^2*cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "827",
@@ -21508,18 +21508,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 5x^4*sin(x) + x^5*cos(x).",
+        "extracted_answer": "f'(x) = 5x^4*sin(x) + x^5*cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "828",
@@ -21534,7 +21534,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate at which area is changing when radius equals to 6cm is approximately 377 cm²/s.",
+        "extracted_answer": "The rate at which area is changing when radius equals to 6cm is approximately 377 cm²/s",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21638,7 +21638,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The simplified function is \\( f(x) = 1 \\) except at the point where it's not defined, which is \\( x = 0 \\).",
+        "extracted_answer": "The simplified function is \\( f(x) = 1 \\) except at the point where it's not defined, which is \\( x = 0 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -21768,7 +21768,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x^3\".",
+        "extracted_answer": "x^3\"",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22028,7 +22028,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area is changing at a rate of \\(96\\pi\\) square centims per second.",
+        "extracted_answer": "The area is changing at a rate of \\(96\\pi\\) square centims per second",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22210,7 +22210,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line at x=-3 is -30.",
+        "extracted_answer": "The slope of the tangent line at x=-3 is -30",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22262,7 +22262,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "31/5 or 6.2 when expressed as a decimal number.",
+        "extracted_answer": "31/5 or 6.2 when expressed as a decimal number",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22288,18 +22288,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 5x^4 sin(x) + x^5 cos(x).",
+        "extracted_answer": "f'(x) = 5x^4 sin(x) + x^5 cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "858",
@@ -22314,7 +22314,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line is 8 at x=4 for the given function.",
+        "extracted_answer": "The slope of the tangent line is 8 at x=4 for the given function",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22418,18 +22418,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 4x^3 sin(x) + x^4 cos(x).",
+        "extracted_answer": "f'(x) = 4x^3 sin(x) + x^4 cos(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "863",
@@ -22501,13 +22501,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "866",
@@ -22548,13 +22548,13 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "40x^4.",
+        "extracted_answer": "40x^4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
         "is_correct": true,
-        "comparison_confidence": 0.95,
+        "comparison_confidence": 1.0,
         "match_type": "equivalent",
         "matched_answer": "main",
         "verification_status": "correct"
@@ -22600,7 +22600,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The critical point is at the coordinates (5/2, -3.25) and it represents a minimum value of f(x).",
+        "extracted_answer": "The critical point is at the coordinates (5/2, -3.25) and it represents a minimum value of f(x)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22678,7 +22678,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The rate of change of the area when r=5 cm is approximately 125.6636 cm^2/s, assuming constant increase in radius as given by dr/dt = 4 cm/s at t=0 seconds immediately after initial measurement was taken (or whenever 'r' starts increasing).",
+        "extracted_answer": "The rate of change of the area when r=5 cm is approximately 125.6636 cm^2/s, assuming constant increase in radius as given by dr/dt = 4 cm/s at t=0 seconds immediately after initial measurement was taken (or whenever 'r' starts increasing)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22730,7 +22730,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "f'(x) = 18x^2 \\).",
+        "extracted_answer": "f'(x) = 18x^2 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -22912,7 +22912,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "(3/6)*x^6 + C or equivalently to x^6/2 + C.",
+        "extracted_answer": "(3/6)*x^6 + C or equivalently to x^6/2 + C",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -23042,18 +23042,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "2.",
+        "extracted_answer": "2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "887",
@@ -23099,13 +23099,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "889",
@@ -23120,7 +23120,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope of the tangent line at \\(f(x) = 5x^2\\) where x=4 is 40.",
+        "extracted_answer": "The slope of the tangent line at \\(f(x) = 5x^2\\) where x=4 is 40",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",

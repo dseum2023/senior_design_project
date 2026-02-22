@@ -3,8 +3,8 @@
     "total_time_seconds": 17129.21856689453,
     "average_time_per_question_seconds": 26.598165476544303,
     "questions_answered": 644,
-    "questions_correct": 152,
-    "percent_correct": 23.60248447204969
+    "questions_correct": 185,
+    "percent_correct": 28.726708074534162
   },
   "metadata": {
     "created": "2026-02-21T01:00:40.154546",
@@ -2507,13 +2507,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "108",
@@ -2533,13 +2533,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "109",
@@ -2559,13 +2559,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "110",
@@ -2585,13 +2585,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "111",
@@ -2611,13 +2611,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "112",
@@ -2637,13 +2637,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "113",
@@ -2663,13 +2663,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "114",
@@ -2689,13 +2689,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "115",
@@ -2793,13 +2793,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "119",
@@ -2819,13 +2819,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "120",
@@ -2871,13 +2871,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "122",
@@ -2897,13 +2897,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "123",
@@ -2923,13 +2923,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "124",
@@ -2949,13 +2949,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "125",
@@ -2975,13 +2975,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "126",
@@ -4588,14 +4588,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "194",
@@ -6250,15 +6250,15 @@
         "extracted_answer": "9 × 10⁻⁸",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "scientific",
         "expected_type": "scientific",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "266",
@@ -6370,7 +6370,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "fraction",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -6437,14 +6437,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "274",
@@ -6716,7 +6716,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -6742,10 +6742,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6768,14 +6768,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "288",
@@ -6794,10 +6794,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6820,7 +6820,7 @@
         "extraction_method": "last_value",
         "extraction_confidence": 0.4,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -6846,10 +6846,10 @@
         "extraction_method": "last_value",
         "extraction_confidence": 0.4,
         "extracted_type": "coordinate",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6872,10 +6872,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6898,10 +6898,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6924,10 +6924,10 @@
         "extraction_method": "last_value",
         "extraction_confidence": 0.4,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6950,10 +6950,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -6976,14 +6976,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "296",
@@ -7002,14 +7002,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "297",
@@ -7080,14 +7080,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "300",
@@ -7106,14 +7106,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.16000000011990778,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "301",
@@ -7236,14 +7236,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "306",
@@ -7288,14 +7288,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "308",
@@ -7392,14 +7392,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "312",
@@ -7418,14 +7418,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.09000000006926712,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "313",
@@ -7470,14 +7470,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.9139999999897555,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "315",
@@ -11452,13 +11452,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "477",
@@ -11502,15 +11502,15 @@
         "extracted_answer": "3√21",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "479",
@@ -11571,13 +11571,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "482",
@@ -11597,13 +11597,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "483",
@@ -11623,13 +11623,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "484",

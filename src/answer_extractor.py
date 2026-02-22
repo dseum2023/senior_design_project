@@ -31,6 +31,9 @@ def _clean_extracted_answer(answer: str) -> str:
     # where generic extraction may capture a leading "}".
     answer = re.sub(r'^\}\s*', '', answer)
 
+    # Strip trailing punctuation artifacts (periods, asterisks) common in LLM output
+    answer = answer.rstrip('.*')
+
     return answer.strip()
 
 

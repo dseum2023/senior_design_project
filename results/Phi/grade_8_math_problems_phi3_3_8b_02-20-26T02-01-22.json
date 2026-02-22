@@ -3,8 +3,8 @@
     "total_time_seconds": 3587.130138158798,
     "average_time_per_question_seconds": 5.5700778542838485,
     "questions_answered": 644,
-    "questions_correct": 79,
-    "percent_correct": 12.267080745341614
+    "questions_correct": 103,
+    "percent_correct": 15.993788819875776
   },
   "metadata": {
     "created": "2026-02-20T02:01:22.748119",
@@ -84,10 +84,10 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "1420.",
+        "extracted_answer": "1420",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "fraction",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -344,7 +344,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "I",
       "verification": {
-        "extracted_answer": "Approximately 9, since we are estimating rather than calculating with high precision and because it lies between two consecutive integers where its square root cannot result in a whole number or simple fraction due to the nature of irrational numbers like this one.",
+        "extracted_answer": "Approximately 9, since we are estimating rather than calculating with high precision and because it lies between two consecutive integers where its square root cannot result in a whole number or simple fraction due to the nature of irrational numbers like this one",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -396,7 +396,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "I",
       "verification": {
-        "extracted_answer": "The number is represented by its decimal value, which does not simplify to a common rational or simple fractional representation.",
+        "extracted_answer": "The number is represented by its decimal value, which does not simplify to a common rational or simple fractional representation",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -474,7 +474,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "R",
       "verification": {
-        "extracted_answer": "The initial problem statement seems incorrect as it implies that the answer should be an integer; however, based on our calculations \\(x = \\frac{26}{3}\\), which simplifies to approximately 8.67 when rounded to two decimal places and is not a whole number.",
+        "extracted_answer": "The initial problem statement seems incorrect as it implies that the answer should be an integer; however, based on our calculations \\(x = \\frac{26}{3}\\), which simplifies to approximately 8.67 when rounded to two decimal places and is not a whole number",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -552,7 +552,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "R",
       "verification": {
-        "extracted_answer": "The fraction is already simplified, so the answer is simply 23/24.",
+        "extracted_answer": "The fraction is already simplified, so the answer is simply 23/24",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -578,7 +578,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "R",
       "verification": {
-        "extracted_answer": "The provided value 46.547415 remains unchanged as there is no operation or transformation indicated that needs to be applied.",
+        "extracted_answer": "The provided value 46.547415 remains unchanged as there is no operation or transformation indicated that needs to be applied",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -682,7 +682,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "I",
       "verification": {
-        "extracted_answer": "The number 82.208701… cannot be solved for a specific value or identified as part of an established mathematical pattern with the given data alone; it requires additional terms from a sequence, operation rules, or other related numbers to establish meaningful relationships and solve accordingly.",
+        "extracted_answer": "The number 82.208701… cannot be solved for a specific value or identified as part of an established mathematical pattern with the given data alone; it requires additional terms from a sequence, operation rules, or other related numbers to establish meaningful relationships and solve accordingly",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -786,7 +786,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "R",
       "verification": {
-        "extracted_answer": "Either of these approximations could be considered as numbers close to but not exactly equal to 19.525305; for example, we might choose one like 19.525407 (which is within the accuracy limit) or its counterpart such as 19.525243 based on whether a larger or smaller number was desired respectively.",
+        "extracted_answer": "Either of these approximations could be considered as numbers close to but not exactly equal to 19.525305; for example, we might choose one like 19.525407 (which is within the accuracy limit) or its counterpart such as 19.525243 based on whether a larger or smaller number was desired respectively",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -890,7 +890,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "SQRT(92) is closer to 9, with an approximate value of \\(9.59\\).",
+        "extracted_answer": "SQRT(92) is closer to 9, with an approximate value of \\(9.59\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -968,7 +968,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "SQRT(86) is closer to 9.",
+        "extracted_answer": "SQRT(86) is closer to 9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1072,7 +1072,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The square root of 66 is closer to 8.",
+        "extracted_answer": "The square root of 66 is closer to 8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1098,7 +1098,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "SQRT(97) is closer to 9.",
+        "extracted_answer": "SQRT(97) is closer to 9",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1332,7 +1332,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "8, 9",
       "verification": {
-        "extracted_answer": "Approximately 8.062 or in simplest radical form, just as it appears \\(√65\\).",
+        "extracted_answer": "Approximately 8.062 or in simplest radical form, just as it appears \\(√65\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1387,7 +1387,7 @@
         "extracted_answer": "√66",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1488,7 +1488,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "9, 10",
       "verification": {
-        "extracted_answer": "Approximately 9.3 (to one decimal place).",
+        "extracted_answer": "Approximately 9.3 (to one decimal place)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1514,7 +1514,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "4, 5",
       "verification": {
-        "extracted_answer": "SQRT(23) ≈ 4.7958 (rounded to four decimal places using a calculator or computational tool).",
+        "extracted_answer": "SQRT(23) ≈ 4.7958 (rounded to four decimal places using a calculator or computational tool)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1543,7 +1543,7 @@
         "extracted_answer": "√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1569,7 +1569,7 @@
         "extracted_answer": "√22",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1595,7 +1595,7 @@
         "extracted_answer": "√67",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -1618,7 +1618,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "9, 10",
       "verification": {
-        "extracted_answer": "Sqrt(4)*sqrt(24.5) = 2*Sqrt(24.5). To get an approximate decimal value without using calculators or logarithms, we can estimate sqrt(24.5) to be slightly less than sqrt(25), which is 5. Therefore FINAL_ANSWER: Approximately 10 (exactly it's about 9.58).",
+        "extracted_answer": "Sqrt(4)*sqrt(24.5) = 2*Sqrt(24.5). To get an approximate decimal value without using calculators or logarithms, we can estimate sqrt(24.5) to be slightly less than sqrt(25), which is 5. Therefore FINAL_ANSWER: Approximately 10 (exactly it's about 9.58)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -1673,7 +1673,7 @@
         "extracted_answer": "√10 ≈ 3.162",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "range",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -2320,7 +2320,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "477\\).",
+        "extracted_answer": "477\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -2398,7 +2398,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "68\\).",
+        "extracted_answer": "68\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -2554,14 +2554,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "846.",
+        "extracted_answer": "846",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -2817,15 +2817,15 @@
         "extracted_answer": "2√14",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "109",
@@ -2869,15 +2869,15 @@
         "extracted_answer": "4√(5)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "111",
@@ -2897,13 +2897,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "112",
@@ -2921,15 +2921,15 @@
         "extracted_answer": "3√3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "113",
@@ -2944,7 +2944,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\sqrt{18} \\approx 4.242\\), or exactly as a product of integers and radicals, \\(SQRT(18) = 3 SQRT(2)\\).",
+        "extracted_answer": "\\(\\sqrt{18} \\approx 4.242\\), or exactly as a product of integers and radicals, \\(SQRT(18) = 3 SQRT(2)\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -2973,15 +2973,15 @@
         "extracted_answer": "2√23",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "115",
@@ -2996,7 +2996,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The correct square root of 16 is 4.",
+        "extracted_answer": "The correct square root of 16 is 4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3079,13 +3079,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "119",
@@ -3103,15 +3103,15 @@
         "extracted_answer": "3√5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "120",
@@ -3155,15 +3155,15 @@
         "extracted_answer": "2√11",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "122",
@@ -3334,7 +3334,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(2\\sqrt{2}\\) or approximately 2.82 when rounded to two decimal places.",
+        "extracted_answer": "\\(2\\sqrt{2}\\) or approximately 2.82 when rounded to two decimal places",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3365,13 +3365,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.6000000000000085,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "130",
@@ -3417,13 +3417,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9072000000000315,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "132",
@@ -3464,7 +3464,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "approximately 9.33 or exactly as an expression in radical form, SQRT(87).",
+        "extracted_answer": "approximately 9.33 or exactly as an expression in radical form, SQRT(87)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3571,7 +3571,7 @@
         "extracted_answer": "√67",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -3594,7 +3594,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "sqrt(2)*7 or approximately 9.165 (rounded off).",
+        "extracted_answer": "sqrt(2)*7 or approximately 9.165 (rounded off)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -3805,7 +3805,7 @@
         "extracted_answer": "√71 ≈ 8.42",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "expression",
         "expected_type": "decimal",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -3909,11 +3909,11 @@
         "extracted_answer": "x = 1/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "coordinate",
         "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -4010,7 +4010,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x = \\(\\frac{1}{8}\\).",
+        "extracted_answer": "x = \\(\\frac{1}{8}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4036,7 +4036,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\frac{1}{9} \\).",
+        "extracted_answer": "\\frac{1}{9} \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4088,7 +4088,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x can be either \\(+\\frac{1}{2}\\) or \\(-\\frac{1}{2}\\).",
+        "extracted_answer": "x can be either \\(+\\frac{1}{2}\\) or \\(-\\frac{1}{2}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4218,7 +4218,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "There are two solutions for this equation; they can be written as fractions and separated by the word \"and\": FINAL_ANSWER: 1/7 and -1/7.",
+        "extracted_answer": "There are two solutions for this equation; they can be written as fractions and separated by the word \"and\": FINAL_ANSWER: 1/7 and -1/7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -4244,7 +4244,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The solutions for x are \\(\\frac{1}{8}\\) and \\(-\\frac{1}{8}\\).",
+        "extracted_answer": "The solutions for x are \\(\\frac{1}{8}\\) and \\(-\\frac{1}{8}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -4426,7 +4426,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The exact numeric value after multiplying 5017648 by 19,683 is an extremely large number that cannot be easily computed manually. However, the process of simplifying and understanding how to approach this problem has been demonstrated step-by-step above. In practice, one would use a calculator or computer software capable of handling such calculations directly for the final numeric answer.",
+        "extracted_answer": "The exact numeric value after multiplying 5017648 by 19,683 is an extremely large number that cannot be easily computed manually. However, the process of simplifying and understanding how to approach this problem has been demonstrated step-by-step above. In practice, one would use a calculator or computer software capable of handling such calculations directly for the final numeric answer",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -4530,14 +4530,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "3125.",
+        "extracted_answer": "3125",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -4608,7 +4608,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "An extremely large number that can be calculated using software tools designed for handling big numbers and complex arithmetic operations, acknowledging the impracticality of manual calculation here due to its size.",
+        "extracted_answer": "An extremely large number that can be calculated using software tools designed for handling big numbers and complex arithmetic operations, acknowledging the impracticality of manual calculation here due to its size",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -4712,14 +4712,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "1/20736.",
+        "extracted_answer": "1/20736",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -4816,7 +4816,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The simplified form is 5^15 (which represents an incredibly large number).",
+        "extracted_answer": "The simplified form is 5^15 (which represents an incredibly large number)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -4946,18 +4946,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "2.",
+        "extracted_answer": "2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "191",
@@ -4998,18 +4998,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "243.",
+        "extracted_answer": "243",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "193",
@@ -5024,18 +5024,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "6561.",
+        "extracted_answer": "6561",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
-        "expected_type": "range",
-        "is_correct": false,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "194",
@@ -5102,7 +5102,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "{+9, -9}.",
+        "extracted_answer": "{+9, -9}",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -5128,7 +5128,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "A is 5; B is approximately 2.466; C is \\(+5\\sqrt{5}\\) or \\(-5\\sqrt{5}\\); and D can be either +5 or -5.",
+        "extracted_answer": "A is 5; B is approximately 2.466; C is \\(+5\\sqrt{5}\\) or \\(-5\\sqrt{5}\\); and D can be either +5 or -5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -5154,7 +5154,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "For A, x = 0.252; for B, plus/minus x = ±0.283; for C, plus/minus x = ±4; and for D, x = 2.",
+        "extracted_answer": "For A, x = 0.252; for B, plus/minus x = ±0.283; for C, plus/minus x = ±4; and for D, x = 2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -5336,7 +5336,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "-2, 2.",
+        "extracted_answer": "-2, 2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -5622,7 +5622,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The number that when raised to the power of three gives us 512 is x=8.",
+        "extracted_answer": "The number that when raised to the power of three gives us 512 is x=8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5752,7 +5752,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The final answer is the set of values {-10, 10}.",
+        "extracted_answer": "The final answer is the set of values {-10, 10}",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -5804,7 +5804,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The possible values of x are 6 and -6.",
+        "extracted_answer": "The possible values of x are 6 and -6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -6405,7 +6405,7 @@
         "extracted_answer": "800,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "scientific",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -6532,7 +6532,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Approximately between 83 and 90 \\) (exact square root not provided due to the constraints of manual calculation).",
+        "extracted_answer": "Approximately between 83 and 90 \\) (exact square root not provided due to the constraints of manual calculation)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -6558,7 +6558,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "600,000,000,000 (as a numeric answer).",
+        "extracted_answer": "600,000,000,000 (as a numeric answer)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6584,7 +6584,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The maximum value of 'n' where each friend gets an equal, whole number of apples with none left over from 3,000 is \\( n = 125 \\).",
+        "extracted_answer": "The maximum value of 'n' where each friend gets an equal, whole number of apples with none left over from 3,000 is \\( n = 125 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6636,7 +6636,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(1 \\times 10^8\\).",
+        "extracted_answer": "\\(1 \\times 10^8\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -6662,7 +6662,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The percentage represented by $1 out of $20 is exactly 5%.",
+        "extracted_answer": "The percentage represented by $1 out of $20 is exactly 5%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7000,7 +7000,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\frac{1}{1428.57}\\).",
+        "extracted_answer": "\\(\\frac{1}{1428.57}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7026,11 +7026,11 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The value of (8 * 10^9) is approximately 2,670 times larger than the value of (3 * 10^6).",
+        "extracted_answer": "The value of (8 * 10^9) is approximately 2,670 times larger than the value of (3 * 10^6)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7052,11 +7052,11 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "57143/9 when expressed as a fraction in simplest terms, because this is how many times larger one number is than the other without using scientific notation for clarity.",
+        "extracted_answer": "57143/9 when expressed as a fraction in simplest terms, because this is how many times larger one number is than the other without using scientific notation for clarity",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7078,18 +7078,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "200.",
+        "extracted_answer": "200",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "integer",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "273",
@@ -7108,7 +7108,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7130,7 +7130,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The answer in terms of multiplication would be \"12.5\".",
+        "extracted_answer": "The answer in terms of multiplication would be \"12.5\"",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -7419,11 +7419,11 @@
         "extracted_answer": "496,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
-        "expected_type": "unknown",
+        "extracted_type": "integer",
+        "expected_type": "integer",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7442,14 +7442,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "544000000000.",
+        "extracted_answer": "544000000000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
-        "expected_type": "unknown",
+        "extracted_type": "integer",
+        "expected_type": "integer",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7471,15 +7471,15 @@
         "extracted_answer": "8,000,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
+        "comparison_confidence": 1.0,
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "288",
@@ -7498,10 +7498,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7523,11 +7523,11 @@
         "extracted_answer": "1,400,000,000,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
-        "expected_type": "unknown",
+        "extracted_type": "integer",
+        "expected_type": "integer",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7550,10 +7550,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7576,10 +7576,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7602,10 +7602,10 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7628,7 +7628,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7654,7 +7654,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7676,18 +7676,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "5300.",
+        "extracted_answer": "5300",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
-        "expected_type": "range",
-        "is_correct": false,
+        "extracted_type": "integer",
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "296",
@@ -7706,10 +7706,10 @@
         "extraction_method": "last_value",
         "extraction_confidence": 0.4,
         "extracted_type": "coordinate",
-        "expected_type": "unknown",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -7784,14 +7784,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "300",
@@ -7810,14 +7810,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.16000000011990778,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "301",
@@ -7940,7 +7940,7 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
-        "expected_type": "range",
+        "expected_type": "integer",
         "is_correct": false,
         "comparison_confidence": 1.0,
         "match_type": "type_mismatch",
@@ -7992,14 +7992,14 @@
         "extraction_method": "last_value",
         "extraction_confidence": 0.4,
         "extracted_type": "coordinate",
-        "expected_type": "range",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "308",
@@ -8096,14 +8096,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "integer",
-        "expected_type": "unknown",
-        "is_correct": false,
+        "expected_type": "integer",
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "312",
@@ -8122,14 +8122,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.09000000006926712,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "313",
@@ -8174,14 +8174,14 @@
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
-        "expected_type": "unknown",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "expected_type": "decimal",
+        "is_correct": true,
+        "comparison_confidence": 0.9139999999897555,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "315",
@@ -8196,7 +8196,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Prime Factors of 5,300 are [2, 2, 5, 3, 11].",
+        "extracted_answer": "Prime Factors of 5,300 are [2, 2, 5, 3, 11]",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8225,11 +8225,11 @@
         "extracted_answer": "960,844,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -8248,7 +8248,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The final answer in terms of factorization would be 665 = \\( 5 \\times 133 \\).",
+        "extracted_answer": "The final answer in terms of factorization would be 665 = \\( 5 \\times 133 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8300,7 +8300,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Two factors of \\(194\\) and \\(2,058\\), which multiply to give 386,000.",
+        "extracted_answer": "Two factors of \\(194\\) and \\(2,058\\), which multiply to give 386,000",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -8352,10 +8352,10 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\( \\frac{69}{1000} \\).",
+        "extracted_answer": "\\( \\frac{69}{1000} \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "expression",
+        "extracted_type": "fraction",
         "expected_type": "unknown",
         "is_correct": false,
         "comparison_confidence": 1.0,
@@ -8378,7 +8378,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Let's find the value of 'x' if 3 times x plus 11 equals 49 (since we need to provide work, let’s assume this is what \"55\" refers to). Here are the steps for solving it algebraically.",
+        "extracted_answer": "Let's find the value of 'x' if 3 times x plus 11 equals 49 (since we need to provide work, let’s assume this is what \"55\" refers to). Here are the steps for solving it algebraically",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8404,7 +8404,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "59 is a prime number with factors 1 and 59.",
+        "extracted_answer": "59 is a prime number with factors 1 and 59",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -8508,7 +8508,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The prime factorization of the number 7,000 is 2^3 * 5^3 * 7.",
+        "extracted_answer": "The prime factorization of the number 7,000 is 2^3 * 5^3 * 7",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -8615,11 +8615,11 @@
         "extracted_answer": "89,918,354",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "integer",
         "expected_type": "unknown",
         "is_correct": false,
-        "comparison_confidence": 0.0,
-        "match_type": "unknown",
+        "comparison_confidence": 1.0,
+        "match_type": "type_mismatch",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -8898,7 +8898,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The solution is the ordered pair (0.5, 1.75).",
+        "extracted_answer": "The solution is the ordered pair (0.5, 1.75)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9028,7 +9028,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "x=10, y=0.",
+        "extracted_answer": "x=10, y=0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9054,7 +9054,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The lines intersect at (-10, 8).",
+        "extracted_answer": "The lines intersect at (-10, 8)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9132,7 +9132,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The solution to the system where `y` equals both expressions given above is a single point at \\( x = 4 \\) and \\( y = 8 \\), or as an ordered pair, (4, 8).",
+        "extracted_answer": "The solution to the system where `y` equals both expressions given above is a single point at \\( x = 4 \\) and \\( y = 8 \\), or as an ordered pair, (4, 8)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9184,7 +9184,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The solution to the given equation for y is \\( y = \\pm\\sqrt[8]{2x} \\) under the assumption of working within real numbers.",
+        "extracted_answer": "The solution to the given equation for y is \\( y = \\pm\\sqrt[8]{2x} \\) under the assumption of working within real numbers",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9418,7 +9418,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Algebraic statement confirming the original expression y = x + 4 is correct for any value of x chosen, as demonstrated by substituting an arbitrary positive number into it.",
+        "extracted_answer": "Algebraic statement confirming the original expression y = x + 4 is correct for any value of x chosen, as demonstrated by substituting an arbitrary positive number into it",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9444,7 +9444,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The relationship between \\( y \\) and \\( x \\) given by the equation \\( y = x - 2 \\) where for every value of \\( x \\), we subtract 2 to find the corresponding value of \\( y \\).",
+        "extracted_answer": "The relationship between \\( y \\) and \\( x \\) given by the equation \\( y = x - 2 \\) where for every value of \\( x \\), we subtract 2 to find the corresponding value of \\( y \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9574,7 +9574,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "For any real number value of x, y can be found using the formula \\( y = 9 - x \\).",
+        "extracted_answer": "For any real number value of x, y can be found using the formula \\( y = 9 - x \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9600,7 +9600,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "y = \\root 4of{2 - x} \\] provided that \\( 2 - x \\geq 0 \\). If the context requires, we can further specify this condition.",
+        "extracted_answer": "y = \\root 4of{2 - x} \\] provided that \\( 2 - x \\geq 0 \\). If the context requires, we can further specify this condition",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -9886,7 +9886,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The linear relationship between x and y given the conditions provided would be \\(y = \\frac{5}{6}x - 3\\).",
+        "extracted_answer": "The linear relationship between x and y given the conditions provided would be \\(y = \\frac{5}{6}x - 3\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -9990,7 +9990,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The equation is y = 5x + 2.",
+        "extracted_answer": "The equation is y = 5x + 2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10120,7 +10120,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "When X=1, then Y = 15.",
+        "extracted_answer": "When X=1, then Y = 15",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10744,7 +10744,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The simplified form is Y = 6*X + 3.",
+        "extracted_answer": "The simplified form is Y = 6*X + 3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -10822,7 +10822,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "For every value of 'X', add 3 to find 'Y'.",
+        "extracted_answer": "For every value of 'X', add 3 to find 'Y'",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11056,7 +11056,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "nonlinear",
       "verification": {
-        "extracted_answer": "\\( Y = \\sqrt{X^2 - 2} \\), with domain of definition as all real numbers such that \\( -\\sqrt{2} \\leq X \\leq \\sqrt{2} \\).",
+        "extracted_answer": "\\( Y = \\sqrt{X^2 - 2} \\), with domain of definition as all real numbers such that \\( -\\sqrt{2} \\leq X \\leq \\sqrt{2} \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11134,7 +11134,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "nonlinear",
       "verification": {
-        "extracted_answer": "The expression remains as is because it already represents the solution to find Y given X within its domain (\\( |X| \\geq 2 \\)).",
+        "extracted_answer": "The expression remains as is because it already represents the solution to find Y given X within its domain (\\( |X| \\geq 2 \\))",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11238,7 +11238,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "linear",
       "verification": {
-        "extracted_answer": "For any value of 'X', the corresponding value for 'Y' will be that same number plus six, as per Y = X + 6.",
+        "extracted_answer": "For any value of 'X', the corresponding value for 'Y' will be that same number plus six, as per Y = X + 6",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11264,7 +11264,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "linear",
       "verification": {
-        "extracted_answer": "The equation represents a linear function with slope -0.5 and y-intercept 4, which can be graphed as a straight line descending from left to right across the coordinate plane starting at (0,4).",
+        "extracted_answer": "The equation represents a linear function with slope -0.5 and y-intercept 4, which can be graphed as a straight line descending from left to right across the coordinate plane starting at (0,4)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -11290,7 +11290,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "linear",
       "verification": {
-        "extracted_answer": "For every real number \\( X \\), the corresponding value of \\( Y \\) is simply its negative counterpart, i.e., if \\( X = 3 \\), then \\( Y = -3 \\).",
+        "extracted_answer": "For every real number \\( X \\), the corresponding value of \\( Y \\) is simply its negative counterpart, i.e., if \\( X = 3 \\), then \\( Y = -3 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11316,7 +11316,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "nonlinear",
       "verification": {
-        "extracted_answer": "Y = sqrt(X^2 - 7), for X such that \\( |X| \\geq \\sqrt{7} \\).",
+        "extracted_answer": "Y = sqrt(X^2 - 7), for X such that \\( |X| \\geq \\sqrt{7} \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11368,7 +11368,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "linear",
       "verification": {
-        "extracted_answer": "For any given value of X, the corresponding value of Y is \\( Y = 5 + X \\).",
+        "extracted_answer": "For any given value of X, the corresponding value of Y is \\( Y = 5 + X \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11394,7 +11394,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "nonlinear",
       "verification": {
-        "extracted_answer": "Y is defined as \\(\\sqrt{X^2 - 6}\\) and holds true when either \\(X \\geq 6\\) or \\(X \\leq -6\\).",
+        "extracted_answer": "Y is defined as \\(\\sqrt{X^2 - 6}\\) and holds true when either \\(X \\geq 6\\) or \\(X \\leq -6\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -11524,7 +11524,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The linear equation connecting these two points is \\(y = \\frac{5}{14}x + \\frac{39}{14}\\).",
+        "extracted_answer": "The linear equation connecting these two points is \\(y = \\frac{5}{14}x + \\frac{39}{14}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11576,7 +11576,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "No unique linear equation can represent a line passing through both points as they share identical x-coordinates, leading to an undefined slope or indeterminate y-intercept for traditional methods of finding such lines (linear equations).",
+        "extracted_answer": "No unique linear equation can represent a line passing through both points as they share identical x-coordinates, leading to an undefined slope or indeterminate y-intercept for traditional methods of finding such lines (linear equations)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -11628,7 +11628,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The slope is \\(\\frac{1}{11}\\).",
+        "extracted_answer": "The slope is \\(\\frac{1}{11}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11706,7 +11706,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The equation of the line passing through points (-4, 5) and (4, 8) is y = 3/8x + 25/2 or in mixed numbers form it's written as y=0.625x+12.5 .",
+        "extracted_answer": "The equation of the line passing through points (-4, 5) and (4, 8) is y = 3/8x + 25/2 or in mixed numbers form it's written as y=0.625x+12.5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -11732,7 +11732,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The equation of the line passing through (-2, 14) and (5, 9) in slope-intercept form is y = -5/7x + 20; in standard form it is \\( 5x + 7y = 88 \\).",
+        "extracted_answer": "The equation of the line passing through (-2, 14) and (5, 9) in slope-intercept form is y = -5/7x + 20; in standard form it is \\( 5x + 7y = 88 \\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -11810,7 +11810,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "y = (11/6)x - 5/2 or alternatively, as an algebraic formula it could also look like f(x) = (11/6)x - 5/2.",
+        "extracted_answer": "y = (11/6)x - 5/2 or alternatively, as an algebraic formula it could also look like f(x) = (11/6)x - 5/2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11836,7 +11836,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The linear equation is \\(3x + 10y = 67\\).",
+        "extracted_answer": "The linear equation is \\(3x + 10y = 67\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -11888,7 +11888,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The equation of the line passing through points (4,-11) and (12,-8) is \\(y = 3/8x - 12.5\\).",
+        "extracted_answer": "The equation of the line passing through points (4,-11) and (12,-8) is \\(y = 3/8x - 12.5\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -11992,7 +11992,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(\\frac{5}{7}x + \\frac{39}{7}\\).",
+        "extracted_answer": "\\(\\frac{5}{7}x + \\frac{39}{7}\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12018,7 +12018,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The equation of the line passing through (-9, 5) and (3, 1) is \\(y = -\\frac{1}{3}x + 2\\).",
+        "extracted_answer": "The equation of the line passing through (-9, 5) and (3, 1) is \\(y = -\\frac{1}{3}x + 2\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12122,7 +12122,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of the rectangle with sides of length 4 and 5 is 20 square units.",
+        "extracted_answer": "The area of the rectangle with sides of length 4 and 5 is 20 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12174,7 +12174,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of a square with sides of length 7 is 49 square units.",
+        "extracted_answer": "The area of a square with sides of length 7 is 49 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12200,7 +12200,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The Area of the rectangle with sides of length 3 and 10 is 30 square units.",
+        "extracted_answer": "The Area of the rectangle with sides of length 3 and 10 is 30 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12226,7 +12226,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Triangle with side lengths of length 12 is an equilateral triangle; each angle measures \\(60^\\circ\\), the height equals \\(6\\sqrt{3}\\), and its area is \\(36\\sqrt{3}\\) square units, while the perimeter totals to 36 units.",
+        "extracted_answer": "Triangle with side lengths of length 12 is an equilateral triangle; each angle measures \\(60^\\circ\\), the height equals \\(6\\sqrt{3}\\), and its area is \\(36\\sqrt{3}\\) square units, while the perimeter totals to 36 units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12356,7 +12356,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "37",
       "verification": {
-        "extracted_answer": "Without an explicit relationship between b and c, we cannot determine a specific value of c from just knowing that \\(b = 35\\). More information is needed about the equation connecting these variables.",
+        "extracted_answer": "Without an explicit relationship between b and c, we cannot determine a specific value of c from just knowing that \\(b = 35\\). More information is needed about the equation connecting these variables",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12382,7 +12382,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "SQRT(317)",
       "verification": {
-        "extracted_answer": "c = 14.",
+        "extracted_answer": "c = 14",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "coordinate",
@@ -12460,7 +12460,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "SQRT(801)",
       "verification": {
-        "extracted_answer": "c = b + x or FINAL_ANSWER: 24 + x where x is an unknown variable.",
+        "extracted_answer": "c = b + x or FINAL_ANSWER: 24 + x where x is an unknown variable",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12486,7 +12486,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "15",
       "verification": {
-        "extracted_answer": "c = k * 12 wherein you need to find 'k'. To provide a numeric value for 'c' and thus complete this task, more information about the relationship between b and c is required.",
+        "extracted_answer": "c = k * 12 wherein you need to find 'k'. To provide a numeric value for 'c' and thus complete this task, more information about the relationship between b and c is required",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12538,7 +12538,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "SQRT(425)",
       "verification": {
-        "extracted_answer": "The value of \\(b\\) cannot be determined with the provided information alone; additional context on how a, b, and c are related (such as if they form an arithmetic or geometric sequence) is required to find the exact numerical answer for \\(b\\).",
+        "extracted_answer": "The value of \\(b\\) cannot be determined with the provided information alone; additional context on how a, b, and c are related (such as if they form an arithmetic or geometric sequence) is required to find the exact numerical answer for \\(b\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12590,7 +12590,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "20",
       "verification": {
-        "extracted_answer": "Insufficient information provided to determine 'c'.",
+        "extracted_answer": "Insufficient information provided to determine 'c'",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -12642,7 +12642,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of the triangle is 63 square units.",
+        "extracted_answer": "The area of the triangle is 63 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12668,7 +12668,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The problem as stated does not provide enough specifics to accurately calculate area, but assuming the shape is an equilateral triangle and using Pythagorean theorem for a right-angled trapezoid within it gives us approximately 378 cm^2.",
+        "extracted_answer": "The problem as stated does not provide enough specifics to accurately calculate area, but assuming the shape is an equilateral triangle and using Pythagorean theorem for a right-angled trapezoid within it gives us approximately 378 cm^2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12694,7 +12694,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "sqrt(164) for hypotenuse and Perimeter = 8 + 10 + sqrt(164).",
+        "extracted_answer": "sqrt(164) for hypotenuse and Perimeter = 8 + 10 + sqrt(164)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12772,7 +12772,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "24 unit².",
+        "extracted_answer": "24 unit²",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12850,7 +12850,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of the triangle is 55 square units.",
+        "extracted_answer": "The area of the triangle is 55 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -12876,7 +12876,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of a triangle with base `b` equal to 5 units and height `h` equal to 11 units is \\( \\frac{55}{2} \\) or 27.5 square units.",
+        "extracted_answer": "The area of a triangle with base `b` equal to 5 units and height `h` equal to 11 units is \\( \\frac{55}{2} \\) or 27.5 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12902,7 +12902,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of a triangle with base 8 units and height 15 units is 60 square units.",
+        "extracted_answer": "The area of a triangle with base 8 units and height 15 units is 60 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -12980,7 +12980,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The total area formed using bases of 15 and 20 units each with the shared height is 350 square units, which represents an equivalent parallelogram's area when these two triangles are combined along a common base line or side if they were to be placed adjacent.",
+        "extracted_answer": "The total area formed using bases of 15 and 20 units each with the shared height is 350 square units, which represents an equivalent parallelogram's area when these two triangles are combined along a common base line or side if they were to be placed adjacent",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -13110,7 +13110,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of the triangle is 216 square units.",
+        "extracted_answer": "The area of the triangle is 216 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13188,7 +13188,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area is \\(45\\) square units.",
+        "extracted_answer": "The area is \\(45\\) square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13240,7 +13240,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The radius of a circle with diameter 4 is 2.",
+        "extracted_answer": "The radius of a circle with diameter 4 is 2",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13266,7 +13266,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The circumference of the circle with radius 7 units is approximately 43.98226 units.",
+        "extracted_answer": "The circumference of the circle with radius 7 units is approximately 43.98226 units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13552,7 +13552,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of the circle with radius equals 8 is approximately 201.06 square units, or exactly A = π * 64 if we leave it in terms of pi for precision purposes.",
+        "extracted_answer": "The area of the circle with radius equals 8 is approximately 201.06 square units, or exactly A = π * 64 if we leave it in terms of pi for precision purposes",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13578,7 +13578,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of a circle with diameter equal to 8 is \\( 16\\pi \\) square units.",
+        "extracted_answer": "The area of a circle with diameter equal to 8 is \\( 16\\pi \\) square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13708,7 +13708,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of the rectangular prism is 24 cubic units.",
+        "extracted_answer": "The volume of the rectangular prism is 24 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13760,7 +13760,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of the rectangular prism with given dimensions is 96 cubic units.",
+        "extracted_answer": "The volume of the rectangular prism with given dimensions is 96 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13864,7 +13864,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Surface Area = 96π square units.",
+        "extracted_answer": "Surface Area = 96π square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -13916,7 +13916,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of a cylinder with radius 5 and height 14 using the approximation for π is approximately 1100.28 cubic units.",
+        "extracted_answer": "The volume of a cylinder with radius 5 and height 14 using the approximation for π is approximately 1100.28 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -13942,7 +13942,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "\\(V = 5347.96859 \\approx 5348\\) cubic units.",
+        "extracted_answer": "\\(V = 5347.96859 \\approx 5348\\) cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14020,7 +14020,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Volume of cone with r=7.2 and h=27 approximately equals to 1609 cubic units (rounded off).",
+        "extracted_answer": "Volume of cone with r=7.2 and h=27 approximately equals to 1609 cubic units (rounded off)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14072,7 +14072,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "V = 301.5872\\] (rounded off) cubic units, given the radius of \\(4\\) units and height of \\(6\\) units for a cylinder's volume calculation using \\(\\pi\\).",
+        "extracted_answer": "V = 301.5872\\] (rounded off) cubic units, given the radius of \\(4\\) units and height of \\(6\\) units for a cylinder's volume calculation using \\(\\pi\\)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14176,7 +14176,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of a cylinder with radius r=4.8 cm and height h=7.3 cm is approximately equal to V = 530.86 cm³.",
+        "extracted_answer": "The volume of a cylinder with radius r=4.8 cm and height h=7.3 cm is approximately equal to V = 530.86 cm³",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14202,7 +14202,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of a cylinder with a radius of 1.5 units and a height of 8.6 units is approximately 65.47 cubic units.",
+        "extracted_answer": "The volume of a cylinder with a radius of 1.5 units and a height of 8.6 units is approximately 65.47 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14306,7 +14306,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The circumference of a circle with radius 10 units is \\( 20\\pi \\) units.",
+        "extracted_answer": "The circumference of a circle with radius 10 units is \\( 20\\pi \\) units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14332,7 +14332,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The area of a circle with radius 7 is approximately \\(153.94\\) square units (using \\(\\pi \\approx 3.14159\\)).",
+        "extracted_answer": "The area of a circle with radius 7 is approximately \\(153.94\\) square units (using \\(\\pi \\approx 3.14159\\))",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14384,7 +14384,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Diameter is 24 units and circumference is \\(24\\pi\\) units, area is \\(144\\pi\\) square units.",
+        "extracted_answer": "Diameter is 24 units and circumference is \\(24\\pi\\) units, area is \\(144\\pi\\) square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14436,7 +14436,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "FINAL_ANSWER: Circumference = 30π units; Area = 225π square units.",
+        "extracted_answer": "FINAL_ANSWER: Circumference = 30π units; Area = 225π square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14462,7 +14462,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The circumference of the circle is approximately 19.5678 units.",
+        "extracted_answer": "The circumference of the circle is approximately 19.5678 units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14488,7 +14488,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Volume = 420 cubic units (or 'cubic meters' if we are talking about real-world measurements).",
+        "extracted_answer": "Volume = 420 cubic units (or 'cubic meters' if we are talking about real-world measurements)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14644,7 +14644,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of the cylinder with radius=10 and height=14 is approximately 4396 cubic units.",
+        "extracted_answer": "The volume of the cylinder with radius=10 and height=14 is approximately 4396 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14670,7 +14670,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of the cylinder is approximately 7380 cubic units.",
+        "extracted_answer": "The volume of the cylinder is approximately 7380 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14722,7 +14722,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The Volume of cylinder with radius 5.7 and height 15 approximately equals to 1526.779 cubic units.",
+        "extracted_answer": "The Volume of cylinder with radius 5.7 and height 15 approximately equals to 1526.779 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14748,7 +14748,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The Volume of the cylinder is approximately 27.08 cubic units.",
+        "extracted_answer": "The Volume of the cylinder is approximately 27.08 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14774,7 +14774,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The total surface area of a cylinder with radius = 11.7 and height = 24 is approximately 7,885.39 square units.",
+        "extracted_answer": "The total surface area of a cylinder with radius = 11.7 and height = 24 is approximately 7,885.39 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14826,7 +14826,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of a cylinder with radius 6 units and height 11 units is exactly \\( 396\\pi \\) cubic units.",
+        "extracted_answer": "The volume of a cylinder with radius 6 units and height 11 units is exactly \\( 396\\pi \\) cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14852,7 +14852,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of this cylinder with a radius of 9 and height of 10 is approximately 2544.69 cubic units.",
+        "extracted_answer": "The volume of this cylinder with a radius of 9 and height of 10 is approximately 2544.69 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -14878,7 +14878,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "[your answer here] including expression(s).",
+        "extracted_answer": "[your answer here] including expression(s)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -14956,7 +14956,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The volume of the cylinder is approximately 5648.47 cubic units.",
+        "extracted_answer": "The volume of the cylinder is approximately 5648.47 cubic units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -14982,7 +14982,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The approximate volume of the given right circular cylinder is 58265.97515 cubic units (the unit will depend on what was used to measure the radius and height, for example if they were in centimeters or inches).",
+        "extracted_answer": "The approximate volume of the given right circular cylinder is 58265.97515 cubic units (the unit will depend on what was used to measure the radius and height, for example if they were in centimeters or inches)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -15034,7 +15034,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The circumference is approximately 62.8318 units.",
+        "extracted_answer": "The circumference is approximately 62.8318 units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15060,7 +15060,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Circumference of a circle with diameter 18 is approximately 56.55 units.",
+        "extracted_answer": "Circumference of a circle with diameter 18 is approximately 56.55 units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15086,7 +15086,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The diameter is 13 cm.",
+        "extracted_answer": "The diameter is 13 cm",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15138,7 +15138,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The approximate area is 16.607 square units.",
+        "extracted_answer": "The approximate area is 16.607 square units",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15242,7 +15242,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "2/6",
       "verification": {
-        "extracted_answer": "The probability of rolling a number smaller than three on a single die roll is 1/3.",
+        "extracted_answer": "The probability of rolling a number smaller than three on a single die roll is 1/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15320,7 +15320,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "3/6",
       "verification": {
-        "extracted_answer": "The probability of rolling an even number on a single die roll is 1/2 or 50%.",
+        "extracted_answer": "The probability of rolling an even number on a single die roll is 1/2 or 50%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15346,7 +15346,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "2/6",
       "verification": {
-        "extracted_answer": "The probability of rolling a 4 or a 5 on a single die roll is 1/3.",
+        "extracted_answer": "The probability of rolling a 4 or a 5 on a single die roll is 1/3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15398,7 +15398,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "3/6",
       "verification": {
-        "extracted_answer": "The probability of rolling a prime number on a single die roll is 1/2 or 50%.",
+        "extracted_answer": "The probability of rolling a prime number on a single die roll is 1/2 or 50%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15424,7 +15424,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of rolling a 7 with a single six-sided die is 0.",
+        "extracted_answer": "The probability of rolling a 7 with a single six-sided die is 0",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15502,7 +15502,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of landing on a number greater than three when spinning a spinner with numbers from one to ten is 0.7, or equivalently 70% chance.",
+        "extracted_answer": "The probability of landing on a number greater than three when spinning a spinner with numbers from one to ten is 0.7, or equivalently 70% chance",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15528,7 +15528,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "4/10",
       "verification": {
-        "extracted_answer": "P(landing < 5) = 0.4 (or 40%).",
+        "extracted_answer": "P(landing < 5) = 0.4 (or 40%)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15554,7 +15554,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "P(multiple of 3) = (3/10), which simplifies down to a fraction representing this likelihood, or as a decimal it would be approximately 0.3.",
+        "extracted_answer": "P(multiple of 3) = (3/10), which simplifies down to a fraction representing this likelihood, or as a decimal it would be approximately 0.3",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15580,18 +15580,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "2/10",
       "verification": {
-        "extracted_answer": "1/5.",
+        "extracted_answer": "1/5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "fraction",
         "expected_type": "fraction",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "600",
@@ -15658,7 +15658,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "P(not A) = 1 - P(A) = 1 - 1/10 = 9/10. So, there is a 9 in 10 chance or probability that you will not land on the number '2' when spinning this spinner once.",
+        "extracted_answer": "P(not A) = 1 - P(A) = 1 - 1/10 = 9/10. So, there is a 9 in 10 chance or probability that you will not land on the number '2' when spinning this spinner once",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15684,7 +15684,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability that the first coin lands on heads is \\(\\frac{1}{2}\\) or 50%.",
+        "extracted_answer": "The probability that the first coin lands on heads is \\(\\frac{1}{2}\\) or 50%",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15736,7 +15736,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.125 or as a fraction, it's 1/8.",
+        "extracted_answer": "0.125 or as a fraction, it's 1/8",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15814,14 +15814,14 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "0.333...",
+        "extracted_answer": "0.333",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
-        "extracted_type": "unknown",
+        "extracted_type": "decimal",
         "expected_type": "fraction",
         "is_correct": false,
         "comparison_confidence": 1.0,
-        "match_type": "type_mismatch",
+        "match_type": "no_match",
         "matched_answer": "none",
         "verification_status": "incorrect"
       },
@@ -15866,7 +15866,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability that when flipping three coins, one gets a tail as its outcome in precisely the middle position is \\( \\frac{1}{8} \\) or 0.125 (in decimal form).",
+        "extracted_answer": "The probability that when flipping three coins, one gets a tail as its outcome in precisely the middle position is \\( \\frac{1}{8} \\) or 0.125 (in decimal form)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -15996,18 +15996,18 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "No.",
+        "extracted_answer": "No",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
         "expected_type": "text",
-        "is_correct": false,
+        "is_correct": true,
         "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "match_type": "exact",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "616",
@@ -16022,7 +16022,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "No, rolling a number divisible by 3 on this die is more likely than rolling one that's divisible by 5.",
+        "extracted_answer": "No, rolling a number divisible by 3 on this die is more likely than rolling one that's divisible by 5",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16074,7 +16074,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "The probability of rolling a \"15\" with a fair twelve-sided die is zero, because there are no faces labeled with the number 15 on such dice.",
+        "extracted_answer": "The probability of rolling a \"15\" with a fair twelve-sided die is zero, because there are no faces labeled with the number 15 on such dice",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16100,7 +16100,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "1/6",
       "verification": {
-        "extracted_answer": "The probability of rolling a 7 or an 11 is \\( \\frac{1}{6} \\) (or approximately 0.1667).",
+        "extracted_answer": "The probability of rolling a 7 or an 11 is \\( \\frac{1}{6} \\) (or approximately 0.1667)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16126,7 +16126,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "3/4",
       "verification": {
-        "extracted_answer": "Fraction, which is 3/4.",
+        "extracted_answer": "Fraction, which is 3/4",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16152,7 +16152,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "1/4",
       "verification": {
-        "extracted_answer": "The probability of rolling a double-digit number on a twelve-sided die labeled from one to twelve is 1/4 or 0.25 when expressed as a decimal, which means there's a 25% chance that the outcome will be any of {10, 11, 12}.",
+        "extracted_answer": "The probability of rolling a double-digit number on a twelve-sided die labeled from one to twelve is 1/4 or 0.25 when expressed as a decimal, which means there's a 25% chance that the outcome will be any of {10, 11, 12}",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16204,7 +16204,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "15/36",
       "verification": {
-        "extracted_answer": "Probability as a fraction or decimal depends on the values provided which are not present here; thus, we have FINAL_ANSWER: ((T-2M)/T).",
+        "extracted_answer": "Probability as a fraction or decimal depends on the values provided which are not present here; thus, we have FINAL_ANSWER: ((T-2M)/T)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
@@ -16334,7 +16334,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "1/6",
       "verification": {
-        "extracted_answer": "Probability of selecting a blue marble is b/(b+t_other).",
+        "extracted_answer": "Probability of selecting a blue marble is b/(b+t_other)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",
@@ -16360,7 +16360,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": "1/3",
       "verification": {
-        "extracted_answer": "The Probability cannot be calculated without additional information about how many black and white marbles are in the jar respectively (the values of B & W).",
+        "extracted_answer": "The Probability cannot be calculated without additional information about how many black and white marbles are in the jar respectively (the values of B & W)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -16594,7 +16594,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "P(Blue) = B/(B + R), where you would replace 'B' with the actual number of blue gummy bears and 'R' with red ones, if known or given as part of additional information.",
+        "extracted_answer": "P(Blue) = B/(B + R), where you would replace 'B' with the actual number of blue gummy bears and 'R' with red ones, if known or given as part of additional information",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "unknown",
@@ -16750,7 +16750,7 @@
       "model_used": "phi3:3.8b",
       "alternate_answer": null,
       "verification": {
-        "extracted_answer": "Equal likelihood).",
+        "extracted_answer": "Equal likelihood)",
         "extraction_method": "FINAL_ANSWER",
         "extraction_confidence": 1.0,
         "extracted_type": "text",

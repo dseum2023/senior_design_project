@@ -3,8 +3,8 @@
     "total_time_seconds": 1712.482842206955,
     "average_time_per_question_seconds": 24.11947665080218,
     "questions_answered": 71,
-    "questions_correct": 53,
-    "percent_correct": 74.64788732394366
+    "questions_correct": 56,
+    "percent_correct": 78.87323943661971
   },
   "metadata": {
     "created": "2026-02-19T22:16:39.985373",
@@ -1311,13 +1311,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.9631999999999721,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "51",
@@ -1508,13 +1508,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "expression",
         "expected_type": "expression",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.95,
+        "match_type": "equivalent",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "59",
@@ -1534,13 +1534,13 @@
         "extraction_confidence": 1.0,
         "extracted_type": "decimal",
         "expected_type": "decimal",
-        "is_correct": false,
-        "comparison_confidence": 1.0,
-        "match_type": "no_match",
-        "matched_answer": "none",
-        "verification_status": "incorrect"
+        "is_correct": true,
+        "comparison_confidence": 0.27999999999883585,
+        "match_type": "tolerance",
+        "matched_answer": "main",
+        "verification_status": "correct"
       },
-      "is_correct": false
+      "is_correct": true
     },
     {
       "question_id": "60",

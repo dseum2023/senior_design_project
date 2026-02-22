@@ -25,7 +25,8 @@ class Question:
             'id': self.id,
             'category': self.category,
             'question': self.question_text,
-            'expected_answer': self.answer
+            'expected_answer': self.answer,
+            'alternate_answer': self.alternate_answer,
         }
     
     def __str__(self) -> str:
@@ -101,19 +102,29 @@ class XMLParser:
 
                     # Get fields
                     category_elem = row.find('CommonCoreCategory')
+                    directions_elem = row.find('Directions')
                     problem_elem = row.find('Problem')
                     solution_elem = row.find('Solution')
                     alternate_elem = row.find('AlternateSolution')
 
                     if problem_elem is not None and solution_elem is not None:
                         category = category_elem.text.strip() if category_elem is not None and category_elem.text else 'unknown'
-                        question_text = problem_elem.text.strip() if problem_elem.text else ''
+                        problem_text = problem_elem.text.strip() if problem_elem.text else ''
+                        directions = directions_elem.text.strip() if directions_elem is not None and directions_elem.text else ''
                         answer = solution_elem.text.strip() if solution_elem.text else ''
                         alternate_answer = alternate_elem.text.strip() if alternate_elem is not None and alternate_elem.text else None
 
                         # Only include alternate if it's not empty
                         if alternate_answer == '':
                             alternate_answer = None
+
+                        # Prepend directions to question text when the problem
+                        # alone lacks the context needed to answer correctly
+                        # (e.g., "SQRT(81)" needs "Determine if rational/irrational").
+                        if directions and not problem_text.lower().startswith(directions[:10].lower()):
+                            question_text = f"{directions}\n{problem_text}"
+                        else:
+                            question_text = problem_text
 
                         question = Question(question_id, category, question_text, answer, alternate_answer)
                         self.questions.append(question)
@@ -157,7 +168,8 @@ class XMLParser:
                 q_data['id'],
                 q_data['category'],
                 q_data['question'],
-                q_data['expected_answer']
+                q_data['expected_answer'],
+                q_data.get('alternate_answer'),
             )
             self.questions.append(question)
         
