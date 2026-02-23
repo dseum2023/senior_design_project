@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBench - Model Comparison</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-900 text-gray-300 font-sans min-h-screen">
+  <div id="nav"></div>
+
+  <main class="pt-20 pb-8">
+    <!-- Page Header -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 scroll-reveal">
+      <h1 class="text-3xl font-bold text-white mb-2">Model Comparison</h1>
+      <p class="text-gray-400">Head-to-head analysis of all three LLMs across every dataset and metric.</p>
+    </section>
+
+    <!-- Model Profile Cards -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Gemma -->
+        <div class="glass-card overflow-hidden card-hover card-spotlight scroll-reveal">
+          <div class="h-1.5 bg-gradient-to-r from-blue-500 to-blue-400"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/20 rounded-xl flex items-center justify-center">
+                <span class="text-blue-400 font-bold text-lg">G</span>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg">Gemma3:4b</h3>
+                <p class="text-gray-500 text-sm">Google &bull; 4B parameters</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-blue-400">63.8%</div>
+                <div class="text-xs text-gray-500">Accuracy</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-gray-300">1,624</div>
+                <div class="text-xs text-gray-500">Correct</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-gray-300">7.3s</div>
+                <div class="text-xs text-gray-500">Avg Time/Q</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-gray-300">310m</div>
+                <div class="text-xs text-gray-500">Total Time</div>
+              </div>
+            </div>
+            <div class="text-sm text-gray-500">
+              <span class="text-emerald-400 font-medium">Strengths:</span> Probability, Limits, Integrals<br>
+              <span class="text-red-400 font-medium">Weaknesses:</span> Product/Quotient rule, Grade 8
+            </div>
+          </div>
+        </div>
+
+        <!-- Phi -->
+        <div class="glass-card overflow-hidden card-hover card-spotlight scroll-reveal">
+          <div class="h-1.5 bg-gradient-to-r from-purple-500 to-purple-400"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 rounded-xl flex items-center justify-center">
+                <span class="text-purple-400 font-bold text-lg">P</span>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg">Phi3:3.8b</h3>
+                <p class="text-gray-500 text-sm">Microsoft &bull; 3.8B parameters</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-purple-400">33.3%</div>
+                <div class="text-xs text-gray-500">Accuracy</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-gray-300">846</div>
+                <div class="text-xs text-gray-500">Correct</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-emerald-400">5.4s</div>
+                <div class="text-xs text-gray-500">Avg Time/Q</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-emerald-400">230m</div>
+                <div class="text-xs text-gray-500">Total Time</div>
+              </div>
+            </div>
+            <div class="text-sm text-gray-500">
+              <span class="text-emerald-400 font-medium">Strengths:</span> Fastest inference speed<br>
+              <span class="text-red-400 font-medium">Weaknesses:</span> Lowest accuracy across all categories
+            </div>
+          </div>
+        </div>
+
+        <!-- Qwen -->
+        <div class="glass-card overflow-hidden card-hover card-spotlight scroll-reveal">
+          <div class="h-1.5 bg-gradient-to-r from-amber-500 to-amber-400"></div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 rounded-xl flex items-center justify-center">
+                <span class="text-amber-400 font-bold text-lg">Q</span>
+              </div>
+              <div>
+                <h3 class="text-white font-bold text-lg">Qwen3:4b</h3>
+                <p class="text-gray-500 text-sm">Alibaba &bull; 4B parameters</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-amber-400">66.3%</div>
+                <div class="text-xs text-gray-500">Accuracy</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-gray-300">1,687</div>
+                <div class="text-xs text-gray-500">Correct</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-red-400">25.8s</div>
+                <div class="text-xs text-gray-500">Avg Time/Q</div>
+              </div>
+              <div class="bg-slate-900/50 rounded-lg p-3 text-center">
+                <div class="text-2xl font-bold text-red-400">1,094m</div>
+                <div class="text-xs text-gray-500">Total Time</div>
+              </div>
+            </div>
+            <div class="text-sm text-gray-500">
+              <span class="text-emerald-400 font-medium">Strengths:</span> Calculus, Related rates, Product rule<br>
+              <span class="text-red-400 font-medium">Weaknesses:</span> Very slow inference, Grade 8
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Head-to-Head Table -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <div class="chart-container">
+        <h3 class="text-white font-semibold text-lg mb-4">Head-to-Head Results</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full data-table text-sm">
+            <thead>
+              <tr class="text-left text-gray-400">
+                <th class="rounded-tl-lg">Dataset</th>
+                <th>Questions</th>
+                <th class="text-center">Gemma3:4b</th>
+                <th class="text-center">Phi3:3.8b</th>
+                <th class="text-center">Qwen3:4b</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-white font-medium">Adv. Probability & Statistics</td>
+                <td>1,000</td>
+                <td class="text-center"><span class="text-emerald-400 font-semibold">85.9%</span> <span class="text-gray-500">(859)</span></td>
+                <td class="text-center"><span class="text-red-400 font-semibold">38.2%</span> <span class="text-gray-500">(382)</span></td>
+                <td class="text-center"><span class="text-emerald-400 font-semibold">74.2%</span> <span class="text-gray-500">(742)</span></td>
+              </tr>
+              <tr>
+                <td class="text-white font-medium">Calculus I</td>
+                <td>900</td>
+                <td class="text-center"><span class="text-yellow-400 font-semibold">69.2%</span> <span class="text-gray-500">(623)</span></td>
+                <td class="text-center"><span class="text-yellow-400 font-semibold">42.8%</span> <span class="text-gray-500">(385)</span></td>
+                <td class="text-center"><span class="text-emerald-400 font-semibold">84.4%</span> <span class="text-gray-500">(760)</span></td>
+              </tr>
+              <tr>
+                <td class="text-white font-medium">Grade 8 Math</td>
+                <td>644</td>
+                <td class="text-center"><span class="text-red-400 font-semibold">22.0%</span> <span class="text-gray-500">(142)</span></td>
+                <td class="text-center"><span class="text-red-400 font-semibold">12.3%</span> <span class="text-gray-500">(79)</span></td>
+                <td class="text-center"><span class="text-red-400 font-semibold">28.7%</span> <span class="text-gray-500">(185)</span></td>
+              </tr>
+              <tr class="font-semibold border-t-2 border-slate-600">
+                <td class="text-white">Overall</td>
+                <td>2,544</td>
+                <td class="text-center text-blue-400">63.8% <span class="text-gray-500 font-normal">(1,624)</span></td>
+                <td class="text-center text-purple-400">33.3% <span class="text-gray-500 font-normal">(846)</span></td>
+                <td class="text-center text-amber-400">66.3% <span class="text-gray-500 font-normal">(1,687)</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timing Charts -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="chart-container scroll-reveal">
+          <h3 class="text-white font-semibold text-lg mb-1">Average Response Time by Dataset</h3>
+          <p class="text-gray-500 text-sm mb-4">Seconds per question (lower is better)</p>
+          <div style="height: 300px;">
+            <canvas id="timingByDataset"></canvas>
+          </div>
+        </div>
+        <div class="chart-container scroll-reveal" data-delay="1">
+          <h3 class="text-white font-semibold text-lg mb-1">Total Processing Time</h3>
+          <p class="text-gray-500 text-sm mb-4">Minutes to complete all 2,544 questions</p>
+          <div style="height: 300px;">
+            <canvas id="totalTimeChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timing Details Table -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <div class="chart-container">
+        <h3 class="text-white font-semibold text-lg mb-4">Detailed Timing Statistics</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full data-table text-sm">
+            <thead>
+              <tr class="text-left text-gray-400">
+                <th class="rounded-tl-lg">Category</th>
+                <th>Model</th>
+                <th class="text-right">Mean (s)</th>
+                <th class="text-right">Median (s)</th>
+                <th class="text-right">Std Dev</th>
+                <th class="text-right">P25</th>
+                <th class="text-right">P75</th>
+                <th class="text-right">P95</th>
+                <th class="text-right">Min</th>
+                <th class="text-right rounded-tr-lg">Max</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td rowspan="3" class="text-white font-medium align-top">Prob & Stats</td>
+                <td class="text-blue-400">Gemma3:4b</td><td class="text-right">8.37</td><td class="text-right">6.80</td><td class="text-right">39.32</td><td class="text-right">5.39</td><td class="text-right">7.87</td><td class="text-right">9.59</td><td class="text-right">2.38</td><td class="text-right">1213.04</td></tr>
+              <tr><td class="text-purple-400">Phi3:3.8b</td><td class="text-right">5.55</td><td class="text-right">5.26</td><td class="text-right">1.85</td><td class="text-right">4.50</td><td class="text-right">6.05</td><td class="text-right">8.00</td><td class="text-right">2.07</td><td class="text-right">19.50</td></tr>
+              <tr><td class="text-amber-400">Qwen3:4b</td><td class="text-right">26.09</td><td class="text-right">24.23</td><td class="text-right">7.62</td><td class="text-right">20.07</td><td class="text-right">33.58</td><td class="text-right">37.84</td><td class="text-right">11.77</td><td class="text-right">39.19</td></tr>
+
+              <tr class="border-t border-slate-600/50"><td rowspan="3" class="text-white font-medium align-top">Calculus I</td>
+                <td class="text-blue-400">Gemma3:4b</td><td class="text-right">6.62</td><td class="text-right">6.21</td><td class="text-right">1.62</td><td class="text-right">5.54</td><td class="text-right">7.30</td><td class="text-right">9.41</td><td class="text-right">4.19</td><td class="text-right">21.53</td></tr>
+              <tr><td class="text-purple-400">Phi3:3.8b</td><td class="text-right">5.19</td><td class="text-right">5.07</td><td class="text-right">1.14</td><td class="text-right">4.51</td><td class="text-right">5.74</td><td class="text-right">6.88</td><td class="text-right">2.78</td><td class="text-right">19.19</td></tr>
+              <tr><td class="text-amber-400">Qwen3:4b</td><td class="text-right">24.89</td><td class="text-right">23.75</td><td class="text-right">6.24</td><td class="text-right">20.06</td><td class="text-right">28.87</td><td class="text-right">37.28</td><td class="text-right">12.72</td><td class="text-right">40.57</td></tr>
+
+              <tr class="border-t border-slate-600/50"><td rowspan="3" class="text-white font-medium align-top">Grade 8 Math</td>
+                <td class="text-blue-400">Gemma3:4b</td><td class="text-right">6.61</td><td class="text-right">6.13</td><td class="text-right">2.26</td><td class="text-right">5.37</td><td class="text-right">7.27</td><td class="text-right">9.84</td><td class="text-right">2.99</td><td class="text-right">21.99</td></tr>
+              <tr><td class="text-purple-400">Phi3:3.8b</td><td class="text-right">5.57</td><td class="text-right">5.22</td><td class="text-right">1.75</td><td class="text-right">4.56</td><td class="text-right">6.12</td><td class="text-right">8.23</td><td class="text-right">2.96</td><td class="text-right">19.22</td></tr>
+              <tr><td class="text-amber-400">Qwen3:4b</td><td class="text-right">26.60</td><td class="text-right">26.26</td><td class="text-right">9.20</td><td class="text-right">18.29</td><td class="text-right">37.18</td><td class="text-right">37.72</td><td class="text-right">10.00</td><td class="text-right">38.48</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verification Analysis -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="chart-container scroll-reveal">
+          <h3 class="text-white font-semibold text-lg mb-1">Verification Match Types</h3>
+          <p class="text-gray-500 text-sm mb-4">How model answers matched expected answers</p>
+          <div style="height: 320px;">
+            <canvas id="matchTypeChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-container scroll-reveal" data-delay="1">
+          <h3 class="text-white font-semibold text-lg mb-1">Extraction & Comparison Confidence</h3>
+          <p class="text-gray-500 text-sm mb-4">How reliably answers could be extracted and compared</p>
+          <div class="space-y-6 pt-4">
+            <!-- Gemma -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-blue-400 font-medium text-sm">Gemma3:4b</span>
+              </div>
+              <div class="space-y-2">
+                <div>
+                  <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Extraction Confidence</span><span class="text-gray-300">99.8%</span></div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5"><div class="bg-blue-500 h-2.5 rounded-full" style="width: 99.8%"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Comparison Confidence</span><span class="text-gray-300">98.5%</span></div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5"><div class="bg-blue-400 h-2.5 rounded-full" style="width: 98.5%"></div></div>
+                </div>
+              </div>
+            </div>
+            <!-- Phi -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-purple-400 font-medium text-sm">Phi3:3.8b</span>
+              </div>
+              <div class="space-y-2">
+                <div>
+                  <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Extraction Confidence</span><span class="text-gray-300">97.9%</span></div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5"><div class="bg-purple-500 h-2.5 rounded-full" style="width: 97.9%"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Comparison Confidence</span><span class="text-gray-300">98.1%</span></div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5"><div class="bg-purple-400 h-2.5 rounded-full" style="width: 98.1%"></div></div>
+                </div>
+              </div>
+            </div>
+            <!-- Qwen -->
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-amber-400 font-medium text-sm">Qwen3:4b</span>
+              </div>
+              <div class="space-y-2">
+                <div>
+                  <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Extraction Confidence</span><span class="text-gray-300">86.3%</span></div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5"><div class="bg-amber-500 h-2.5 rounded-full" style="width: 86.3%"></div></div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs text-gray-500 mb-1"><span>Comparison Confidence</span><span class="text-gray-300">88.2%</span></div>
+                  <div class="w-full bg-slate-700 rounded-full h-2.5"><div class="bg-amber-400 h-2.5 rounded-full" style="width: 88.2%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Strengths & Weaknesses -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <h2 class="text-white font-semibold text-xl mb-6 scroll-reveal">Strengths & Weaknesses</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 scroll-reveal">
+          <h3 class="text-blue-400 font-bold mb-4">Gemma3:4b</h3>
+          <div class="mb-4">
+            <h4 class="text-emerald-400 text-sm font-semibold mb-2">Top Performances</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li>Combinations C(n,r): <span class="text-white">98.7%</span></li>
+              <li>Permutations: <span class="text-white">98%</span></li>
+              <li>Conditional Probability: <span class="text-white">98%</span></li>
+              <li>Evaluate the limit: <span class="text-white">100%</span></li>
+              <li>Limit by factoring: <span class="text-white">100%</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-red-400 text-sm font-semibold mb-2">Weakest Areas</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li>Product rule: <span class="text-white">0%</span></li>
+              <li>Quotient rule: <span class="text-white">0%</span></li>
+              <li>Functions (Grade 8): <span class="text-white">0%</span></li>
+              <li>Related rates: <span class="text-white">5%</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 scroll-reveal">
+          <h3 class="text-purple-400 font-bold mb-4">Phi3:3.8b</h3>
+          <div class="mb-4">
+            <h4 class="text-emerald-400 text-sm font-semibold mb-2">Top Performances</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li>Power rule: <span class="text-white">77%</span></li>
+              <li>Evaluate the limit: <span class="text-white">73.3%</span></li>
+              <li>Find the derivative: <span class="text-white">73.8%</span></li>
+              <li>Conditional Probability: <span class="text-white">55.3%</span></li>
+              <li>Fastest speed: <span class="text-white">5.4s/q avg</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-red-400 text-sm font-semibold mb-2">Weakest Areas</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li>Product rule: <span class="text-white">0%</span></li>
+              <li>Quotient rule: <span class="text-white">2.5%</span></li>
+              <li>Related rates: <span class="text-white">2.5%</span></li>
+              <li>Expected value: <span class="text-white">11.3%</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 scroll-reveal">
+          <h3 class="text-amber-400 font-bold mb-4">Qwen3:4b</h3>
+          <div class="mb-4">
+            <h4 class="text-emerald-400 text-sm font-semibold mb-2">Top Performances</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li>Limit by factoring: <span class="text-white">100%</span></li>
+              <li>Tangent line slope: <span class="text-white">100%</span></li>
+              <li>Indefinite integral: <span class="text-white">99.3%</span></li>
+              <li>Power rule: <span class="text-white">98%</span></li>
+              <li>Related rates: <span class="text-white">85%</span></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-red-400 text-sm font-semibold mb-2">Weakest Areas</h4>
+            <ul class="space-y-1 text-sm text-gray-400">
+              <li>Quotient rule: <span class="text-white">0%</span></li>
+              <li>Functions (Grade 8): <span class="text-white">3.4%</span></li>
+              <li>Slow inference: <span class="text-white">25.8s/q avg</span></li>
+              <li>Lower extraction confidence: <span class="text-white">86.3%</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    initNav('models');
+    initFooter();
+    initEnhancements();
+
+    // Timing by Dataset
+    createGroupedBarChart('timingByDataset',
+      ['Prob & Stats', 'Calculus I', 'Grade 8 Math'],
+      [
+        { label: 'Gemma3:4b', data: [8.37, 6.62, 6.61] },
+        { label: 'Phi3:3.8b', data: [5.55, 5.19, 5.57] },
+        { label: 'Qwen3:4b', data: [26.09, 24.89, 26.60] },
+      ],
+      { scales: { y: { beginAtZero: true, max: 30, ticks: { callback: v => v + 's' } }, x: { grid: { display: false } } } }
+    );
+
+    // Total Processing Time
+    createHorizontalBarChart('totalTimeChart',
+      ['Qwen3:4b', 'Gemma3:4b', 'Phi3:3.8b'],
+      [1094, 310, 230],
+      ['#f59e0b', '#3b82f6', '#a855f7'],
+      { scales: { x: { ticks: { callback: v => v + ' min' }, beginAtZero: true, grid: { color: 'rgba(51, 65, 85, 0.3)' } } } }
+    );
+
+    // Verification Match Types - Stacked Bar
+    createStackedBarChart('matchTypeChart',
+      ['Gemma3:4b', 'Phi3:3.8b', 'Qwen3:4b'],
+      [
+        { label: 'Exact', data: [55.74, 28.03, 50.55], backgroundColor: '#10b981', borderRadius: 2 },
+        { label: 'Equivalent', data: [7.19, 4.80, 13.01], backgroundColor: '#3b82f6', borderRadius: 2 },
+        { label: 'Tolerance', data: [0.90, 0.43, 2.75], backgroundColor: '#6366f1', borderRadius: 2 },
+        { label: 'No Match', data: [13.76, 19.06, 9.55], backgroundColor: '#ef4444', borderRadius: 2 },
+        { label: 'Type Mismatch', data: [21.74, 46.23, 14.31], backgroundColor: '#f59e0b', borderRadius: 2 },
+        { label: 'Other', data: [0.67, 1.46, 9.82], backgroundColor: '#64748b', borderRadius: 2 },
+      ]
+    );
+  </script>
+</body>
+</html>

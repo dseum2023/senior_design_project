@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBench - LLM Evaluation Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-900 text-gray-300 font-sans min-h-screen">
+  <div id="nav"></div>
+
+  <main class="pt-20 pb-8">
+    <!-- Hero Section -->
+    <section class="aurora-bg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="text-center py-16 scroll-reveal">
+        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 mb-6 backdrop-blur-sm">
+          <div class="w-2 h-2 bg-blue-400 rounded-full live-dot"></div>
+          <span class="text-blue-400 text-sm font-medium">Senior Design Project 2026</span>
+        </div>
+        <h1 class="text-5xl sm:text-6xl font-extrabold text-white mb-4 tracking-tight">
+          Brain<span class="bg-gradient-to-r from-blue-400 via-purple-400 to-amber-400 bg-clip-text text-transparent">Bench</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-3 max-w-2xl mx-auto">
+          Evaluating Local LLMs on Mathematical Reasoning
+        </p>
+        <p class="text-gray-500 text-sm">
+          3 Models &bull; 3 Datasets &bull; 2,544 Questions &bull; Standardized &amp; Reproducible
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Metric Cards -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="glass-card p-5 card-hover card-spotlight scroll-reveal glow-blue" data-delay="1">
+          <div class="label-text text-gray-500 mb-1.5">Models Tested</div>
+          <div class="text-3xl font-bold gradient-number" data-count="3">0</div>
+          <div class="text-xs text-gray-500 mt-1.5">Local LLMs via Ollama</div>
+        </div>
+        <div class="glass-card p-5 card-hover card-spotlight scroll-reveal glow-purple" data-delay="2">
+          <div class="label-text text-gray-500 mb-1.5">Questions Per Model</div>
+          <div class="text-3xl font-bold gradient-number" data-count="2544" data-commas="true">0</div>
+          <div class="text-xs text-gray-500 mt-1.5">Across 3 math datasets</div>
+        </div>
+        <div class="glass-card p-5 card-hover card-spotlight scroll-reveal glow-amber" data-delay="3">
+          <div class="label-text text-gray-500 mb-1.5">Total Responses</div>
+          <div class="text-3xl font-bold gradient-number" data-count="7632" data-commas="true">0</div>
+          <div class="text-xs text-gray-500 mt-1.5">All verified automatically</div>
+        </div>
+        <div class="glass-card p-5 card-hover card-spotlight scroll-reveal glow-emerald" data-delay="4">
+          <div class="label-text text-gray-500 mb-1.5">Best Overall</div>
+          <div class="text-3xl font-bold text-amber-400">Qwen3:4b</div>
+          <div class="text-xs text-gray-500 mt-1.5">66.3% overall accuracy</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Charts Row -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="grid lg:grid-cols-5 gap-6">
+        <div class="lg:col-span-3 chart-container scroll-reveal">
+          <h3 class="text-white font-semibold text-lg mb-1">Accuracy by Dataset</h3>
+          <p class="text-gray-500 text-sm mb-4">Percentage of correctly answered questions per model per dataset</p>
+          <div style="height: 340px;">
+            <canvas id="accuracyBarChart"></canvas>
+          </div>
+        </div>
+        <div class="lg:col-span-2 chart-container scroll-reveal" data-delay="1">
+          <h3 class="text-white font-semibold text-lg mb-1">Model Capabilities</h3>
+          <p class="text-gray-500 text-sm mb-4">Multi-dimensional comparison</p>
+          <div style="height: 340px;">
+            <canvas id="radarChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Model Cards Row -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <h2 class="text-white font-semibold text-xl mb-6 scroll-reveal">Model Overview</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Gemma Card -->
+        <div class="glass-card p-6 card-hover card-spotlight scroll-reveal" data-delay="1" style="border-top: 3px solid #3b82f6;">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-white font-bold text-lg">Gemma3:4b</h3>
+              <p class="text-gray-500 text-sm">Google &bull; 4B params</p>
+            </div>
+            <div class="text-3xl font-bold text-blue-400" data-count="63.8" data-suffix="%" data-decimals="1">0%</div>
+          </div>
+          <div class="space-y-3 mb-4 progress-group">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Prob & Stats</span><span class="text-emerald-400">85.9%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-blue-500 h-2 rounded-full" data-width="85.9%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Calculus I</span><span class="text-emerald-400">69.2%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-blue-500 h-2 rounded-full" data-width="69.2%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Grade 8</span><span class="text-red-400">22.0%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-blue-500 h-2 rounded-full" data-width="22%"></div></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-gray-500 pt-3 border-t border-slate-700/30">
+            <span>Avg: <span class="text-gray-300">7.3s</span>/q</span>
+            <span>Total: <span class="text-gray-300">310 min</span></span>
+          </div>
+        </div>
+
+        <!-- Phi Card -->
+        <div class="glass-card p-6 card-hover card-spotlight scroll-reveal" data-delay="2" style="border-top: 3px solid #a855f7;">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-white font-bold text-lg">Phi3:3.8b</h3>
+              <p class="text-gray-500 text-sm">Microsoft &bull; 3.8B params</p>
+            </div>
+            <div class="text-3xl font-bold text-purple-400" data-count="33.3" data-suffix="%" data-decimals="1">0%</div>
+          </div>
+          <div class="space-y-3 mb-4 progress-group">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Prob & Stats</span><span class="text-red-400">38.2%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-purple-500 h-2 rounded-full" data-width="38.2%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Calculus I</span><span class="text-yellow-400">42.8%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-purple-500 h-2 rounded-full" data-width="42.8%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Grade 8</span><span class="text-red-400">12.3%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-purple-500 h-2 rounded-full" data-width="12.3%"></div></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-gray-500 pt-3 border-t border-slate-700/30">
+            <span>Avg: <span class="text-gray-300">5.4s</span>/q</span>
+            <span>Total: <span class="text-gray-300">230 min</span></span>
+          </div>
+        </div>
+
+        <!-- Qwen Card -->
+        <div class="glass-card p-6 card-hover card-spotlight scroll-reveal" data-delay="3" style="border-top: 3px solid #f59e0b;">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-white font-bold text-lg">Qwen3:4b</h3>
+              <p class="text-gray-500 text-sm">Alibaba &bull; 4B params</p>
+            </div>
+            <div class="text-3xl font-bold text-amber-400" data-count="66.3" data-suffix="%" data-decimals="1">0%</div>
+          </div>
+          <div class="space-y-3 mb-4 progress-group">
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Prob & Stats</span><span class="text-emerald-400">74.2%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-amber-500 h-2 rounded-full" data-width="74.2%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Calculus I</span><span class="text-emerald-400">84.4%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-amber-500 h-2 rounded-full" data-width="84.4%"></div></div>
+            </div>
+            <div>
+              <div class="flex justify-between text-sm mb-1"><span class="text-gray-400">Grade 8</span><span class="text-red-400">28.7%</span></div>
+              <div class="w-full bg-slate-700/50 rounded-full h-2"><div class="progress-fill bg-amber-500 h-2 rounded-full" data-width="28.7%"></div></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 text-sm text-gray-500 pt-3 border-t border-slate-700/30">
+            <span>Avg: <span class="text-gray-300">25.8s</span>/q</span>
+            <span>Total: <span class="text-gray-300">1,094 min</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overall Ranking + Speed Chart -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <div class="chart-container scroll-reveal">
+          <h3 class="text-white font-semibold text-lg mb-1">Overall Accuracy Ranking</h3>
+          <p class="text-gray-500 text-sm mb-4">Percentage of all 2,544 questions answered correctly</p>
+          <div style="height: 200px;">
+            <canvas id="overallRankChart"></canvas>
+          </div>
+        </div>
+        <div class="chart-container scroll-reveal" data-delay="1">
+          <h3 class="text-white font-semibold text-lg mb-1">Average Response Time</h3>
+          <p class="text-gray-500 text-sm mb-4">Seconds per question (lower is better)</p>
+          <div style="height: 200px;">
+            <canvas id="speedChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <div class="glass-card p-6 scroll-reveal">
+        <h3 class="text-white font-semibold text-lg mb-4">Key Takeaways</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="flex gap-3">
+            <div class="w-1.5 bg-amber-400 rounded-full flex-shrink-0"></div>
+            <p class="text-gray-400 text-sm"><span class="text-white font-medium">Qwen3:4b leads overall</span> with 66.3% accuracy and dominates Calculus I (84.4%), but is 4&ndash;5x slower than competitors at ~26 seconds per question.</p>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-1.5 bg-blue-400 rounded-full flex-shrink-0"></div>
+            <p class="text-gray-400 text-sm"><span class="text-white font-medium">Gemma3:4b excels at probability</span> with 85.9% accuracy on Prob &amp; Stats&mdash;the highest single-dataset score&mdash;and scores perfectly on limit evaluation problems.</p>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-1.5 bg-purple-400 rounded-full flex-shrink-0"></div>
+            <p class="text-gray-400 text-sm"><span class="text-white font-medium">Phi3:3.8b is the fastest</span> at 5.4s per question but has the lowest accuracy across all categories. Speed alone doesn't compensate for reduced correctness.</p>
+          </div>
+          <div class="flex gap-3">
+            <div class="w-1.5 bg-red-400 rounded-full flex-shrink-0"></div>
+            <p class="text-gray-400 text-sm"><span class="text-white font-medium">All models struggle with Grade 8 Math</span> (12&ndash;29% accuracy), especially repeating decimal-to-fraction conversions and function problems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    initNav('index');
+    initFooter();
+    initEnhancements();
+
+    // Accuracy by Dataset - Grouped Bar Chart
+    createGroupedBarChart('accuracyBarChart',
+      ['Prob & Stats\n(1,000 Q)', 'Calculus I\n(900 Q)', 'Grade 8 Math\n(644 Q)'],
+      [
+        { label: 'Gemma3:4b', data: [85.9, 69.2, 22.0] },
+        { label: 'Phi3:3.8b', data: [38.2, 42.8, 12.3] },
+        { label: 'Qwen3:4b', data: [74.2, 84.4, 28.7] },
+      ]
+    );
+
+    // Radar Chart
+    createRadarChart('radarChart',
+      ['Prob & Stats', 'Calculus I', 'Grade 8', 'Speed', 'Confidence'],
+      [
+        { label: 'Gemma3:4b', data: [85.9, 69.2, 22.0, 80, 98.5] },
+        { label: 'Phi3:3.8b', data: [38.2, 42.8, 12.3, 95, 97.9] },
+        { label: 'Qwen3:4b', data: [74.2, 84.4, 28.7, 20, 86.3] },
+      ]
+    );
+
+    // Overall Accuracy - Horizontal Bar
+    createHorizontalBarChart('overallRankChart',
+      ['Qwen3:4b', 'Gemma3:4b', 'Phi3:3.8b'],
+      [66.3, 63.8, 33.3],
+      ['#f59e0b', '#3b82f6', '#a855f7'],
+      { scales: { x: { max: 100, ticks: { callback: v => v + '%' }, beginAtZero: true, grid: { color: 'rgba(51, 65, 85, 0.2)' } } } }
+    );
+
+    // Speed - Horizontal Bar
+    createHorizontalBarChart('speedChart',
+      ['Phi3:3.8b', 'Gemma3:4b', 'Qwen3:4b'],
+      [5.4, 7.3, 25.8],
+      ['#a855f7', '#3b82f6', '#f59e0b'],
+      { scales: { x: { ticks: { callback: v => v + 's' }, beginAtZero: true, grid: { color: 'rgba(51, 65, 85, 0.2)' } } } }
+    );
+  </script>
+</body>
+</html>

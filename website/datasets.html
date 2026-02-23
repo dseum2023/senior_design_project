@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBench - Dataset Breakdown</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-900 text-gray-300 font-sans min-h-screen">
+  <div id="nav"></div>
+
+  <main class="pt-20 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 scroll-reveal">
+      <h1 class="text-3xl font-bold text-white mb-2">Dataset Breakdown</h1>
+      <p class="text-gray-400">Topic-level accuracy analysis for each of the three math datasets.</p>
+    </section>
+
+    <!-- Tabs -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <div class="flex border-b border-slate-700/50 gap-1">
+        <button onclick="switchTab('calculus')" id="tab-calculus" class="tab-btn active px-5 py-3 text-sm font-medium border-b-2 border-transparent rounded-t-lg">
+          Calculus I <span class="text-gray-500 text-xs ml-1">(900 Q)</span>
+        </button>
+        <button onclick="switchTab('probstats')" id="tab-probstats" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent rounded-t-lg text-gray-400">
+          Prob & Stats <span class="text-gray-500 text-xs ml-1">(1,000 Q)</span>
+        </button>
+        <button onclick="switchTab('grade8')" id="tab-grade8" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent rounded-t-lg text-gray-400">
+          Grade 8 Math <span class="text-gray-500 text-xs ml-1">(644 Q)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Calculus I Tab -->
+    <div id="content-calculus" class="tab-content active">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="grid lg:grid-cols-3 gap-4 mb-8">
+          <div class="glass-card p-4 text-center scroll-reveal">
+            <div class="text-sm text-gray-500 mb-1">Total Questions</div>
+            <div class="text-2xl font-bold text-white">900</div>
+          </div>
+          <div class="glass-card p-4 text-center scroll-reveal" data-delay="1">
+            <div class="text-sm text-gray-500 mb-1">Best Model</div>
+            <div class="text-2xl font-bold text-amber-400">Qwen3:4b</div>
+            <div class="text-xs text-gray-500">84.4% accuracy</div>
+          </div>
+          <div class="glass-card p-4 text-center scroll-reveal" data-delay="2">
+            <div class="text-sm text-gray-500 mb-1">Topics Covered</div>
+            <div class="text-2xl font-bold text-white">12</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="chart-container mb-8">
+          <h3 class="text-white font-semibold text-lg mb-1">Accuracy by Topic</h3>
+          <p class="text-gray-500 text-sm mb-4">Sorted from highest to lowest average accuracy</p>
+          <div style="height: 420px;">
+            <canvas id="calculusChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="chart-container">
+          <h3 class="text-white font-semibold text-lg mb-4">Calculus I &mdash; Topic-Level Detail</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full data-table text-sm">
+              <thead>
+                <tr class="text-left text-gray-400">
+                  <th class="rounded-tl-lg">Topic</th>
+                  <th class="text-center">Questions</th>
+                  <th class="text-center">Gemma3:4b</th>
+                  <th class="text-center">Phi3:3.8b</th>
+                  <th class="text-center rounded-tr-lg">Qwen3:4b</th>
+                </tr>
+              </thead>
+              <tbody id="calculus-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Prob & Stats Tab -->
+    <div id="content-probstats" class="tab-content">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="grid lg:grid-cols-3 gap-4 mb-8">
+          <div class="glass-card p-4 text-center">
+            <div class="text-sm text-gray-500 mb-1">Total Questions</div>
+            <div class="text-2xl font-bold text-white">1,000</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-sm text-gray-500 mb-1">Best Model</div>
+            <div class="text-2xl font-bold text-blue-400">Gemma3:4b</div>
+            <div class="text-xs text-gray-500">85.9% accuracy</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-sm text-gray-500 mb-1">Topics Covered</div>
+            <div class="text-2xl font-bold text-white">8</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="chart-container mb-8">
+          <h3 class="text-white font-semibold text-lg mb-1">Accuracy by Topic</h3>
+          <p class="text-gray-500 text-sm mb-4">Sorted from highest to lowest average accuracy</p>
+          <div style="height: 380px;">
+            <canvas id="probstatsChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="chart-container">
+          <h3 class="text-white font-semibold text-lg mb-4">Probability &amp; Statistics &mdash; Topic-Level Detail</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full data-table text-sm">
+              <thead>
+                <tr class="text-left text-gray-400">
+                  <th class="rounded-tl-lg">Topic</th>
+                  <th class="text-center">Questions</th>
+                  <th class="text-center">Gemma3:4b</th>
+                  <th class="text-center">Phi3:3.8b</th>
+                  <th class="text-center rounded-tr-lg">Qwen3:4b</th>
+                </tr>
+              </thead>
+              <tbody id="probstats-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Grade 8 Math Tab -->
+    <div id="content-grade8" class="tab-content">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="grid lg:grid-cols-3 gap-4 mb-8">
+          <div class="glass-card p-4 text-center">
+            <div class="text-sm text-gray-500 mb-1">Total Questions</div>
+            <div class="text-2xl font-bold text-white">644</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-sm text-gray-500 mb-1">Best Model</div>
+            <div class="text-2xl font-bold text-amber-400">Qwen3:4b</div>
+            <div class="text-xs text-gray-500">28.7% accuracy</div>
+          </div>
+          <div class="glass-card p-4 text-center">
+            <div class="text-sm text-gray-500 mb-1">Subcategories</div>
+            <div class="text-2xl font-bold text-white">5</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Note about Grade 8 -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="bg-red-500/5 border border-red-500/20 rounded-xl p-5">
+          <div class="flex gap-3">
+            <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+            </svg>
+            <div>
+              <h4 class="text-red-400 font-medium text-sm mb-1">Why all models struggle with Grade 8 Math</h4>
+              <p class="text-gray-400 text-sm">This dataset includes many repeating decimal-to-fraction conversions (e.g., "0.551(35)" &rarr; "54584/99000") and complex fraction operations. These problems require precise algorithmic computation rather than reasoning&mdash;a known weakness of language models. The "Functions" subcategory was particularly challenging, with all models scoring below 4%.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="chart-container mb-8">
+          <h3 class="text-white font-semibold text-lg mb-1">Accuracy by Subcategory</h3>
+          <p class="text-gray-500 text-sm mb-4">Sorted from highest to lowest average accuracy</p>
+          <div style="height: 320px;">
+            <canvas id="grade8Chart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <div class="chart-container">
+          <h3 class="text-white font-semibold text-lg mb-4">Grade 8 Math &mdash; Subcategory Detail</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full data-table text-sm">
+              <thead>
+                <tr class="text-left text-gray-400">
+                  <th class="rounded-tl-lg">Subcategory</th>
+                  <th class="text-center">Questions</th>
+                  <th class="text-center">Gemma3:4b</th>
+                  <th class="text-center">Phi3:3.8b</th>
+                  <th class="text-center rounded-tr-lg">Qwen3:4b</th>
+                </tr>
+              </thead>
+              <tbody id="grade8-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    initNav('datasets');
+    initFooter();
+    initEnhancements();
+
+    // Tab switching
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.getElementById('tab-' + tabId).classList.add('active');
+      document.getElementById('content-' + tabId).classList.add('active');
+
+      // Initialize charts on first view
+      if (tabId === 'probstats' && !window.probstatsChartInit) {
+        initProbStatsChart();
+        window.probstatsChartInit = true;
+      }
+      if (tabId === 'grade8' && !window.grade8ChartInit) {
+        initGrade8Chart();
+        window.grade8ChartInit = true;
+      }
+    }
+
+    // Build table rows helper
+    function buildTableRows(topics, containerId) {
+      const tbody = document.getElementById(containerId);
+      topics.forEach(t => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td class="text-white font-medium">${t.topic}</td>
+          <td class="text-center text-gray-400">${t.count}</td>
+          <td class="text-center"><span class="${accuracyColor(t.gemma)} font-semibold">${pct(t.gemma)}</span></td>
+          <td class="text-center"><span class="${accuracyColor(t.phi)} font-semibold">${pct(t.phi)}</span></td>
+          <td class="text-center"><span class="${accuracyColor(t.qwen)} font-semibold">${pct(t.qwen)}</span></td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Calculus Chart (initialized immediately since it's the default tab)
+    createGroupedBarChart('calculusChart',
+      CALCULUS_TOPICS.map(t => t.topic),
+      [
+        { label: 'Gemma3:4b', data: CALCULUS_TOPICS.map(t => pctNum(t.gemma)) },
+        { label: 'Phi3:3.8b', data: CALCULUS_TOPICS.map(t => pctNum(t.phi)) },
+        { label: 'Qwen3:4b', data: CALCULUS_TOPICS.map(t => pctNum(t.qwen)) },
+      ],
+      {
+        scales: {
+          x: { ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 25 }, grid: { display: false } },
+          y: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: 'rgba(51, 65, 85, 0.3)' } }
+        }
+      }
+    );
+    buildTableRows(CALCULUS_TOPICS, 'calculus-table-body');
+
+    // Prob & Stats Chart (lazy init)
+    function initProbStatsChart() {
+      createGroupedBarChart('probstatsChart',
+        PROB_STATS_TOPICS.map(t => t.topic),
+        [
+          { label: 'Gemma3:4b', data: PROB_STATS_TOPICS.map(t => pctNum(t.gemma)) },
+          { label: 'Phi3:3.8b', data: PROB_STATS_TOPICS.map(t => pctNum(t.phi)) },
+          { label: 'Qwen3:4b', data: PROB_STATS_TOPICS.map(t => pctNum(t.qwen)) },
+        ],
+        {
+          scales: {
+            x: { ticks: { font: { size: 10 }, maxRotation: 35, minRotation: 15 }, grid: { display: false } },
+            y: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' }, grid: { color: 'rgba(51, 65, 85, 0.3)' } }
+          }
+        }
+      );
+      buildTableRows(PROB_STATS_TOPICS, 'probstats-table-body');
+    }
+
+    // Grade 8 Chart (lazy init)
+    function initGrade8Chart() {
+      createGroupedBarChart('grade8Chart',
+        GRADE8_TOPICS.map(t => t.topic),
+        [
+          { label: 'Gemma3:4b', data: GRADE8_TOPICS.map(t => pctNum(t.gemma)) },
+          { label: 'Phi3:3.8b', data: GRADE8_TOPICS.map(t => pctNum(t.phi)) },
+          { label: 'Qwen3:4b', data: GRADE8_TOPICS.map(t => pctNum(t.qwen)) },
+        ],
+        {
+          scales: {
+            x: { ticks: { font: { size: 10 }, maxRotation: 25, minRotation: 0 }, grid: { display: false } },
+            y: { beginAtZero: true, max: 70, ticks: { callback: v => v + '%' }, grid: { color: 'rgba(51, 65, 85, 0.3)' } }
+          }
+        }
+      );
+      buildTableRows(GRADE8_TOPICS, 'grade8-table-body');
+    }
+  </script>
+</body>
+</html>

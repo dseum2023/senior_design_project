@@ -76,7 +76,7 @@ def get_available_datasets() -> Dict[str, Dict[str, str]]:
 
 def select_model() -> str:
     """Prompt user to select a model"""
-    default_key = "1"
+    default_key = "6"
     default_model = MODEL_OPTIONS[default_key]
 
     print("\n" + "=" * 60)

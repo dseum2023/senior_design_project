@@ -23,7 +23,7 @@ class LLMResponse:
 class OllamaClient:
     """Client for communicating with Ollama API"""
     
-    def __init__(self, base_url: str = "http://localhost:11434", model: str = "gpt-oss:20b"):
+    def __init__(self, base_url: str = "http://localhost:11434", model: str = "gemma3:4b"):
         self.base_url = base_url.rstrip('/')
         self.model = model
         self.session = requests.Session()

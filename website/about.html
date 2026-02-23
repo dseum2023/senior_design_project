@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBench - About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-900 text-gray-300 font-sans min-h-screen">
+  <div id="nav"></div>
+
+  <main class="pt-20 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 scroll-reveal">
+      <h1 class="text-3xl font-bold text-white mb-2">About BrainBench</h1>
+      <p class="text-gray-400">The project, the team, and the motivation behind it.</p>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <div class="glass-card p-8">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-white text-2xl font-bold">BrainBench</h2>
+            <p class="text-gray-400">ML/LLM Models Evaluation Dashboard</p>
+          </div>
+        </div>
+        <p class="text-gray-300 leading-relaxed mb-4">
+          The goal of this project is to evaluate multiple large language models (LLMs) using a standardized and reproducible testing pipeline in order to provide users with a clearer understanding of their capabilities. Rather than relying on marketing claims or inconsistent benchmarks, this project focuses on comparing models using consistent metrics such as correctness, performance, and practical usability, with an emphasis on free or locally hosted models.
+        </p>
+        <p class="text-gray-300 leading-relaxed">
+          Currently, there are few widely adopted, transparent systems for comparing LLMs under identical conditions, especially for users who are constrained by cost or interested in local deployment. By developing and applying a unified evaluation framework, this project aims to present meaningful, unbiased comparisons that help users more effectively select and use LLMs based on their specific needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <h2 class="text-white font-semibold text-xl mb-6">Team</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 text-center card-hover card-spotlight scroll-reveal">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-white text-2xl font-bold">OP</span>
+          </div>
+          <h3 class="text-white font-semibold text-lg">Orion Powers</h3>
+          <p class="text-gray-500 text-sm mb-2">Developer</p>
+          <p class="text-gray-400 text-xs">opowers2023@my.fit.edu</p>
+        </div>
+        <div class="glass-card p-6 text-center card-hover card-spotlight scroll-reveal" data-delay="1">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-white text-2xl font-bold">DS</span>
+          </div>
+          <h3 class="text-white font-semibold text-lg">Daniella Seum</h3>
+          <p class="text-gray-500 text-sm mb-2">Developer</p>
+          <p class="text-gray-400 text-xs">dseum2023@my.fit.edu</p>
+        </div>
+        <div class="glass-card p-6 text-center card-hover card-spotlight scroll-reveal" data-delay="2">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-white text-2xl font-bold">KS</span>
+          </div>
+          <h3 class="text-white font-semibold text-lg">Dr. Khaled Slhoub</h3>
+          <p class="text-gray-500 text-sm mb-2">Faculty Advisor & Client</p>
+          <p class="text-gray-400 text-xs">kslhoub@fit.edu</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Institution -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <div class="glass-card p-6">
+        <h2 class="text-white font-semibold text-lg mb-3">Florida Institute of Technology</h2>
+        <p class="text-gray-400 text-sm">
+          BrainBench is a Senior Design project developed during the 2025&ndash;2026 academic year at the Florida Institute of Technology, Department of Computer Science. The project demonstrates the practical application of software engineering principles to build a comprehensive LLM evaluation framework.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <h2 class="text-white font-semibold text-xl mb-6">Technologies Used</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card p-5 text-center card-hover card-spotlight">
+          <div class="text-3xl mb-2">&#x1f40d;</div>
+          <h3 class="text-white font-semibold text-sm">Python</h3>
+          <p class="text-gray-500 text-xs">Evaluation pipeline</p>
+        </div>
+        <div class="glass-card p-5 text-center card-hover card-spotlight">
+          <div class="text-3xl mb-2">&#x1f999;</div>
+          <h3 class="text-white font-semibold text-sm">Ollama</h3>
+          <p class="text-gray-500 text-xs">Local model hosting</p>
+        </div>
+        <div class="glass-card p-5 text-center card-hover card-spotlight">
+          <div class="text-3xl mb-2">&#x1f4ca;</div>
+          <h3 class="text-white font-semibold text-sm">Chart.js</h3>
+          <p class="text-gray-500 text-xs">Data visualization</p>
+        </div>
+        <div class="glass-card p-5 text-center card-hover card-spotlight">
+          <div class="text-3xl mb-2">&#x1f3a8;</div>
+          <h3 class="text-white font-semibold text-sm">Tailwind CSS</h3>
+          <p class="text-gray-500 text-xs">UI framework</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Novel Features -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 scroll-reveal">
+      <div class="glass-card p-6">
+        <h2 class="text-white font-semibold text-lg mb-4">What Makes BrainBench Different</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <h3 class="text-blue-400 font-medium text-sm mb-2">Unified Platform</h3>
+            <p class="text-gray-400 text-sm">Combines performance metrics, reasoning categorization, and analysis into a single, user-friendly dashboard.</p>
+          </div>
+          <div>
+            <h3 class="text-purple-400 font-medium text-sm mb-2">Unbiased Comparison</h3>
+            <p class="text-gray-400 text-sm">All models tested under identical conditions with automated verification&mdash;no marketing bias or cherry-picked results.</p>
+          </div>
+          <div>
+            <h3 class="text-amber-400 font-medium text-sm mb-2">Local & Free Focus</h3>
+            <p class="text-gray-400 text-sm">Specifically targets models that can run locally on consumer hardware without cloud costs or API fees.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    initNav('about');
+    initFooter();
+    initEnhancements();
+  </script>
+</body>
+</html>
