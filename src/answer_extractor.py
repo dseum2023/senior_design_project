@@ -37,6 +37,67 @@ def _clean_extracted_answer(answer: str) -> str:
     return answer.strip()
 
 
+def _strip_prose_from_answer(answer: str) -> str:
+    """
+    Strip English prose from a verbose FINAL_ANSWER extraction.
+
+    Many models (especially Phi) wrap their answer in natural language:
+        "504 ways to arrange three items from nine distinct ones"
+        "The slope of the tangent line to f(x) at x = 4 is 32"
+        "There are 210 different arrangements possible"
+
+    This function extracts the core numeric/math value when prose is detected.
+    Returns the original answer unchanged if no prose is found.
+    """
+    PROSE_WORDS = {
+        'the', 'is', 'are', 'was', 'were', 'has', 'have', 'had',
+        'ways', 'when', 'where', 'which', 'that', 'this', 'there',
+        'from', 'with', 'into', 'about', 'after', 'before',
+        'approximately', 'equal', 'equals', 'simply', 'roughly',
+        'different', 'possible', 'total', 'items', 'distinct',
+        'arrange', 'choose', 'selecting', 'rounded', 'decimal',
+        'because', 'since', 'therefore', 'thus', 'hence',
+        'calculate', 'calculated', 'result', 'value', 'answer',
+        'probability', 'function', 'slope', 'tangent', 'line',
+        'arrangements', 'combinations', 'permutations',
+    }
+
+    stripped = answer.strip().rstrip('.')
+
+    # Count prose words in the text
+    words_lower = stripped.lower().split()
+    prose_count = sum(1 for w in words_lower if w in PROSE_WORDS)
+
+    # Only attempt cleanup if there are at least 2 prose words
+    if prose_count < 2:
+        return answer
+
+    # Pattern: "There are <number> ..." or "There is <number> ..."
+    m = re.match(r'^[Tt]here\s+(?:are|is)\s+(?:a\s+total\s+of\s+)?(-?\d+(?:\.\d+)?(?:/\d+)?)', stripped)
+    if m:
+        return m.group(1)
+
+    # Pattern: "<number> ways/arrangements/combinations/..." (leading number + prose)
+    m = re.match(r'^(-?\d+(?:\.\d+)?(?:/\d+)?)\s+[a-zA-Z]', stripped)
+    if m:
+        return m.group(1)
+
+    # Pattern: "... is [approximately|equal to|simply] <number>" (trailing number after "is")
+    m = re.search(r'\bis\s+(?:approximately\s+|equal\s+to\s+|simply\s+|about\s+)?(-?\d+(?:\.\d+)?(?:/\d+)?)\s*(?:when|$)', stripped)
+    if m:
+        return m.group(1)
+
+    # Pattern: "... is <number>" at end of string
+    m = re.search(r'\bis\s+(-?\d+(?:\.\d+)?(?:/\d+)?)\s*$', stripped)
+    if m:
+        return m.group(1)
+
+    # Pattern: "P(A and B) = 0.201" — math equation, not prose. Leave as-is.
+    # (This is caught by the prose_count < 2 guard above in most cases)
+
+    return answer
+
+
 def _extract_final_answer_keyword(text: str) -> Optional[str]:
     """
     Extract answer using FINAL_ANSWER: keyword format (PRIMARY method)
@@ -50,6 +111,10 @@ def _extract_final_answer_keyword(text: str) -> Optional[str]:
         r'\\text\{FINAL_ANSWER:\s*\}\s*(.+?)(?:\n|$)',
         # Standard variant:
         r'FINAL_ANSWER:\s*(.+?)(?:\n|$)',
+        # "FINAL_ANSWER is <answer>" variant (e.g. Phi-style):
+        r'FINAL_ANSWER\s+is\s+(.+?)(?:\n|$)',
+        # "FINAL_ANSWER = <answer>" or "FINAL_ANSWER=<answer>" variant:
+        r'FINAL_ANSWER\s*=\s*(.+?)(?:\n|$)',
     ]
 
     for pattern in patterns:
@@ -143,18 +208,13 @@ def _extract_last_value(text: str) -> Optional[str]:
     """
     Extract last mathematical value in text (FALLBACK 3)
 
-    Looks for:
-    - Numbers (integers, decimals, negative)
-    - Fractions (e.g., 1/4)
-    - Simple expressions (e.g., x = 1.67)
+    Looks for (in priority order):
+    - Fractions (e.g., 1/4) — most specific pattern
+    - Numbers (integers, decimals, negative) — prefer plain numeric values
+    - Coordinate expressions (e.g., x = 1.67) — last resort, as these often
+      appear in LLM working/intermediate steps rather than the final answer
     """
-    # Try to find expressions like "x = value" first
-    coord_pattern = r'[a-z]\s*=\s*-?\d+\.?\d*'
-    coord_matches = re.findall(coord_pattern, text, re.IGNORECASE)
-    if coord_matches:
-        return coord_matches[-1].strip()
-
-    # Try to find fractions
+    # Try to find fractions first (most specific)
     fraction_pattern = r'-?\d+/-?\d+'
     fraction_matches = re.findall(fraction_pattern, text)
     if fraction_matches:
@@ -164,10 +224,17 @@ def _extract_last_value(text: str) -> Optional[str]:
     number_pattern = r'-?\d+\.?\d*'
     number_matches = re.findall(number_pattern, text)
     if number_matches:
-        # Filter out very small numbers (likely part of formatting)
         valid_numbers = [n for n in number_matches if len(n) > 0]
         if valid_numbers:
             return valid_numbers[-1].strip()
+
+    # Last resort: coordinate pattern (x = value)
+    # Deprioritized because LLM working often contains intermediate variable
+    # assignments like "X = 92" or "u = 13.3" that are not the final answer
+    coord_pattern = r'[a-z]\s*=\s*-?\d+\.?\d*'
+    coord_matches = re.findall(coord_pattern, text, re.IGNORECASE)
+    if coord_matches:
+        return coord_matches[-1].strip()
 
     return None
 
@@ -199,10 +266,11 @@ def extract_answer(llm_response: str) -> ExtractionResult:
     # Strategy 1: FINAL_ANSWER keyword (PRIMARY)
     answer = _extract_final_answer_keyword(llm_response)
     if answer:
+        cleaned = _strip_prose_from_answer(answer)
         return ExtractionResult(
-            extracted_answer=answer,
+            extracted_answer=cleaned,
             extraction_method="FINAL_ANSWER",
-            confidence=1.0,
+            confidence=1.0 if cleaned == answer else 0.9,
             raw_text=llm_response
         )
 

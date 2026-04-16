@@ -83,7 +83,21 @@ def verify_answer(llm_response: str, expected_answer: str,
         # Step 3: Compare answers
         comparison = compare_answers(extracted_norm, expected_norm, alternate_norm)
 
-        # Step 4: Build result
+        # Step 4: Apply minimum confidence threshold for tolerance matches
+        # Reject matches where the confidence is too low (e.g., 0.111 for a
+        # cross-type fraction/coordinate comparison that barely squeaks through)
+        MIN_TOLERANCE_CONFIDENCE = 0.15
+        if comparison.is_correct and comparison.match_type == "tolerance":
+            if comparison.confidence < MIN_TOLERANCE_CONFIDENCE:
+                comparison = ComparisonResult(
+                    is_correct=False,
+                    confidence=comparison.confidence,
+                    match_type="low_confidence",
+                    details=f"Match rejected: confidence {comparison.confidence:.3f} below threshold {MIN_TOLERANCE_CONFIDENCE}",
+                    matched_answer="none"
+                )
+
+        # Step 5: Build result
         if comparison.is_correct:
             status = "correct"
         else:

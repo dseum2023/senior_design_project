@@ -12,12 +12,13 @@ import os
 class Question:
     """Represents a single calculus question"""
 
-    def __init__(self, question_id: str, category: str, question_text: str, answer: str, alternate_answer: str = None):
+    def __init__(self, question_id: str, category: str, question_text: str, answer: str, alternate_answer: str = None, directions: str = ""):
         self.id = question_id
         self.category = category
         self.question_text = question_text
         self.answer = answer
         self.alternate_answer = alternate_answer
+        self.directions = directions
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert question to dictionary format"""
@@ -27,6 +28,7 @@ class Question:
             'question': self.question_text,
             'expected_answer': self.answer,
             'alternate_answer': self.alternate_answer,
+            'directions': self.directions,
         }
     
     def __str__(self) -> str:
@@ -126,9 +128,16 @@ class XMLParser:
                         else:
                             question_text = problem_text
 
-                        question = Question(question_id, category, question_text, answer, alternate_answer)
+                        question = Question(question_id, category, question_text, answer, alternate_answer, directions)
                         self.questions.append(question)
             
+            # Backfill metadata fields that may be absent for non-standard XML formats
+            # (e.g., <rows> root has no name/total_problems attributes)
+            if not self.metadata.get("total_problems"):
+                self.metadata["total_problems"] = len(self.questions)
+            if not self.metadata.get("name"):
+                self.metadata["name"] = os.path.splitext(os.path.basename(self.xml_file_path))[0]
+
             print(f"Successfully parsed {len(self.questions)} questions from XML file")
             return self.questions
             
@@ -170,6 +179,7 @@ class XMLParser:
                 q_data['question'],
                 q_data['expected_answer'],
                 q_data.get('alternate_answer'),
+                q_data.get('directions', ''),
             )
             self.questions.append(question)
         

@@ -4,19 +4,30 @@ Handles the interactive processing of questions with manual confirmation
 """
 
 import time
-from typing import List, Optional, Tuple
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple
 from src.xml_parser import Question
 from src.ollama_client import OllamaClient, LLMResponse
 from src.storage import StorageManager, QuestionResult
 from src.verifier import verify_answer
+from src.resource_monitor import ResourceMonitor
+
+if TYPE_CHECKING:
+    from src.fairness_controller import FairnessController
 
 
 class QuestionProcessor:
     """Interactive processor for calculus questions"""
     
-    def __init__(self, ollama_client: OllamaClient, storage_manager: StorageManager):
+    def __init__(
+        self,
+        ollama_client: OllamaClient,
+        storage_manager: StorageManager,
+        fairness_controller: Optional['FairnessController'] = None,
+    ):
         self.ollama_client = ollama_client
         self.storage_manager = storage_manager
+        self.fairness_controller = fairness_controller
+        self._fairness_snapshot: Optional[Dict[str, Any]] = None
         self.current_question_index = 0
         self.total_questions = 0
         self.processed_count = 0
@@ -24,6 +35,7 @@ class QuestionProcessor:
         self.failed_count = 0
         # Verification stats
         self.verification_stats = {"correct": 0, "incorrect": 0, "unable_to_verify": 0, "total": 0}
+        self.resource_monitor = ResourceMonitor(sample_interval=0.5)
     
     def initialize_session(self, questions: List[Question]) -> bool:
         """
@@ -50,7 +62,14 @@ class QuestionProcessor:
         
         print("✅ Ollama connection established")
         print(f"✅ Model '{self.ollama_client.model}' is available")
-        
+
+        # Run fairness setup if controller is active
+        if self.fairness_controller is not None:
+            self.fairness_controller.validate_system_state()
+            self.fairness_controller.unload_models(self.ollama_client)
+            self.fairness_controller.warmup_model(self.ollama_client)
+            self._fairness_snapshot = self.fairness_controller.get_fairness_snapshot()
+
         # Find starting point based on progress
         processed_ids = self.storage_manager.get_processed_question_ids()
         skipped_ids = self.storage_manager.get_skipped_question_ids()
@@ -234,14 +253,16 @@ class QuestionProcessor:
                 print("-" * 50)
                 
                 # Query with streaming callback to show real-time thinking
-                response = self.ollama_client.query_llm(
-                    question.question_text,
-                    stream_callback=self._streaming_callback
-                )
-                
+                with self.resource_monitor:
+                    response = self.ollama_client.query_llm(
+                        question.question_text,
+                        stream_callback=self._streaming_callback
+                    )
+                resource_metrics = self.resource_monitor.get_metrics()
+
                 print()  # New line after streaming content
                 print("-" * 50)
-                
+
                 # Display final response summary
                 if response.success:
                     print(f"⏱️  Processing Time: {response.processing_time:.2f} seconds")
@@ -249,6 +270,19 @@ class QuestionProcessor:
                 else:
                     print(f"❌ Error: {response.error_message}")
                     print(f"⏱️  Time: {response.processing_time:.2f} seconds")
+                if resource_metrics:
+                    print(f"📊 GPU: {resource_metrics.gpu_util_avg_percent}% util, "
+                          f"{resource_metrics.gpu_vram_peak_mb:.0f} MB VRAM, "
+                          f"{resource_metrics.gpu_power_avg_w:.1f}W avg")
+                    print(f"   CPU: {resource_metrics.cpu_avg_percent}% avg | "
+                          f"RAM: {resource_metrics.ram_peak_mb:.0f} MB peak | "
+                          f"Energy: {resource_metrics.energy_estimate_wh:.4f} Wh")
+                if response.ollama_metrics:
+                    om = response.ollama_metrics
+                    print(f"   Tokens: {om.get('eval_count', 0)} generated @ "
+                          f"{om.get('generation_speed_tps', 0):.1f} tok/s | "
+                          f"Prompt: {om.get('prompt_eval_count', 0)} @ "
+                          f"{om.get('prompt_processing_speed_tps', 0):.1f} tok/s")
                 print("-" * 50)
             
             # Verify the answer automatically
@@ -293,14 +327,18 @@ class QuestionProcessor:
             # Auto-save the result immediately after getting LLM response
             print(f"\n💾 Auto-saving result for question {question.id}...")
 
-            result = QuestionResult.from_question_and_response(question, response, verification_dict)
+            result = QuestionResult.from_question_and_response(
+                question, response, verification_dict,
+                system_metrics=resource_metrics.to_dict() if resource_metrics else None,
+                fairness_metadata=self._fairness_snapshot,
+            )
 
             if self.storage_manager.save_result(result):
                 print("✅ Result auto-saved successfully to data/results.json")
                 self.processed_count += 1
             else:
                 print("⚠️  Warning: Failed to auto-save result")
-            
+
             # Get user choice
             choice = self.get_user_choice()
             
@@ -392,10 +430,12 @@ class QuestionProcessor:
             print("\n🔄 Querying LLM...")
             print("\n🤖 LLM Response (streaming):")
             print("-" * 50)
-            response = self.ollama_client.query_llm(
-                question.question_text,
-                stream_callback=self._streaming_callback
-            )
+            with self.resource_monitor:
+                response = self.ollama_client.query_llm(
+                    question.question_text,
+                    stream_callback=self._streaming_callback
+                )
+            resource_metrics = self.resource_monitor.get_metrics()
             print()
             print("-" * 50)
 
@@ -405,6 +445,19 @@ class QuestionProcessor:
             else:
                 print(f"❌ Error: {response.error_message}")
                 print(f"⏱️  Time: {response.processing_time:.2f} seconds")
+            if resource_metrics:
+                print(f"📊 GPU: {resource_metrics.gpu_util_avg_percent}% util, "
+                      f"{resource_metrics.gpu_vram_peak_mb:.0f} MB VRAM, "
+                      f"{resource_metrics.gpu_power_avg_w:.1f}W avg")
+                print(f"   CPU: {resource_metrics.cpu_avg_percent}% avg | "
+                      f"RAM: {resource_metrics.ram_peak_mb:.0f} MB peak | "
+                      f"Energy: {resource_metrics.energy_estimate_wh:.4f} Wh")
+            if response.ollama_metrics:
+                om = response.ollama_metrics
+                print(f"   Tokens: {om.get('eval_count', 0)} generated @ "
+                      f"{om.get('generation_speed_tps', 0):.1f} tok/s | "
+                      f"Prompt: {om.get('prompt_eval_count', 0)} @ "
+                      f"{om.get('prompt_processing_speed_tps', 0):.1f} tok/s")
             print("-" * 50)
 
             verification_dict = None
@@ -439,8 +492,18 @@ class QuestionProcessor:
                     "verification_status": verification.verification_status
                 }
 
+            # Optional between-question cooldown (default 0s = disabled)
+            if self.fairness_controller is not None:
+                cfg_cooldown = self.fairness_controller._config.get("cooldown", {})
+                if cfg_cooldown.get("between_questions_seconds", 0) > 0:
+                    self.fairness_controller.wait_for_cooldown("between_questions")
+
             print(f"\n💾 Auto-saving result for question {question.id}...")
-            result = QuestionResult.from_question_and_response(question, response, verification_dict)
+            result = QuestionResult.from_question_and_response(
+                question, response, verification_dict,
+                system_metrics=resource_metrics.to_dict() if resource_metrics else None,
+                fairness_metadata=self._fairness_snapshot,
+            )
             if self.storage_manager.save_result(result):
                 print("✅ Result auto-saved successfully to data/results.json")
                 self.processed_count += 1

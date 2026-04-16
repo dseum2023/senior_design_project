@@ -28,13 +28,23 @@ class QuestionResult:
     alternate_answer: Optional[str] = None
     verification: Optional[Dict[str, Any]] = None
     is_correct: Optional[bool] = None
+    system_metrics: Optional[Dict[str, Any]] = None
+    ollama_metrics: Optional[Dict[str, Any]] = None
+    fairness_metadata: Optional[Dict[str, Any]] = None
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert to dictionary for JSON serialization"""
         return asdict(self)
     
     @classmethod
-    def from_question_and_response(cls, question: Question, llm_response: LLMResponse, verification: Optional[Dict[str, Any]] = None) -> 'QuestionResult':
+    def from_question_and_response(
+        cls,
+        question: Question,
+        llm_response: LLMResponse,
+        verification: Optional[Dict[str, Any]] = None,
+        system_metrics: Optional[Dict[str, Any]] = None,
+        fairness_metadata: Optional[Dict[str, Any]] = None,
+    ) -> 'QuestionResult':
         """Create QuestionResult from Question and LLMResponse objects"""
         is_correct = None
         if isinstance(verification, dict):
@@ -55,7 +65,10 @@ class QuestionResult:
             model_used=llm_response.model_used,
             alternate_answer=getattr(question, 'alternate_answer', None),
             verification=verification,
-            is_correct=is_correct
+            is_correct=is_correct,
+            system_metrics=system_metrics,
+            ollama_metrics=llm_response.ollama_metrics,
+            fairness_metadata=fairness_metadata,
         )
 
 
@@ -82,6 +95,7 @@ class StorageManager:
         model_name: str = "",
         requested_timestamp: str = "",
         filename_timestamp: str = "",
+        fairness_snapshot: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         """Build an empty results payload."""
         created_iso = created_iso or datetime.now().isoformat()
@@ -105,6 +119,7 @@ class StorageManager:
                 "successful_responses": 0,
                 "failed_responses": 0,
                 "last_updated": created_iso,
+                "fairness_config": fairness_snapshot,
             },
             "results": [],
         }
@@ -166,6 +181,7 @@ class StorageManager:
         run_name: Optional[str] = None,
         dataset_file: Optional[str] = None,
         model_name: str = "",
+        fairness_snapshot: Optional[Dict[str, Any]] = None,
     ) -> str:
         """
         Start a fresh run by switching to a new results file and resetting progress.
@@ -196,6 +212,7 @@ class StorageManager:
                     model_name=model_name,
                     requested_timestamp=requested_timestamp,
                     filename_timestamp=filename_timestamp,
+                    fairness_snapshot=fairness_snapshot,
                 ),
                 f,
                 indent=2,
@@ -207,7 +224,12 @@ class StorageManager:
 
         return self.results_file
 
-    def start_new_dataset_run(self, dataset_file: str, model_name: str = "") -> str:
+    def start_new_dataset_run(
+        self,
+        dataset_file: str,
+        model_name: str = "",
+        fairness_snapshot: Optional[Dict[str, Any]] = None,
+    ) -> str:
         """Start a new run for a specific dataset."""
         dataset_base_name = os.path.splitext(os.path.basename(dataset_file))[0] or "dataset"
         safe_dataset_name = self._sanitize_file_component(dataset_base_name)
@@ -221,6 +243,7 @@ class StorageManager:
             run_name=run_name,
             dataset_file=dataset_file,
             model_name=model_name,
+            fairness_snapshot=fairness_snapshot,
         )
     
     def save_result(self, result: QuestionResult) -> bool:
@@ -271,13 +294,59 @@ class StorageManager:
         questions_correct = sum(1 for result in results if result.get("is_correct") is True)
         percent_correct = (questions_correct / question_count * 100.0) if question_count > 0 else 0.0
 
-        return {
+        summary = {
             "total_time_seconds": total_time,
             "average_time_per_question_seconds": average_time,
             "questions_answered": question_count,
             "questions_correct": questions_correct,
             "percent_correct": percent_correct,
         }
+
+        # Aggregate system resource metrics
+        metrics_results = [r for r in results if r.get('system_metrics')]
+        if metrics_results:
+            n = len(metrics_results)
+            summary['resource_metrics_avg'] = {
+                'gpu_power_avg_w': round(
+                    sum(r['system_metrics']['gpu_power_avg_w'] for r in metrics_results) / n, 1
+                ),
+                'gpu_vram_peak_mb': round(
+                    max(r['system_metrics']['gpu_vram_peak_mb'] for r in metrics_results), 1
+                ),
+                'cpu_avg_percent': round(
+                    sum(r['system_metrics']['cpu_avg_percent'] for r in metrics_results) / n, 1
+                ),
+                'ram_peak_mb': round(
+                    max(r['system_metrics']['ram_peak_mb'] for r in metrics_results), 1
+                ),
+                'total_energy_wh': round(
+                    sum(r['system_metrics']['energy_estimate_wh'] for r in metrics_results), 4
+                ),
+            }
+
+        # Aggregate Ollama metrics
+        ollama_results = [r for r in results if r.get('ollama_metrics')]
+        if ollama_results:
+            total_tokens = sum(r['ollama_metrics'].get('eval_count', 0) for r in ollama_results)
+            total_prompt_tokens = sum(r['ollama_metrics'].get('prompt_eval_count', 0) for r in ollama_results)
+            gen_speed_values = [r['ollama_metrics']['generation_speed_tps'] for r in ollama_results
+                               if r['ollama_metrics'].get('generation_speed_tps', 0) > 0]
+            prompt_speed_values = [r['ollama_metrics']['prompt_processing_speed_tps'] for r in ollama_results
+                                   if r['ollama_metrics'].get('prompt_processing_speed_tps', 0) > 0]
+            ratio_values = [r['ollama_metrics']['output_to_input_ratio'] for r in ollama_results
+                           if r['ollama_metrics'].get('output_to_input_ratio', 0) > 0]
+            overhead_values = [r['ollama_metrics'].get('ollama_overhead_s', 0) for r in ollama_results]
+
+            summary['ollama_metrics_avg'] = {
+                'total_generated_tokens': total_tokens,
+                'total_prompt_tokens': total_prompt_tokens,
+                'avg_generation_speed_tps': round(sum(gen_speed_values) / len(gen_speed_values), 2) if gen_speed_values else 0.0,
+                'avg_prompt_processing_speed_tps': round(sum(prompt_speed_values) / len(prompt_speed_values), 2) if prompt_speed_values else 0.0,
+                'avg_output_to_input_ratio': round(sum(ratio_values) / len(ratio_values), 2) if ratio_values else 0.0,
+                'avg_ollama_overhead_s': round(sum(overhead_values) / len(overhead_values), 4) if overhead_values else 0.0,
+            }
+
+        return summary
 
     def _update_progress(self, question_id: str, success: bool):
         """Update progress tracking"""

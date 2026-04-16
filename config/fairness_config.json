@@ -1,0 +1,39 @@
+{
+  "fairness_version": "1.0",
+  "ollama_parameters": {
+    "num_ctx": 4096,
+    "num_gpu": 999,
+    "num_thread": 8,
+    "num_predict": 16384,
+    "temperature": 0.3,
+    "top_p": 0.9,
+    "top_k": 40
+  },
+  "model_overrides": {
+    "qwen3": {
+      "think": false,
+      "justification": "Disables hidden chain-of-thought to prevent exhausting token budget on invisible reasoning. Without this, qwen3 consumes the entire num_predict budget on internal deliberation before producing any visible output."
+    },
+    "phi3": {
+      "num_ctx": 8192,
+      "justification": "Phi3:3.8b produces degenerate/empty outputs at num_ctx=4096 in ~38% of responses. Larger context window reduces truncation and allows the model to complete its FINAL_ANSWER line."
+    }
+  },
+  "cooldown": {
+    "between_models_seconds": 60,
+    "between_questions_seconds": 0,
+    "gpu_temp_threshold_c": 55,
+    "gpu_temp_wait_max_seconds": 300
+  },
+  "warmup": {
+    "enabled": true,
+    "warmup_prompt": "What is 2+2?"
+  },
+  "system_validation": {
+    "enabled": true,
+    "max_gpu_util_percent": 5,
+    "max_cpu_util_percent": 20,
+    "check_no_other_models_loaded": true,
+    "validation_sample_seconds": 3
+  }
+}

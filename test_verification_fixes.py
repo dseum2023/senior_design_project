@@ -220,6 +220,135 @@ def test_no_false_positive_repeating_decimal_as_decimal():
 
 
 # ===========================================================================
+# 7. INTEGER <-> DECIMAL cross-type comparison
+# ===========================================================================
+
+def test_integer_vs_decimal_equivalent():
+    """6 must match 6.0"""
+    _check("int-dec 6 vs 6.0", "FINAL_ANSWER: 6", "6.0")
+
+def test_integer_vs_decimal_equivalent_zero():
+    """0 must match 0.00"""
+    _check("int-dec 0 vs 0.00", "FINAL_ANSWER: 0", "0.00")
+
+def test_integer_vs_decimal_expected_int_extracted_dec():
+    """Expected integer 42, extracted 42.0 must match"""
+    _check("int-dec 42.0 vs 42", "FINAL_ANSWER: 42.0", "42")
+
+def test_integer_vs_decimal_not_equal():
+    """6 must NOT match 6.5"""
+    _check("int-dec diff", "FINAL_ANSWER: 6", "6.5",
+           expect_correct=False, expect_incorrect=True)
+
+def test_integer_vs_decimal_negative():
+    """-3 must match -3.0"""
+    _check("int-dec neg", "FINAL_ANSWER: -3", "-3.0")
+
+
+# ===========================================================================
+# 8. INTEGER <-> FRACTION cross-type comparison
+# ===========================================================================
+
+def test_integer_vs_fraction_equivalent():
+    """2 must match 6/3"""
+    _check("int-frac 2 vs 6/3", "FINAL_ANSWER: 2", "6/3")
+
+def test_integer_vs_fraction_identity():
+    """5 must match 5/1"""
+    _check("int-frac 5 vs 5/1", "FINAL_ANSWER: 5", "5/1")
+
+def test_integer_vs_fraction_negative():
+    """-4 must match -8/2"""
+    _check("int-frac neg", "FINAL_ANSWER: -4", "-8/2")
+
+def test_integer_vs_fraction_not_equal():
+    """2 must NOT match 7/3"""
+    _check("int-frac diff", "FINAL_ANSWER: 2", "7/3",
+           expect_correct=False, expect_incorrect=True)
+
+
+# ===========================================================================
+# 9. EXPRESSION vs scalar (constant expressions)
+# ===========================================================================
+
+def test_expression_vs_integer_constant():
+    """f'(x) = 1x^0 must match 1 (since x^0 = 1, so 1*1 = 1)"""
+    _check("expr-int 1x^0 vs 1", "FINAL_ANSWER: 1", "f'(x) = 1x^0")
+
+def test_expression_vs_integer_constant_larger():
+    """f'(x) = 5x^0 must match 5"""
+    _check("expr-int 5x^0 vs 5", "FINAL_ANSWER: 5", "f'(x) = 5x^0")
+
+def test_expression_vs_integer_wrong():
+    """f'(x) = 1x^0 must NOT match 2"""
+    _check("expr-int 1x^0 vs 2", "FINAL_ANSWER: 2", "f'(x) = 1x^0",
+           expect_correct=False, expect_incorrect=True)
+
+def test_expression_vs_scalar_non_constant():
+    """f'(x) = 2x must NOT match 2 (expression is not constant)"""
+    _check("expr non-const", "FINAL_ANSWER: 2", "f'(x) = 2x",
+           expect_correct=False, expect_incorrect=True)
+
+
+# ===========================================================================
+# 10. Scientific notation by numeric value
+# ===========================================================================
+
+def test_sci_notation_equivalent_forms():
+    """5 * 10^3 must match 50 * 10^2 (both equal 5000)"""
+    _check("sci equiv", "FINAL_ANSWER: 5 * 10^3", "50 * 10^2")
+
+def test_sci_notation_not_equal():
+    """5 * 10^3 must NOT match 5 * 10^4"""
+    _check("sci diff", "FINAL_ANSWER: 5 * 10^3", "5 * 10^4",
+           expect_correct=False, expect_incorrect=True)
+
+
+# ===========================================================================
+# 11. Extractor deprioritizes coordinates
+# ===========================================================================
+
+def test_extraction_prefers_number_over_coordinate():
+    """Last value extraction should prefer bare numbers over variable assignments"""
+    result = extract_answer("We compute X = 50 and find variance is 42.21")
+    assert result.extracted_answer == "42.21", (
+        f"Expected '42.21' (last number), got {result.extracted_answer!r}"
+    )
+
+def test_extraction_still_finds_coordinate_when_only_option():
+    """When only coordinate-style values exist, extractor should still find them"""
+    result = extract_answer("The critical point is x = 0.5")
+    assert result.extracted_answer == "0.5", (
+        f"Expected '0.5' (last number from text), got {result.extracted_answer!r}"
+    )
+
+
+# ===========================================================================
+# 12. Low confidence threshold rejection
+# ===========================================================================
+
+def test_low_confidence_tolerance_rejected():
+    """A tolerance match with very low confidence (< 0.25) should be rejected."""
+    result = verify_answer("FINAL_ANSWER: 5.744444", "5.7")
+    # 5.744444 vs 5.7: diff=0.044444, tolerance at precision=1 is 0.05
+    # confidence = 1 - (0.044444/0.05) = 0.111 -> below 0.25 threshold
+    assert not result.is_correct, (
+        f"Expected INCORRECT (low confidence), got {result.verification_status}. "
+        f"confidence={result.comparison_confidence:.3f}"
+    )
+
+def test_adequate_confidence_tolerance_accepted():
+    """A tolerance match with adequate confidence should still be accepted."""
+    result = verify_answer("FINAL_ANSWER: 263.89356", "263.89")
+    # 263.89356 vs 263.89: diff=0.00356, tolerance at precision=2 is 0.005
+    # confidence = 1 - (0.00356/0.005) = 0.288 -> above 0.25 threshold
+    assert result.is_correct, (
+        f"Expected CORRECT (adequate confidence), got {result.verification_status}. "
+        f"confidence={result.comparison_confidence:.3f}"
+    )
+
+
+# ===========================================================================
 # Runner
 # ===========================================================================
 
@@ -262,6 +391,31 @@ if __name__ == "__main__":
         test_no_false_positive_wrong_sqrt,
         test_no_false_positive_wrong_coordinate,
         test_no_false_positive_repeating_decimal_as_decimal,
+        # INTEGER <-> DECIMAL
+        test_integer_vs_decimal_equivalent,
+        test_integer_vs_decimal_equivalent_zero,
+        test_integer_vs_decimal_expected_int_extracted_dec,
+        test_integer_vs_decimal_not_equal,
+        test_integer_vs_decimal_negative,
+        # INTEGER <-> FRACTION
+        test_integer_vs_fraction_equivalent,
+        test_integer_vs_fraction_identity,
+        test_integer_vs_fraction_negative,
+        test_integer_vs_fraction_not_equal,
+        # EXPRESSION vs scalar
+        test_expression_vs_integer_constant,
+        test_expression_vs_integer_constant_larger,
+        test_expression_vs_integer_wrong,
+        test_expression_vs_scalar_non_constant,
+        # Scientific notation equivalence
+        test_sci_notation_equivalent_forms,
+        test_sci_notation_not_equal,
+        # Extractor priority
+        test_extraction_prefers_number_over_coordinate,
+        test_extraction_still_finds_coordinate_when_only_option,
+        # Low confidence threshold
+        test_low_confidence_tolerance_rejected,
+        test_adequate_confidence_tolerance_accepted,
     ]
 
     passed = 0

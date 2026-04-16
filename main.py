@@ -25,6 +25,7 @@ from src.xml_parser import XMLParser
 from src.ollama_client import OllamaClient
 from src.storage import StorageManager
 from src.question_processor import QuestionProcessor
+from src.fairness_controller import FairnessController
 
 
 MODEL_OPTIONS = {
@@ -219,28 +220,52 @@ def check_prerequisites(dataset_files: List[str]) -> bool:
     return True
 
 
-def setup_components(ollama_url: str, model_name: str) -> Optional[tuple]:
+def setup_components(
+    ollama_url: str,
+    model_name: str,
+    fairness_config_path: Optional[str] = None,
+) -> Optional[tuple]:
     """
-    Set up all application components
+    Set up all application components.
 
     Args:
         ollama_url: URL for Ollama server
         model_name: Name of the LLM model to use
+        fairness_config_path: Path to fairness config JSON, or None to disable fairness controls
 
     Returns:
-        Tuple of (ollama_client, storage_manager, processor) or None if setup fails
+        Tuple of (ollama_client, storage_manager, processor, fairness_controller) or None if setup fails
     """
     try:
+        fairness_controller = None
+        options_override = None
+
+        if fairness_config_path is not None:
+            print(f"⚖️  Initializing fairness controller ({fairness_config_path})...")
+            fairness_controller = FairnessController(config_path=fairness_config_path)
+            options_override = fairness_controller.build_ollama_options(model_name)
+            print(
+                f"[Fairness] Standardized options: "
+                f"num_ctx={options_override.get('num_ctx')}, "
+                f"num_gpu={options_override.get('num_gpu')}, "
+                f"num_thread={options_override.get('num_thread')}, "
+                f"num_predict={options_override.get('num_predict')}"
+            )
+
         print(f"🤖 Initializing Ollama client (URL: {ollama_url}, Model: {model_name})...")
-        ollama_client = OllamaClient(base_url=ollama_url, model=model_name)
+        ollama_client = OllamaClient(
+            base_url=ollama_url,
+            model=model_name,
+            options_override=options_override,
+        )
 
         print("💾 Initializing storage manager...")
         storage_manager = StorageManager(data_dir="data", results_dir="results")
 
         print("⚙️  Initializing question processor...")
-        processor = QuestionProcessor(ollama_client, storage_manager)
+        processor = QuestionProcessor(ollama_client, storage_manager, fairness_controller)
 
-        return ollama_client, storage_manager, processor
+        return ollama_client, storage_manager, processor, fairness_controller
 
     except Exception as e:
         print(f"❌ Error during setup: {e}")
@@ -264,11 +289,18 @@ def load_questions(xml_file: str) -> Optional[list]:
     cache_file = get_cache_file_path(xml_file)
 
     try:
-        if os.path.exists(cache_file):
+        cache_is_stale = (
+            os.path.exists(cache_file) and
+            os.path.getmtime(xml_file) > os.path.getmtime(cache_file)
+        )
+        if os.path.exists(cache_file) and not cache_is_stale:
             print("📂 Loading questions from cache...")
             questions = parser.load_questions_cache(cache_file)
         else:
-            print("📖 Parsing XML file...")
+            if cache_is_stale:
+                print("📂 Cache is outdated, re-parsing XML file...")
+            else:
+                print("📖 Parsing XML file...")
             questions = parser.parse()
             print("💾 Saving questions cache...")
             parser.save_questions_cache(cache_file)
@@ -414,9 +446,15 @@ def process_selected_datasets(
     for dataset in selected_datasets:
         xml_file = dataset["file"]
         try:
+            fairness_snapshot = (
+                processor.fairness_controller.get_fairness_snapshot()
+                if processor.fairness_controller is not None
+                else None
+            )
             results_file = processor.storage_manager.start_new_dataset_run(
                 dataset_file=xml_file,
                 model_name=processor.ollama_client.model,
+                fairness_snapshot=fairness_snapshot,
             )
             print(f"\n🗂️ New results file for {dataset['name']}: {results_file}")
         except Exception as e:
@@ -464,6 +502,16 @@ def main() -> None:
         action="store_true",
         help="Skip menu and start processing immediately",
     )
+    arg_parser.add_argument(
+        "--fairness-config",
+        default="config/fairness_config.json",
+        help="Path to fairness config JSON (default: config/fairness_config.json)",
+    )
+    arg_parser.add_argument(
+        "--no-fairness",
+        action="store_true",
+        help="Disable fairness controls and use legacy Ollama parameter defaults",
+    )
 
     args = arg_parser.parse_args()
 
@@ -493,11 +541,12 @@ def main() -> None:
     if not check_prerequisites(selected_dataset_files):
         sys.exit(1)
 
-    components = setup_components(args.ollama_url, model_name)
+    fairness_config_path = None if args.no_fairness else args.fairness_config
+    components = setup_components(args.ollama_url, model_name, fairness_config_path)
     if not components:
         sys.exit(1)
 
-    ollama_client, storage_manager, processor = components
+    ollama_client, storage_manager, processor, _fairness_controller = components
 
     if args.mode:
         processing_mode = args.mode

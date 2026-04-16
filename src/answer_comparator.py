@@ -502,28 +502,32 @@ def compare_ranges(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Comparison
 
 def compare_scientific_notation(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
     """
-    Compare two scientific notation values
+    Compare two scientific notation values by numeric value
 
     Examples:
-        5 * 10^3 vs 5 * 10^3 -> MATCH
-        5 * 10^3 vs 50 * 10^2 -> NO MATCH (not normalized the same)
+        5 * 10^3 vs 5 * 10^3 -> MATCH (exact)
+        5 * 10^3 vs 50 * 10^2 -> MATCH (equivalent, both equal 5000)
     """
     coef1, exp1 = ans1.value
     coef2, exp2 = ans2.value
 
-    if coef1 == coef2 and exp1 == exp2:
+    val1 = coef1 * (10 ** exp1)
+    val2 = coef2 * (10 ** exp2)
+
+    if val1 == val2:
+        match_type = "exact" if (coef1 == coef2 and exp1 == exp2) else "equivalent"
         return ComparisonResult(
             is_correct=True,
             confidence=1.0,
-            match_type="exact",
-            details=f"Scientific notation match: {coef1} * 10^{exp1}"
+            match_type=match_type,
+            details=f"Scientific notation match: {coef1}*10^{exp1} = {coef2}*10^{exp2} = {val1}"
         )
     else:
         return ComparisonResult(
             is_correct=False,
             confidence=1.0,
             match_type="no_match",
-            details=f"Scientific notation mismatch: {coef1}*10^{exp1} vs {coef2}*10^{exp2}"
+            details=f"Scientific notation mismatch: {coef1}*10^{exp1} ({val1}) vs {coef2}*10^{exp2} ({val2})"
         )
 
 
@@ -570,6 +574,199 @@ def compare_coordinates(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compa
         )
 
 
+def compare_integer_and_decimal(
+    integer_ans: NormalizedAnswer, decimal_ans: NormalizedAnswer
+) -> ComparisonResult:
+    """
+    Compare integer vs decimal by converting integer to float.
+
+    Examples:
+        6 vs 6.0 -> MATCH (exact)
+        6 vs 6.01 -> check within tolerance
+        6 vs 7.0 -> NO MATCH
+    """
+    int_value = float(integer_ans.value)
+    dec_value = float(decimal_ans.value)
+    precision = decimal_ans.precision if decimal_ans.precision is not None else 2
+    tolerance = 0.5 * (10 ** -precision)
+    diff = abs(int_value - dec_value)
+
+    if diff == 0:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="exact",
+            details=f"Integer/decimal exact match: {integer_ans.value} = {dec_value}"
+        )
+    elif diff <= tolerance:
+        confidence = 1.0 - (diff / tolerance)
+        return ComparisonResult(
+            is_correct=True,
+            confidence=confidence,
+            match_type="tolerance",
+            details=f"Integer/decimal within tolerance: |{int_value} - {dec_value}| = {diff:.6f} <= {tolerance}"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Integer/decimal differ: {integer_ans.value} vs {dec_value}"
+        )
+
+
+def compare_integer_and_fraction(
+    integer_ans: NormalizedAnswer, fraction_ans: NormalizedAnswer
+) -> ComparisonResult:
+    """
+    Compare integer vs fraction by reducing the fraction.
+
+    Examples:
+        2 vs 6/3 -> MATCH (6/3 reduces to 2/1)
+        2 vs 2/1 -> MATCH
+        2 vs 7/3 -> NO MATCH
+    """
+    int_value = integer_ans.value
+    num, den = fraction_ans.value
+
+    if den == 0:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details="Invalid fraction denominator 0"
+        )
+
+    g = gcd(abs(num), abs(den))
+    num_reduced = num // g
+    den_reduced = den // g
+
+    if den_reduced < 0:
+        num_reduced = -num_reduced
+        den_reduced = -den_reduced
+
+    if den_reduced == 1 and num_reduced == int_value:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=1.0,
+            match_type="equivalent",
+            details=f"Integer/fraction match: {int_value} = {num}/{den} (reduced: {num_reduced}/{den_reduced})"
+        )
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="no_match",
+            details=f"Integer/fraction differ: {int_value} vs {num}/{den} (reduced: {num_reduced}/{den_reduced})"
+        )
+
+
+def compare_expression_and_scalar(
+    expression_ans: NormalizedAnswer, scalar_ans: NormalizedAnswer
+) -> ComparisonResult:
+    """
+    Compare an expression against a scalar (integer or decimal) by evaluating
+    the expression numerically and checking if it equals the scalar value.
+
+    Handles cases like f'(x) = 1x^0 vs 1 (since x^0 = 1 for all x).
+
+    Only matches when the expression evaluates to a constant equal to the scalar.
+    """
+    expr = str(expression_ans.value).strip()
+
+    # Strip assignment label (e.g., f'(x) = ...)
+    expr_clean = re.sub(r'\s+', '', expr)
+    if '=' in expr_clean:
+        left, right = expr_clean.split('=', 1)
+        label_pattern = r"^[a-zA-Z]\w*(?:'+)?(?:\([^=+\-*/^]+\))?$"
+        if re.match(label_pattern, left):
+            expr_clean = right
+
+    # Build evaluable form
+    expr_eval = (
+        expr_clean.replace("·", "*")
+        .replace("⋅", "*")
+        .replace("×", "*")
+        .replace("?", "*")
+        .replace("−", "-")
+    )
+    expr_eval = expr_eval.replace("^", "**")
+
+    while "+-" in expr_eval or "--" in expr_eval or "-+" in expr_eval:
+        expr_eval = expr_eval.replace("+-", "-").replace("--", "+").replace("-+", "-")
+
+    if not re.match(r"^[0-9a-zA-Z+\-*/().*]+$", expr_eval):
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="type_mismatch",
+            details=f"Cannot evaluate expression for scalar comparison: {expr}"
+        )
+
+    # Insert implicit multiplication
+    expr_eval = re.sub(r"(?<=[0-9a-zA-Z\)])(?=\()", "*", expr_eval)
+    expr_eval = re.sub(r"(?<=[0-9\)])(?=[a-zA-Z])", "*", expr_eval)
+    expr_eval = re.sub(r"(?<=[a-zA-Z\)])(?=\d)", "*", expr_eval)
+
+    # Get scalar value
+    if scalar_ans.answer_type == AnswerType.INTEGER:
+        scalar_value = float(scalar_ans.value)
+    elif scalar_ans.answer_type == AnswerType.DECIMAL:
+        scalar_value = float(scalar_ans.value)
+    else:
+        return ComparisonResult(
+            is_correct=False,
+            confidence=1.0,
+            match_type="type_mismatch",
+            details=f"Type mismatch: expression vs {scalar_ans.answer_type.value}"
+        )
+
+    # Evaluate expression at multiple test points to check if it's a constant
+    safe_globals = {
+        "__builtins__": {},
+        "sin": math.sin, "cos": math.cos, "tan": math.tan,
+        "log": math.log, "exp": math.exp,
+        "sqrt": math.sqrt, "SQRT": math.sqrt, "abs": abs,
+    }
+    test_points = [-2.5, -0.7, 0.4, 1.3, 2.8]
+    tokens = set(re.findall(r"[A-Za-z_]+", expr_eval))
+    function_names = {"sin", "cos", "tan", "log", "exp", "sqrt", "SQRT", "abs",
+                      "sec", "csc", "cot"}
+    variables = sorted(tokens - function_names)
+
+    checked = 0
+    for p in test_points:
+        env = {var: p for var in variables}
+        try:
+            val = eval(expr_eval, safe_globals, env)
+        except Exception:
+            continue
+        checked += 1
+        tolerance = max(1e-8, 1e-6 * max(1.0, abs(scalar_value)))
+        if abs(val - scalar_value) > tolerance:
+            return ComparisonResult(
+                is_correct=False,
+                confidence=1.0,
+                match_type="no_match",
+                details=f"Expression evaluates to {val} at test point, not {scalar_value}"
+            )
+
+    if checked >= 3:
+        return ComparisonResult(
+            is_correct=True,
+            confidence=0.95,
+            match_type="equivalent",
+            details=f"Expression '{expr}' evaluates to {scalar_value} (constant)"
+        )
+
+    return ComparisonResult(
+        is_correct=False,
+        confidence=1.0,
+        match_type="type_mismatch",
+        details=f"Could not evaluate expression '{expr}' for scalar comparison"
+    )
+
+
 def _compare_single(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> ComparisonResult:
     """
     Compare two normalized answers
@@ -593,6 +790,25 @@ def _compare_single(ans1: NormalizedAnswer, ans2: NormalizedAnswer) -> Compariso
             return compare_fraction_and_decimal(ans1, ans2)
         if ans2.answer_type == AnswerType.FRACTION and ans1.answer_type == AnswerType.DECIMAL:
             return compare_fraction_and_decimal(ans2, ans1)
+
+        # INTEGER <-> DECIMAL
+        if ans1.answer_type == AnswerType.INTEGER and ans2.answer_type == AnswerType.DECIMAL:
+            return compare_integer_and_decimal(ans1, ans2)
+        if ans2.answer_type == AnswerType.INTEGER and ans1.answer_type == AnswerType.DECIMAL:
+            return compare_integer_and_decimal(ans2, ans1)
+
+        # INTEGER <-> FRACTION
+        if ans1.answer_type == AnswerType.INTEGER and ans2.answer_type == AnswerType.FRACTION:
+            return compare_integer_and_fraction(ans1, ans2)
+        if ans2.answer_type == AnswerType.INTEGER and ans1.answer_type == AnswerType.FRACTION:
+            return compare_integer_and_fraction(ans2, ans1)
+
+        # EXPRESSION vs scalar (INTEGER/DECIMAL)
+        scalar_numeric = {AnswerType.INTEGER, AnswerType.DECIMAL}
+        if ans1.answer_type == AnswerType.EXPRESSION and ans2.answer_type in scalar_numeric:
+            return compare_expression_and_scalar(ans1, ans2)
+        if ans2.answer_type == AnswerType.EXPRESSION and ans1.answer_type in scalar_numeric:
+            return compare_expression_and_scalar(ans2, ans1)
 
         return ComparisonResult(
             is_correct=False,

@@ -6,7 +6,7 @@ Handles communication with the local Ollama LLM server
 import requests
 import json
 import time
-from typing import Dict, Any, Optional
+from typing import Any, Dict, List, Optional
 from dataclasses import dataclass
 
 
@@ -18,14 +18,63 @@ class LLMResponse:
     success: bool
     error_message: Optional[str] = None
     model_used: str = ""
+    ollama_metrics: Optional[Dict[str, Any]] = None
+
+
+def _extract_ollama_metrics(data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Extract and compute Ollama timing/token metrics from API response data."""
+    eval_count = data.get('eval_count', 0)
+    eval_duration_ns = data.get('eval_duration', 0)
+    prompt_eval_count = data.get('prompt_eval_count', 0)
+    prompt_eval_duration_ns = data.get('prompt_eval_duration', 0)
+    total_duration_ns = data.get('total_duration', 0)
+    load_duration_ns = data.get('load_duration', 0)
+
+    # Derived: generation speed (tokens/sec)
+    generation_speed = 0.0
+    if eval_duration_ns > 0:
+        generation_speed = eval_count / (eval_duration_ns / 1e9)
+
+    # Derived: prompt processing speed (tokens/sec)
+    prompt_processing_speed = 0.0
+    if prompt_eval_duration_ns > 0:
+        prompt_processing_speed = prompt_eval_count / (prompt_eval_duration_ns / 1e9)
+
+    # Derived: Ollama overhead (total - prompt_eval - eval)
+    ollama_overhead_ns = total_duration_ns - prompt_eval_duration_ns - eval_duration_ns
+    ollama_overhead_s = max(ollama_overhead_ns / 1e9, 0.0)
+
+    # Derived: output-to-input token ratio
+    output_to_input_ratio = 0.0
+    if prompt_eval_count > 0:
+        output_to_input_ratio = eval_count / prompt_eval_count
+
+    return {
+        'total_duration_s': round(total_duration_ns / 1e9, 4),
+        'load_duration_s': round(load_duration_ns / 1e9, 4),
+        'prompt_eval_count': prompt_eval_count,
+        'prompt_eval_duration_s': round(prompt_eval_duration_ns / 1e9, 4),
+        'eval_count': eval_count,
+        'eval_duration_s': round(eval_duration_ns / 1e9, 4),
+        'generation_speed_tps': round(generation_speed, 2),
+        'prompt_processing_speed_tps': round(prompt_processing_speed, 2),
+        'ollama_overhead_s': round(ollama_overhead_s, 4),
+        'output_to_input_ratio': round(output_to_input_ratio, 2),
+    }
 
 
 class OllamaClient:
     """Client for communicating with Ollama API"""
     
-    def __init__(self, base_url: str = "http://localhost:11434", model: str = "gemma3:4b"):
+    def __init__(
+        self,
+        base_url: str = "http://localhost:11434",
+        model: str = "gemma3:4b",
+        options_override: Optional[Dict[str, Any]] = None,
+    ):
         self.base_url = base_url.rstrip('/')
         self.model = model
+        self.options_override = options_override
         self.session = requests.Session()
         self.session.headers.update({
             'Content-Type': 'application/json'
@@ -75,7 +124,9 @@ class OllamaClient:
                 "2. Explain your reasoning clearly at each step\n"
                 "3. Show all calculations, substitutions, and algebraic manipulations\n"
                 "4. If using formulas, state them explicitly\n"
-                "5. Verify your work when possible\n\n"
+                "5. NOTE: In repeating decimal notation, digits inside parentheses repeat infinitely "
+                "(e.g., 0.551(35) means 0.55135353535..., where '35' repeats — NOT multiplication).\n"
+                "6. Verify your work when possible\n\n"
                 "After showing your complete solution process, provide your final answer in this exact format:\n"
                 "FINAL_ANSWER: [your answer here]\n\n"
                 "Examples of final answer formats:\n"
@@ -90,19 +141,30 @@ class OllamaClient:
         
         # Determine if we should stream
         use_streaming = stream_callback is not None
-        
+
+        # Use fairness-controlled options when provided, otherwise fall back to defaults.
+        # The options_override is built by FairnessController.build_ollama_options() and
+        # already includes model-specific parameters (e.g. think=False for qwen3).
+        if self.options_override is not None:
+            options = dict(self.options_override)
+        else:
+            # Legacy defaults (used when --no-fairness flag is passed)
+            options = {
+                "temperature": 0.3,
+                "top_p": 0.9,
+                "top_k": 40,
+                "num_predict": 16384,
+            }
+            if "qwen3" in self.model.lower():
+                options["think"] = False
+
         # Prepare the request payload
         payload = {
             "model": self.model,
             "prompt": question,
             "system": system_prompt,
             "stream": use_streaming,
-            "options": {
-                "temperature": 0.3,  # Slightly higher temperature for more detailed explanations
-                "top_p": 0.9,
-                "top_k": 40,
-                "num_predict": 2048  # Allow longer responses for detailed work
-            }
+            "options": options,
         }
         
         try:
@@ -112,13 +174,14 @@ class OllamaClient:
                 response = self.session.post(
                     f"{self.base_url}/api/generate",
                     json=payload,
-                    timeout=120,
+                    timeout=600,
                     stream=True
                 )
 
                 if response.status_code == 200:
                     full_response = ""
                     chunk_count = 0
+                    ollama_metrics = None
 
                     try:
                         for line in response.iter_lines(decode_unicode=True):
@@ -141,6 +204,7 @@ class OllamaClient:
 
                                     # Check if this is the final chunk
                                     if chunk_data.get('done', False):
+                                        ollama_metrics = _extract_ollama_metrics(chunk_data)
                                         break
 
                                 except json.JSONDecodeError as e:
@@ -158,7 +222,8 @@ class OllamaClient:
                                 processing_time=processing_time,
                                 success=True,
                                 error_message=f"Streaming interrupted: {stream_error}",
-                                model_used=self.model
+                                model_used=self.model,
+                                ollama_metrics=ollama_metrics
                             )
                         else:
                             raise stream_error
@@ -170,7 +235,8 @@ class OllamaClient:
                             response_text=full_response.strip(),
                             processing_time=processing_time,
                             success=True,
-                            model_used=self.model
+                            model_used=self.model,
+                            ollama_metrics=ollama_metrics
                         )
                     else:
                         return LLMResponse(
@@ -195,7 +261,7 @@ class OllamaClient:
                 response = self.session.post(
                     f"{self.base_url}/api/generate",
                     json=payload,
-                    timeout=120  # 2 minute timeout for complex calculations
+                    timeout=600  # 10 minute timeout for thinking models
                 )
                 
                 processing_time = time.time() - start_time
@@ -203,13 +269,15 @@ class OllamaClient:
                 if response.status_code == 200:
                     data = response.json()
                     response_text = data.get('response', '').strip()
-                    
+                    ollama_metrics = _extract_ollama_metrics(data)
+
                     if response_text:
                         return LLMResponse(
                             response_text=response_text,
                             processing_time=processing_time,
                             success=True,
-                            model_used=self.model
+                            model_used=self.model,
+                            ollama_metrics=ollama_metrics
                         )
                     else:
                         return LLMResponse(
@@ -275,6 +343,32 @@ class OllamaClient:
                 model_used=self.model
             )
     
+    def list_loaded_models(self) -> List[str]:
+        """Return names of models currently loaded in Ollama VRAM (via /api/ps)."""
+        try:
+            response = self.session.get(f"{self.base_url}/api/ps", timeout=5)
+            if response.status_code == 200:
+                data = response.json()
+                return [m.get("name", "") for m in data.get("models", []) if m.get("name")]
+        except requests.exceptions.RequestException:
+            pass
+        return []
+
+    def unload_model(self, model_name: str) -> bool:
+        """
+        Unload a specific model from Ollama VRAM by sending keep_alive=0.
+        Returns True if the request succeeded.
+        """
+        try:
+            response = self.session.post(
+                f"{self.base_url}/api/generate",
+                json={"model": model_name, "keep_alive": 0},
+                timeout=30,
+            )
+            return response.status_code == 200
+        except requests.exceptions.RequestException:
+            return False
+
     def get_model_info(self) -> Dict[str, Any]:
         """Get information about the current model"""
         try:
