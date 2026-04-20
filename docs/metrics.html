@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BrainBench - Metrics Comparison</title>
+  <title>BrainBench - Metrics</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -19,144 +19,116 @@
 
   <main class="pt-20 pb-8">
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 scroll-reveal">
-      <h1 class="text-3xl font-bold text-white mb-2">Metrics Comparison</h1>
-      <p class="text-gray-400">Grouped comparison of all requested metrics using only <code>analysis_report.xlsx</code> and <code>analysis_results.xlsx</code>.</p>
+      <h1 class="text-3xl font-bold text-white mb-2">Metrics</h1>
+      <p class="text-gray-400">Cross-model comparison grouped by metric category.</p>
     </section>
 
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
-      <div class="glass-card p-5 text-sm text-gray-400">
-        <p>Values are shown as cross-model comparisons. Where a metric is not present in the provided spreadsheets, the value is marked <span class="text-gray-500">N/A (not in sheet)</span>.</p>
+      <div class="glass-card p-5">
+        <p class="text-sm text-gray-400">Only metrics with available values are shown.</p>
       </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-      <div id="metric-groups" class="space-y-6"></div>
-    </section>
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 space-y-6" id="metric-sections"></section>
   </main>
 
   <div id="footer"></div>
 
   <script src="js/data.js"></script>
-  <script src="js/metric_summary_data.js"></script>
+  <script src="js/metric_summary_by_model.js"></script>
   <script src="js/nav.js"></script>
   <script>
     initNav('metrics');
     initFooter();
     initEnhancements();
 
-    const MODEL_MAP = {
-      gemma: 'Gemma3:4b',
-      phi: 'Phi3:3.8b',
-      qwen: 'Qwen3:4b'
-    };
+    const MODELS_IN_ORDER = ['Gemma3:4b', 'Phi3:3.8b', 'Qwen3:4b'];
 
-    const METRIC_DEFINITIONS = [
-      ['Correctness', ['is_correct', 'verification_status', 'matched_answer', 'match_type', 'extracted_answer', 'extracted_type', 'expected_type', 'extraction_method', 'extraction_confidence', 'comparison_confidence']],
-      ['Latency', ['processing_time', 'total_duration_s', 'load_duration_s', 'prompt_eval_duration_s', 'eval_duration_s', 'ollama_overhead_s']],
-      ['Token Usage', ['prompt_eval_count', 'eval_count', 'total_prompt_tokens', 'total_generated_tokens', 'output_to_input_ratio', 'avg_output_to_input_ratio']],
-      ['Throughput', ['generation_speed_tps', 'prompt_processing_speed_tps', 'avg_generation_speed_tps', 'avg_prompt_processing_speed_tps']],
-      ['Memory', ['ram_peak_mb', 'ram_avg_mb', 'gpu_vram_peak_mb', 'gpu_vram_avg_mb']],
-      ['CPU', ['cpu_avg_percent', 'cpu_peak_percent']],
-      ['GPU', ['gpu_util_avg_percent', 'gpu_util_peak_percent', 'gpu_temp_avg_c', 'gpu_temp_peak_c', 'gpu_power_avg_w', 'gpu_power_peak_w']],
-      ['Energy', ['energy_estimate_wh', 'total_energy_wh']],
-      ['Run Summary', ['questions_answered', 'questions_correct', 'percent_correct', 'total_time_seconds', 'average_time_per_question_seconds', 'sample_count']]
+    function weightedMean(metric, model) {
+      const rows = (MODEL_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
+      if (!rows.length) return null;
+      const n = rows.reduce((a, r) => a + r.n, 0);
+      return rows.reduce((a, r) => a + r.mean * r.n, 0) / n;
+    }
+
+    function weightedTotal(metric, model) {
+      const rows = (MODEL_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
+      if (!rows.length) return null;
+      return rows.reduce((a, r) => a + r.mean * r.n, 0);
+    }
+
+    function fmt(v, pct = false) {
+      if (v === null || v === undefined || Number.isNaN(v)) return null;
+      return Number(v).toLocaleString(undefined, { maximumFractionDigits: 4 }) + (pct ? '%' : '');
+    }
+
+    function statFor(model, metric) {
+      const modelKey = model.includes('Gemma') ? 'gemma' : model.includes('Phi') ? 'phi' : 'qwen';
+      switch (metric) {
+        case 'is_correct': return fmt(VERIFICATION.status[modelKey].correct, true);
+        case 'verification_status': return `${fmt(VERIFICATION.status[modelKey].correct, true)} correct`;
+        case 'matched_answer': return fmt(VERIFICATION.matchTypes[modelKey].exact + VERIFICATION.matchTypes[modelKey].equivalent + VERIFICATION.matchTypes[modelKey].tolerance, true);
+        case 'match_type': return `Exact ${fmt(VERIFICATION.matchTypes[modelKey].exact, true)}`;
+        case 'extraction_confidence': return fmt(VERIFICATION.confidence[modelKey].extraction * 100, true);
+        case 'comparison_confidence': return fmt(VERIFICATION.confidence[modelKey].comparison * 100, true);
+        case 'processing_time': return fmt(weightedMean('processing_time_s', model));
+        case 'total_duration_s': return fmt(weightedMean('total_duration_s', model));
+        case 'eval_duration_s': return fmt(weightedMean('eval_duration_s', model));
+        case 'prompt_eval_count': return fmt(weightedMean('prompt_eval_count', model));
+        case 'eval_count': return fmt(weightedMean('eval_count', model));
+        case 'total_prompt_tokens': return fmt(weightedTotal('prompt_eval_count', model));
+        case 'total_generated_tokens': return fmt(weightedTotal('eval_count', model));
+        case 'output_to_input_ratio': {
+          const out = weightedMean('eval_count', model), inp = weightedMean('prompt_eval_count', model);
+          return (out && inp) ? fmt(out / inp) : null;
+        }
+        case 'generation_speed_tps': return fmt(weightedMean('generation_speed_tps', model));
+        case 'prompt_processing_speed_tps': return fmt(weightedMean('prompt_processing_speed_tps', model));
+        case 'ram_peak_mb': return fmt(weightedMean('ram_peak_mb', model));
+        case 'gpu_vram_peak_mb': return fmt(weightedMean('gpu_vram_peak_mb', model));
+        case 'gpu_power_avg_w': return fmt(weightedMean('gpu_power_avg_w', model));
+        case 'energy_estimate_wh': return fmt(weightedMean('energy_estimate_wh', model));
+        case 'total_energy_wh': return fmt(weightedTotal('energy_estimate_wh', model));
+        case 'questions_answered': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel.gemma : (model.includes('Phi') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel.phi : EXECUTIVE_SUMMARY.totalQuestionsPerModel.qwen));
+        case 'questions_correct': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.correct : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.correct : EXECUTIVE_SUMMARY.overall.qwen.correct));
+        case 'percent_correct': return fmt((model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.accuracy : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.accuracy : EXECUTIVE_SUMMARY.overall.qwen.accuracy)) * 100, true);
+        case 'total_time_seconds': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.totalTime : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.totalTime : EXECUTIVE_SUMMARY.overall.qwen.totalTime));
+        case 'average_time_per_question_seconds': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.avgTime : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.avgTime : EXECUTIVE_SUMMARY.overall.qwen.avgTime));
+        case 'sample_count': return statFor(model, 'questions_answered');
+        default: return null;
+      }
+    }
+
+    const CATEGORIES = [
+      { name: 'Correctness', metrics: ['is_correct', 'verification_status', 'matched_answer', 'match_type', 'extraction_confidence', 'comparison_confidence'] },
+      { name: 'Latency', metrics: ['processing_time', 'total_duration_s', 'eval_duration_s'] },
+      { name: 'Token Usage', metrics: ['prompt_eval_count', 'eval_count', 'total_prompt_tokens', 'total_generated_tokens', 'output_to_input_ratio'] },
+      { name: 'Throughput', metrics: ['generation_speed_tps', 'prompt_processing_speed_tps'] },
+      { name: 'Memory', metrics: ['ram_peak_mb', 'gpu_vram_peak_mb'] },
+      { name: 'GPU', metrics: ['gpu_power_avg_w'] },
+      { name: 'Energy', metrics: ['energy_estimate_wh', 'total_energy_wh'] },
+      { name: 'Run Summary', metrics: ['questions_answered', 'questions_correct', 'percent_correct', 'total_time_seconds', 'average_time_per_question_seconds', 'sample_count'] },
     ];
 
-    function weightedMean(metricName, modelName) {
-      const rows = METRIC_SUMMARY.filter(r => r.metric === metricName && r.model === modelName);
-      if (!rows.length) return null;
-      const totalN = rows.reduce((a, r) => a + r.n, 0);
-      const weighted = rows.reduce((a, r) => a + (r.mean * r.n), 0);
-      return weighted / totalN;
-    }
-
-    function metricTotal(metricName, modelName) {
-      const rows = METRIC_SUMMARY.filter(r => r.metric === metricName && r.model === modelName);
-      if (!rows.length) return null;
-      return rows.reduce((a, r) => a + (r.mean * r.n), 0);
-    }
-
-    function fmt(value, suffix = '') {
-      if (value === null || value === undefined || Number.isNaN(value)) return '<span class="text-gray-500">N/A (not in sheet)</span>';
-      return Number(value).toLocaleString(undefined, { maximumFractionDigits: 4 }) + suffix;
-    }
-
-    function getModelStat(modelId, key) {
-      const modelName = MODEL_MAP[modelId];
-      const status = VERIFICATION.status[modelId];
-      const match = VERIFICATION.matchTypes[modelId];
-      const conf = VERIFICATION.confidence[modelId];
-      const overall = EXECUTIVE_SUMMARY.overall[modelId];
-
-      const aliasWeighted = {
-        processing_time: 'processing_time_s',
-        total_duration_s: 'total_duration_s',
-        eval_duration_s: 'eval_duration_s',
-        prompt_eval_count: 'prompt_eval_count',
-        eval_count: 'eval_count',
-        generation_speed_tps: 'generation_speed_tps',
-        prompt_processing_speed_tps: 'prompt_processing_speed_tps',
-        ram_peak_mb: 'ram_peak_mb',
-        gpu_vram_peak_mb: 'gpu_vram_peak_mb',
-        gpu_power_avg_w: 'gpu_power_avg_w',
-        energy_estimate_wh: 'energy_estimate_wh'
-      };
-
-      if (key in aliasWeighted) {
-        return fmt(weightedMean(aliasWeighted[key], modelName));
-      }
-
-      switch (key) {
-        case 'is_correct': return fmt(status.correct, '%');
-        case 'verification_status': return `${fmt(status.correct, '%')} correct / ${fmt(status.incorrect, '%')} incorrect`;
-        case 'matched_answer': return fmt((match.exact + match.equivalent + match.tolerance), '%');
-        case 'match_type': return `Exact ${fmt(match.exact, '%')}`;
-        case 'extraction_confidence': return fmt(conf.extraction * 100, '%');
-        case 'comparison_confidence': return fmt(conf.comparison * 100, '%');
-        case 'ollama_overhead_s': {
-          const p = weightedMean('processing_time_s', modelName);
-          const t = weightedMean('total_duration_s', modelName);
-          return fmt((p !== null && t !== null) ? (p - t) : null);
-        }
-        case 'total_prompt_tokens': return fmt(metricTotal('prompt_eval_count', modelName));
-        case 'total_generated_tokens': return fmt(metricTotal('eval_count', modelName));
-        case 'output_to_input_ratio': {
-          const out = weightedMean('eval_count', modelName);
-          const inn = weightedMean('prompt_eval_count', modelName);
-          return fmt((out !== null && inn) ? (out / inn) : null);
-        }
-        case 'avg_output_to_input_ratio': {
-          const out = weightedMean('eval_count', modelName);
-          const inn = weightedMean('prompt_eval_count', modelName);
-          return fmt((out !== null && inn) ? (out / inn) : null);
-        }
-        case 'avg_generation_speed_tps': return fmt(weightedMean('generation_speed_tps', modelName));
-        case 'avg_prompt_processing_speed_tps': return fmt(weightedMean('prompt_processing_speed_tps', modelName));
-        case 'total_energy_wh': return fmt(metricTotal('energy_estimate_wh', modelName));
-        case 'questions_answered': return fmt(EXECUTIVE_SUMMARY.totalQuestionsPerModel[modelId]);
-        case 'questions_correct': return fmt(overall.correct);
-        case 'percent_correct': return fmt(overall.accuracy * 100, '%');
-        case 'total_time_seconds': return fmt(overall.totalTime);
-        case 'average_time_per_question_seconds': return fmt(overall.avgTime);
-        case 'sample_count': return fmt(EXECUTIVE_SUMMARY.totalQuestionsPerModel[modelId]);
-        default: return '<span class="text-gray-500">N/A (not in sheet)</span>';
-      }
-    }
-
-    const container = document.getElementById('metric-groups');
-    container.innerHTML = METRIC_DEFINITIONS.map(([category, metrics]) => {
-      const rows = metrics.map(metric => `
-        <tr>
-          <td class="text-gray-300 font-mono text-xs">${metric}</td>
-          <td class="text-right">${getModelStat('gemma', metric)}</td>
-          <td class="text-right">${getModelStat('phi', metric)}</td>
-          <td class="text-right">${getModelStat('qwen', metric)}</td>
-        </tr>
-      `).join('');
+    const sections = document.getElementById('metric-sections');
+    sections.innerHTML = CATEGORIES.map(category => {
+      const rows = category.metrics.map(metric => {
+        const vals = MODELS_IN_ORDER.map(m => statFor(m, metric));
+        if (vals.every(v => v === null)) return '';
+        return `
+          <tr>
+            <td class="font-mono text-xs text-gray-300">${metric}</td>
+            <td class="text-right">${vals[0] || ''}</td>
+            <td class="text-right">${vals[1] || ''}</td>
+            <td class="text-right">${vals[2] || ''}</td>
+          </tr>
+        `;
+      }).join('');
+      if (!rows.trim()) return '';
 
       return `
         <div class="chart-container">
-          <h3 class="text-white font-semibold text-lg mb-4">${category}</h3>
+          <h3 class="text-white font-semibold text-lg mb-4">${category.name}</h3>
           <div class="overflow-x-auto">
             <table class="w-full data-table text-sm">
               <thead>
