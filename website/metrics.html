@@ -99,7 +99,7 @@
       }
     }
 
-    const CATEGORIES = [
+    const METRIC_CATEGORIES = [
       { name: 'Correctness', metrics: ['is_correct', 'verification_status', 'matched_answer', 'match_type', 'extraction_confidence', 'comparison_confidence'] },
       { name: 'Latency', metrics: ['processing_time', 'total_duration_s', 'eval_duration_s'] },
       { name: 'Token Usage', metrics: ['prompt_eval_count', 'eval_count', 'total_prompt_tokens', 'total_generated_tokens', 'output_to_input_ratio'] },
@@ -111,7 +111,7 @@
     ];
 
     const sections = document.getElementById('metric-sections');
-    sections.innerHTML = CATEGORIES.map(category => {
+    sections.innerHTML = METRIC_CATEGORIES.map(category => {
       const rows = category.metrics.map(metric => {
         const vals = MODELS_IN_ORDER.map(m => statFor(m, metric));
         if (vals.every(v => v === null)) return '';
