@@ -196,7 +196,7 @@
     <!-- Efficiency Metrics -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
       <div class="chart-container">
-        <h3 class="text-white font-semibold text-lg mb-4">Efficiency & Failure Modes (Latest Runs)</h3>
+        <h3 class="text-white font-semibold text-lg mb-4">Efficiency</h3>
         <div class="overflow-x-auto">
           <table class="w-full data-table text-sm">
             <thead>
@@ -214,34 +214,6 @@
               <tr><td class="text-white font-medium">Phi3:3.8b (Prob & Stats)</td><td class="text-right">0.78</td><td class="text-right">0.24</td><td class="text-right">0.117</td><td class="text-right">389.49</td><td class="text-right">90.8%</td></tr>
               <tr><td class="text-white font-medium">Qwen3:4b (Prob & Stats)</td><td class="text-right">1.97</td><td class="text-right">0.65</td><td class="text-right">0.496</td><td class="text-right">1507.47</td><td class="text-right">2.5%</td></tr>
             </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Full Metric Summary -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
-      <div class="chart-container">
-        <h3 class="text-white font-semibold text-lg mb-1">Metric Summary (All Metrics from analysis_report.xlsx)</h3>
-        <p class="text-gray-500 text-sm mb-4">Complete per-question metric summary by model and dataset.</p>
-        <div class="overflow-x-auto">
-          <table class="w-full data-table text-sm">
-            <thead>
-              <tr class="text-left text-gray-400">
-                <th>Model</th>
-                <th>Dataset</th>
-                <th>Metric</th>
-                <th class="text-right">N</th>
-                <th class="text-right">Mean</th>
-                <th class="text-right">Median</th>
-                <th class="text-right">Std Dev</th>
-                <th class="text-right">Q25</th>
-                <th class="text-right">Q75</th>
-                <th class="text-right">Min</th>
-                <th class="text-right">Max</th>
-              </tr>
-            </thead>
-            <tbody id="metric-summary-body"></tbody>
           </table>
         </div>
       </div>
@@ -449,6 +421,38 @@
         </div>
       </div>
     </section>
+
+
+    <!-- Metric Summary -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 scroll-reveal">
+      <div class="chart-container">
+        <h2 class="text-white font-semibold text-xl mb-4">Metric Summary</h2>
+        <div class="flex border-b border-slate-700/50 gap-1 mb-4">
+          <button id="metric-tab-gemma" class="tab-btn active px-4 py-2 text-sm font-medium border-b-2 border-transparent rounded-t-lg" onclick="switchMetricTab('Gemma3:4b')">Gemma3:4b</button>
+          <button id="metric-tab-phi" class="tab-btn px-4 py-2 text-sm font-medium border-b-2 border-transparent rounded-t-lg text-gray-400" onclick="switchMetricTab('Phi3:3.8b')">Phi3:3.8b</button>
+          <button id="metric-tab-qwen" class="tab-btn px-4 py-2 text-sm font-medium border-b-2 border-transparent rounded-t-lg text-gray-400" onclick="switchMetricTab('Qwen3:4b')">Qwen3:4b</button>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full data-table text-sm">
+            <thead>
+              <tr class="text-left text-gray-400">
+                <th>Dataset</th>
+                <th>Metric</th>
+                <th class="text-right">N</th>
+                <th class="text-right">Mean</th>
+                <th class="text-right">Median</th>
+                <th class="text-right">Std Dev</th>
+                <th class="text-right">Q25</th>
+                <th class="text-right">Q75</th>
+                <th class="text-right">Min</th>
+                <th class="text-right">Max</th>
+              </tr>
+            </thead>
+            <tbody id="metric-summary-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
   </main>
 
   <div id="footer"></div>
@@ -495,14 +499,36 @@
       ]
     );
 
-    // Full Metric Summary table (analysis_report.xlsx -> Metric_Summary sheet)
-    const metricSummaryBody = document.getElementById('metric-summary-body');
-    if (metricSummaryBody && Array.isArray(METRIC_SUMMARY)) {
+    // Metric Summary tabs by model
+    function setActiveMetricButton(modelName) {
+      const map = {
+        'Gemma3:4b': 'metric-tab-gemma',
+        'Phi3:3.8b': 'metric-tab-phi',
+        'Qwen3:4b': 'metric-tab-qwen'
+      };
+      ['metric-tab-gemma', 'metric-tab-phi', 'metric-tab-qwen'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (!btn) return;
+        btn.classList.remove('active', 'text-gray-400');
+        if (id === map[modelName]) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.add('text-gray-400');
+        }
+      });
+    }
+
+    function switchMetricTab(modelName) {
+      const metricSummaryBody = document.getElementById('metric-summary-body');
+      if (!metricSummaryBody || !Array.isArray(METRIC_SUMMARY)) return;
+      setActiveMetricButton(modelName);
       const fmt = (num) => Number(num).toLocaleString(undefined, { maximumFractionDigits: 4 });
-      metricSummaryBody.innerHTML = METRIC_SUMMARY.map(row => `
+      const rows = METRIC_SUMMARY
+        .filter(row => row.model === modelName)
+        .sort((a, b) => (a.dataset + a.metric).localeCompare(b.dataset + b.metric));
+      metricSummaryBody.innerHTML = rows.map(row => `
         <tr>
-          <td class="text-white">${row.model}</td>
-          <td>${row.dataset}</td>
+          <td class="text-white">${row.dataset}</td>
           <td class="font-mono text-xs text-gray-300">${row.metric}</td>
           <td class="text-right">${row.n}</td>
           <td class="text-right">${fmt(row.mean)}</td>
@@ -515,6 +541,8 @@
         </tr>
       `).join('');
     }
+
+    switchMetricTab('Gemma3:4b');
   </script>
 </body>
 </html>
