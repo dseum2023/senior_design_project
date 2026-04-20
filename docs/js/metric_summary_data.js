@@ -1,4 +1,4 @@
-// Auto-generated from analysis_report.xlsx (Metric_Summary)
+// Auto-generated from benchmark metric summary data
 const METRIC_SUMMARY = [
   {
     "model": "Gemma3:4b",
