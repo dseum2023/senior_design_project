@@ -1,5 +1,5 @@
 // BrainBench - All Hardcoded Benchmark Data
-// Source: analysis_report.xlsx + analysis_results.xlsx (Latest runs through 2026-04-17)
+// Source: latest benchmark analysis datasets (runs through 2026-04-17)
 
 const MODELS = {
   gemma: {
