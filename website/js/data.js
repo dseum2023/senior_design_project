@@ -1,5 +1,5 @@
 // BrainBench - All Hardcoded Benchmark Data
-// Source: analysis_results.xlsx (Generated 2026-02-22)
+// Source: latest benchmark analysis datasets (runs through 2026-04-17)
 
 const MODELS = {
   gemma: {
@@ -32,11 +32,11 @@ const MODEL_ORDER = ['gemma', 'phi', 'qwen'];
 
 // ===== EXECUTIVE SUMMARY =====
 const EXECUTIVE_SUMMARY = {
-  totalQuestionsPerModel: 2544,
+  totalQuestionsPerModel: { gemma: 1902, phi: 2544, qwen: 2544 },
   overall: {
-    gemma: { correct: 1624, accuracy: 0.6384, totalTime: 18581.58, avgTime: 7.304, medianTime: 6.434 },
-    phi:   { correct: 846,  accuracy: 0.3325, totalTime: 13809.47, avgTime: 5.428, medianTime: 5.183 },
-    qwen:  { correct: 1687, accuracy: 0.6631, totalTime: 65619.89, avgTime: 25.794, medianTime: 24.239 },
+    gemma: { correct: 1595, accuracy: 0.8386, totalTime: 14938.07, avgTime: 7.854 },
+    phi:   { correct: 218,  accuracy: 0.0857, totalTime: 21117.58, avgTime: 8.301 },
+    qwen:  { correct: 2197, accuracy: 0.8636, totalTime: 54405.83, avgTime: 21.386 },
   }
 };
 
@@ -45,21 +45,21 @@ const CATEGORIES = {
   probStats: {
     name: 'Advanced Probability & Statistics',
     shortName: 'Prob & Stats',
-    questions: 1000,
+    questions: { gemma: 884, phi: 1000, qwen: 1000 },
     results: {
-      gemma: { correct: 859, incorrect: 141, accuracy: 0.859, avgTime: 8.369, medianTime: 6.796, minTime: 2.375, maxTime: 1213.042 },
-      phi:   { correct: 382, incorrect: 618, accuracy: 0.382, avgTime: 5.552, medianTime: 5.258, minTime: 2.074, maxTime: 19.503 },
-      qwen:  { correct: 742, incorrect: 258, accuracy: 0.742, avgTime: 26.092, medianTime: 24.226, minTime: 11.773, maxTime: 39.191 },
+      gemma: { correct: 837, incorrect: 47, accuracy: 0.9468, avgTime: 6.914 },
+      phi:   { correct: 92,  incorrect: 908, accuracy: 0.0920, avgTime: 5.805 },
+      qwen:  { correct: 975, incorrect: 25, accuracy: 0.9750, avgTime: 21.356 },
     }
   },
   calculus: {
     name: 'Calculus I',
     shortName: 'Calculus I',
-    questions: 900,
+    questions: { gemma: 374, phi: 900, qwen: 900 },
     results: {
-      gemma: { correct: 623, incorrect: 277, accuracy: 0.6922, avgTime: 6.620, medianTime: 6.206, minTime: 4.188, maxTime: 21.525 },
-      phi:   { correct: 385, incorrect: 515, accuracy: 0.4278, avgTime: 5.190, medianTime: 5.073, minTime: 2.776, maxTime: 19.190 },
-      qwen:  { correct: 760, incorrect: 140, accuracy: 0.8444, avgTime: 24.888, medianTime: 23.754, minTime: 12.717, maxTime: 40.572 },
+      gemma: { correct: 323, incorrect: 51, accuracy: 0.8636, avgTime: 11.040 },
+      phi:   { correct: 110, incorrect: 790, accuracy: 0.1222, avgTime: 12.745 },
+      qwen:  { correct: 718, incorrect: 182, accuracy: 0.7978, avgTime: 21.617 },
     }
   },
   grade8: {
@@ -67,9 +67,9 @@ const CATEGORIES = {
     shortName: 'Grade 8',
     questions: 644,
     results: {
-      gemma: { correct: 142, incorrect: 502, accuracy: 0.2205, avgTime: 6.606, medianTime: 6.131, minTime: 2.987, maxTime: 21.987 },
-      phi:   { correct: 79,  incorrect: 565, accuracy: 0.1227, avgTime: 5.570, medianTime: 5.224, minTime: 2.959, maxTime: 19.216 },
-      qwen:  { correct: 185, incorrect: 459, accuracy: 0.2873, avgTime: 26.598, medianTime: 26.261, minTime: 10.001, maxTime: 38.482 },
+      gemma: { correct: 435, incorrect: 209, accuracy: 0.6755, avgTime: 7.293 },
+      phi:   { correct: 16,  incorrect: 628, accuracy: 0.0248, avgTime: 5.966 },
+      qwen:  { correct: 504, incorrect: 140, accuracy: 0.7826, avgTime: 25.390 },
     }
   }
 };
@@ -106,13 +106,12 @@ const PROB_STATS_TOPICS = [
 
 // ===== GRADE 8 MATH SUBCATEGORY BREAKDOWN =====
 const GRADE8_TOPICS = [
-  { topic: 'Statistics & Probability',     count: 60,  gemma: 0.55,   phi: 0.20,   qwen: 0.5667 },
-  { topic: 'Expressions & Equations',      count: 186, gemma: 0.2688, phi: 0.2258, qwen: 0.4086 },
-  { topic: 'The Number System',            count: 164, gemma: 0.2256, phi: 0.1037, qwen: 0.2378 },
-  { topic: 'Geometry',                     count: 145, gemma: 0.1517, phi: 0.0414, qwen: 0.2207 },
-  { topic: 'Functions',                    count: 88,  gemma: 0.0,    phi: 0.0227, qwen: 0.0341 },
+  { topic: 'Statistics & Probability',     count: 60,  gemma: 0.9333, phi: 0.0,    qwen: 0.95   },
+  { topic: 'Expressions & Equations',      count: 186, gemma: 0.5054, phi: 0.0054, qwen: 0.5914 },
+  { topic: 'The Number System',            count: 164, gemma: 0.6585, phi: 0.0915, qwen: 0.75   },
+  { topic: 'Geometry',                     count: 145, gemma: 0.6897, phi: 0.0,    qwen: 0.8759 },
+  { topic: 'Functions',                    count: 88,  gemma: 0.8636, phi: 0.0,    qwen: 0.9773 },
 ];
-
 // ===== VERIFICATION ANALYSIS =====
 const VERIFICATION = {
   matchTypes: {
@@ -126,9 +125,9 @@ const VERIFICATION = {
     qwen:  { extraction: 0.8629, comparison: 0.8822 },
   },
   status: {
-    gemma: { correct: 63.84, incorrect: 36.12, unable: 0.04, unknown: 0.0 },
-    phi:   { correct: 33.25, incorrect: 66.71, unable: 0.04, unknown: 0.0 },
-    qwen:  { correct: 66.31, incorrect: 24.61, unable: 0.43, unknown: 8.65 },
+    gemma: { correct: 83.86, incorrect: 16.14, unable: 0.0, unknown: 0.0 },
+    phi:   { correct: 8.57, incorrect: 91.39, unable: 0.04, unknown: 0.0 },
+    qwen:  { correct: 86.36, incorrect: 13.64, unable: 0.0, unknown: 0.0 },
   }
 };
 
@@ -152,9 +151,9 @@ const TIMING = {
     }
   },
   overall: {
-    gemma: { totalQuestions: 2544, totalTime: 18581.58, totalMinutes: 309.69, avgTime: 7.304, medianTime: 6.434 },
-    phi:   { totalQuestions: 2544, totalTime: 13809.47, totalMinutes: 230.16, avgTime: 5.428, medianTime: 5.183 },
-    qwen:  { totalQuestions: 2544, totalTime: 65619.89, totalMinutes: 1093.66, avgTime: 25.794, medianTime: 24.239 },
+    gemma: { totalQuestions: 1902, totalTime: 14938.07, totalMinutes: 248.97, avgTime: 7.854, medianTime: null },
+    phi:   { totalQuestions: 2544, totalTime: 21117.58, totalMinutes: 351.96, avgTime: 8.301, medianTime: null },
+    qwen:  { totalQuestions: 2544, totalTime: 54405.83, totalMinutes: 906.76, avgTime: 21.386, medianTime: null },
   }
 };
 

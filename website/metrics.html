@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBench - Metrics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] } } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-slate-900 text-gray-300 font-sans min-h-screen">
+  <div id="nav"></div>
+
+  <main class="pt-20 pb-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 scroll-reveal">
+      <h1 class="text-3xl font-bold text-white mb-2">Metrics</h1>
+      <p class="text-gray-400">Cross-model comparison grouped by metric category.</p>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <div class="glass-card p-5">
+        <p class="text-sm text-gray-400">Only metrics with available values are shown.</p>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 space-y-6" id="metric-sections"></section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/metric_summary_by_model.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    initNav('metrics');
+    initFooter();
+    initEnhancements();
+
+    const MODELS_IN_ORDER = ['Gemma3:4b', 'Phi3:3.8b', 'Qwen3:4b'];
+
+    function weightedMean(metric, model) {
+      const rows = (MODEL_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
+      if (!rows.length) return null;
+      const n = rows.reduce((a, r) => a + r.n, 0);
+      return rows.reduce((a, r) => a + r.mean * r.n, 0) / n;
+    }
+
+    function weightedTotal(metric, model) {
+      const rows = (MODEL_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
+      if (!rows.length) return null;
+      return rows.reduce((a, r) => a + r.mean * r.n, 0);
+    }
+
+    function fmt(v, pct = false) {
+      if (v === null || v === undefined || Number.isNaN(v)) return null;
+      return Number(v).toLocaleString(undefined, { maximumFractionDigits: 4 }) + (pct ? '%' : '');
+    }
+
+    function statFor(model, metric) {
+      const modelKey = model.includes('Gemma') ? 'gemma' : model.includes('Phi') ? 'phi' : 'qwen';
+      switch (metric) {
+        case 'is_correct': return fmt(VERIFICATION.status[modelKey].correct, true);
+        case 'verification_status': return `${fmt(VERIFICATION.status[modelKey].correct, true)} correct`;
+        case 'matched_answer': return fmt(VERIFICATION.matchTypes[modelKey].exact + VERIFICATION.matchTypes[modelKey].equivalent + VERIFICATION.matchTypes[modelKey].tolerance, true);
+        case 'match_type': return `Exact ${fmt(VERIFICATION.matchTypes[modelKey].exact, true)}`;
+        case 'extraction_confidence': return fmt(VERIFICATION.confidence[modelKey].extraction * 100, true);
+        case 'comparison_confidence': return fmt(VERIFICATION.confidence[modelKey].comparison * 100, true);
+        case 'processing_time': return fmt(weightedMean('processing_time_s', model));
+        case 'total_duration_s': return fmt(weightedMean('total_duration_s', model));
+        case 'eval_duration_s': return fmt(weightedMean('eval_duration_s', model));
+        case 'prompt_eval_count': return fmt(weightedMean('prompt_eval_count', model));
+        case 'eval_count': return fmt(weightedMean('eval_count', model));
+        case 'total_prompt_tokens': return fmt(weightedTotal('prompt_eval_count', model));
+        case 'total_generated_tokens': return fmt(weightedTotal('eval_count', model));
+        case 'output_to_input_ratio': {
+          const out = weightedMean('eval_count', model), inp = weightedMean('prompt_eval_count', model);
+          return (out && inp) ? fmt(out / inp) : null;
+        }
+        case 'generation_speed_tps': return fmt(weightedMean('generation_speed_tps', model));
+        case 'prompt_processing_speed_tps': return fmt(weightedMean('prompt_processing_speed_tps', model));
+        case 'ram_peak_mb': return fmt(weightedMean('ram_peak_mb', model));
+        case 'gpu_vram_peak_mb': return fmt(weightedMean('gpu_vram_peak_mb', model));
+        case 'gpu_power_avg_w': return fmt(weightedMean('gpu_power_avg_w', model));
+        case 'energy_estimate_wh': return fmt(weightedMean('energy_estimate_wh', model));
+        case 'total_energy_wh': return fmt(weightedTotal('energy_estimate_wh', model));
+        case 'questions_answered': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel.gemma : (model.includes('Phi') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel.phi : EXECUTIVE_SUMMARY.totalQuestionsPerModel.qwen));
+        case 'questions_correct': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.correct : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.correct : EXECUTIVE_SUMMARY.overall.qwen.correct));
+        case 'percent_correct': return fmt((model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.accuracy : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.accuracy : EXECUTIVE_SUMMARY.overall.qwen.accuracy)) * 100, true);
+        case 'total_time_seconds': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.totalTime : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.totalTime : EXECUTIVE_SUMMARY.overall.qwen.totalTime));
+        case 'average_time_per_question_seconds': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.avgTime : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.avgTime : EXECUTIVE_SUMMARY.overall.qwen.avgTime));
+        case 'sample_count': return statFor(model, 'questions_answered');
+        default: return null;
+      }
+    }
+
+    const METRIC_CATEGORIES = [
+      { name: 'Correctness', metrics: ['is_correct', 'verification_status', 'matched_answer', 'match_type', 'extraction_confidence', 'comparison_confidence'] },
+      { name: 'Latency', metrics: ['processing_time', 'total_duration_s', 'eval_duration_s'] },
+      { name: 'Token Usage', metrics: ['prompt_eval_count', 'eval_count', 'total_prompt_tokens', 'total_generated_tokens', 'output_to_input_ratio'] },
+      { name: 'Throughput', metrics: ['generation_speed_tps', 'prompt_processing_speed_tps'] },
+      { name: 'Memory', metrics: ['ram_peak_mb', 'gpu_vram_peak_mb'] },
+      { name: 'GPU', metrics: ['gpu_power_avg_w'] },
+      { name: 'Energy', metrics: ['energy_estimate_wh', 'total_energy_wh'] },
+      { name: 'Run Summary', metrics: ['questions_answered', 'questions_correct', 'percent_correct', 'total_time_seconds', 'average_time_per_question_seconds', 'sample_count'] },
+    ];
+
+    const sections = document.getElementById('metric-sections');
+    sections.innerHTML = METRIC_CATEGORIES.map(category => {
+      const rows = category.metrics.map(metric => {
+        const vals = MODELS_IN_ORDER.map(m => statFor(m, metric));
+        if (vals.every(v => v === null)) return '';
+        return `
+          <tr>
+            <td class="font-mono text-xs text-gray-300">${metric}</td>
+            <td class="text-right">${vals[0] || ''}</td>
+            <td class="text-right">${vals[1] || ''}</td>
+            <td class="text-right">${vals[2] || ''}</td>
+          </tr>
+        `;
+      }).join('');
+      if (!rows.trim()) return '';
+
+      return `
+        <div class="chart-container">
+          <h3 class="text-white font-semibold text-lg mb-4">${category.name}</h3>
+          <div class="overflow-x-auto">
+            <table class="w-full data-table text-sm">
+              <thead>
+                <tr class="text-left text-gray-400">
+                  <th>Metric</th>
+                  <th class="text-right">Gemma3:4b</th>
+                  <th class="text-right">Phi3:3.8b</th>
+                  <th class="text-right">Qwen3:4b</th>
+                </tr>
+              </thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        </div>
+      `;
+    }).join('');
+  </script>
+</body>
+</html>
