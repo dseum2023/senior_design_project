@@ -43,16 +43,19 @@
     initEnhancements();
 
     const MODELS_IN_ORDER = ['Gemma3:4b', 'Phi3:3.8b', 'Qwen3:4b'];
+    const SAFE_METRIC_SUMMARY = (typeof MODEL_METRIC_SUMMARY === 'object' && MODEL_METRIC_SUMMARY) ? MODEL_METRIC_SUMMARY : {};
+    const HAS_VERIFICATION = typeof VERIFICATION === 'object';
+    const HAS_EXEC_SUMMARY = typeof EXECUTIVE_SUMMARY === 'object';
 
     function weightedMean(metric, model) {
-      const rows = (MODEL_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
+      const rows = (SAFE_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
       if (!rows.length) return null;
       const n = rows.reduce((a, r) => a + r.n, 0);
       return rows.reduce((a, r) => a + r.mean * r.n, 0) / n;
     }
 
     function weightedTotal(metric, model) {
-      const rows = (MODEL_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
+      const rows = (SAFE_METRIC_SUMMARY[model] || []).filter(r => r.metric === metric);
       if (!rows.length) return null;
       return rows.reduce((a, r) => a + r.mean * r.n, 0);
     }
@@ -64,13 +67,18 @@
 
     function statFor(model, metric) {
       const modelKey = model.includes('Gemma') ? 'gemma' : model.includes('Phi') ? 'phi' : 'qwen';
+      const vStatus = HAS_VERIFICATION ? VERIFICATION.status?.[modelKey] : null;
+      const vMatch = HAS_VERIFICATION ? VERIFICATION.matchTypes?.[modelKey] : null;
+      const vConf = HAS_VERIFICATION ? VERIFICATION.confidence?.[modelKey] : null;
+      const eSum = HAS_EXEC_SUMMARY ? (model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall?.gemma : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall?.phi : EXECUTIVE_SUMMARY.overall?.qwen)) : null;
+      const eQuestions = HAS_EXEC_SUMMARY ? (model.includes('Gemma') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel?.gemma : (model.includes('Phi') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel?.phi : EXECUTIVE_SUMMARY.totalQuestionsPerModel?.qwen)) : null;
       switch (metric) {
-        case 'is_correct': return fmt(VERIFICATION.status[modelKey].correct, true);
-        case 'verification_status': return `${fmt(VERIFICATION.status[modelKey].correct, true)} correct`;
-        case 'matched_answer': return fmt(VERIFICATION.matchTypes[modelKey].exact + VERIFICATION.matchTypes[modelKey].equivalent + VERIFICATION.matchTypes[modelKey].tolerance, true);
-        case 'match_type': return `Exact ${fmt(VERIFICATION.matchTypes[modelKey].exact, true)}`;
-        case 'extraction_confidence': return fmt(VERIFICATION.confidence[modelKey].extraction * 100, true);
-        case 'comparison_confidence': return fmt(VERIFICATION.confidence[modelKey].comparison * 100, true);
+        case 'is_correct': return fmt(vStatus?.correct, true);
+        case 'verification_status': return vStatus ? `${fmt(vStatus.correct, true)} correct` : null;
+        case 'matched_answer': return vMatch ? fmt(vMatch.exact + vMatch.equivalent + vMatch.tolerance, true) : null;
+        case 'match_type': return vMatch ? `Exact ${fmt(vMatch.exact, true)}` : null;
+        case 'extraction_confidence': return vConf ? fmt(vConf.extraction * 100, true) : null;
+        case 'comparison_confidence': return vConf ? fmt(vConf.comparison * 100, true) : null;
         case 'processing_time': return fmt(weightedMean('processing_time_s', model));
         case 'total_duration_s': return fmt(weightedMean('total_duration_s', model));
         case 'eval_duration_s': return fmt(weightedMean('eval_duration_s', model));
@@ -89,11 +97,11 @@
         case 'gpu_power_avg_w': return fmt(weightedMean('gpu_power_avg_w', model));
         case 'energy_estimate_wh': return fmt(weightedMean('energy_estimate_wh', model));
         case 'total_energy_wh': return fmt(weightedTotal('energy_estimate_wh', model));
-        case 'questions_answered': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel.gemma : (model.includes('Phi') ? EXECUTIVE_SUMMARY.totalQuestionsPerModel.phi : EXECUTIVE_SUMMARY.totalQuestionsPerModel.qwen));
-        case 'questions_correct': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.correct : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.correct : EXECUTIVE_SUMMARY.overall.qwen.correct));
-        case 'percent_correct': return fmt((model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.accuracy : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.accuracy : EXECUTIVE_SUMMARY.overall.qwen.accuracy)) * 100, true);
-        case 'total_time_seconds': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.totalTime : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.totalTime : EXECUTIVE_SUMMARY.overall.qwen.totalTime));
-        case 'average_time_per_question_seconds': return fmt(model.includes('Gemma') ? EXECUTIVE_SUMMARY.overall.gemma.avgTime : (model.includes('Phi') ? EXECUTIVE_SUMMARY.overall.phi.avgTime : EXECUTIVE_SUMMARY.overall.qwen.avgTime));
+        case 'questions_answered': return fmt(eQuestions);
+        case 'questions_correct': return fmt(eSum?.correct);
+        case 'percent_correct': return fmt((typeof eSum?.accuracy === 'number') ? (eSum.accuracy * 100) : null, true);
+        case 'total_time_seconds': return fmt(eSum?.totalTime);
+        case 'average_time_per_question_seconds': return fmt(eSum?.avgTime);
         case 'sample_count': return statFor(model, 'questions_answered');
         default: return null;
       }
@@ -111,7 +119,7 @@
     ];
 
     const sections = document.getElementById('metric-sections');
-    sections.innerHTML = METRIC_CATEGORIES.map(category => {
+    const rendered = METRIC_CATEGORIES.map(category => {
       const rows = category.metrics.map(metric => {
         const vals = MODELS_IN_ORDER.map(m => statFor(m, metric));
         if (vals.every(v => v === null)) return '';
@@ -145,6 +153,8 @@
         </div>
       `;
     }).join('');
+
+    sections.innerHTML = rendered.trim() || `<div class=\"glass-card p-5\"><p class=\"text-sm text-gray-400\">No metric data available.</p></div>`;
   </script>
 </body>
 </html>
