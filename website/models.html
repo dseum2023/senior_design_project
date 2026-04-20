@@ -219,6 +219,34 @@
       </div>
     </section>
 
+    <!-- Full Metric Summary -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 scroll-reveal">
+      <div class="chart-container">
+        <h3 class="text-white font-semibold text-lg mb-1">Metric Summary (All Metrics from analysis_report.xlsx)</h3>
+        <p class="text-gray-500 text-sm mb-4">Complete per-question metric summary by model and dataset.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full data-table text-sm">
+            <thead>
+              <tr class="text-left text-gray-400">
+                <th>Model</th>
+                <th>Dataset</th>
+                <th>Metric</th>
+                <th class="text-right">N</th>
+                <th class="text-right">Mean</th>
+                <th class="text-right">Median</th>
+                <th class="text-right">Std Dev</th>
+                <th class="text-right">Q25</th>
+                <th class="text-right">Q75</th>
+                <th class="text-right">Min</th>
+                <th class="text-right">Max</th>
+              </tr>
+            </thead>
+            <tbody id="metric-summary-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <!-- Timing Charts -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
       <div class="grid lg:grid-cols-2 gap-6">
@@ -426,6 +454,7 @@
   <div id="footer"></div>
 
   <script src="js/data.js"></script>
+  <script src="js/metric_summary_data.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
   <script src="js/charts.js"></script>
   <script src="js/nav.js"></script>
@@ -465,6 +494,27 @@
         { label: 'Other', data: [0.67, 1.46, 9.82], backgroundColor: '#64748b', borderRadius: 2 },
       ]
     );
+
+    // Full Metric Summary table (analysis_report.xlsx -> Metric_Summary sheet)
+    const metricSummaryBody = document.getElementById('metric-summary-body');
+    if (metricSummaryBody && Array.isArray(METRIC_SUMMARY)) {
+      const fmt = (num) => Number(num).toLocaleString(undefined, { maximumFractionDigits: 4 });
+      metricSummaryBody.innerHTML = METRIC_SUMMARY.map(row => `
+        <tr>
+          <td class="text-white">${row.model}</td>
+          <td>${row.dataset}</td>
+          <td class="font-mono text-xs text-gray-300">${row.metric}</td>
+          <td class="text-right">${row.n}</td>
+          <td class="text-right">${fmt(row.mean)}</td>
+          <td class="text-right">${fmt(row.median)}</td>
+          <td class="text-right">${fmt(row.stdDev)}</td>
+          <td class="text-right">${fmt(row.q25)}</td>
+          <td class="text-right">${fmt(row.q75)}</td>
+          <td class="text-right">${fmt(row.min)}</td>
+          <td class="text-right">${fmt(row.max)}</td>
+        </tr>
+      `).join('');
+    }
   </script>
 </body>
 </html>
