@@ -6,6 +6,7 @@ function initNav(activePage) {
     { id: 'index', label: 'Dashboard', href: 'index.html' },
     { id: 'models', label: 'Models', href: 'models.html' },
     { id: 'datasets', label: 'Datasets', href: 'datasets.html' },
+    { id: 'metrics', label: 'Metrics', href: 'metrics.html' },
     { id: 'methodology', label: 'Methodology', href: 'methodology.html' },
     { id: 'about', label: 'About', href: 'about.html' },
   ];
